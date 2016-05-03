@@ -1,0 +1,213 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 6 ]
+"56 D:\SharedFolder\BoardCodes\ULTRA_PIC/00-libfiles/delay.c
+[v _DELAY_us DELAY_us `(v  1 e 1 0 ]
+"75
+[v _DELAY_ms DELAY_ms `(v  1 e 1 0 ]
+"60 D:\SharedFolder\BoardCodes\ULTRA_PIC/00-libfiles/eeprom.c
+[v _EEPROM_WriteByte EEPROM_WriteByte `(v  1 e 1 0 ]
+"90
+[v _EEPROM_ReadByte EEPROM_ReadByte `(uc  1 e 1 0 ]
+"66 D:\SharedFolder\BoardCodes\ULTRA_PIC/00-libfiles/uart.c
+[v _UART_Init UART_Init `(v  1 e 1 0 ]
+"91
+[v _UART_SetBaudRate UART_SetBaudRate `(v  1 e 1 0 ]
+"123
+[v _UART_RxChar UART_RxChar `(uc  1 e 1 0 ]
+"145
+[v _UART_TxChar UART_TxChar `(v  1 e 1 0 ]
+"169
+[v _UART_TxString UART_TxString `(v  1 e 1 0 ]
+"260
+[v _UART_TxNumber UART_TxNumber `(v  1 e 1 0 ]
+"413
+[v _UART_Printf UART_Printf `(v  1 e 1 0 ]
+"62 C:\Program Files\Microchip\xc8\v1.36\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files\Microchip\xc8\v1.36\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.36\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v1.36\sources\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.36\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.36\sources\pic\eewrite.c
+[v _eeprom_write eeprom_write `(v  1 e 1 0 ]
+"42 D:\SharedFolder\BoardCodes\ULTRA_PIC\08a-Eeprom_Byte_RdWr.X\main.c
+[v _main main `(i  1 e 2 0 ]
+"937 C:\Program Files\Microchip\xc8\v1.36\include\pic16f877a.h
+[v _RCSTA RCSTA `VEuc  1 e 1 @24 ]
+"1031
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1037
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
+"1398
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1950
+[v _TXSTA TXSTA `VEuc  1 e 1 @152 ]
+"2030
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"2233
+[v _EEDATA EEDATA `VEuc  1 e 1 @268 ]
+"2239
+[v _EEADR EEADR `VEuc  1 e 1 @269 ]
+"2257
+[v _EECON1 EECON1 `VEuc  1 e 1 @396 ]
+"2301
+[v _EECON2 EECON2 `VEuc  1 e 1 @397 ]
+"2351
+[v _CARRY CARRY `VEb  1 e 0 @24 ]
+"2443
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"2559
+[v _RCIF RCIF `VEb  1 e 0 @101 ]
+"2561
+[v _RD RD `VEb  1 e 0 @3168 ]
+"2755
+[v _TXIF TXIF `VEb  1 e 0 @100 ]
+"2761
+[v _WR WR `VEb  1 e 0 @3169 ]
+"2763
+[v _WREN WREN `VEb  1 e 0 @3170 ]
+"42 D:\SharedFolder\BoardCodes\ULTRA_PIC\08a-Eeprom_Byte_RdWr.X\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"44
+[v main@write_char write_char `uc  1 a 1 62 ]
+[v main@eeprom_address eeprom_address `uc  1 a 1 61 ]
+[v main@read_char read_char `uc  1 a 1 60 ]
+"61
+} 0
+"413 D:\SharedFolder\BoardCodes\ULTRA_PIC/00-libfiles/uart.c
+[v _UART_Printf UART_Printf `(v  1 e 1 0 ]
+{
+[v UART_Printf@argList argList `*.24DCCuc  1 a 1 wreg ]
+"420
+[v UART_Printf@v_num_u32 v_num_u32 `ul  1 a 4 47 ]
+"418
+[v UART_Printf@v_num_s32 v_num_s32 `l  1 a 4 41 ]
+"419
+[v UART_Printf@v_num_u16 v_num_u16 `ui  1 a 2 51 ]
+"417
+[v UART_Printf@v_num_s16 v_num_s16 `i  1 a 2 45 ]
+"416
+[v UART_Printf@argp argp `[1]*.4v  1 a 1 56 ]
+"423
+[v UART_Printf@v_numOfDigitsToTransmit_u8 v_numOfDigitsToTransmit_u8 `uc  1 a 1 55 ]
+"422
+[v UART_Printf@ch ch `uc  1 a 1 54 ]
+"415
+[v UART_Printf@ptr ptr `*.24DCCuc  1 a 1 53 ]
+"421
+[v UART_Printf@str str `*.1uc  1 a 1 39 ]
+"413
+[v UART_Printf@argList argList `*.24DCCuc  1 a 1 wreg ]
+"429
+[v UART_Printf@argList argList `*.24DCCuc  1 a 1 40 ]
+"552
+} 0
+"169
+[v _UART_TxString UART_TxString `(v  1 e 1 0 ]
+{
+[v UART_TxString@ptr_string ptr_string `*.1DCCuc  1 a 1 wreg ]
+[v UART_TxString@ptr_string ptr_string `*.1DCCuc  1 a 1 wreg ]
+[v UART_TxString@ptr_string ptr_string `*.1DCCuc  1 a 1 2 ]
+"173
+} 0
+"260
+[v _UART_TxNumber UART_TxNumber `(v  1 e 1 0 ]
+{
+[v UART_TxNumber@v_numericSystem_u8 v_numericSystem_u8 `uc  1 a 1 wreg ]
+"262
+[v UART_TxNumber@a a `[10]uc  1 a 10 21 ]
+[v UART_TxNumber@i i `uc  1 a 1 34 ]
+"260
+[v UART_TxNumber@v_numericSystem_u8 v_numericSystem_u8 `uc  1 a 1 wreg ]
+[v UART_TxNumber@v_number_u32 v_number_u32 `ul  1 p 4 4 ]
+[v UART_TxNumber@v_numOfDigitsToTransmit_u8 v_numOfDigitsToTransmit_u8 `uc  1 p 1 8 ]
+"262
+[v UART_TxNumber@v_numericSystem_u8 v_numericSystem_u8 `uc  1 a 1 33 ]
+"324
+} 0
+"4 C:\Program Files\Microchip\xc8\v1.36\sources\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 2 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 a 1 3 ]
+"51
+} 0
+"145 D:\SharedFolder\BoardCodes\ULTRA_PIC/00-libfiles/uart.c
+[v _UART_TxChar UART_TxChar `(v  1 e 1 0 ]
+{
+[v UART_TxChar@v_uartData_u8 v_uartData_u8 `uc  1 a 1 wreg ]
+[v UART_TxChar@v_uartData_u8 v_uartData_u8 `uc  1 a 1 wreg ]
+[v UART_TxChar@v_uartData_u8 v_uartData_u8 `uc  1 a 1 0 ]
+"150
+} 0
+"66
+[v _UART_Init UART_Init `(v  1 e 1 0 ]
+{
+[v UART_Init@v_baudRate_u32 v_baudRate_u32 `ul  1 p 4 10 ]
+"72
+} 0
+"91
+[v _UART_SetBaudRate UART_SetBaudRate `(v  1 e 1 0 ]
+{
+"93
+[v UART_SetBaudRate@RegValue RegValue `uc  1 a 1 9 ]
+"91
+[v UART_SetBaudRate@v_baudRate_u32 v_baudRate_u32 `ul  1 p 4 0 ]
+"108
+} 0
+"6 C:\Program Files\Microchip\xc8\v1.36\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"11
+[v ___lldiv@quotient quotient `ul  1 a 4 9 ]
+"12
+[v ___lldiv@counter counter `uc  1 a 1 13 ]
+"6
+[v ___lldiv@divisor divisor `ul  1 p 4 0 ]
+[v ___lldiv@dividend dividend `ul  1 p 4 4 ]
+"31
+} 0
+"60 D:\SharedFolder\BoardCodes\ULTRA_PIC/00-libfiles/eeprom.c
+[v _EEPROM_WriteByte EEPROM_WriteByte `(v  1 e 1 0 ]
+{
+[v EEPROM_WriteByte@v_eepromAddress_u16 v_eepromAddress_u16 `ui  1 p 2 3 ]
+[v EEPROM_WriteByte@v_eepromData_u8 v_eepromData_u8 `uc  1 p 1 5 ]
+"75
+} 0
+"6 C:\Program Files\Microchip\xc8\v1.36\sources\pic\eewrite.c
+[v _eeprom_write eeprom_write `(v  1 e 1 0 ]
+{
+[v eeprom_write@addr addr `uc  1 a 1 wreg ]
+[v eeprom_write@addr addr `uc  1 a 1 wreg ]
+[v eeprom_write@value value `uc  1 p 1 0 ]
+[v eeprom_write@addr addr `uc  1 a 1 2 ]
+"9
+} 0
+"90 D:\SharedFolder\BoardCodes\ULTRA_PIC/00-libfiles/eeprom.c
+[v _EEPROM_ReadByte EEPROM_ReadByte `(uc  1 e 1 0 ]
+{
+[v EEPROM_ReadByte@v_eepromAddress_u16 v_eepromAddress_u16 `ui  1 p 2 2 ]
+"98
+} 0
+"56 D:\SharedFolder\BoardCodes\ULTRA_PIC/00-libfiles/delay.c
+[v _DELAY_us DELAY_us `(v  1 e 1 0 ]
+{
+[v DELAY_us@us_count us_count `ui  1 p 2 0 ]
+"62
+} 0

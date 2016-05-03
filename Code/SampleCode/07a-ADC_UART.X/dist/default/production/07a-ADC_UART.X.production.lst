@@ -1,0 +1,2731 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.36 build -262312587 
+                                                                                               Sat Feb 20 16:10:45 2016
+
+Microchip Technology Omniscient Code Generator v1.36 (Free mode) build 201601150325
+     1                           	processor	16F877A
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	strings,global,class=STRING,delta=2
+     5                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     6                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     7                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+     8                           	psect	maintext,global,class=CODE,split=1,delta=2
+     9                           	psect	text1,local,class=CODE,merge=1,delta=2
+    10                           	psect	text2,local,class=CODE,merge=1,delta=2
+    11                           	psect	text3,local,class=CODE,merge=1,delta=2
+    12                           	psect	text4,local,class=CODE,merge=1,delta=2
+    13                           	psect	text5,local,class=CODE,merge=1,delta=2
+    14                           	psect	text6,local,class=CODE,merge=1,delta=2
+    15                           	psect	text7,local,class=CODE,merge=1,delta=2
+    16                           	psect	text8,local,class=CODE,merge=1,delta=2
+    17                           	psect	text9,local,class=CODE,merge=1,delta=2
+    18                           	psect	text10,local,class=CODE,merge=1,delta=2
+    19                           	psect	text11,local,class=CODE,merge=1,delta=2
+    20                           	dabs	1,0x7E,2
+    21  0000                     	;# 
+    22  0001                     	;# 
+    23  0002                     	;# 
+    24  0003                     	;# 
+    25  0004                     	;# 
+    26  0005                     	;# 
+    27  0006                     	;# 
+    28  0007                     	;# 
+    29  0008                     	;# 
+    30  0009                     	;# 
+    31  000A                     	;# 
+    32  000B                     	;# 
+    33  000C                     	;# 
+    34  000D                     	;# 
+    35  000E                     	;# 
+    36  000E                     	;# 
+    37  000F                     	;# 
+    38  0010                     	;# 
+    39  0011                     	;# 
+    40  0012                     	;# 
+    41  0013                     	;# 
+    42  0014                     	;# 
+    43  0015                     	;# 
+    44  0015                     	;# 
+    45  0016                     	;# 
+    46  0017                     	;# 
+    47  0018                     	;# 
+    48  0019                     	;# 
+    49  001A                     	;# 
+    50  001B                     	;# 
+    51  001B                     	;# 
+    52  001C                     	;# 
+    53  001D                     	;# 
+    54  001E                     	;# 
+    55  001F                     	;# 
+    56  0081                     	;# 
+    57  0085                     	;# 
+    58  0086                     	;# 
+    59  0087                     	;# 
+    60  0088                     	;# 
+    61  0089                     	;# 
+    62  008C                     	;# 
+    63  008D                     	;# 
+    64  008E                     	;# 
+    65  0091                     	;# 
+    66  0092                     	;# 
+    67  0093                     	;# 
+    68  0094                     	;# 
+    69  0098                     	;# 
+    70  0099                     	;# 
+    71  009C                     	;# 
+    72  009D                     	;# 
+    73  009E                     	;# 
+    74  009F                     	;# 
+    75  010C                     	;# 
+    76  010D                     	;# 
+    77  010E                     	;# 
+    78  010F                     	;# 
+    79  018C                     	;# 
+    80  018D                     	;# 
+    81  0000                     	;# 
+    82  0001                     	;# 
+    83  0002                     	;# 
+    84  0003                     	;# 
+    85  0004                     	;# 
+    86  0005                     	;# 
+    87  0006                     	;# 
+    88  0007                     	;# 
+    89  0008                     	;# 
+    90  0009                     	;# 
+    91  000A                     	;# 
+    92  000B                     	;# 
+    93  000C                     	;# 
+    94  000D                     	;# 
+    95  000E                     	;# 
+    96  000E                     	;# 
+    97  000F                     	;# 
+    98  0010                     	;# 
+    99  0011                     	;# 
+   100  0012                     	;# 
+   101  0013                     	;# 
+   102  0014                     	;# 
+   103  0015                     	;# 
+   104  0015                     	;# 
+   105  0016                     	;# 
+   106  0017                     	;# 
+   107  0018                     	;# 
+   108  0019                     	;# 
+   109  001A                     	;# 
+   110  001B                     	;# 
+   111  001B                     	;# 
+   112  001C                     	;# 
+   113  001D                     	;# 
+   114  001E                     	;# 
+   115  001F                     	;# 
+   116  0081                     	;# 
+   117  0085                     	;# 
+   118  0086                     	;# 
+   119  0087                     	;# 
+   120  0088                     	;# 
+   121  0089                     	;# 
+   122  008C                     	;# 
+   123  008D                     	;# 
+   124  008E                     	;# 
+   125  0091                     	;# 
+   126  0092                     	;# 
+   127  0093                     	;# 
+   128  0094                     	;# 
+   129  0098                     	;# 
+   130  0099                     	;# 
+   131  009C                     	;# 
+   132  009D                     	;# 
+   133  009E                     	;# 
+   134  009F                     	;# 
+   135  010C                     	;# 
+   136  010D                     	;# 
+   137  010E                     	;# 
+   138  010F                     	;# 
+   139  018C                     	;# 
+   140  018D                     	;# 
+   141  0000                     	;# 
+   142  0001                     	;# 
+   143  0002                     	;# 
+   144  0003                     	;# 
+   145  0004                     	;# 
+   146  0005                     	;# 
+   147  0006                     	;# 
+   148  0007                     	;# 
+   149  0008                     	;# 
+   150  0009                     	;# 
+   151  000A                     	;# 
+   152  000B                     	;# 
+   153  000C                     	;# 
+   154  000D                     	;# 
+   155  000E                     	;# 
+   156  000E                     	;# 
+   157  000F                     	;# 
+   158  0010                     	;# 
+   159  0011                     	;# 
+   160  0012                     	;# 
+   161  0013                     	;# 
+   162  0014                     	;# 
+   163  0015                     	;# 
+   164  0015                     	;# 
+   165  0016                     	;# 
+   166  0017                     	;# 
+   167  0018                     	;# 
+   168  0019                     	;# 
+   169  001A                     	;# 
+   170  001B                     	;# 
+   171  001B                     	;# 
+   172  001C                     	;# 
+   173  001D                     	;# 
+   174  001E                     	;# 
+   175  001F                     	;# 
+   176  0081                     	;# 
+   177  0085                     	;# 
+   178  0086                     	;# 
+   179  0087                     	;# 
+   180  0088                     	;# 
+   181  0089                     	;# 
+   182  008C                     	;# 
+   183  008D                     	;# 
+   184  008E                     	;# 
+   185  0091                     	;# 
+   186  0092                     	;# 
+   187  0093                     	;# 
+   188  0094                     	;# 
+   189  0098                     	;# 
+   190  0099                     	;# 
+   191  009C                     	;# 
+   192  009D                     	;# 
+   193  009E                     	;# 
+   194  009F                     	;# 
+   195  010C                     	;# 
+   196  010D                     	;# 
+   197  010E                     	;# 
+   198  010F                     	;# 
+   199  018C                     	;# 
+   200  018D                     	;# 
+   201  001F                     _ADCON0	set	31
+   202  001E                     _ADRESH	set	30
+   203  001A                     _RCREG	set	26
+   204  0018                     _RCSTA	set	24
+   205  0019                     _TXREG	set	25
+   206  00F8                     _ADON	set	248
+   207  00FA                     _GO	set	250
+   208  00FA                     _GO_DONE	set	250
+   209  0065                     _RCIF	set	101
+   210  0064                     _TXIF	set	100
+   211  009F                     _ADCON1	set	159
+   212  009E                     _ADRESL	set	158
+   213  0099                     _SPBRG	set	153
+   214  0087                     _TRISC	set	135
+   215  0098                     _TXSTA	set	152
+   216                           
+   217                           	psect	strings
+   218  0003                     __pstrings:	
+   219  0003                     stringtab:	
+   220  0003                     __stringtab:	
+   221  0003                     stringcode:	
+   222                           ;	String table - string pointers are 1 byte each
+   223                           
+   224  0003                     stringdir:	
+   225  0003  3000               	movlw	high stringdir
+   226  0004  008A               	movwf	10
+   227  0005  0804               	movf	4,w
+   228  0006  0A84               	incf	4,f
+   229  0007  0782               	addwf	2,f
+   230  0008                     __stringbase:	
+   231  0008  3400               	retlw	0
+   232  0009                     __end_of__stringtab:	
+   233  0009                     STR_1:	
+   234  0009  3441               	retlw	65	;'A'
+   235  000A  3444               	retlw	68	;'D'
+   236  000B  3443               	retlw	67	;'C'
+   237  000C  3430               	retlw	48	;'0'
+   238  000D  3420               	retlw	32	;' '
+   239  000E  3456               	retlw	86	;'V'
+   240  000F  3461               	retlw	97	;'a'
+   241  0010  346C               	retlw	108	;'l'
+   242  0011  3475               	retlw	117	;'u'
+   243  0012  3465               	retlw	101	;'e'
+   244  0013  343A               	retlw	58	;':'
+   245  0014  3425               	retlw	37	;'%'
+   246  0015  3434               	retlw	52	;'4'
+   247  0016  3464               	retlw	100	;'d'
+   248  0017  3420               	retlw	32	;' '
+   249  0018  340A               	retlw	10
+   250  0019  340D               	retlw	13
+   251  001A  3400               	retlw	0
+   252                           
+   253                           ; #config settings
+   254  0000                     
+   255                           	psect	cinit
+   256  07FC                     start_initialization:	
+   257  07FC                     __initialization:	
+   258  07FC                     end_of_initialization:	
+   259                           ;End of C runtime variable initialization code
+   260                           
+   261  07FC                     __end_of__initialization:	
+   262  07FC  0183               	clrf	3
+   263  07FD  120A  118A  2BE3   	ljmp	_main	;jump to C main() function
+   264                           
+   265                           	psect	cstackCOMMON
+   266  0070                     __pcstackCOMMON:	
+   267  0070                     ?_DELAY_us:	
+   268  0070                     ?_ADC_Init:	
+   269                           ; 1 bytes @ 0x0
+   270                           
+   271  0070                     ??_ADC_Init:	
+   272                           ; 1 bytes @ 0x0
+   273                           
+   274  0070                     ?_UART_TxChar:	
+   275                           ; 1 bytes @ 0x0
+   276                           
+   277  0070                     ??_UART_TxChar:	
+   278                           ; 1 bytes @ 0x0
+   279                           
+   280  0070                     ?_UART_TxString:	
+   281                           ; 1 bytes @ 0x0
+   282                           
+   283  0070                     ?_main:	
+   284                           ; 1 bytes @ 0x0
+   285                           
+   286  0070                     ?___lldiv:	
+   287                           ; 2 bytes @ 0x0
+   288                           
+   289  0070                     UART_TxChar@var_uartData_u8:	
+   290                           ; 4 bytes @ 0x0
+   291                           
+   292  0070                     DELAY_us@us_count:	
+   293                           ; 1 bytes @ 0x0
+   294                           
+   295  0070                     ___lldiv@divisor:	
+   296                           ; 2 bytes @ 0x0
+   297                           
+   298                           
+   299                           ; 4 bytes @ 0x0
+   300  0070                     	ds	1
+   301  0071                     ??_UART_TxString:	
+   302                           
+   303                           ; 1 bytes @ 0x1
+   304  0071                     	ds	1
+   305  0072                     ??_DELAY_us:	
+   306  0072                     ?_ADC_GetAdcValue:	
+   307                           ; 1 bytes @ 0x2
+   308                           
+   309  0072                     UART_TxString@ptr_string:	
+   310                           ; 2 bytes @ 0x2
+   311                           
+   312                           
+   313                           ; 1 bytes @ 0x2
+   314  0072                     	ds	2
+   315  0074                     ??_ADC_GetAdcValue:	
+   316  0074                     ___lldiv@dividend:	
+   317                           ; 1 bytes @ 0x4
+   318                           
+   319                           
+   320                           ; 4 bytes @ 0x4
+   321  0074                     	ds	1
+   322  0075                     ADC_GetAdcValue@var_adcChannel_u8:	
+   323                           
+   324                           ; 1 bytes @ 0x5
+   325  0075                     	ds	3
+   326  0078                     ??___lldiv:	
+   327                           
+   328                           ; 1 bytes @ 0x8
+   329  0078                     	ds	1
+   330  0079                     ___lldiv@quotient:	
+   331                           
+   332                           ; 4 bytes @ 0x9
+   333  0079                     	ds	4
+   334  007D                     ___lldiv@counter:	
+   335                           
+   336                           ; 1 bytes @ 0xD
+   337  007D                     	ds	1
+   338  007E                     ??_UART_Init:	
+   339  007E                     ??_main:	
+   340                           ; 1 bytes @ 0xE
+   341                           
+   342                           
+   343                           	psect	cstackBANK0
+   344  0020                     __pcstackBANK0:	
+   345                           ; 1 bytes @ 0xE
+   346                           
+   347  0020                     ?_UART_SetBaudRate:	
+   348  0020                     ?___bmul:	
+   349                           ; 1 bytes @ 0x0
+   350                           
+   351  0020                     ___bmul@multiplicand:	
+   352                           ; 1 bytes @ 0x0
+   353                           
+   354  0020                     UART_SetBaudRate@var_baudRate_u32:	
+   355                           ; 1 bytes @ 0x0
+   356                           
+   357                           
+   358                           ; 4 bytes @ 0x0
+   359  0020                     	ds	1
+   360  0021                     ??___bmul:	
+   361                           
+   362                           ; 1 bytes @ 0x1
+   363  0021                     	ds	1
+   364  0022                     ___bmul@product:	
+   365                           
+   366                           ; 1 bytes @ 0x2
+   367  0022                     	ds	1
+   368  0023                     ___bmul@multiplier:	
+   369                           
+   370                           ; 1 bytes @ 0x3
+   371  0023                     	ds	1
+   372  0024                     ??_UART_SetBaudRate:	
+   373  0024                     ?_UART_TxNumber:	
+   374                           ; 1 bytes @ 0x4
+   375                           
+   376  0024                     UART_TxNumber@v_number_u32:	
+   377                           ; 1 bytes @ 0x4
+   378                           
+   379                           
+   380                           ; 4 bytes @ 0x4
+   381  0024                     	ds	4
+   382  0028                     UART_TxNumber@v_numOfDigitsToTransmit_u8:	
+   383                           
+   384                           ; 1 bytes @ 0x8
+   385  0028                     	ds	1
+   386  0029                     ??_UART_TxNumber:	
+   387                           
+   388                           ; 1 bytes @ 0x9
+   389  0029                     	ds	3
+   390  002C                     UART_SetBaudRate@RegValue:	
+   391                           
+   392                           ; 4 bytes @ 0xC
+   393  002C                     	ds	4
+   394  0030                     ?_UART_Init:	
+   395  0030                     UART_Init@var_baudRate_u32:	
+   396                           ; 1 bytes @ 0x10
+   397                           
+   398                           
+   399                           ; 4 bytes @ 0x10
+   400  0030                     	ds	5
+   401  0035                     UART_TxNumber@a:	
+   402                           
+   403                           ; 10 bytes @ 0x15
+   404  0035                     	ds	10
+   405  003F                     _UART_TxNumber$79:	
+   406                           
+   407                           ; 2 bytes @ 0x1F
+   408  003F                     	ds	2
+   409  0041                     UART_TxNumber@v_numericSystem_u8:	
+   410                           
+   411                           ; 1 bytes @ 0x21
+   412  0041                     	ds	1
+   413  0042                     UART_TxNumber@i:	
+   414                           
+   415                           ; 1 bytes @ 0x22
+   416  0042                     	ds	1
+   417  0043                     ?_UART_Printf:	
+   418                           
+   419                           ; 1 bytes @ 0x23
+   420  0043                     	ds	2
+   421  0045                     ??_UART_Printf:	
+   422                           
+   423                           ; 1 bytes @ 0x25
+   424  0045                     	ds	2
+   425  0047                     UART_Printf@str:	
+   426                           
+   427                           ; 1 bytes @ 0x27
+   428  0047                     	ds	1
+   429  0048                     UART_Printf@argList:	
+   430                           
+   431                           ; 1 bytes @ 0x28
+   432  0048                     	ds	1
+   433  0049                     UART_Printf@v_num_s32:	
+   434                           
+   435                           ; 4 bytes @ 0x29
+   436  0049                     	ds	4
+   437  004D                     UART_Printf@v_num_s16:	
+   438                           
+   439                           ; 2 bytes @ 0x2D
+   440  004D                     	ds	2
+   441  004F                     UART_Printf@v_num_u32:	
+   442                           
+   443                           ; 4 bytes @ 0x2F
+   444  004F                     	ds	4
+   445  0053                     UART_Printf@v_num_u16:	
+   446                           
+   447                           ; 2 bytes @ 0x33
+   448  0053                     	ds	2
+   449  0055                     UART_Printf@ptr:	
+   450                           
+   451                           ; 1 bytes @ 0x35
+   452  0055                     	ds	1
+   453  0056                     UART_Printf@ch:	
+   454                           
+   455                           ; 1 bytes @ 0x36
+   456  0056                     	ds	1
+   457  0057                     UART_Printf@v_numOfDigitsToTransmit_u8:	
+   458                           
+   459                           ; 1 bytes @ 0x37
+   460  0057                     	ds	1
+   461  0058                     UART_Printf@argp:	
+   462                           
+   463                           ; 1 bytes @ 0x38
+   464  0058                     	ds	1
+   465  0059                     main@adcValue:	
+   466                           
+   467                           ; 2 bytes @ 0x39
+   468  0059                     	ds	2
+   469                           
+   470                           	psect	maintext
+   471  03E3                     __pmaintext:	
+   472 ;;
+   473 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   474 ;;
+   475 ;; *************** function _main *****************
+   476 ;; Defined at:
+   477 ;;		line 41 in file "main.c"
+   478 ;; Parameters:    Size  Location     Type
+   479 ;;		None
+   480 ;; Auto vars:     Size  Location     Type
+   481 ;;  adcValue        2   57[BANK0 ] int 
+   482 ;; Return value:  Size  Location     Type
+   483 ;;                  2  174[None  ] int 
+   484 ;; Registers used:
+   485 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   486 ;; Tracked objects:
+   487 ;;		On entry : B00/0
+   488 ;;		On exit  : 0/0
+   489 ;;		Unchanged: 0/0
+   490 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   491 ;;      Params:         0       0       0       0       0
+   492 ;;      Locals:         0       2       0       0       0
+   493 ;;      Temps:          0       0       0       0       0
+   494 ;;      Totals:         0       2       0       0       0
+   495 ;;Total ram usage:        2 bytes
+   496 ;; Hardware stack levels required when called:    3
+   497 ;; This function calls:
+   498 ;;		_ADC_GetAdcValue
+   499 ;;		_ADC_Init
+   500 ;;		_UART_Init
+   501 ;;		_UART_Printf
+   502 ;; This function is called by:
+   503 ;;		Startup code after reset
+   504 ;; This function uses a non-reentrant model
+   505 ;;
+   506                           
+   507                           
+   508                           ;psect for function _main
+   509  03E3                     _main:	
+   510                           
+   511                           ;main.c: 43: int adcValue;
+   512                           ;main.c: 45: ADC_Init();
+   513                           
+   514                           ;incstack = 0
+   515                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   516  03E3  120A  118A  2365  120A  118A  	fcall	_ADC_Init
+   517                           
+   518                           ;main.c: 46: UART_Init(9600);
+   519  03E8  3000               	movlw	0
+   520  03E9  1283               	bcf	3,5	;RP0=0, select bank0
+   521  03EA  1303               	bcf	3,6	;RP1=0, select bank0
+   522  03EB  00B3               	movwf	UART_Init@var_baudRate_u32+3
+   523  03EC  3000               	movlw	0
+   524  03ED  00B2               	movwf	UART_Init@var_baudRate_u32+2
+   525  03EE  3025               	movlw	37
+   526  03EF  00B1               	movwf	UART_Init@var_baudRate_u32+1
+   527  03F0  3080               	movlw	128
+   528  03F1  00B0               	movwf	UART_Init@var_baudRate_u32
+   529  03F2  120A  118A  23A9  120A  118A  	fcall	_UART_Init
+   530  03F7                     l175:	
+   531                           ;main.c: 48: while(1)
+   532                           
+   533                           
+   534                           ;main.c: 49: {
+   535                           ;main.c: 50: adcValue = ADC_GetAdcValue(0);
+   536  03F7  3000               	movlw	0
+   537  03F8  120A  118A  23BF  120A  118A  	fcall	_ADC_GetAdcValue
+   538  03FD  0873               	movf	?_ADC_GetAdcValue+1,w
+   539  03FE  1283               	bcf	3,5	;RP0=0, select bank0
+   540  03FF  1303               	bcf	3,6	;RP1=0, select bank0
+   541  0400  00DA               	movwf	main@adcValue+1
+   542  0401  0872               	movf	?_ADC_GetAdcValue,w
+   543  0402  00D9               	movwf	main@adcValue
+   544                           
+   545                           ;main.c: 51: UART_Printf("ADC0 Value:%4d \n\r",adcValue);
+   546  0403  085A               	movf	main@adcValue+1,w
+   547  0404  00C4               	movwf	?_UART_Printf+1
+   548  0405  0859               	movf	main@adcValue,w
+   549  0406  00C3               	movwf	?_UART_Printf
+   550  0407  3001               	movlw	(low ((STR_1-__stringbase)| (0+32768)))& (0+255)
+   551  0408  120A  118A  25E7  120A  118A  	fcall	_UART_Printf
+   552  040D  2BF7               	goto	l175
+   553  040E                     __end_of_main:	
+   554                           ;main.c: 52: }
+   555                           ;main.c: 54: return (0);
+   556                           ;	Return value of _main is never used
+   557                           
+   558                           
+   559                           	psect	text1
+   560  05E7                     __ptext1:	
+   561 ;; *************** function _UART_Printf *****************
+   562 ;; Defined at:
+   563 ;;		line 410 in file "../00-libfiles/uart.c"
+   564 ;; Parameters:    Size  Location     Type
+   565 ;;  argList         1    wreg     PTR const unsigned char 
+   566 ;;		 -> STR_1(18), 
+   567 ;; Auto vars:     Size  Location     Type
+   568 ;;  argList         1   40[BANK0 ] PTR const unsigned char 
+   569 ;;		 -> STR_1(18), 
+   570 ;;  v_num_u32       4   47[BANK0 ] unsigned long 
+   571 ;;  v_num_s32       4   41[BANK0 ] long 
+   572 ;;  v_num_u16       2   51[BANK0 ] unsigned int 
+   573 ;;  v_num_s16       2   45[BANK0 ] int 
+   574 ;;  argp            1   56[BANK0 ] PTR void [1]
+   575 ;;		 -> ?_UART_Printf(1), 
+   576 ;;  v_numOfDigit    1   55[BANK0 ] unsigned char 
+   577 ;;  ch              1   54[BANK0 ] unsigned char 
+   578 ;;  ptr             1   53[BANK0 ] PTR const unsigned char 
+   579 ;;		 -> STR_1(18), 
+   580 ;;  str             1   39[BANK0 ] PTR unsigned char 
+   581 ;; Return value:  Size  Location     Type
+   582 ;;                  1    wreg      void 
+   583 ;; Registers used:
+   584 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   585 ;; Tracked objects:
+   586 ;;		On entry : 0/0
+   587 ;;		On exit  : 0/0
+   588 ;;		Unchanged: 0/0
+   589 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   590 ;;      Params:         0       2       0       0       0
+   591 ;;      Locals:         0      18       0       0       0
+   592 ;;      Temps:          0       2       0       0       0
+   593 ;;      Totals:         0      22       0       0       0
+   594 ;;Total ram usage:       22 bytes
+   595 ;; Hardware stack levels used:    1
+   596 ;; Hardware stack levels required when called:    2
+   597 ;; This function calls:
+   598 ;;		_UART_TxChar
+   599 ;;		_UART_TxNumber
+   600 ;;		_UART_TxString
+   601 ;;		___bmul
+   602 ;; This function is called by:
+   603 ;;		_main
+   604 ;; This function uses a non-reentrant model
+   605 ;;
+   606                           
+   607                           
+   608                           ;psect for function _UART_Printf
+   609  05E7                     _UART_Printf:	
+   610                           
+   611                           ;incstack = 0
+   612                           ; Regs used in _UART_Printf: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   613                           ;UART_Printf@argList stored from wreg
+   614  05E7  1283               	bcf	3,5	;RP0=0, select bank0
+   615  05E8  1303               	bcf	3,6	;RP1=0, select bank0
+   616  05E9  00C8               	movwf	UART_Printf@argList
+   617                           
+   618                           ;uart.c: 412: const char *ptr;
+   619                           ;uart.c: 413: va_list argp;
+   620                           ;uart.c: 414: sint16_t v_num_s16;
+   621                           ;uart.c: 415: sint32_t v_num_s32;
+   622                           ;uart.c: 416: uint16_t v_num_u16;
+   623                           ;uart.c: 417: uint32_t v_num_u32;
+   624                           ;uart.c: 418: char *str;
+   625                           ;uart.c: 419: char ch;
+   626                           ;uart.c: 420: uint8_t v_numOfDigitsToTransmit_u8;
+   627                           ;uart.c: 426: *argp = __va_start();
+   628  05EA  3043               	movlw	(low (?_UART_Printf| 0))& (0+255)
+   629  05EB  00C5               	movwf	??_UART_Printf
+   630  05EC  0845               	movf	??_UART_Printf,w
+   631  05ED  00D8               	movwf	UART_Printf@argp
+   632                           
+   633                           ;uart.c: 429: for(ptr = argList; *ptr != '\0'; ptr++)
+   634  05EE  0848               	movf	UART_Printf@argList,w
+   635  05EF  00C5               	movwf	??_UART_Printf
+   636  05F0  0845               	movf	??_UART_Printf,w
+   637  05F1  00D5               	movwf	UART_Printf@ptr
+   638  05F2                     l1198:	
+   639  05F2  0855               	movf	UART_Printf@ptr,w
+   640  05F3  0084               	movwf	4
+   641  05F4  120A  118A  2003  120A  118A  	fcall	stringdir
+   642  05F9  3A00               	xorlw	0
+   643  05FA  1903               	btfsc	3,2
+   644  05FB  0008               	return
+   645                           
+   646                           ;uart.c: 430: {
+   647                           ;uart.c: 432: ch= *ptr;
+   648  05FC  0855               	movf	UART_Printf@ptr,w
+   649  05FD  0084               	movwf	4
+   650  05FE  120A  118A  2003  120A  118A  	fcall	stringdir
+   651  0603  00C5               	movwf	??_UART_Printf
+   652  0604  0845               	movf	??_UART_Printf,w
+   653  0605  00D6               	movwf	UART_Printf@ch
+   654                           
+   655                           ;uart.c: 433: if(ch == '%')
+   656  0606  3025               	movlw	37
+   657  0607  0656               	xorwf	UART_Printf@ch,w
+   658  0608  1D03               	btfss	3,2
+   659  0609  2FEF               	goto	l1194
+   660                           
+   661                           ;uart.c: 434: {
+   662                           ;uart.c: 435: ptr++;
+   663  060A  3001               	movlw	1
+   664  060B  00C5               	movwf	??_UART_Printf
+   665  060C  0845               	movf	??_UART_Printf,w
+   666  060D  07D5               	addwf	UART_Printf@ptr,f
+   667                           
+   668                           ;uart.c: 436: ch = *ptr;
+   669  060E  0855               	movf	UART_Printf@ptr,w
+   670  060F  0084               	movwf	4
+   671  0610  120A  118A  2003  120A  118A  	fcall	stringdir
+   672  0615  00C5               	movwf	??_UART_Printf
+   673  0616  0845               	movf	??_UART_Printf,w
+   674  0617  00D6               	movwf	UART_Printf@ch
+   675                           
+   676                           ;uart.c: 437: if((ch>=0x30) && (ch<=0x39))
+   677  0618  3030               	movlw	48
+   678  0619  0256               	subwf	UART_Printf@ch,w
+   679  061A  1C03               	skipc
+   680  061B  2E49               	goto	l1106
+   681  061C  303A               	movlw	58
+   682  061D  0256               	subwf	UART_Printf@ch,w
+   683  061E  1803               	skipnc
+   684  061F  2E49               	goto	l1106
+   685                           
+   686                           ;uart.c: 438: {
+   687                           ;uart.c: 439: v_numOfDigitsToTransmit_u8 = 0;
+   688  0620  01D7               	clrf	UART_Printf@v_numOfDigitsToTransmit_u8
+   689  0621                     l1102:	
+   690                           ;uart.c: 440: while((ch>=0x30) && (ch<=0x39))
+   691                           
+   692  0621  3030               	movlw	48
+   693  0622  0256               	subwf	UART_Printf@ch,w
+   694  0623  1C03               	skipc
+   695  0624  2FBD               	goto	l1192
+   696  0625  303A               	movlw	58
+   697  0626  0256               	subwf	UART_Printf@ch,w
+   698  0627  1803               	btfsc	3,0
+   699  0628  2FBD               	goto	l1192
+   700                           
+   701                           ;uart.c: 441: {
+   702                           ;uart.c: 442: v_numOfDigitsToTransmit_u8 = (v_numOfDigitsToTransmit_u8 * 10) + (ch-0x30)
+      +                          ;
+   703  0629  300A               	movlw	10
+   704  062A  00C5               	movwf	??_UART_Printf
+   705  062B  0845               	movf	??_UART_Printf,w
+   706  062C  00A0               	movwf	___bmul@multiplicand
+   707  062D  0857               	movf	UART_Printf@v_numOfDigitsToTransmit_u8,w
+   708  062E  120A  118A  2381  120A  118A  	fcall	___bmul
+   709  0633  1283               	bcf	3,5	;RP0=0, select bank0
+   710  0634  1303               	bcf	3,6	;RP1=0, select bank0
+   711  0635  0756               	addwf	UART_Printf@ch,w
+   712  0636  3ED0               	addlw	208
+   713  0637  00C6               	movwf	??_UART_Printf+1
+   714  0638  0846               	movf	??_UART_Printf+1,w
+   715  0639  00D7               	movwf	UART_Printf@v_numOfDigitsToTransmit_u8
+   716                           
+   717                           ;uart.c: 443: ptr++;
+   718  063A  3001               	movlw	1
+   719  063B  00C5               	movwf	??_UART_Printf
+   720  063C  0845               	movf	??_UART_Printf,w
+   721  063D  07D5               	addwf	UART_Printf@ptr,f
+   722                           
+   723                           ;uart.c: 444: ch = *ptr;
+   724  063E  0855               	movf	UART_Printf@ptr,w
+   725  063F  0084               	movwf	4
+   726  0640  120A  118A  2003  120A  118A  	fcall	stringdir
+   727  0645  00C5               	movwf	??_UART_Printf
+   728  0646  0845               	movf	??_UART_Printf,w
+   729  0647  00D6               	movwf	UART_Printf@ch
+   730  0648  2E21               	goto	l1102
+   731  0649                     l1106:	
+   732                           ;uart.c: 445: }
+   733                           ;uart.c: 446: }
+   734                           
+   735                           
+   736                           ;uart.c: 447: else
+   737                           ;uart.c: 448: {
+   738                           ;uart.c: 449: v_numOfDigitsToTransmit_u8 = 0xffu;
+   739  0649  30FF               	movlw	255
+   740  064A  00C5               	movwf	??_UART_Printf
+   741  064B  0845               	movf	??_UART_Printf,w
+   742  064C  00D7               	movwf	UART_Printf@v_numOfDigitsToTransmit_u8
+   743                           
+   744                           ;uart.c: 450: }
+   745                           ;uart.c: 453: switch(ch)
+   746  064D  2FBD               	goto	l1192
+   747  064E                     l1108:	
+   748                           ;uart.c: 454: {
+   749                           ;uart.c: 455: case 'C':
+   750                           
+   751                           
+   752                           ;uart.c: 456: case 'c':
+   753                           ;uart.c: 457: ch = (*(uint8_t *)__va_arg((*(uint8_t **)argp), (uint8_t)0));
+   754  064E  0858               	movf	UART_Printf@argp,w
+   755  064F  0084               	movwf	4
+   756  0650  1383               	bcf	3,7	;select IRP bank0
+   757  0651  0800               	movf	0,w
+   758  0652  00C5               	movwf	??_UART_Printf
+   759  0653  0845               	movf	??_UART_Printf,w
+   760  0654  00D6               	movwf	UART_Printf@ch
+   761  0655  3002               	movlw	2
+   762  0656  00C5               	movwf	??_UART_Printf
+   763  0657  0845               	movf	??_UART_Printf,w
+   764  0658  07D8               	addwf	UART_Printf@argp,f
+   765  0659  2FEF               	goto	l1194
+   766  065A                     l1114:	
+   767                           ;uart.c: 461: case 'd':
+   768                           
+   769                           ;uart.c: 459: break;
+   770                           
+   771                           ;uart.c: 458: UART_TxChar(ch);
+   772                           
+   773                           
+   774                           ;uart.c: 462: v_num_s16 = (*(sint16_t *)__va_arg((*(sint16_t **)argp), (sint16_t)0));
+   775  065A  1283               	bcf	3,5	;RP0=0, select bank0
+   776  065B  1303               	bcf	3,6	;RP1=0, select bank0
+   777  065C  0858               	movf	UART_Printf@argp,w
+   778  065D  0084               	movwf	4
+   779  065E  1383               	bcf	3,7	;select IRP bank0
+   780  065F  0800               	movf	0,w
+   781  0660  00CD               	movwf	UART_Printf@v_num_s16
+   782  0661  0A84               	incf	4,f
+   783  0662  0800               	movf	0,w
+   784  0663  00CE               	movwf	UART_Printf@v_num_s16+1
+   785  0664  3002               	movlw	2
+   786  0665  00C5               	movwf	??_UART_Printf
+   787  0666  0845               	movf	??_UART_Printf,w
+   788  0667  07D8               	addwf	UART_Printf@argp,f
+   789                           
+   790                           ;uart.c: 463: if(v_num_s16<0)
+   791  0668  1FCE               	btfss	UART_Printf@v_num_s16+1,7
+   792  0669  2E75               	goto	l1124
+   793                           
+   794                           ;uart.c: 464: {
+   795                           ;uart.c: 465: v_num_s16 = -v_num_s16;
+   796  066A  09CD               	comf	UART_Printf@v_num_s16,f
+   797  066B  09CE               	comf	UART_Printf@v_num_s16+1,f
+   798  066C  0ACD               	incf	UART_Printf@v_num_s16,f
+   799  066D  1903               	skipnz
+   800  066E  0ACE               	incf	UART_Printf@v_num_s16+1,f
+   801                           
+   802                           ;uart.c: 466: UART_TxChar('-');
+   803  066F  302D               	movlw	45
+   804  0670  120A  118A  236D  120A  118A  	fcall	_UART_TxChar
+   805  0675                     l1124:	
+   806                           
+   807                           ;uart.c: 467: }
+   808                           ;uart.c: 468: UART_TxNumber(10u,v_num_s16,v_numOfDigitsToTransmit_u8);
+   809  0675  1283               	bcf	3,5	;RP0=0, select bank0
+   810  0676  1303               	bcf	3,6	;RP1=0, select bank0
+   811  0677  084D               	movf	UART_Printf@v_num_s16,w
+   812  0678  00A4               	movwf	UART_TxNumber@v_number_u32
+   813  0679  084E               	movf	UART_Printf@v_num_s16+1,w
+   814  067A  00A5               	movwf	UART_TxNumber@v_number_u32+1
+   815  067B  3000               	movlw	0
+   816  067C  1BA5               	btfsc	UART_TxNumber@v_number_u32+1,7
+   817  067D  30FF               	movlw	255
+   818  067E  00A6               	movwf	UART_TxNumber@v_number_u32+2
+   819  067F  00A7               	movwf	UART_TxNumber@v_number_u32+3
+   820  0680  0857               	movf	UART_Printf@v_numOfDigitsToTransmit_u8,w
+   821  0681  00C5               	movwf	??_UART_Printf
+   822  0682  0845               	movf	??_UART_Printf,w
+   823  0683  00A8               	movwf	UART_TxNumber@v_numOfDigitsToTransmit_u8
+   824  0684  300A               	movlw	10
+   825  0685  120A  118A  24E6  120A  118A  	fcall	_UART_TxNumber
+   826                           
+   827                           ;uart.c: 469: break;
+   828  068A  2FF5               	goto	l1196
+   829  068B                     l1126:	
+   830                           ;uart.c: 471: case 'D':
+   831                           
+   832                           
+   833                           ;uart.c: 472: v_num_s32 = (*(sint32_t *)__va_arg((*(sint32_t **)argp), (sint32_t)0));
+   834  068B  1283               	bcf	3,5	;RP0=0, select bank0
+   835  068C  1303               	bcf	3,6	;RP1=0, select bank0
+   836  068D  0858               	movf	UART_Printf@argp,w
+   837  068E  0084               	movwf	4
+   838  068F  1383               	bcf	3,7	;select IRP bank0
+   839  0690  0800               	movf	0,w
+   840  0691  00C9               	movwf	UART_Printf@v_num_s32
+   841  0692  0A84               	incf	4,f
+   842  0693  0800               	movf	0,w
+   843  0694  00CA               	movwf	UART_Printf@v_num_s32+1
+   844  0695  0A84               	incf	4,f
+   845  0696  0800               	movf	0,w
+   846  0697  00CB               	movwf	UART_Printf@v_num_s32+2
+   847  0698  0A84               	incf	4,f
+   848  0699  0800               	movf	0,w
+   849  069A  00CC               	movwf	UART_Printf@v_num_s32+3
+   850  069B  3004               	movlw	4
+   851  069C  00C5               	movwf	??_UART_Printf
+   852  069D  0845               	movf	??_UART_Printf,w
+   853  069E  07D8               	addwf	UART_Printf@argp,f
+   854                           
+   855                           ;uart.c: 473: if(v_num_s32<0)
+   856  069F  1FCC               	btfss	UART_Printf@v_num_s32+3,7
+   857  06A0  2EB2               	goto	l1136
+   858                           
+   859                           ;uart.c: 474: {
+   860                           ;uart.c: 475: v_num_s32 = -v_num_s32;
+   861  06A1  09C9               	comf	UART_Printf@v_num_s32,f
+   862  06A2  09CA               	comf	UART_Printf@v_num_s32+1,f
+   863  06A3  09CB               	comf	UART_Printf@v_num_s32+2,f
+   864  06A4  09CC               	comf	UART_Printf@v_num_s32+3,f
+   865  06A5  0AC9               	incf	UART_Printf@v_num_s32,f
+   866  06A6  1903               	skipnz
+   867  06A7  0ACA               	incf	UART_Printf@v_num_s32+1,f
+   868  06A8  1903               	skipnz
+   869  06A9  0ACB               	incf	UART_Printf@v_num_s32+2,f
+   870  06AA  1903               	skipnz
+   871  06AB  0ACC               	incf	UART_Printf@v_num_s32+3,f
+   872                           
+   873                           ;uart.c: 476: UART_TxChar('-');
+   874  06AC  302D               	movlw	45
+   875  06AD  120A  118A  236D  120A  118A  	fcall	_UART_TxChar
+   876  06B2                     l1136:	
+   877                           
+   878                           ;uart.c: 477: }
+   879                           ;uart.c: 478: UART_TxNumber(10u,v_num_s32,v_numOfDigitsToTransmit_u8);
+   880  06B2  1283               	bcf	3,5	;RP0=0, select bank0
+   881  06B3  1303               	bcf	3,6	;RP1=0, select bank0
+   882  06B4  084C               	movf	UART_Printf@v_num_s32+3,w
+   883  06B5  00A7               	movwf	UART_TxNumber@v_number_u32+3
+   884  06B6  084B               	movf	UART_Printf@v_num_s32+2,w
+   885  06B7  00A6               	movwf	UART_TxNumber@v_number_u32+2
+   886  06B8  084A               	movf	UART_Printf@v_num_s32+1,w
+   887  06B9  00A5               	movwf	UART_TxNumber@v_number_u32+1
+   888  06BA  0849               	movf	UART_Printf@v_num_s32,w
+   889  06BB  00A4               	movwf	UART_TxNumber@v_number_u32
+   890  06BC  0857               	movf	UART_Printf@v_numOfDigitsToTransmit_u8,w
+   891  06BD  00C5               	movwf	??_UART_Printf
+   892  06BE  0845               	movf	??_UART_Printf,w
+   893  06BF  00A8               	movwf	UART_TxNumber@v_numOfDigitsToTransmit_u8
+   894  06C0  300A               	movlw	10
+   895  06C1  120A  118A  24E6  120A  118A  	fcall	_UART_TxNumber
+   896                           
+   897                           ;uart.c: 479: break;
+   898  06C6  2FF5               	goto	l1196
+   899  06C7                     l1138:	
+   900                           ;uart.c: 481: case 'u':
+   901                           
+   902                           
+   903                           ;uart.c: 482: v_num_u16 = (*(uint16_t *)__va_arg((*(uint16_t **)argp), (uint16_t)0));
+   904  06C7  1283               	bcf	3,5	;RP0=0, select bank0
+   905  06C8  1303               	bcf	3,6	;RP1=0, select bank0
+   906  06C9  0858               	movf	UART_Printf@argp,w
+   907  06CA  0084               	movwf	4
+   908  06CB  1383               	bcf	3,7	;select IRP bank0
+   909  06CC  0800               	movf	0,w
+   910  06CD  00D3               	movwf	UART_Printf@v_num_u16
+   911  06CE  0A84               	incf	4,f
+   912  06CF  0800               	movf	0,w
+   913  06D0  00D4               	movwf	UART_Printf@v_num_u16+1
+   914  06D1  3002               	movlw	2
+   915  06D2  00C5               	movwf	??_UART_Printf
+   916  06D3  0845               	movf	??_UART_Printf,w
+   917  06D4  07D8               	addwf	UART_Printf@argp,f
+   918                           
+   919                           ;uart.c: 483: UART_TxNumber(10u,v_num_u16,v_numOfDigitsToTransmit_u8);
+   920  06D5  0853               	movf	UART_Printf@v_num_u16,w
+   921  06D6  00A4               	movwf	UART_TxNumber@v_number_u32
+   922  06D7  0854               	movf	UART_Printf@v_num_u16+1,w
+   923  06D8  00A5               	movwf	UART_TxNumber@v_number_u32+1
+   924  06D9  01A6               	clrf	UART_TxNumber@v_number_u32+2
+   925  06DA  01A7               	clrf	UART_TxNumber@v_number_u32+3
+   926  06DB  0857               	movf	UART_Printf@v_numOfDigitsToTransmit_u8,w
+   927  06DC  00C5               	movwf	??_UART_Printf
+   928  06DD  0845               	movf	??_UART_Printf,w
+   929  06DE  00A8               	movwf	UART_TxNumber@v_numOfDigitsToTransmit_u8
+   930  06DF  300A               	movlw	10
+   931  06E0  120A  118A  24E6  120A  118A  	fcall	_UART_TxNumber
+   932                           
+   933                           ;uart.c: 484: break;
+   934  06E5  2FF5               	goto	l1196
+   935  06E6                     l1144:	
+   936                           ;uart.c: 486: case 'U':
+   937                           
+   938                           
+   939                           ;uart.c: 487: v_num_u32 = (*(uint32_t *)__va_arg((*(uint32_t **)argp), (uint32_t)0));
+   940  06E6  1283               	bcf	3,5	;RP0=0, select bank0
+   941  06E7  1303               	bcf	3,6	;RP1=0, select bank0
+   942  06E8  0858               	movf	UART_Printf@argp,w
+   943  06E9  0084               	movwf	4
+   944  06EA  1383               	bcf	3,7	;select IRP bank0
+   945  06EB  0800               	movf	0,w
+   946  06EC  00CF               	movwf	UART_Printf@v_num_u32
+   947  06ED  0A84               	incf	4,f
+   948  06EE  0800               	movf	0,w
+   949  06EF  00D0               	movwf	UART_Printf@v_num_u32+1
+   950  06F0  0A84               	incf	4,f
+   951  06F1  0800               	movf	0,w
+   952  06F2  00D1               	movwf	UART_Printf@v_num_u32+2
+   953  06F3  0A84               	incf	4,f
+   954  06F4  0800               	movf	0,w
+   955  06F5  00D2               	movwf	UART_Printf@v_num_u32+3
+   956  06F6  3004               	movlw	4
+   957  06F7  00C5               	movwf	??_UART_Printf
+   958  06F8  0845               	movf	??_UART_Printf,w
+   959  06F9  07D8               	addwf	UART_Printf@argp,f
+   960                           
+   961                           ;uart.c: 488: UART_TxNumber(10u,v_num_u32,v_numOfDigitsToTransmit_u8);
+   962  06FA  0852               	movf	UART_Printf@v_num_u32+3,w
+   963  06FB  00A7               	movwf	UART_TxNumber@v_number_u32+3
+   964  06FC  0851               	movf	UART_Printf@v_num_u32+2,w
+   965  06FD  00A6               	movwf	UART_TxNumber@v_number_u32+2
+   966  06FE  0850               	movf	UART_Printf@v_num_u32+1,w
+   967  06FF  00A5               	movwf	UART_TxNumber@v_number_u32+1
+   968  0700  084F               	movf	UART_Printf@v_num_u32,w
+   969  0701  00A4               	movwf	UART_TxNumber@v_number_u32
+   970  0702  0857               	movf	UART_Printf@v_numOfDigitsToTransmit_u8,w
+   971  0703  00C5               	movwf	??_UART_Printf
+   972  0704  0845               	movf	??_UART_Printf,w
+   973  0705  00A8               	movwf	UART_TxNumber@v_numOfDigitsToTransmit_u8
+   974  0706  300A               	movlw	10
+   975  0707  120A  118A  24E6  120A  118A  	fcall	_UART_TxNumber
+   976                           
+   977                           ;uart.c: 489: break;
+   978  070C  2FF5               	goto	l1196
+   979  070D                     l1150:	
+   980                           ;uart.c: 491: case 'x':
+   981                           
+   982                           
+   983                           ;uart.c: 492: v_num_u16 = (*(uint16_t *)__va_arg((*(uint16_t **)argp), (uint16_t)0));
+   984  070D  1283               	bcf	3,5	;RP0=0, select bank0
+   985  070E  1303               	bcf	3,6	;RP1=0, select bank0
+   986  070F  0858               	movf	UART_Printf@argp,w
+   987  0710  0084               	movwf	4
+   988  0711  1383               	bcf	3,7	;select IRP bank0
+   989  0712  0800               	movf	0,w
+   990  0713  00D3               	movwf	UART_Printf@v_num_u16
+   991  0714  0A84               	incf	4,f
+   992  0715  0800               	movf	0,w
+   993  0716  00D4               	movwf	UART_Printf@v_num_u16+1
+   994  0717  3002               	movlw	2
+   995  0718  00C5               	movwf	??_UART_Printf
+   996  0719  0845               	movf	??_UART_Printf,w
+   997  071A  07D8               	addwf	UART_Printf@argp,f
+   998                           
+   999                           ;uart.c: 493: UART_TxNumber(16u,v_num_u16,v_numOfDigitsToTransmit_u8);
+  1000  071B  0853               	movf	UART_Printf@v_num_u16,w
+  1001  071C  00A4               	movwf	UART_TxNumber@v_number_u32
+  1002  071D  0854               	movf	UART_Printf@v_num_u16+1,w
+  1003  071E  00A5               	movwf	UART_TxNumber@v_number_u32+1
+  1004  071F  01A6               	clrf	UART_TxNumber@v_number_u32+2
+  1005  0720  01A7               	clrf	UART_TxNumber@v_number_u32+3
+  1006  0721  0857               	movf	UART_Printf@v_numOfDigitsToTransmit_u8,w
+  1007  0722  00C5               	movwf	??_UART_Printf
+  1008  0723  0845               	movf	??_UART_Printf,w
+  1009  0724  00A8               	movwf	UART_TxNumber@v_numOfDigitsToTransmit_u8
+  1010  0725  3010               	movlw	16
+  1011  0726  120A  118A  24E6  120A  118A  	fcall	_UART_TxNumber
+  1012                           
+  1013                           ;uart.c: 494: break;
+  1014  072B  2FF5               	goto	l1196
+  1015  072C                     l1156:	
+  1016                           ;uart.c: 496: case 'X':
+  1017                           
+  1018                           
+  1019                           ;uart.c: 497: v_num_u32 = (*(uint32_t *)__va_arg((*(uint32_t **)argp), (uint32_t)0));
+  1020  072C  1283               	bcf	3,5	;RP0=0, select bank0
+  1021  072D  1303               	bcf	3,6	;RP1=0, select bank0
+  1022  072E  0858               	movf	UART_Printf@argp,w
+  1023  072F  0084               	movwf	4
+  1024  0730  1383               	bcf	3,7	;select IRP bank0
+  1025  0731  0800               	movf	0,w
+  1026  0732  00CF               	movwf	UART_Printf@v_num_u32
+  1027  0733  0A84               	incf	4,f
+  1028  0734  0800               	movf	0,w
+  1029  0735  00D0               	movwf	UART_Printf@v_num_u32+1
+  1030  0736  0A84               	incf	4,f
+  1031  0737  0800               	movf	0,w
+  1032  0738  00D1               	movwf	UART_Printf@v_num_u32+2
+  1033  0739  0A84               	incf	4,f
+  1034  073A  0800               	movf	0,w
+  1035  073B  00D2               	movwf	UART_Printf@v_num_u32+3
+  1036  073C  3004               	movlw	4
+  1037  073D  00C5               	movwf	??_UART_Printf
+  1038  073E  0845               	movf	??_UART_Printf,w
+  1039  073F  07D8               	addwf	UART_Printf@argp,f
+  1040                           
+  1041                           ;uart.c: 498: UART_TxNumber(16u,v_num_u32,v_numOfDigitsToTransmit_u8);
+  1042  0740  0852               	movf	UART_Printf@v_num_u32+3,w
+  1043  0741  00A7               	movwf	UART_TxNumber@v_number_u32+3
+  1044  0742  0851               	movf	UART_Printf@v_num_u32+2,w
+  1045  0743  00A6               	movwf	UART_TxNumber@v_number_u32+2
+  1046  0744  0850               	movf	UART_Printf@v_num_u32+1,w
+  1047  0745  00A5               	movwf	UART_TxNumber@v_number_u32+1
+  1048  0746  084F               	movf	UART_Printf@v_num_u32,w
+  1049  0747  00A4               	movwf	UART_TxNumber@v_number_u32
+  1050  0748  0857               	movf	UART_Printf@v_numOfDigitsToTransmit_u8,w
+  1051  0749  00C5               	movwf	??_UART_Printf
+  1052  074A  0845               	movf	??_UART_Printf,w
+  1053  074B  00A8               	movwf	UART_TxNumber@v_numOfDigitsToTransmit_u8
+  1054  074C  3010               	movlw	16
+  1055  074D  120A  118A  24E6  120A  118A  	fcall	_UART_TxNumber
+  1056                           
+  1057                           ;uart.c: 499: break;
+  1058  0752  2FF5               	goto	l1196
+  1059  0753                     l1162:	
+  1060                           ;uart.c: 502: case 'b':
+  1061                           
+  1062                           
+  1063                           ;uart.c: 503: v_num_u16 = (*(uint16_t *)__va_arg((*(uint16_t **)argp), (uint16_t)0));
+  1064  0753  1283               	bcf	3,5	;RP0=0, select bank0
+  1065  0754  1303               	bcf	3,6	;RP1=0, select bank0
+  1066  0755  0858               	movf	UART_Printf@argp,w
+  1067  0756  0084               	movwf	4
+  1068  0757  1383               	bcf	3,7	;select IRP bank0
+  1069  0758  0800               	movf	0,w
+  1070  0759  00D3               	movwf	UART_Printf@v_num_u16
+  1071  075A  0A84               	incf	4,f
+  1072  075B  0800               	movf	0,w
+  1073  075C  00D4               	movwf	UART_Printf@v_num_u16+1
+  1074  075D  3002               	movlw	2
+  1075  075E  00C5               	movwf	??_UART_Printf
+  1076  075F  0845               	movf	??_UART_Printf,w
+  1077  0760  07D8               	addwf	UART_Printf@argp,f
+  1078                           
+  1079                           ;uart.c: 505: if(v_numOfDigitsToTransmit_u8 == 0xffu)
+  1080  0761  0A57               	incf	UART_Printf@v_numOfDigitsToTransmit_u8,w
+  1081  0762  1D03               	btfss	3,2
+  1082  0763  2F68               	goto	l1170
+  1083                           
+  1084                           ;uart.c: 506: v_numOfDigitsToTransmit_u8 = 16;
+  1085  0764  3010               	movlw	16
+  1086  0765  00C5               	movwf	??_UART_Printf
+  1087  0766  0845               	movf	??_UART_Printf,w
+  1088  0767  00D7               	movwf	UART_Printf@v_numOfDigitsToTransmit_u8
+  1089  0768                     l1170:	
+  1090                           
+  1091                           ;uart.c: 508: UART_TxNumber(2u,v_num_u16,v_numOfDigitsToTransmit_u8);
+  1092  0768  0853               	movf	UART_Printf@v_num_u16,w
+  1093  0769  00A4               	movwf	UART_TxNumber@v_number_u32
+  1094  076A  0854               	movf	UART_Printf@v_num_u16+1,w
+  1095  076B  00A5               	movwf	UART_TxNumber@v_number_u32+1
+  1096  076C  01A6               	clrf	UART_TxNumber@v_number_u32+2
+  1097  076D  01A7               	clrf	UART_TxNumber@v_number_u32+3
+  1098  076E  0857               	movf	UART_Printf@v_numOfDigitsToTransmit_u8,w
+  1099  076F  00C5               	movwf	??_UART_Printf
+  1100  0770  0845               	movf	??_UART_Printf,w
+  1101  0771  00A8               	movwf	UART_TxNumber@v_numOfDigitsToTransmit_u8
+  1102  0772  3002               	movlw	2
+  1103  0773  120A  118A  24E6  120A  118A  	fcall	_UART_TxNumber
+  1104                           
+  1105                           ;uart.c: 509: break;
+  1106  0778  2FF5               	goto	l1196
+  1107  0779                     l1172:	
+  1108                           ;uart.c: 511: case 'B':
+  1109                           
+  1110                           
+  1111                           ;uart.c: 512: v_num_u32 = (*(uint32_t *)__va_arg((*(uint32_t **)argp), (uint32_t)0));
+  1112  0779  1283               	bcf	3,5	;RP0=0, select bank0
+  1113  077A  1303               	bcf	3,6	;RP1=0, select bank0
+  1114  077B  0858               	movf	UART_Printf@argp,w
+  1115  077C  0084               	movwf	4
+  1116  077D  1383               	bcf	3,7	;select IRP bank0
+  1117  077E  0800               	movf	0,w
+  1118  077F  00CF               	movwf	UART_Printf@v_num_u32
+  1119  0780  0A84               	incf	4,f
+  1120  0781  0800               	movf	0,w
+  1121  0782  00D0               	movwf	UART_Printf@v_num_u32+1
+  1122  0783  0A84               	incf	4,f
+  1123  0784  0800               	movf	0,w
+  1124  0785  00D1               	movwf	UART_Printf@v_num_u32+2
+  1125  0786  0A84               	incf	4,f
+  1126  0787  0800               	movf	0,w
+  1127  0788  00D2               	movwf	UART_Printf@v_num_u32+3
+  1128  0789  3004               	movlw	4
+  1129  078A  00C5               	movwf	??_UART_Printf
+  1130  078B  0845               	movf	??_UART_Printf,w
+  1131  078C  07D8               	addwf	UART_Printf@argp,f
+  1132                           
+  1133                           ;uart.c: 514: if(v_numOfDigitsToTransmit_u8 == 0xffu)
+  1134  078D  0A57               	incf	UART_Printf@v_numOfDigitsToTransmit_u8,w
+  1135  078E  1D03               	btfss	3,2
+  1136  078F  2F94               	goto	l1180
+  1137                           
+  1138                           ;uart.c: 515: v_numOfDigitsToTransmit_u8 = 32;
+  1139  0790  3020               	movlw	32
+  1140  0791  00C5               	movwf	??_UART_Printf
+  1141  0792  0845               	movf	??_UART_Printf,w
+  1142  0793  00D7               	movwf	UART_Printf@v_numOfDigitsToTransmit_u8
+  1143  0794                     l1180:	
+  1144                           
+  1145                           ;uart.c: 517: UART_TxNumber(2u,v_num_u32,v_numOfDigitsToTransmit_u8);
+  1146  0794  0852               	movf	UART_Printf@v_num_u32+3,w
+  1147  0795  00A7               	movwf	UART_TxNumber@v_number_u32+3
+  1148  0796  0851               	movf	UART_Printf@v_num_u32+2,w
+  1149  0797  00A6               	movwf	UART_TxNumber@v_number_u32+2
+  1150  0798  0850               	movf	UART_Printf@v_num_u32+1,w
+  1151  0799  00A5               	movwf	UART_TxNumber@v_number_u32+1
+  1152  079A  084F               	movf	UART_Printf@v_num_u32,w
+  1153  079B  00A4               	movwf	UART_TxNumber@v_number_u32
+  1154  079C  0857               	movf	UART_Printf@v_numOfDigitsToTransmit_u8,w
+  1155  079D  00C5               	movwf	??_UART_Printf
+  1156  079E  0845               	movf	??_UART_Printf,w
+  1157  079F  00A8               	movwf	UART_TxNumber@v_numOfDigitsToTransmit_u8
+  1158  07A0  3002               	movlw	2
+  1159  07A1  120A  118A  24E6  120A  118A  	fcall	_UART_TxNumber
+  1160                           
+  1161                           ;uart.c: 522: case 'f':
+  1162                           ;uart.c: 527: break;
+  1163                           
+  1164                           ;uart.c: 521: case 'F':
+  1165                           
+  1166                           ;uart.c: 518: break;
+  1167  07A6  2FF5               	goto	l1196
+  1168  07A7                     l1182:	
+  1169                           ;uart.c: 530: case 'S':
+  1170                           
+  1171                           
+  1172                           ;uart.c: 531: case 's':
+  1173                           ;uart.c: 532: str = (*(char * *)__va_arg((*(char * **)argp), (char *)0));
+  1174  07A7  1283               	bcf	3,5	;RP0=0, select bank0
+  1175  07A8  1303               	bcf	3,6	;RP1=0, select bank0
+  1176  07A9  0858               	movf	UART_Printf@argp,w
+  1177  07AA  0084               	movwf	4
+  1178  07AB  1383               	bcf	3,7	;select IRP bank0
+  1179  07AC  0800               	movf	0,w
+  1180  07AD  00C5               	movwf	??_UART_Printf
+  1181  07AE  0845               	movf	??_UART_Printf,w
+  1182  07AF  00C7               	movwf	UART_Printf@str
+  1183  07B0  3001               	movlw	1
+  1184  07B1  00C5               	movwf	??_UART_Printf
+  1185  07B2  0845               	movf	??_UART_Printf,w
+  1186  07B3  07D8               	addwf	UART_Printf@argp,f
+  1187                           
+  1188                           ;uart.c: 533: UART_TxString(str);
+  1189  07B4  0847               	movf	UART_Printf@str,w
+  1190  07B5  120A  118A  2394  120A  118A  	fcall	_UART_TxString
+  1191                           
+  1192                           ;uart.c: 534: break;
+  1193  07BA  2FF5               	goto	l1196
+  1194  07BB                     l1188:	
+  1195                           ;uart.c: 536: case '%':
+  1196                           
+  1197                           
+  1198                           ;uart.c: 537: UART_TxChar('%');
+  1199  07BB  3025               	movlw	37
+  1200  07BC  2FF0               	goto	L1
+  1201  07BD                     l1192:	
+  1202                           ;uart.c: 539: }
+  1203                           
+  1204                           ;uart.c: 538: break;
+  1205                           
+  1206  07BD  1283               	bcf	3,5	;RP0=0, select bank0
+  1207  07BE  1303               	bcf	3,6	;RP1=0, select bank0
+  1208  07BF  0856               	movf	UART_Printf@ch,w
+  1209                           
+  1210                           ; Switch size 1, requested type "space"
+  1211                           ; Number of cases is 15, Range of values is 37 to 120
+  1212                           ; switch strategies available:
+  1213                           ; Name         Instructions Cycles
+  1214                           ; simple_byte           46    24 (average)
+  1215                           ; direct_byte          263    11 (fixed)
+  1216                           ; jumptable            263     9 (fixed)
+  1217                           ;	Chosen strategy is simple_byte
+  1218  07C0  3A25               	xorlw	37	; case 37
+  1219  07C1  1903               	skipnz
+  1220  07C2  2FBB               	goto	l1188
+  1221  07C3  3A67               	xorlw	103	; case 66
+  1222  07C4  1903               	skipnz
+  1223  07C5  2F79               	goto	l1172
+  1224  07C6  3A01               	xorlw	1	; case 67
+  1225  07C7  1903               	skipnz
+  1226  07C8  2E4E               	goto	l1108
+  1227  07C9  3A07               	xorlw	7	; case 68
+  1228  07CA  1903               	skipnz
+  1229  07CB  2E8B               	goto	l1126
+  1230  07CC  3A02               	xorlw	2	; case 70
+  1231  07CD  1903               	skipnz
+  1232  07CE  2FF5               	goto	l1196
+  1233  07CF  3A15               	xorlw	21	; case 83
+  1234  07D0  1903               	skipnz
+  1235  07D1  2FA7               	goto	l1182
+  1236  07D2  3A06               	xorlw	6	; case 85
+  1237  07D3  1903               	skipnz
+  1238  07D4  2EE6               	goto	l1144
+  1239  07D5  3A0D               	xorlw	13	; case 88
+  1240  07D6  1903               	skipnz
+  1241  07D7  2F2C               	goto	l1156
+  1242  07D8  3A3A               	xorlw	58	; case 98
+  1243  07D9  1903               	skipnz
+  1244  07DA  2F53               	goto	l1162
+  1245  07DB  3A01               	xorlw	1	; case 99
+  1246  07DC  1903               	skipnz
+  1247  07DD  2E4E               	goto	l1108
+  1248  07DE  3A07               	xorlw	7	; case 100
+  1249  07DF  1903               	skipnz
+  1250  07E0  2E5A               	goto	l1114
+  1251  07E1  3A02               	xorlw	2	; case 102
+  1252  07E2  1903               	skipnz
+  1253  07E3  2FF5               	goto	l1196
+  1254  07E4  3A15               	xorlw	21	; case 115
+  1255  07E5  1903               	skipnz
+  1256  07E6  2FA7               	goto	l1182
+  1257  07E7  3A06               	xorlw	6	; case 117
+  1258  07E8  1903               	skipnz
+  1259  07E9  2EC7               	goto	l1138
+  1260  07EA  3A0D               	xorlw	13	; case 120
+  1261  07EB  1903               	skipnz
+  1262  07EC  2F0D               	goto	l1150
+  1263  07ED  2FF5               	goto	l1196
+  1264                           
+  1265                           ;uart.c: 540: }
+  1266  07EE  2FF5               	goto	l1196
+  1267  07EF                     l1194:	
+  1268                           
+  1269                           ;uart.c: 541: else
+  1270                           ;uart.c: 542: {
+  1271                           ;uart.c: 544: UART_TxChar(ch);
+  1272  07EF  0856               	movf	UART_Printf@ch,w
+  1273  07F0                     L1:	
+  1274  07F0  120A  118A  236D  120A  118A  	fcall	_UART_TxChar
+  1275  07F5                     l1196:	
+  1276  07F5  3001               	movlw	1
+  1277  07F6  1283               	bcf	3,5	;RP0=0, select bank0
+  1278  07F7  1303               	bcf	3,6	;RP1=0, select bank0
+  1279  07F8  00C5               	movwf	??_UART_Printf
+  1280  07F9  0845               	movf	??_UART_Printf,w
+  1281  07FA  07D5               	addwf	UART_Printf@ptr,f
+  1282  07FB  2DF2               	goto	l1198
+  1283  07FC                     __end_of_UART_Printf:	
+  1284                           
+  1285                           	psect	text2
+  1286  0394                     __ptext2:	
+  1287 ;; *************** function _UART_TxString *****************
+  1288 ;; Defined at:
+  1289 ;;		line 167 in file "../00-libfiles/uart.c"
+  1290 ;; Parameters:    Size  Location     Type
+  1291 ;;  ptr_string      1    wreg     PTR unsigned char 
+  1292 ;; Auto vars:     Size  Location     Type
+  1293 ;;  ptr_string      1    2[COMMON] PTR unsigned char 
+  1294 ;; Return value:  Size  Location     Type
+  1295 ;;                  1    wreg      void 
+  1296 ;; Registers used:
+  1297 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+  1298 ;; Tracked objects:
+  1299 ;;		On entry : 0/0
+  1300 ;;		On exit  : 0/0
+  1301 ;;		Unchanged: 0/0
+  1302 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1303 ;;      Params:         0       0       0       0       0
+  1304 ;;      Locals:         1       0       0       0       0
+  1305 ;;      Temps:          1       0       0       0       0
+  1306 ;;      Totals:         2       0       0       0       0
+  1307 ;;Total ram usage:        2 bytes
+  1308 ;; Hardware stack levels used:    1
+  1309 ;; Hardware stack levels required when called:    1
+  1310 ;; This function calls:
+  1311 ;;		_UART_TxChar
+  1312 ;; This function is called by:
+  1313 ;;		_UART_Printf
+  1314 ;; This function uses a non-reentrant model
+  1315 ;;
+  1316                           
+  1317                           
+  1318                           ;psect for function _UART_TxString
+  1319  0394                     _UART_TxString:	
+  1320                           
+  1321                           ;incstack = 0
+  1322                           ; Regs used in _UART_TxString: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+  1323                           ;UART_TxString@ptr_string stored from wreg
+  1324  0394  00F2               	movwf	UART_TxString@ptr_string
+  1325  0395                     l1000:	
+  1326                           ;uart.c: 169: while(*ptr_string)
+  1327                           
+  1328  0395  0872               	movf	UART_TxString@ptr_string,w
+  1329  0396  0084               	movwf	4
+  1330  0397  1383               	bcf	3,7	;select IRP bank0
+  1331  0398  0800               	movf	0,w
+  1332  0399  1903               	btfsc	3,2
+  1333  039A  0008               	return
+  1334                           
+  1335                           ;uart.c: 170: UART_TxChar(*ptr_string++);
+  1336  039B  0872               	movf	UART_TxString@ptr_string,w
+  1337  039C  0084               	movwf	4
+  1338  039D  1383               	bcf	3,7	;select IRP bank0
+  1339  039E  0800               	movf	0,w
+  1340  039F  120A  118A  236D  120A  118A  	fcall	_UART_TxChar
+  1341  03A4  3001               	movlw	1
+  1342  03A5  00F1               	movwf	??_UART_TxString
+  1343  03A6  0871               	movf	??_UART_TxString,w
+  1344  03A7  07F2               	addwf	UART_TxString@ptr_string,f
+  1345  03A8  2B95               	goto	l1000
+  1346  03A9                     __end_of_UART_TxString:	
+  1347                           
+  1348                           	psect	text3
+  1349  04E6                     __ptext3:	
+  1350 ;; *************** function _UART_TxNumber *****************
+  1351 ;; Defined at:
+  1352 ;;		line 258 in file "../00-libfiles/uart.c"
+  1353 ;; Parameters:    Size  Location     Type
+  1354 ;;  v_numericSys    1    wreg     unsigned char 
+  1355 ;;  v_number_u32    4    4[BANK0 ] unsigned long 
+  1356 ;;  v_numOfDigit    1    8[BANK0 ] unsigned char 
+  1357 ;; Auto vars:     Size  Location     Type
+  1358 ;;  v_numericSys    1   33[BANK0 ] unsigned char 
+  1359 ;;  a              10   21[BANK0 ] unsigned char [10]
+  1360 ;;  i               1   34[BANK0 ] unsigned char 
+  1361 ;; Return value:  Size  Location     Type
+  1362 ;;                  1    wreg      void 
+  1363 ;; Registers used:
+  1364 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+  1365 ;; Tracked objects:
+  1366 ;;		On entry : 0/0
+  1367 ;;		On exit  : 0/0
+  1368 ;;		Unchanged: 0/0
+  1369 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1370 ;;      Params:         0       5       0       0       0
+  1371 ;;      Locals:         0      14       0       0       0
+  1372 ;;      Temps:          0      12       0       0       0
+  1373 ;;      Totals:         0      31       0       0       0
+  1374 ;;Total ram usage:       31 bytes
+  1375 ;; Hardware stack levels used:    1
+  1376 ;; Hardware stack levels required when called:    1
+  1377 ;; This function calls:
+  1378 ;;		_UART_TxChar
+  1379 ;;		___bmul
+  1380 ;;		___lldiv
+  1381 ;; This function is called by:
+  1382 ;;		_UART_Printf
+  1383 ;; This function uses a non-reentrant model
+  1384 ;;
+  1385                           
+  1386                           
+  1387                           ;psect for function _UART_TxNumber
+  1388  04E6                     _UART_TxNumber:	
+  1389                           
+  1390                           ;incstack = 0
+  1391                           ; Regs used in _UART_TxNumber: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+  1392                           ;UART_TxNumber@v_numericSystem_u8 stored from wreg
+  1393  04E6  1283               	bcf	3,5	;RP0=0, select bank0
+  1394  04E7  1303               	bcf	3,6	;RP1=0, select bank0
+  1395  04E8  00C1               	movwf	UART_TxNumber@v_numericSystem_u8
+  1396                           
+  1397                           ;uart.c: 260: uint8_t i=0,a[10];
+  1398  04E9  01C2               	clrf	UART_TxNumber@i
+  1399                           
+  1400                           ;uart.c: 262: if(2u == v_numericSystem_u8)
+  1401  04EA  3002               	movlw	2
+  1402  04EB  0641               	xorwf	UART_TxNumber@v_numericSystem_u8,w
+  1403  04EC  1903               	btfsc	3,2
+  1404  04ED  2D2D               	goto	l1014
+  1405  04EE  2D31               	goto	l1016
+  1406  04EF                     l1008:	
+  1407                           ;uart.c: 263: {
+  1408                           ;uart.c: 264: while(v_numOfDigitsToTransmit_u8!=0)
+  1409                           
+  1410                           
+  1411                           ;uart.c: 265: {
+  1412                           ;uart.c: 268: i = (((v_number_u32)&((1<<((v_numOfDigitsToTransmit_u8-1)))))!=0u);
+  1413  04EF  0824               	movf	UART_TxNumber@v_number_u32,w
+  1414  04F0  00A9               	movwf	??_UART_TxNumber
+  1415  04F1  0825               	movf	UART_TxNumber@v_number_u32+1,w
+  1416  04F2  00AA               	movwf	??_UART_TxNumber+1
+  1417  04F3  0826               	movf	UART_TxNumber@v_number_u32+2,w
+  1418  04F4  00AB               	movwf	??_UART_TxNumber+2
+  1419  04F5  0827               	movf	UART_TxNumber@v_number_u32+3,w
+  1420  04F6  00AC               	movwf	??_UART_TxNumber+3
+  1421  04F7  0828               	movf	UART_TxNumber@v_numOfDigitsToTransmit_u8,w
+  1422  04F8  3EFF               	addlw	-1
+  1423  04F9  00AD               	movwf	??_UART_TxNumber+4
+  1424  04FA  0AAD               	incf	??_UART_TxNumber+4,f
+  1425  04FB  3001               	movlw	1
+  1426  04FC  00AE               	movwf	??_UART_TxNumber+5
+  1427  04FD  3000               	movlw	0
+  1428  04FE  00AF               	movwf	??_UART_TxNumber+6
+  1429  04FF  2D03               	goto	u664
+  1430  0500                     u665:	
+  1431  0500  1003               	clrc
+  1432  0501  0DAE               	rlf	??_UART_TxNumber+5,f
+  1433  0502  0DAF               	rlf	??_UART_TxNumber+6,f
+  1434  0503                     u664:	
+  1435  0503  0BAD               	decfsz	??_UART_TxNumber+4,f
+  1436  0504  2D00               	goto	u665
+  1437  0505  082E               	movf	??_UART_TxNumber+5,w
+  1438  0506  00B0               	movwf	??_UART_TxNumber+7
+  1439  0507  082F               	movf	??_UART_TxNumber+6,w
+  1440  0508  00B1               	movwf	??_UART_TxNumber+8
+  1441  0509  3000               	movlw	0
+  1442  050A  1BB1               	btfsc	??_UART_TxNumber+8,7
+  1443  050B  30FF               	movlw	255
+  1444  050C  00B2               	movwf	??_UART_TxNumber+9
+  1445  050D  00B3               	movwf	??_UART_TxNumber+10
+  1446  050E  0830               	movf	??_UART_TxNumber+7,w
+  1447  050F  05A9               	andwf	??_UART_TxNumber,f
+  1448  0510  0831               	movf	??_UART_TxNumber+8,w
+  1449  0511  05AA               	andwf	??_UART_TxNumber+1,f
+  1450  0512  0832               	movf	??_UART_TxNumber+9,w
+  1451  0513  05AB               	andwf	??_UART_TxNumber+2,f
+  1452  0514  0833               	movf	??_UART_TxNumber+10,w
+  1453  0515  05AC               	andwf	??_UART_TxNumber+3,f
+  1454  0516  082C               	movf	??_UART_TxNumber+3,w
+  1455  0517  042B               	iorwf	??_UART_TxNumber+2,w
+  1456  0518  042A               	iorwf	??_UART_TxNumber+1,w
+  1457  0519  0429               	iorwf	??_UART_TxNumber,w
+  1458  051A  1903               	btfsc	3,2
+  1459  051B  2D1E               	goto	u670
+  1460  051C  3001               	movlw	1
+  1461  051D  2D1F               	goto	u680
+  1462  051E                     u670:	
+  1463  051E  3000               	movlw	0
+  1464  051F                     u680:	
+  1465  051F  00B4               	movwf	??_UART_TxNumber+11
+  1466  0520  0834               	movf	??_UART_TxNumber+11,w
+  1467  0521  00C2               	movwf	UART_TxNumber@i
+  1468                           
+  1469                           ;uart.c: 269: UART_TxChar(((i)+0x30));
+  1470  0522  0842               	movf	UART_TxNumber@i,w
+  1471  0523  3E30               	addlw	48
+  1472  0524  120A  118A  236D  120A  118A  	fcall	_UART_TxChar
+  1473                           
+  1474                           ;uart.c: 270: v_numOfDigitsToTransmit_u8--;
+  1475  0529  3001               	movlw	1
+  1476  052A  1283               	bcf	3,5	;RP0=0, select bank0
+  1477  052B  1303               	bcf	3,6	;RP1=0, select bank0
+  1478  052C  02A8               	subwf	UART_TxNumber@v_numOfDigitsToTransmit_u8,f
+  1479  052D                     l1014:	
+  1480  052D  0828               	movf	UART_TxNumber@v_numOfDigitsToTransmit_u8,w
+  1481  052E  1903               	btfsc	3,2
+  1482  052F  0008               	return
+  1483  0530  2CEF               	goto	l1008
+  1484  0531                     l1016:	
+  1485                           ;uart.c: 271: }
+  1486                           ;uart.c: 272: }
+  1487                           
+  1488                           
+  1489                           ;uart.c: 273: else if(v_number_u32==0)
+  1490  0531  0827               	movf	UART_TxNumber@v_number_u32+3,w
+  1491  0532  0426               	iorwf	UART_TxNumber@v_number_u32+2,w
+  1492  0533  0425               	iorwf	UART_TxNumber@v_number_u32+1,w
+  1493  0534  0424               	iorwf	UART_TxNumber@v_number_u32,w
+  1494  0535  1D03               	skipz
+  1495  0536  2D4D               	goto	l1028
+  1496                           
+  1497                           ;uart.c: 274: {
+  1498                           ;uart.c: 276: for(i=0;((i<v_numOfDigitsToTransmit_u8) && (i<10u)) ;i++)
+  1499  0537  01C2               	clrf	UART_TxNumber@i
+  1500  0538                     l1024:	
+  1501  0538  0828               	movf	UART_TxNumber@v_numOfDigitsToTransmit_u8,w
+  1502  0539  0242               	subwf	UART_TxNumber@i,w
+  1503  053A  1803               	skipnc
+  1504  053B  0008               	return
+  1505  053C  300A               	movlw	10
+  1506  053D  0242               	subwf	UART_TxNumber@i,w
+  1507  053E  1803               	btfsc	3,0
+  1508  053F  0008               	return
+  1509                           
+  1510                           ;uart.c: 277: UART_TxChar('0');
+  1511  0540  3030               	movlw	48
+  1512  0541  120A  118A  236D  120A  118A  	fcall	_UART_TxChar
+  1513  0546  3001               	movlw	1
+  1514  0547  1283               	bcf	3,5	;RP0=0, select bank0
+  1515  0548  1303               	bcf	3,6	;RP1=0, select bank0
+  1516  0549  00A9               	movwf	??_UART_TxNumber
+  1517  054A  0829               	movf	??_UART_TxNumber,w
+  1518  054B  07C2               	addwf	UART_TxNumber@i,f
+  1519  054C  2D38               	goto	l1024
+  1520  054D                     l1028:	
+  1521                           ;uart.c: 278: }
+  1522                           
+  1523                           
+  1524                           ;uart.c: 279: else
+  1525                           ;uart.c: 280: {
+  1526                           ;uart.c: 281: for(i=0;i<v_numOfDigitsToTransmit_u8;i++)
+  1527  054D  01C2               	clrf	UART_TxNumber@i
+  1528  054E                     l1046:	
+  1529  054E  0828               	movf	UART_TxNumber@v_numOfDigitsToTransmit_u8,w
+  1530  054F  0242               	subwf	UART_TxNumber@i,w
+  1531  0550  1803               	btfsc	3,0
+  1532  0551  2DE3               	goto	l1058
+  1533                           
+  1534                           ;uart.c: 282: {
+  1535                           ;uart.c: 285: if(v_number_u32!=0)
+  1536  0552  0827               	movf	UART_TxNumber@v_number_u32+3,w
+  1537  0553  0426               	iorwf	UART_TxNumber@v_number_u32+2,w
+  1538  0554  0425               	iorwf	UART_TxNumber@v_number_u32+1,w
+  1539  0555  0424               	iorwf	UART_TxNumber@v_number_u32,w
+  1540  0556  1903               	skipnz
+  1541  0557  2DAD               	goto	l1036
+  1542                           
+  1543                           ;uart.c: 286: {
+  1544                           ;uart.c: 293: a[i]=(uint32_t)(v_number_u32 - (v_numericSystem_u8 * (uint32_t)(v_number_u
+      +                          32/v_numericSystem_u8)));
+  1545  0558  0841               	movf	UART_TxNumber@v_numericSystem_u8,w
+  1546  0559  00A9               	movwf	??_UART_TxNumber
+  1547  055A  0829               	movf	??_UART_TxNumber,w
+  1548  055B  00A0               	movwf	___bmul@multiplicand
+  1549  055C  0827               	movf	UART_TxNumber@v_number_u32+3,w
+  1550  055D  00F7               	movwf	___lldiv@dividend+3
+  1551  055E  0826               	movf	UART_TxNumber@v_number_u32+2,w
+  1552  055F  00F6               	movwf	___lldiv@dividend+2
+  1553  0560  0825               	movf	UART_TxNumber@v_number_u32+1,w
+  1554  0561  00F5               	movwf	___lldiv@dividend+1
+  1555  0562  0824               	movf	UART_TxNumber@v_number_u32,w
+  1556  0563  00F4               	movwf	___lldiv@dividend
+  1557  0564  0841               	movf	UART_TxNumber@v_numericSystem_u8,w
+  1558  0565  00AA               	movwf	??_UART_TxNumber+1
+  1559  0566  01AB               	clrf	??_UART_TxNumber+2
+  1560  0567  01AC               	clrf	??_UART_TxNumber+3
+  1561  0568  01AD               	clrf	??_UART_TxNumber+4
+  1562  0569  082D               	movf	??_UART_TxNumber+4,w
+  1563  056A  00F3               	movwf	___lldiv@divisor+3
+  1564  056B  082C               	movf	??_UART_TxNumber+3,w
+  1565  056C  00F2               	movwf	___lldiv@divisor+2
+  1566  056D  082B               	movf	??_UART_TxNumber+2,w
+  1567  056E  00F1               	movwf	___lldiv@divisor+1
+  1568  056F  082A               	movf	??_UART_TxNumber+1,w
+  1569  0570  00F0               	movwf	___lldiv@divisor
+  1570  0571  120A  118A  240E  120A  118A  	fcall	___lldiv
+  1571  0576  0870               	movf	?___lldiv,w
+  1572  0577  120A  118A  2381  120A  118A  	fcall	___bmul
+  1573  057C  3AFF               	xorlw	255
+  1574  057D  3E01               	addlw	1
+  1575  057E  1283               	bcf	3,5	;RP0=0, select bank0
+  1576  057F  1303               	bcf	3,6	;RP1=0, select bank0
+  1577  0580  0724               	addwf	UART_TxNumber@v_number_u32,w
+  1578  0581  00AE               	movwf	??_UART_TxNumber+5
+  1579  0582  0842               	movf	UART_TxNumber@i,w
+  1580  0583  3E35               	addlw	(low (UART_TxNumber@a| 0))& (0+255)
+  1581  0584  0084               	movwf	4
+  1582  0585  082E               	movf	??_UART_TxNumber+5,w
+  1583  0586  1383               	bcf	3,7	;select IRP bank0
+  1584  0587  0080               	movwf	0
+  1585                           
+  1586                           ;uart.c: 294: v_number_u32=v_number_u32/v_numericSystem_u8;
+  1587  0588  0841               	movf	UART_TxNumber@v_numericSystem_u8,w
+  1588  0589  00A9               	movwf	??_UART_TxNumber
+  1589  058A  01AA               	clrf	??_UART_TxNumber+1
+  1590  058B  01AB               	clrf	??_UART_TxNumber+2
+  1591  058C  01AC               	clrf	??_UART_TxNumber+3
+  1592  058D  082C               	movf	??_UART_TxNumber+3,w
+  1593  058E  00F3               	movwf	___lldiv@divisor+3
+  1594  058F  082B               	movf	??_UART_TxNumber+2,w
+  1595  0590  00F2               	movwf	___lldiv@divisor+2
+  1596  0591  082A               	movf	??_UART_TxNumber+1,w
+  1597  0592  00F1               	movwf	___lldiv@divisor+1
+  1598  0593  0829               	movf	??_UART_TxNumber,w
+  1599  0594  00F0               	movwf	___lldiv@divisor
+  1600  0595  0827               	movf	UART_TxNumber@v_number_u32+3,w
+  1601  0596  00F7               	movwf	___lldiv@dividend+3
+  1602  0597  0826               	movf	UART_TxNumber@v_number_u32+2,w
+  1603  0598  00F6               	movwf	___lldiv@dividend+2
+  1604  0599  0825               	movf	UART_TxNumber@v_number_u32+1,w
+  1605  059A  00F5               	movwf	___lldiv@dividend+1
+  1606  059B  0824               	movf	UART_TxNumber@v_number_u32,w
+  1607  059C  00F4               	movwf	___lldiv@dividend
+  1608  059D  120A  118A  240E  120A  118A  	fcall	___lldiv
+  1609  05A2  0873               	movf	?___lldiv+3,w
+  1610  05A3  1283               	bcf	3,5	;RP0=0, select bank0
+  1611  05A4  1303               	bcf	3,6	;RP1=0, select bank0
+  1612  05A5  00A7               	movwf	UART_TxNumber@v_number_u32+3
+  1613  05A6  0872               	movf	?___lldiv+2,w
+  1614  05A7  00A6               	movwf	UART_TxNumber@v_number_u32+2
+  1615  05A8  0871               	movf	?___lldiv+1,w
+  1616  05A9  00A5               	movwf	UART_TxNumber@v_number_u32+1
+  1617  05AA  0870               	movf	?___lldiv,w
+  1618  05AB  00A4               	movwf	UART_TxNumber@v_number_u32
+  1619                           
+  1620                           ;uart.c: 295: }
+  1621  05AC  2DB9               	goto	l1044
+  1622  05AD                     l1036:	
+  1623                           
+  1624                           ;uart.c: 296: else if( (v_numOfDigitsToTransmit_u8 == 0xffu) ||
+  1625                           ;uart.c: 297: (v_numOfDigitsToTransmit_u8 > 10u))
+  1626  05AD  0A28               	incf	UART_TxNumber@v_numOfDigitsToTransmit_u8,w
+  1627  05AE  1903               	btfsc	3,2
+  1628  05AF  2DE3               	goto	l1058
+  1629  05B0  300B               	movlw	11
+  1630  05B1  0228               	subwf	UART_TxNumber@v_numOfDigitsToTransmit_u8,w
+  1631  05B2  1803               	btfsc	3,0
+  1632  05B3  2DE3               	goto	l1058
+  1633                           
+  1634                           ;uart.c: 303: else
+  1635                           ;uart.c: 304: {
+  1636                           ;uart.c: 308: a[i]=0;
+  1637                           
+  1638                           ;uart.c: 302: }
+  1639                           
+  1640                           ;uart.c: 298: {
+  1641                           ;uart.c: 301: break;
+  1642  05B4  0842               	movf	UART_TxNumber@i,w
+  1643  05B5  3E35               	addlw	(low (UART_TxNumber@a| 0))& (0+255)
+  1644  05B6  0084               	movwf	4
+  1645  05B7  1383               	bcf	3,7	;select IRP bank0
+  1646  05B8  0180               	clrf	0
+  1647  05B9                     l1044:	
+  1648  05B9  3001               	movlw	1
+  1649  05BA  00A9               	movwf	??_UART_TxNumber
+  1650  05BB  0829               	movf	??_UART_TxNumber,w
+  1651  05BC  07C2               	addwf	UART_TxNumber@i,f
+  1652  05BD  2D4E               	goto	l1046
+  1653  05BE                     l1048:	
+  1654                           ;uart.c: 309: }
+  1655                           ;uart.c: 310: }
+  1656                           ;uart.c: 312: while(i)
+  1657                           
+  1658                           
+  1659                           ;uart.c: 313: {
+  1660                           ;uart.c: 315: UART_TxChar((((a[i-1])>0x09) ? ((a[i-1]) + 0x37): ((a[i-1]) + 0x30)));
+  1661  05BE  0842               	movf	UART_TxNumber@i,w
+  1662  05BF  3EFF               	addlw	255
+  1663  05C0  3E35               	addlw	(low (UART_TxNumber@a| 0))& (0+255)
+  1664  05C1  0084               	movwf	4
+  1665  05C2  300A               	movlw	10
+  1666  05C3  1383               	bcf	3,7	;select IRP bank0
+  1667  05C4  0200               	subwf	0,w
+  1668  05C5  1803               	skipnc
+  1669  05C6  2DCE               	goto	l1052
+  1670  05C7  0842               	movf	UART_TxNumber@i,w
+  1671  05C8  3EFF               	addlw	255
+  1672  05C9  3E35               	addlw	(low (UART_TxNumber@a| 0))& (0+255)
+  1673  05CA  0084               	movwf	4
+  1674  05CB  0800               	movf	0,w
+  1675  05CC  3E30               	addlw	48
+  1676  05CD  2DD4               	goto	L2
+  1677  05CE                     l1052:	
+  1678  05CE  0842               	movf	UART_TxNumber@i,w
+  1679  05CF  3EFF               	addlw	255
+  1680  05D0  3E35               	addlw	(low (UART_TxNumber@a| 0))& (0+255)
+  1681  05D1  0084               	movwf	4
+  1682  05D2  0800               	movf	0,w
+  1683  05D3  3E37               	addlw	55
+  1684  05D4                     L2:	
+  1685  05D4  00BF               	movwf	_UART_TxNumber$79
+  1686  05D5  3000               	movlw	0
+  1687  05D6  1803               	skipnc
+  1688  05D7  3001               	movlw	1
+  1689  05D8  00C0               	movwf	_UART_TxNumber$79+1
+  1690  05D9  083F               	movf	_UART_TxNumber$79,w
+  1691  05DA  120A  118A  236D  120A  118A  	fcall	_UART_TxChar
+  1692                           
+  1693                           ;uart.c: 316: i--;
+  1694  05DF  3001               	movlw	1
+  1695  05E0  1283               	bcf	3,5	;RP0=0, select bank0
+  1696  05E1  1303               	bcf	3,6	;RP1=0, select bank0
+  1697  05E2  02C2               	subwf	UART_TxNumber@i,f
+  1698  05E3                     l1058:	
+  1699  05E3  0842               	movf	UART_TxNumber@i,w
+  1700  05E4  1903               	btfsc	3,2
+  1701  05E5  0008               	return
+  1702  05E6  2DBE               	goto	l1048
+  1703  05E7                     __end_of_UART_TxNumber:	
+  1704                           
+  1705                           	psect	text4
+  1706  0381                     __ptext4:	
+  1707 ;; *************** function ___bmul *****************
+  1708 ;; Defined at:
+  1709 ;;		line 4 in file "C:\Program Files\Microchip\xc8\v1.36\sources\common\Umul8.c"
+  1710 ;; Parameters:    Size  Location     Type
+  1711 ;;  multiplier      1    wreg     unsigned char 
+  1712 ;;  multiplicand    1    0[BANK0 ] unsigned char 
+  1713 ;; Auto vars:     Size  Location     Type
+  1714 ;;  multiplier      1    3[BANK0 ] unsigned char 
+  1715 ;;  product         1    2[BANK0 ] unsigned char 
+  1716 ;; Return value:  Size  Location     Type
+  1717 ;;                  1    wreg      unsigned char 
+  1718 ;; Registers used:
+  1719 ;;		wreg, status,2, status,0
+  1720 ;; Tracked objects:
+  1721 ;;		On entry : 0/0
+  1722 ;;		On exit  : 0/0
+  1723 ;;		Unchanged: 0/0
+  1724 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1725 ;;      Params:         0       1       0       0       0
+  1726 ;;      Locals:         0       2       0       0       0
+  1727 ;;      Temps:          0       1       0       0       0
+  1728 ;;      Totals:         0       4       0       0       0
+  1729 ;;Total ram usage:        4 bytes
+  1730 ;; Hardware stack levels used:    1
+  1731 ;; This function calls:
+  1732 ;;		Nothing
+  1733 ;; This function is called by:
+  1734 ;;		_UART_TxNumber
+  1735 ;;		_UART_Printf
+  1736 ;; This function uses a non-reentrant model
+  1737 ;;
+  1738                           
+  1739                           
+  1740                           ;psect for function ___bmul
+  1741  0381                     ___bmul:	
+  1742                           
+  1743                           ;incstack = 0
+  1744                           ; Regs used in ___bmul: [wreg+status,2+status,0]
+  1745                           ;___bmul@multiplier stored from wreg
+  1746  0381  1283               	bcf	3,5	;RP0=0, select bank0
+  1747  0382  1303               	bcf	3,6	;RP1=0, select bank0
+  1748  0383  00A3               	movwf	___bmul@multiplier
+  1749  0384  01A2               	clrf	___bmul@product
+  1750  0385                     l944:	
+  1751  0385  1C23               	btfss	___bmul@multiplier,0
+  1752  0386  2B8B               	goto	l948
+  1753  0387  0820               	movf	___bmul@multiplicand,w
+  1754  0388  00A1               	movwf	??___bmul
+  1755  0389  0821               	movf	??___bmul,w
+  1756  038A  07A2               	addwf	___bmul@product,f
+  1757  038B                     l948:	
+  1758  038B  1003               	clrc
+  1759  038C  0DA0               	rlf	___bmul@multiplicand,f
+  1760  038D  1003               	clrc
+  1761  038E  0CA3               	rrf	___bmul@multiplier,f
+  1762  038F  0823               	movf	___bmul@multiplier,w
+  1763  0390  1D03               	btfss	3,2
+  1764  0391  2B85               	goto	l944
+  1765  0392  0822               	movf	___bmul@product,w
+  1766  0393  0008               	return
+  1767  0394                     __end_of___bmul:	
+  1768                           
+  1769                           	psect	text5
+  1770  036D                     __ptext5:	
+  1771 ;; *************** function _UART_TxChar *****************
+  1772 ;; Defined at:
+  1773 ;;		line 143 in file "../00-libfiles/uart.c"
+  1774 ;; Parameters:    Size  Location     Type
+  1775 ;;  var_uartData    1    wreg     unsigned char 
+  1776 ;; Auto vars:     Size  Location     Type
+  1777 ;;  var_uartData    1    0[COMMON] unsigned char 
+  1778 ;; Return value:  Size  Location     Type
+  1779 ;;                  1    wreg      void 
+  1780 ;; Registers used:
+  1781 ;;		wreg
+  1782 ;; Tracked objects:
+  1783 ;;		On entry : 0/0
+  1784 ;;		On exit  : 0/0
+  1785 ;;		Unchanged: 0/0
+  1786 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1787 ;;      Params:         0       0       0       0       0
+  1788 ;;      Locals:         1       0       0       0       0
+  1789 ;;      Temps:          0       0       0       0       0
+  1790 ;;      Totals:         1       0       0       0       0
+  1791 ;;Total ram usage:        1 bytes
+  1792 ;; Hardware stack levels used:    1
+  1793 ;; This function calls:
+  1794 ;;		Nothing
+  1795 ;; This function is called by:
+  1796 ;;		_UART_TxString
+  1797 ;;		_UART_TxNumber
+  1798 ;;		_UART_Printf
+  1799 ;;		_UART_RxString
+  1800 ;; This function uses a non-reentrant model
+  1801 ;;
+  1802                           
+  1803                           
+  1804                           ;psect for function _UART_TxChar
+  1805  036D                     _UART_TxChar:	
+  1806                           
+  1807                           ;incstack = 0
+  1808                           ; Regs used in _UART_TxChar: [wreg]
+  1809                           ;UART_TxChar@var_uartData_u8 stored from wreg
+  1810  036D  00F0               	movwf	UART_TxChar@var_uartData_u8
+  1811  036E                     l76:	
+  1812                           ;uart.c: 145: while(TXIF==0);
+  1813                           
+  1814  036E  1283               	bcf	3,5	;RP0=0, select bank0
+  1815  036F  1303               	bcf	3,6	;RP1=0, select bank0
+  1816  0370  1E0C               	btfss	12,4	;volatile
+  1817  0371  2B6E               	goto	l76
+  1818                           
+  1819                           ;uart.c: 146: TXIF=0;
+  1820  0372  120C               	bcf	12,4	;volatile
+  1821                           
+  1822                           ;uart.c: 147: TXREG=var_uartData_u8;
+  1823  0373  0870               	movf	UART_TxChar@var_uartData_u8,w
+  1824  0374  0099               	movwf	25	;volatile
+  1825  0375  0008               	return
+  1826  0376                     __end_of_UART_TxChar:	
+  1827                           
+  1828                           	psect	text6
+  1829  03A9                     __ptext6:	
+  1830 ;; *************** function _UART_Init *****************
+  1831 ;; Defined at:
+  1832 ;;		line 64 in file "../00-libfiles/uart.c"
+  1833 ;; Parameters:    Size  Location     Type
+  1834 ;;  var_baudRate    4   16[BANK0 ] unsigned long 
+  1835 ;; Auto vars:     Size  Location     Type
+  1836 ;;		None
+  1837 ;; Return value:  Size  Location     Type
+  1838 ;;                  1    wreg      void 
+  1839 ;; Registers used:
+  1840 ;;		wreg, status,2, status,0, pclath, cstack
+  1841 ;; Tracked objects:
+  1842 ;;		On entry : 0/0
+  1843 ;;		On exit  : 0/0
+  1844 ;;		Unchanged: 0/0
+  1845 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1846 ;;      Params:         0       4       0       0       0
+  1847 ;;      Locals:         0       0       0       0       0
+  1848 ;;      Temps:          0       0       0       0       0
+  1849 ;;      Totals:         0       4       0       0       0
+  1850 ;;Total ram usage:        4 bytes
+  1851 ;; Hardware stack levels used:    1
+  1852 ;; Hardware stack levels required when called:    2
+  1853 ;; This function calls:
+  1854 ;;		_UART_SetBaudRate
+  1855 ;; This function is called by:
+  1856 ;;		_main
+  1857 ;; This function uses a non-reentrant model
+  1858 ;;
+  1859                           
+  1860                           
+  1861                           ;psect for function _UART_Init
+  1862  03A9                     _UART_Init:	
+  1863                           
+  1864                           ;uart.c: 66: TRISC=0x80;
+  1865                           
+  1866                           ;incstack = 0
+  1867                           ; Regs used in _UART_Init: [wreg+status,2+status,0+pclath+cstack]
+  1868  03A9  3080               	movlw	128
+  1869  03AA  1683               	bsf	3,5	;RP0=1, select bank1
+  1870  03AB  1303               	bcf	3,6	;RP1=0, select bank1
+  1871  03AC  0087               	movwf	7	;volatile
+  1872                           
+  1873                           ;uart.c: 67: TXSTA=0x20;
+  1874  03AD  3020               	movlw	32
+  1875  03AE  0098               	movwf	24	;volatile
+  1876                           
+  1877                           ;uart.c: 68: RCSTA=0x90;
+  1878  03AF  3090               	movlw	144
+  1879  03B0  1283               	bcf	3,5	;RP0=0, select bank0
+  1880  03B1  1303               	bcf	3,6	;RP1=0, select bank0
+  1881  03B2  0098               	movwf	24	;volatile
+  1882                           
+  1883                           ;uart.c: 69: UART_SetBaudRate(var_baudRate_u32);
+  1884  03B3  0833               	movf	UART_Init@var_baudRate_u32+3,w
+  1885  03B4  00A3               	movwf	UART_SetBaudRate@var_baudRate_u32+3
+  1886  03B5  0832               	movf	UART_Init@var_baudRate_u32+2,w
+  1887  03B6  00A2               	movwf	UART_SetBaudRate@var_baudRate_u32+2
+  1888  03B7  0831               	movf	UART_Init@var_baudRate_u32+1,w
+  1889  03B8  00A1               	movwf	UART_SetBaudRate@var_baudRate_u32+1
+  1890  03B9  0830               	movf	UART_Init@var_baudRate_u32,w
+  1891  03BA  00A0               	movwf	UART_SetBaudRate@var_baudRate_u32
+  1892  03BB  120A  118A  246C   	fcall	_UART_SetBaudRate
+  1893  03BE  0008               	return
+  1894  03BF                     __end_of_UART_Init:	
+  1895                           
+  1896                           	psect	text7
+  1897  046C                     __ptext7:	
+  1898 ;; *************** function _UART_SetBaudRate *****************
+  1899 ;; Defined at:
+  1900 ;;		line 89 in file "../00-libfiles/uart.c"
+  1901 ;; Parameters:    Size  Location     Type
+  1902 ;;  var_baudRate    4    0[BANK0 ] unsigned long 
+  1903 ;; Auto vars:     Size  Location     Type
+  1904 ;;  RegValue        4   12[BANK0 ] unsigned long 
+  1905 ;; Return value:  Size  Location     Type
+  1906 ;;                  1    wreg      void 
+  1907 ;; Registers used:
+  1908 ;;		wreg, status,2, status,0, pclath, cstack
+  1909 ;; Tracked objects:
+  1910 ;;		On entry : 0/0
+  1911 ;;		On exit  : 0/0
+  1912 ;;		Unchanged: 0/0
+  1913 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1914 ;;      Params:         0       4       0       0       0
+  1915 ;;      Locals:         0       4       0       0       0
+  1916 ;;      Temps:          0       8       0       0       0
+  1917 ;;      Totals:         0      16       0       0       0
+  1918 ;;Total ram usage:       16 bytes
+  1919 ;; Hardware stack levels used:    1
+  1920 ;; Hardware stack levels required when called:    1
+  1921 ;; This function calls:
+  1922 ;;		___lldiv
+  1923 ;; This function is called by:
+  1924 ;;		_UART_Init
+  1925 ;; This function uses a non-reentrant model
+  1926 ;;
+  1927                           
+  1928                           
+  1929                           ;psect for function _UART_SetBaudRate
+  1930  046C                     _UART_SetBaudRate:	
+  1931                           
+  1932                           ;uart.c: 91: uint32_t RegValue;
+  1933                           ;uart.c: 93: if((var_baudRate_u32 >= 2400) && (var_baudRate_u32<=115200UL))
+  1934                           
+  1935                           ;incstack = 0
+  1936                           ; Regs used in _UART_SetBaudRate: [wreg+status,2+status,0+pclath+cstack]
+  1937  046C  1283               	bcf	3,5	;RP0=0, select bank0
+  1938  046D  1303               	bcf	3,6	;RP1=0, select bank0
+  1939  046E  0823               	movf	UART_SetBaudRate@var_baudRate_u32+3,w
+  1940  046F  1D03               	btfss	3,2
+  1941  0470  2C7E               	goto	l988
+  1942  0471  0822               	movf	UART_SetBaudRate@var_baudRate_u32+2,w
+  1943  0472  1D03               	btfss	3,2
+  1944  0473  2C7E               	goto	l988
+  1945  0474  3009               	movlw	9
+  1946  0475  0221               	subwf	UART_SetBaudRate@var_baudRate_u32+1,w
+  1947  0476  1D03               	skipz
+  1948  0477  2C7C               	goto	u603
+  1949  0478  3060               	movlw	96
+  1950  0479  0220               	subwf	UART_SetBaudRate@var_baudRate_u32,w
+  1951  047A  1D03               	skipz
+  1952  047B  2C7C               	goto	u603
+  1953  047C                     u603:	
+  1954  047C  1C03               	btfss	3,0
+  1955  047D  2CD9               	goto	l992
+  1956  047E                     l988:	
+  1957  047E  0823               	movf	UART_SetBaudRate@var_baudRate_u32+3,w
+  1958  047F  1D03               	btfss	3,2
+  1959  0480  2CD9               	goto	l992
+  1960  0481  3001               	movlw	1
+  1961  0482  0222               	subwf	UART_SetBaudRate@var_baudRate_u32+2,w
+  1962  0483  1D03               	skipz
+  1963  0484  2C8D               	goto	u613
+  1964  0485  30C2               	movlw	194
+  1965  0486  0221               	subwf	UART_SetBaudRate@var_baudRate_u32+1,w
+  1966  0487  1D03               	skipz
+  1967  0488  2C8D               	goto	u613
+  1968  0489  3001               	movlw	1
+  1969  048A  0220               	subwf	UART_SetBaudRate@var_baudRate_u32,w
+  1970  048B  1D03               	skipz
+  1971  048C  2C8D               	goto	u613
+  1972  048D                     u613:	
+  1973  048D  1803               	btfsc	3,0
+  1974  048E  2CD9               	goto	l992
+  1975                           
+  1976                           ;uart.c: 94: {
+  1977                           ;uart.c: 97: RegValue = (uint32_t)((20000000UL / (64*(uint32_t)var_baudRate_u32)) - 1);
+  1978  048F  30FF               	movlw	255
+  1979  0490  00A4               	movwf	??_UART_SetBaudRate
+  1980  0491  30FF               	movlw	255
+  1981  0492  00A5               	movwf	??_UART_SetBaudRate+1
+  1982  0493  30FF               	movlw	255
+  1983  0494  00A6               	movwf	??_UART_SetBaudRate+2
+  1984  0495  30FF               	movlw	255
+  1985  0496  00A7               	movwf	??_UART_SetBaudRate+3
+  1986  0497  0820               	movf	UART_SetBaudRate@var_baudRate_u32,w
+  1987  0498  00A8               	movwf	??_UART_SetBaudRate+4
+  1988  0499  0821               	movf	UART_SetBaudRate@var_baudRate_u32+1,w
+  1989  049A  00A9               	movwf	??_UART_SetBaudRate+5
+  1990  049B  0822               	movf	UART_SetBaudRate@var_baudRate_u32+2,w
+  1991  049C  00AA               	movwf	??_UART_SetBaudRate+6
+  1992  049D  0823               	movf	UART_SetBaudRate@var_baudRate_u32+3,w
+  1993  049E  00AB               	movwf	??_UART_SetBaudRate+7
+  1994  049F  3006               	movlw	6
+  1995  04A0                     u625:	
+  1996  04A0  1003               	clrc
+  1997  04A1  0DA8               	rlf	??_UART_SetBaudRate+4,f
+  1998  04A2  0DA9               	rlf	??_UART_SetBaudRate+5,f
+  1999  04A3  0DAA               	rlf	??_UART_SetBaudRate+6,f
+  2000  04A4  0DAB               	rlf	??_UART_SetBaudRate+7,f
+  2001  04A5  3EFF               	addlw	-1
+  2002  04A6  1D03               	skipz
+  2003  04A7  2CA0               	goto	u625
+  2004  04A8  082B               	movf	??_UART_SetBaudRate+7,w
+  2005  04A9  00F3               	movwf	___lldiv@divisor+3
+  2006  04AA  082A               	movf	??_UART_SetBaudRate+6,w
+  2007  04AB  00F2               	movwf	___lldiv@divisor+2
+  2008  04AC  0829               	movf	??_UART_SetBaudRate+5,w
+  2009  04AD  00F1               	movwf	___lldiv@divisor+1
+  2010  04AE  0828               	movf	??_UART_SetBaudRate+4,w
+  2011  04AF  00F0               	movwf	___lldiv@divisor
+  2012  04B0  3001               	movlw	1
+  2013  04B1  00F7               	movwf	___lldiv@dividend+3
+  2014  04B2  3031               	movlw	49
+  2015  04B3  00F6               	movwf	___lldiv@dividend+2
+  2016  04B4  302D               	movlw	45
+  2017  04B5  00F5               	movwf	___lldiv@dividend+1
+  2018  04B6  3000               	movlw	0
+  2019  04B7  00F4               	movwf	___lldiv@dividend
+  2020  04B8  120A  118A  240E  120A  118A  	fcall	___lldiv
+  2021  04BD  0870               	movf	?___lldiv,w
+  2022  04BE  1283               	bcf	3,5	;RP0=0, select bank0
+  2023  04BF  1303               	bcf	3,6	;RP1=0, select bank0
+  2024  04C0  07A4               	addwf	??_UART_SetBaudRate,f
+  2025  04C1  0871               	movf	?___lldiv+1,w
+  2026  04C2  1803               	skipnc
+  2027  04C3  0F71               	incfsz	?___lldiv+1,w
+  2028  04C4  2CC6               	goto	u630
+  2029  04C5  2CC7               	goto	u631
+  2030  04C6                     u630:	
+  2031  04C6  07A5               	addwf	??_UART_SetBaudRate+1,f
+  2032  04C7                     u631:	
+  2033  04C7  0872               	movf	?___lldiv+2,w
+  2034  04C8  1803               	skipnc
+  2035  04C9  0F72               	incfsz	?___lldiv+2,w
+  2036  04CA  2CCC               	goto	u632
+  2037  04CB  2CCD               	goto	u633
+  2038  04CC                     u632:	
+  2039  04CC  07A6               	addwf	??_UART_SetBaudRate+2,f
+  2040  04CD                     u633:	
+  2041  04CD  0873               	movf	?___lldiv+3,w
+  2042  04CE  1803               	skipnc
+  2043  04CF  0A73               	incf	?___lldiv+3,w
+  2044  04D0  07A7               	addwf	??_UART_SetBaudRate+3,f
+  2045  04D1  0827               	movf	??_UART_SetBaudRate+3,w
+  2046  04D2  00AF               	movwf	UART_SetBaudRate@RegValue+3
+  2047  04D3  0826               	movf	??_UART_SetBaudRate+2,w
+  2048  04D4  00AE               	movwf	UART_SetBaudRate@RegValue+2
+  2049  04D5  0825               	movf	??_UART_SetBaudRate+1,w
+  2050  04D6  00AD               	movwf	UART_SetBaudRate@RegValue+1
+  2051  04D7  0824               	movf	??_UART_SetBaudRate,w
+  2052  04D8  2CE0               	goto	L3
+  2053  04D9                     l992:	
+  2054                           ;uart.c: 98: }
+  2055                           
+  2056                           
+  2057                           ;uart.c: 99: else
+  2058                           ;uart.c: 100: {
+  2059                           ;uart.c: 102: RegValue = (uint32_t)((20000000UL / (64*(uint32_t)9600)) - 1);
+  2060  04D9  3000               	movlw	0
+  2061  04DA  00AF               	movwf	UART_SetBaudRate@RegValue+3
+  2062  04DB  3000               	movlw	0
+  2063  04DC  00AE               	movwf	UART_SetBaudRate@RegValue+2
+  2064  04DD  3000               	movlw	0
+  2065  04DE  00AD               	movwf	UART_SetBaudRate@RegValue+1
+  2066  04DF  301F               	movlw	31
+  2067  04E0                     L3:	
+  2068  04E0  00AC               	movwf	UART_SetBaudRate@RegValue
+  2069                           
+  2070                           ;uart.c: 103: }
+  2071                           ;uart.c: 105: SPBRG = (uint8_t)RegValue;
+  2072  04E1  082C               	movf	UART_SetBaudRate@RegValue,w
+  2073  04E2  1683               	bsf	3,5	;RP0=1, select bank1
+  2074  04E3  1303               	bcf	3,6	;RP1=0, select bank1
+  2075  04E4  0099               	movwf	25	;volatile
+  2076  04E5  0008               	return
+  2077  04E6                     __end_of_UART_SetBaudRate:	
+  2078                           
+  2079                           	psect	text8
+  2080  040E                     __ptext8:	
+  2081 ;; *************** function ___lldiv *****************
+  2082 ;; Defined at:
+  2083 ;;		line 6 in file "C:\Program Files\Microchip\xc8\v1.36\sources\common\lldiv.c"
+  2084 ;; Parameters:    Size  Location     Type
+  2085 ;;  divisor         4    0[COMMON] unsigned long 
+  2086 ;;  dividend        4    4[COMMON] unsigned long 
+  2087 ;; Auto vars:     Size  Location     Type
+  2088 ;;  quotient        4    9[COMMON] unsigned long 
+  2089 ;;  counter         1   13[COMMON] unsigned char 
+  2090 ;; Return value:  Size  Location     Type
+  2091 ;;                  4    0[COMMON] unsigned long 
+  2092 ;; Registers used:
+  2093 ;;		wreg, status,2, status,0
+  2094 ;; Tracked objects:
+  2095 ;;		On entry : 0/0
+  2096 ;;		On exit  : 0/0
+  2097 ;;		Unchanged: 0/0
+  2098 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2099 ;;      Params:         8       0       0       0       0
+  2100 ;;      Locals:         5       0       0       0       0
+  2101 ;;      Temps:          1       0       0       0       0
+  2102 ;;      Totals:        14       0       0       0       0
+  2103 ;;Total ram usage:       14 bytes
+  2104 ;; Hardware stack levels used:    1
+  2105 ;; This function calls:
+  2106 ;;		Nothing
+  2107 ;; This function is called by:
+  2108 ;;		_UART_SetBaudRate
+  2109 ;;		_UART_TxNumber
+  2110 ;; This function uses a non-reentrant model
+  2111 ;;
+  2112                           
+  2113                           
+  2114                           ;psect for function ___lldiv
+  2115  040E                     ___lldiv:	
+  2116                           
+  2117                           ;incstack = 0
+  2118                           ; Regs used in ___lldiv: [wreg+status,2+status,0]
+  2119  040E  3000               	movlw	0
+  2120  040F  00FC               	movwf	___lldiv@quotient+3
+  2121  0410  3000               	movlw	0
+  2122  0411  00FB               	movwf	___lldiv@quotient+2
+  2123  0412  3000               	movlw	0
+  2124  0413  00FA               	movwf	___lldiv@quotient+1
+  2125  0414  3000               	movlw	0
+  2126  0415  00F9               	movwf	___lldiv@quotient
+  2127  0416  0873               	movf	___lldiv@divisor+3,w
+  2128  0417  0472               	iorwf	___lldiv@divisor+2,w
+  2129  0418  0471               	iorwf	___lldiv@divisor+1,w
+  2130  0419  0470               	iorwf	___lldiv@divisor,w
+  2131  041A  1903               	skipnz
+  2132  041B  2C63               	goto	l976
+  2133  041C  01FD               	clrf	___lldiv@counter
+  2134  041D  0AFD               	incf	___lldiv@counter,f
+  2135  041E                     l962:	
+  2136  041E  1BF3               	btfsc	___lldiv@divisor+3,7
+  2137  041F  2C2E               	goto	l964
+  2138  0420  3001               	movlw	1
+  2139  0421  00F8               	movwf	??___lldiv
+  2140  0422                     u535:	
+  2141  0422  1003               	clrc
+  2142  0423  0DF0               	rlf	___lldiv@divisor,f
+  2143  0424  0DF1               	rlf	___lldiv@divisor+1,f
+  2144  0425  0DF2               	rlf	___lldiv@divisor+2,f
+  2145  0426  0DF3               	rlf	___lldiv@divisor+3,f
+  2146  0427  0BF8               	decfsz	??___lldiv,f
+  2147  0428  2C22               	goto	u535
+  2148  0429  3001               	movlw	1
+  2149  042A  00F8               	movwf	??___lldiv
+  2150  042B  0878               	movf	??___lldiv,w
+  2151  042C  07FD               	addwf	___lldiv@counter,f
+  2152  042D  2C1E               	goto	l962
+  2153  042E                     l964:	
+  2154  042E  3001               	movlw	1
+  2155  042F  00F8               	movwf	??___lldiv
+  2156  0430                     u555:	
+  2157  0430  1003               	clrc
+  2158  0431  0DF9               	rlf	___lldiv@quotient,f
+  2159  0432  0DFA               	rlf	___lldiv@quotient+1,f
+  2160  0433  0DFB               	rlf	___lldiv@quotient+2,f
+  2161  0434  0DFC               	rlf	___lldiv@quotient+3,f
+  2162  0435  0BF8               	decfsz	??___lldiv,f
+  2163  0436  2C30               	goto	u555
+  2164  0437  0873               	movf	___lldiv@divisor+3,w
+  2165  0438  0277               	subwf	___lldiv@dividend+3,w
+  2166  0439  1D03               	skipz
+  2167  043A  2C45               	goto	u565
+  2168  043B  0872               	movf	___lldiv@divisor+2,w
+  2169  043C  0276               	subwf	___lldiv@dividend+2,w
+  2170  043D  1D03               	skipz
+  2171  043E  2C45               	goto	u565
+  2172  043F  0871               	movf	___lldiv@divisor+1,w
+  2173  0440  0275               	subwf	___lldiv@dividend+1,w
+  2174  0441  1D03               	skipz
+  2175  0442  2C45               	goto	u565
+  2176  0443  0870               	movf	___lldiv@divisor,w
+  2177  0444  0274               	subwf	___lldiv@dividend,w
+  2178  0445                     u565:	
+  2179  0445  1C03               	skipc
+  2180  0446  2C56               	goto	l972
+  2181  0447  0870               	movf	___lldiv@divisor,w
+  2182  0448  02F4               	subwf	___lldiv@dividend,f
+  2183  0449  0871               	movf	___lldiv@divisor+1,w
+  2184  044A  1C03               	skipc
+  2185  044B  0F71               	incfsz	___lldiv@divisor+1,w
+  2186  044C  02F5               	subwf	___lldiv@dividend+1,f
+  2187  044D  0872               	movf	___lldiv@divisor+2,w
+  2188  044E  1C03               	skipc
+  2189  044F  0F72               	incfsz	___lldiv@divisor+2,w
+  2190  0450  02F6               	subwf	___lldiv@dividend+2,f
+  2191  0451  0873               	movf	___lldiv@divisor+3,w
+  2192  0452  1C03               	skipc
+  2193  0453  0F73               	incfsz	___lldiv@divisor+3,w
+  2194  0454  02F7               	subwf	___lldiv@dividend+3,f
+  2195  0455  1479               	bsf	___lldiv@quotient,0
+  2196  0456                     l972:	
+  2197  0456  3001               	movlw	1
+  2198  0457                     u575:	
+  2199  0457  1003               	clrc
+  2200  0458  0CF3               	rrf	___lldiv@divisor+3,f
+  2201  0459  0CF2               	rrf	___lldiv@divisor+2,f
+  2202  045A  0CF1               	rrf	___lldiv@divisor+1,f
+  2203  045B  0CF0               	rrf	___lldiv@divisor,f
+  2204  045C  3EFF               	addlw	-1
+  2205  045D  1D03               	skipz
+  2206  045E  2C57               	goto	u575
+  2207  045F  3001               	movlw	1
+  2208  0460  02FD               	subwf	___lldiv@counter,f
+  2209  0461  1D03               	btfss	3,2
+  2210  0462  2C2E               	goto	l964
+  2211  0463                     l976:	
+  2212  0463  087C               	movf	___lldiv@quotient+3,w
+  2213  0464  00F3               	movwf	?___lldiv+3
+  2214  0465  087B               	movf	___lldiv@quotient+2,w
+  2215  0466  00F2               	movwf	?___lldiv+2
+  2216  0467  087A               	movf	___lldiv@quotient+1,w
+  2217  0468  00F1               	movwf	?___lldiv+1
+  2218  0469  0879               	movf	___lldiv@quotient,w
+  2219  046A  00F0               	movwf	?___lldiv
+  2220  046B  0008               	return
+  2221  046C                     __end_of___lldiv:	
+  2222                           
+  2223                           	psect	text9
+  2224  0365                     __ptext9:	
+  2225 ;; *************** function _ADC_Init *****************
+  2226 ;; Defined at:
+  2227 ;;		line 54 in file "../00-libfiles/adc.c"
+  2228 ;; Parameters:    Size  Location     Type
+  2229 ;;		None
+  2230 ;; Auto vars:     Size  Location     Type
+  2231 ;;		None
+  2232 ;; Return value:  Size  Location     Type
+  2233 ;;                  1    wreg      void 
+  2234 ;; Registers used:
+  2235 ;;		wreg, status,2
+  2236 ;; Tracked objects:
+  2237 ;;		On entry : 0/0
+  2238 ;;		On exit  : 0/0
+  2239 ;;		Unchanged: 0/0
+  2240 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2241 ;;      Params:         0       0       0       0       0
+  2242 ;;      Locals:         0       0       0       0       0
+  2243 ;;      Temps:          0       0       0       0       0
+  2244 ;;      Totals:         0       0       0       0       0
+  2245 ;;Total ram usage:        0 bytes
+  2246 ;; Hardware stack levels used:    1
+  2247 ;; This function calls:
+  2248 ;;		Nothing
+  2249 ;; This function is called by:
+  2250 ;;		_main
+  2251 ;; This function uses a non-reentrant model
+  2252 ;;
+  2253                           
+  2254                           
+  2255                           ;psect for function _ADC_Init
+  2256  0365                     _ADC_Init:	
+  2257                           
+  2258                           ;adc.c: 56: ADCON0=0x00;
+  2259                           
+  2260                           ;incstack = 0
+  2261                           ; Regs used in _ADC_Init: [wreg+status,2]
+  2262  0365  1283               	bcf	3,5	;RP0=0, select bank0
+  2263  0366  1303               	bcf	3,6	;RP1=0, select bank0
+  2264  0367  019F               	clrf	31	;volatile
+  2265                           
+  2266                           ;adc.c: 57: ADCON1=0x80;
+  2267  0368  3080               	movlw	128
+  2268  0369  1683               	bsf	3,5	;RP0=1, select bank1
+  2269  036A  1303               	bcf	3,6	;RP1=0, select bank1
+  2270  036B  009F               	movwf	31	;volatile
+  2271  036C  0008               	return
+  2272  036D                     __end_of_ADC_Init:	
+  2273                           
+  2274                           	psect	text10
+  2275  03BF                     __ptext10:	
+  2276 ;; *************** function _ADC_GetAdcValue *****************
+  2277 ;; Defined at:
+  2278 ;;		line 76 in file "../00-libfiles/adc.c"
+  2279 ;; Parameters:    Size  Location     Type
+  2280 ;;  var_adcChann    1    wreg     unsigned char 
+  2281 ;; Auto vars:     Size  Location     Type
+  2282 ;;  var_adcChann    1    5[COMMON] unsigned char 
+  2283 ;; Return value:  Size  Location     Type
+  2284 ;;                  2    2[COMMON] unsigned int 
+  2285 ;; Registers used:
+  2286 ;;		wreg, status,2, status,0, pclath, cstack
+  2287 ;; Tracked objects:
+  2288 ;;		On entry : 0/0
+  2289 ;;		On exit  : 0/0
+  2290 ;;		Unchanged: 0/0
+  2291 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2292 ;;      Params:         2       0       0       0       0
+  2293 ;;      Locals:         1       0       0       0       0
+  2294 ;;      Temps:          1       0       0       0       0
+  2295 ;;      Totals:         4       0       0       0       0
+  2296 ;;Total ram usage:        4 bytes
+  2297 ;; Hardware stack levels used:    1
+  2298 ;; Hardware stack levels required when called:    1
+  2299 ;; This function calls:
+  2300 ;;		_DELAY_us
+  2301 ;; This function is called by:
+  2302 ;;		_main
+  2303 ;; This function uses a non-reentrant model
+  2304 ;;
+  2305                           
+  2306                           
+  2307                           ;psect for function _ADC_GetAdcValue
+  2308  03BF                     _ADC_GetAdcValue:	
+  2309                           
+  2310                           ;incstack = 0
+  2311                           ; Regs used in _ADC_GetAdcValue: [wreg+status,2+status,0+pclath+cstack]
+  2312                           ;ADC_GetAdcValue@var_adcChannel_u8 stored from wreg
+  2313  03BF  00F5               	movwf	ADC_GetAdcValue@var_adcChannel_u8
+  2314                           
+  2315                           ;adc.c: 79: ADCON0= (var_adcChannel_u8<<3);
+  2316  03C0  0875               	movf	ADC_GetAdcValue@var_adcChannel_u8,w
+  2317  03C1  00F4               	movwf	??_ADC_GetAdcValue
+  2318  03C2  3002               	movlw	2
+  2319  03C3                     u795:	
+  2320  03C3  1003               	clrc
+  2321  03C4  0DF4               	rlf	??_ADC_GetAdcValue,f
+  2322  03C5  3EFF               	addlw	-1
+  2323  03C6  1D03               	skipz
+  2324  03C7  2BC3               	goto	u795
+  2325  03C8  1003               	clrc
+  2326  03C9  0D74               	rlf	??_ADC_GetAdcValue,w
+  2327  03CA  1283               	bcf	3,5	;RP0=0, select bank0
+  2328  03CB  1303               	bcf	3,6	;RP1=0, select bank0
+  2329  03CC  009F               	movwf	31	;volatile
+  2330                           
+  2331                           ;adc.c: 80: ADON = 1;
+  2332  03CD  141F               	bsf	31,0	;volatile
+  2333                           
+  2334                           ;adc.c: 81: DELAY_us(50);
+  2335  03CE  3032               	movlw	50
+  2336  03CF  00F0               	movwf	DELAY_us@us_count
+  2337  03D0  3000               	movlw	0
+  2338  03D1  00F1               	movwf	DELAY_us@us_count+1
+  2339  03D2  120A  118A  2376  120A  118A  	fcall	_DELAY_us
+  2340                           
+  2341                           ;adc.c: 83: GO=1;
+  2342  03D7  1283               	bcf	3,5	;RP0=0, select bank0
+  2343  03D8  1303               	bcf	3,6	;RP1=0, select bank0
+  2344  03D9  151F               	bsf	31,2	;volatile
+  2345  03DA                     l34:	
+  2346                           ;adc.c: 84: while(GO_DONE==1);
+  2347                           
+  2348  03DA  191F               	btfsc	31,2	;volatile
+  2349  03DB  2BDA               	goto	l34
+  2350                           
+  2351                           ;adc.c: 87: return((ADRESH<<8) + ADRESL);
+  2352  03DC  081E               	movf	30,w	;volatile
+  2353  03DD  00F3               	movwf	?_ADC_GetAdcValue+1
+  2354  03DE  1683               	bsf	3,5	;RP0=1, select bank1
+  2355  03DF  1303               	bcf	3,6	;RP1=0, select bank1
+  2356  03E0  081E               	movf	30,w	;volatile
+  2357  03E1  00F2               	movwf	?_ADC_GetAdcValue
+  2358  03E2  0008               	return
+  2359  03E3                     __end_of_ADC_GetAdcValue:	
+  2360                           
+  2361                           	psect	text11
+  2362  0376                     __ptext11:	
+  2363 ;; *************** function _DELAY_us *****************
+  2364 ;; Defined at:
+  2365 ;;		line 56 in file "../00-libfiles/delay.c"
+  2366 ;; Parameters:    Size  Location     Type
+  2367 ;;  us_count        2    0[COMMON] unsigned int 
+  2368 ;; Auto vars:     Size  Location     Type
+  2369 ;;		None
+  2370 ;; Return value:  Size  Location     Type
+  2371 ;;                  1    wreg      void 
+  2372 ;; Registers used:
+  2373 ;;		wreg, status,2, status,0
+  2374 ;; Tracked objects:
+  2375 ;;		On entry : 0/0
+  2376 ;;		On exit  : 0/0
+  2377 ;;		Unchanged: 0/0
+  2378 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2379 ;;      Params:         2       0       0       0       0
+  2380 ;;      Locals:         0       0       0       0       0
+  2381 ;;      Temps:          0       0       0       0       0
+  2382 ;;      Totals:         2       0       0       0       0
+  2383 ;;Total ram usage:        2 bytes
+  2384 ;; Hardware stack levels used:    1
+  2385 ;; This function calls:
+  2386 ;;		Nothing
+  2387 ;; This function is called by:
+  2388 ;;		_ADC_GetAdcValue
+  2389 ;;		_DELAY_ms
+  2390 ;; This function uses a non-reentrant model
+  2391 ;;
+  2392                           
+  2393                           
+  2394                           ;psect for function _DELAY_us
+  2395  0376                     _DELAY_us:	
+  2396  0376                     l984:	
+  2397                           ;delay.c: 58: while (us_count != 0)
+  2398                           
+  2399                           ;incstack = 0
+  2400                           ; Regs used in _DELAY_us: [wreg+status,2+status,0]
+  2401                           
+  2402  0376  0870               	movf	DELAY_us@us_count,w
+  2403  0377  0471               	iorwf	DELAY_us@us_count+1,w
+  2404  0378  1903               	btfsc	3,2
+  2405  0379  0008               	return
+  2406                           
+  2407                           ;delay.c: 59: {
+  2408                           ;delay.c: 60: us_count--;
+  2409  037A  3001               	movlw	1
+  2410  037B  02F0               	subwf	DELAY_us@us_count,f
+  2411  037C  3000               	movlw	0
+  2412  037D  1C03               	skipc
+  2413  037E  03F1               	decf	DELAY_us@us_count+1,f
+  2414  037F  02F1               	subwf	DELAY_us@us_count+1,f
+  2415  0380  2B76               	goto	l984
+  2416  0381                     __end_of_DELAY_us:	
+  2417  007E                     btemp	set	126	;btemp
+  2418  007E                     wtemp	set	126
+  2419  007E                     wtemp0	set	126
+  2420  0080                     wtemp1	set	128
+  2421  0082                     wtemp2	set	130
+  2422  0084                     wtemp3	set	132
+  2423  0086                     wtemp4	set	134
+  2424  0088                     wtemp5	set	136
+  2425  007F                     wtemp6	set	127
+  2426  007E                     ttemp	set	126
+  2427  007E                     ttemp0	set	126
+  2428  0081                     ttemp1	set	129
+  2429  0084                     ttemp2	set	132
+  2430  0087                     ttemp3	set	135
+  2431  007F                     ttemp4	set	127
+  2432  007E                     ltemp	set	126
+  2433  007E                     ltemp0	set	126
+  2434  0082                     ltemp1	set	130
+  2435  0086                     ltemp2	set	134
+  2436  0080                     ltemp3	set	128
+
+
+Data Sizes:
+    Strings     18
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14     14      14
+    BANK0            80     59      59
+    BANK1            80      0       0
+    BANK3            96      0       0
+    BANK2            96      0       0
+
+Pointer List with Targets:
+
+    UART_Printf@str	PTR unsigned char  size(1) Largest target is 0
+
+    UART_Printf@argList	PTR const unsigned char  size(1) Largest target is 18
+		 -> STR_1(CODE[18]), 
+
+    UART_Printf@ptr	PTR const unsigned char  size(1) Largest target is 18
+		 -> STR_1(CODE[18]), 
+
+    UART_Printf@argp	PTR void [1] size(1) Largest target is 1
+		 -> ?_UART_Printf(BANK0[1]), 
+
+    UART_TxString@ptr_string	PTR unsigned char  size(1) Largest target is 0
+
+
+Critical Paths under _main in COMMON
+
+    _UART_TxString->_UART_TxChar
+    _UART_TxNumber->___lldiv
+    ___bmul->___lldiv
+    _UART_SetBaudRate->___lldiv
+    _ADC_GetAdcValue->_DELAY_us
+
+Critical Paths under _main in BANK0
+
+    _main->_UART_Printf
+    _UART_Printf->_UART_TxNumber
+    _UART_TxNumber->___bmul
+    _UART_Init->_UART_SetBaudRate
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 2     2      0    4574
+                                             57 BANK0      2     2      0
+                    _ADC_GetAdcValue
+                           _ADC_Init
+                          _UART_Init
+                        _UART_Printf
+ ---------------------------------------------------------------------------------
+ (1) _UART_Printf                                         22    20      2    3702
+                                             35 BANK0     22    20      2
+                        _UART_TxChar
+                      _UART_TxNumber
+                      _UART_TxString
+                             ___bmul
+ ---------------------------------------------------------------------------------
+ (2) _UART_TxString                                        2     2      0      94
+                                              1 COMMON     2     2      0
+                        _UART_TxChar
+ ---------------------------------------------------------------------------------
+ (2) _UART_TxNumber                                       31    26      5    2270
+                                              4 BANK0     31    26      5
+                        _UART_TxChar
+                             ___bmul
+                            ___lldiv
+ ---------------------------------------------------------------------------------
+ (2) ___bmul                                               4     3      1     198
+                                              0 BANK0      4     3      1
+                            ___lldiv (ARG)
+ ---------------------------------------------------------------------------------
+ (3) _UART_TxChar                                          1     1      0      22
+                                              0 COMMON     1     1      0
+ ---------------------------------------------------------------------------------
+ (1) _UART_Init                                            4     0      4     698
+                                             16 BANK0      4     0      4
+                   _UART_SetBaudRate
+ ---------------------------------------------------------------------------------
+ (2) _UART_SetBaudRate                                    16    12      4     623
+                                              0 BANK0     16    12      4
+                            ___lldiv
+ ---------------------------------------------------------------------------------
+ (3) ___lldiv                                             14     6      8     480
+                                              0 COMMON    14     6      8
+ ---------------------------------------------------------------------------------
+ (1) _ADC_Init                                             0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _ADC_GetAdcValue                                      4     2      2     151
+                                              2 COMMON     4     2      2
+                           _DELAY_us
+ ---------------------------------------------------------------------------------
+ (2) _DELAY_us                                             2     0      2     129
+                                              0 COMMON     2     0      2
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 3
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _ADC_GetAdcValue
+     _DELAY_us
+   _ADC_Init
+   _UART_Init
+     _UART_SetBaudRate
+       ___lldiv
+   _UART_Printf
+     _UART_TxChar
+     _UART_TxNumber
+       _UART_TxChar
+       ___bmul
+         ___lldiv (ARG)
+       ___lldiv
+     _UART_TxString
+       _UART_TxChar
+     ___bmul
+       ___lldiv (ARG)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            E      0       0       0        0.0%
+EEDATA             100      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMMON               E      E       E       1      100.0%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+ABS                  0      0       0       3        0.0%
+BITBANK0            50      0       0       4        0.0%
+BITSFR3              0      0       0       4        0.0%
+SFR3                 0      0       0       4        0.0%
+BANK0               50     3B      3B       5       73.8%
+BITSFR2              0      0       0       5        0.0%
+SFR2                 0      0       0       5        0.0%
+BITBANK1            50      0       0       6        0.0%
+BANK1               50      0       0       7        0.0%
+BITBANK3            60      0       0       8        0.0%
+BANK3               60      0       0       9        0.0%
+BITBANK2            60      0       0      10        0.0%
+BANK2               60      0       0      11        0.0%
+DATA                 0      0       0      12        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.36 build -262312587 
+Symbol Table                                                                                   Sat Feb 20 16:10:45 2016
+
+       UART_SetBaudRate@var_baudRate_u32 0020                                        pc 0002  
+                         ___bmul@product 0022                              __CFG_CP$OFF 0000  
+                                     l34 03DA                                       l76 036E  
+                                     _GO 00FA                                       fsr 0004  
+                            __CFG_LVP$ON 0000                                      l175 03F7  
+                                    l944 0385                                      l962 041E  
+                                    l972 0456                                      l964 042E  
+                                    l948 038B                                      l984 0376  
+                                    l976 0463                                      l992 04D9  
+                                    l988 047E                             __CFG_CPD$OFF 0000  
+                                    u603 047C                                      u613 048D  
+                                    u630 04C6                                      u535 0422  
+                                    u631 04C7                                      u632 04CC  
+                                    u633 04CD                                      u625 04A0  
+                                    u555 0430                                      u565 0445  
+                                    u670 051E                                      u575 0457  
+                                    u680 051F                                      u664 0503  
+                                    u665 0500                                      u795 03C3  
+                                    fsr0 0004                                      indf 0000  
+                           __CFG_FOSC$HS 0000                  __end_of_ADC_GetAdcValue 03E3  
+                                   l1000 0395                                     l1014 052D  
+                                   l1102 0621                                     l1024 0538  
+                                   l1008 04EF                                     l1016 0531  
+                                   l1114 065A                                     l1106 0649  
+                                   l1052 05CE                                     l1044 05B9  
+                                   l1036 05AD                                     l1028 054D  
+                                   l1124 0675                                     l1108 064E  
+                                   l1046 054E                                     l1150 070D  
+                                   l1126 068B                                     l1048 05BE  
+                                   l1144 06E6                                     l1136 06B2  
+                                   l1058 05E3                                     l1170 0768  
+                                   l1162 0753                                     l1138 06C7  
+                                   l1180 0794                                     l1172 0779  
+                                   l1156 072C                                     l1182 07A7  
+                                   l1192 07BD                                     l1194 07EF  
+                                   l1188 07BB                                     l1196 07F5  
+                                   l1198 05F2                                     _ADON 00F8  
+                                   STR_1 0009                                     _RCIF 0065  
+                                   _TXIF 0064                             __CFG_WRT$OFF 0000  
+                                   _main 03E3                                     btemp 007E  
+                       __end_of_ADC_Init 036D                             main@adcValue 0059  
+                                   ltemp 007E                                     start 0000  
+                                   ttemp 007E                                     wtemp 007E  
+                       __end_of_DELAY_us 0381                        ___bmul@multiplier 0023  
+                                  ?_main 0070                            __CFG_WDTE$OFF 0000  
+                        __end_of___lldiv 046C                                    _RCREG 001A  
+                                  _RCSTA 0018                                    _SPBRG 0099  
+                                  _TRISC 0087                                    _TXREG 0019  
+                                  _TXSTA 0098                       __size_of_UART_Init 0016  
+                         __CFG_BOREN$OFF 0000                                    pclath 000A  
+                                  ltemp0 007E                                    ltemp1 0082  
+                                  ltemp2 0086                                    ltemp3 0080  
+                                  ttemp0 007E                                    ttemp1 0081  
+                                  ttemp2 0084                                    ttemp3 0087  
+                                  ttemp4 007F                                    status 0003  
+                                  wtemp0 007E                                    wtemp1 0080  
+                                  wtemp2 0082                                    wtemp3 0084  
+                                  wtemp4 0086                                    wtemp5 0088  
+                                  wtemp6 007F                          __initialization 07FC  
+                           __end_of_main 040E                                   ??_main 007E  
+                       ?_ADC_GetAdcValue 0072                                   _ADCON0 001F  
+                                 _ADCON1 009F                                   _ADRESH 001E  
+                                 _ADRESL 009E                        ?_UART_SetBaudRate 0020  
+                     ??_UART_SetBaudRate 0024                           __CFG_PWRTE$OFF 0000  
+                           ?_UART_TxChar 0070                             ?_UART_Printf 0043  
+                      __end_of_UART_Init 03BF                                   ___bmul 0381  
+                              ??___lldiv 0078  UART_TxNumber@v_numOfDigitsToTransmit_u8 0028  
+                              ?_ADC_Init 0070                                ?_DELAY_us 0070  
+                __end_of__initialization 07FC                    __end_of_UART_TxNumber 05E7  
+                  __end_of_UART_TxString 03A9                      ___bmul@multiplicand 0020  
+                         __pcstackCOMMON 0070                               ??_ADC_Init 0070  
+                             ??_DELAY_us 0072                               __pmaintext 03E3  
+                                ?___bmul 0020                                  _GO_DONE 00FA  
+                       DELAY_us@us_count 0070                               __stringtab 0003  
+                   __size_of_UART_TxChar 0009                          __size_of___bmul 0013  
+                   __size_of_UART_Printf 0215                                  ___lldiv 040E  
+                                __ptext1 05E7                                  __ptext2 0394  
+                                __ptext3 04E6                                  __ptext4 0381  
+                                __ptext5 036D                                  __ptext6 03A9  
+                                __ptext7 046C                                  __ptext8 040E  
+                                __ptext9 0365                           UART_Printf@ptr 0055  
+                         UART_Printf@str 0047                     end_of_initialization 07FC  
+                         UART_TxNumber@a 0035                           UART_TxNumber@i 0042  
+             UART_TxChar@var_uartData_u8 0070                          ___lldiv@divisor 0070  
+                        ___lldiv@counter 007D                                _UART_Init 03A9  
+              __size_of_UART_SetBaudRate 007A         ADC_GetAdcValue@var_adcChannel_u8 0075  
+                      __size_of_ADC_Init 0008                        __size_of_DELAY_us 000B  
+               __size_of_ADC_GetAdcValue 0024          UART_TxNumber@v_numericSystem_u8 0041  
+                         __end_of___bmul 0394                               ?_UART_Init 0030  
+                    start_initialization 07FC                                 ??___bmul 0021  
+                 __size_of_UART_TxNumber 0101                                ___latbits 0002  
+                 __size_of_UART_TxString 0015                            __pcstackBANK0 0020  
+              UART_Init@var_baudRate_u32 0030                                 ?___lldiv 0070  
+                      ??_ADC_GetAdcValue 0074                              ??_UART_Init 007E  
+                       _UART_SetBaudRate 046C                                __pstrings 0003  
+                               _ADC_Init 0365                                 _DELAY_us 0376  
+                          UART_Printf@ch 0056                            ??_UART_TxChar 0070  
+                          _UART_TxNumber 04E6                            ??_UART_Printf 0045  
+                          _UART_TxString 0394                  UART_TxString@ptr_string 0072  
+                            __stringbase 0008                UART_TxNumber@v_number_u32 0024  
+                         ?_UART_TxNumber 0024                           ?_UART_TxString 0070  
+                       _UART_TxNumber$79 003F                      __end_of_UART_TxChar 0376  
+                       __size_of___lldiv 005E                      __end_of_UART_Printf 07FC  
+                     __end_of__stringtab 0009                                 __ptext10 03BF  
+                               __ptext11 0376                            __size_of_main 002B  
+                        UART_Printf@argp 0058                 UART_SetBaudRate@RegValue 002C  
+                        ??_UART_TxNumber 0029                 __end_of_UART_SetBaudRate 04E6  
+                        _ADC_GetAdcValue 03BF                          ??_UART_TxString 0071  
+                       ___lldiv@dividend 0074                                stringcode 0003  
+                            _UART_TxChar 036D                              _UART_Printf 05E7  
+                       ___lldiv@quotient 0079                                 stringdir 0003  
+                               stringtab 0003    UART_Printf@v_numOfDigitsToTransmit_u8 0057  
+                     UART_Printf@argList 0048                     UART_Printf@v_num_s16 004D  
+                   UART_Printf@v_num_s32 0049                     UART_Printf@v_num_u16 0053  
+                   UART_Printf@v_num_u32 004F  

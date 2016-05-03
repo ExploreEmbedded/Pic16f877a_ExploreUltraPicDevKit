@@ -1,0 +1,168 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[p mainexit ]
+"47 main.c
+[c E22 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 255 .. ]
+[n E22 . PA_0 PA_1 PA_2 PA_3 PA_4 PA_5 PA_6 PA_7 PB_0 PB_1 PB_2 PB_3 PB_4 PB_5 PB_6 PB_7 PC_0 PC_1 PC_2 PC_3 PC_4 PC_5 PC_6 PC_7 PD_0 PD_1 PD_2 PD_3 PD_4 PD_5 PD_6 PD_7 PE_0 PE_1 PE_2 PE_3 PE_4 PE_5 PE_6 PE_7 P_NC  ]
+"162 ../00-libfiles\lcd.h
+[v _LCD_SetUp `(v ~T0 @X0 0 ef11`E22`E22`E22`E22`E22`E22`E22`E22`E22`E22`E22 ]
+"150
+[v _LCD_Init `(v ~T0 @X0 0 ef2`uc`uc ]
+"157
+[v _LCD_DisplayString `(v ~T0 @X0 0 ef1`*Cuc ]
+"154
+[v _LCD_GoToLine `(v ~T0 @X0 0 ef1`uc ]
+"161
+[v _LCD_Printf `(v ~T0 @X0 0 ev`*Cuc ]
+"68 ../00-libfiles\delay.h
+[v _DELAY_ms `(v ~T0 @X0 0 ef1`ui ]
+[; ;00-libfiles\stdutils.h: 68: typedef signed char sint8_t;
+[; ;00-libfiles\stdutils.h: 69: typedef unsigned char uint8_t;
+[; ;00-libfiles\stdutils.h: 71: typedef signed int sint16_t;
+[; ;00-libfiles\stdutils.h: 72: typedef unsigned int uint16_t;
+[; ;00-libfiles\stdutils.h: 74: typedef signed long int sint32_t;
+[; ;00-libfiles\stdutils.h: 75: typedef unsigned long int uint32_t;
+[; ;00-libfiles\stdutils.h: 177: typedef enum
+[; ;00-libfiles\stdutils.h: 178: {
+[; ;00-libfiles\stdutils.h: 179: E_FALSE,
+[; ;00-libfiles\stdutils.h: 180: E_TRUE
+[; ;00-libfiles\stdutils.h: 181: }Boolean_et;
+[; ;00-libfiles\stdutils.h: 184: typedef enum
+[; ;00-libfiles\stdutils.h: 185: {
+[; ;00-libfiles\stdutils.h: 186: E_FAILED,
+[; ;00-libfiles\stdutils.h: 187: E_SUCCESS,
+[; ;00-libfiles\stdutils.h: 188: E_BUSY,
+[; ;00-libfiles\stdutils.h: 189: E_TIMEOUT
+[; ;00-libfiles\stdutils.h: 190: }Status_et;
+[; ;00-libfiles\stdutils.h: 193: typedef enum
+[; ;00-libfiles\stdutils.h: 194: {
+[; ;00-libfiles\stdutils.h: 195: E_BINARY=2,
+[; ;00-libfiles\stdutils.h: 196: E_DECIMAL = 10,
+[; ;00-libfiles\stdutils.h: 197: E_HEX = 16
+[; ;00-libfiles\stdutils.h: 198: }NumericSystem_et;
+"299 ../00-libfiles\stdutils.h
+[p x FOSC=HS ]
+"300
+[p x WDTE=OFF ]
+"301
+[p x PWRTE=OFF ]
+"302
+[p x BOREN=OFF ]
+"303
+[p x LVP=ON ]
+"304
+[p x CPD=OFF ]
+"305
+[p x WRT=OFF ]
+"306
+[p x CP=OFF ]
+[; ;00-libfiles\gpio.h: 48: typedef enum
+[; ;00-libfiles\gpio.h: 49: {
+[; ;00-libfiles\gpio.h: 50: PA_0,PA_1,PA_2,PA_3,PA_4,PA_5,PA_6,PA_7,
+[; ;00-libfiles\gpio.h: 51: PB_0,PB_1,PB_2,PB_3,PB_4,PB_5,PB_6,PB_7,
+[; ;00-libfiles\gpio.h: 52: PC_0,PC_1,PC_2,PC_3,PC_4,PC_5,PC_6,PC_7,
+[; ;00-libfiles\gpio.h: 53: PD_0,PD_1,PD_2,PD_3,PD_4,PD_5,PD_6,PD_7,
+[; ;00-libfiles\gpio.h: 54: PE_0,PE_1,PE_2,PE_3,PE_4,PE_5,PE_6,PE_7,
+[; ;00-libfiles\gpio.h: 55: P_NC = 0xff
+[; ;00-libfiles\gpio.h: 56: }gpioPins_et;
+[; ;00-libfiles\gpio.h: 66: void GPIO_PinDirection(gpioPins_et enm_pinNumber, uint8_t var_pinDirn_u8);
+[; ;00-libfiles\gpio.h: 67: void GPIO_PinWrite(gpioPins_et enm_pinNumber, uint8_t var_pinValue_u8);
+[; ;00-libfiles\gpio.h: 68: uint8_t GPIO_PinRead(gpioPins_et enm_pinNumber);
+[; ;00-libfiles\lcd.h: 123: typedef struct
+[; ;00-libfiles\lcd.h: 124: {
+[; ;00-libfiles\lcd.h: 125: uint8_t v_MaxSupportedLines_U8;
+[; ;00-libfiles\lcd.h: 126: uint8_t v_MaxSupportedChars_U8;
+[; ;00-libfiles\lcd.h: 127: uint8_t v_LcdMode_U8;
+[; ;00-libfiles\lcd.h: 128: gpioPins_et RS;
+[; ;00-libfiles\lcd.h: 129: gpioPins_et RW;
+[; ;00-libfiles\lcd.h: 130: gpioPins_et EN;
+[; ;00-libfiles\lcd.h: 131: gpioPins_et D0;
+[; ;00-libfiles\lcd.h: 132: gpioPins_et D1;
+[; ;00-libfiles\lcd.h: 133: gpioPins_et D2;
+[; ;00-libfiles\lcd.h: 134: gpioPins_et D3;
+[; ;00-libfiles\lcd.h: 135: gpioPins_et D4;
+[; ;00-libfiles\lcd.h: 136: gpioPins_et D5;
+[; ;00-libfiles\lcd.h: 137: gpioPins_et D6;
+[; ;00-libfiles\lcd.h: 138: gpioPins_et D7;
+[; ;00-libfiles\lcd.h: 139: }LcdConfig_st;
+[; ;00-libfiles\lcd.h: 150: void LCD_Init(uint8_t v_lcdNoOfLines_u8, uint8_t v_MaxCharsPerLine_u8);
+[; ;00-libfiles\lcd.h: 151: void LCD_CmdWrite( uint8_t v_lcdCmd_u8);
+[; ;00-libfiles\lcd.h: 152: void LCD_DisplayChar( char v_lcdData_u8);
+[; ;00-libfiles\lcd.h: 153: void LCD_Clear();
+[; ;00-libfiles\lcd.h: 154: void LCD_GoToLine(uint8_t v_lineNumber_u8);
+[; ;00-libfiles\lcd.h: 155: void LCD_GoToNextLine();
+[; ;00-libfiles\lcd.h: 156: void LCD_SetCursor(uint8_t v_lineNumber_u8, uint8_t v_charNumber_u8);
+[; ;00-libfiles\lcd.h: 157: void LCD_DisplayString(const char *ptr_stringPointer_u8);
+[; ;00-libfiles\lcd.h: 158: void LCD_ScrollMessage(uint8_t v_lineNumber_u8, char *ptr_msgPointer_u8);
+[; ;00-libfiles\lcd.h: 159: void LCD_DisplayNumber(uint8_t v_numericSystem_u8, uint32_t v_number_u32, uint8_t v_numOfDigitsToDisplay_u8);
+[; ;00-libfiles\lcd.h: 160: void LCD_DisplayFloatNumber(double v_floatNum_f32);
+[; ;00-libfiles\lcd.h: 161: void LCD_Printf(const char *argList, ...);
+[; ;00-libfiles\lcd.h: 162: void LCD_SetUp(gpioPins_et RS,
+[; ;00-libfiles\lcd.h: 163: gpioPins_et RW,
+[; ;00-libfiles\lcd.h: 164: gpioPins_et EN,
+[; ;00-libfiles\lcd.h: 165: gpioPins_et D0,
+[; ;00-libfiles\lcd.h: 166: gpioPins_et D1,
+[; ;00-libfiles\lcd.h: 167: gpioPins_et D2,
+[; ;00-libfiles\lcd.h: 168: gpioPins_et D3,
+[; ;00-libfiles\lcd.h: 169: gpioPins_et D4,
+[; ;00-libfiles\lcd.h: 170: gpioPins_et D5,
+[; ;00-libfiles\lcd.h: 171: gpioPins_et D6,
+[; ;00-libfiles\lcd.h: 172: gpioPins_et D7 );
+[; ;00-libfiles\delay.h: 67: void DELAY_us(uint16_t us_count);
+[; ;00-libfiles\delay.h: 68: void DELAY_ms(uint16_t ms_count);
+[; ;00-libfiles\delay.h: 69: void DELAY_sec(uint16_t var_delaySecCount_u16);
+"43 main.c
+[v _main `(i ~T0 @X0 1 ef ]
+"44
+{
+[; ;main.c: 43: int main()
+[; ;main.c: 44: {
+[e :U _main ]
+[f ]
+"45
+[v _count `i ~T0 @X0 1 a ]
+[; ;main.c: 45: int count = 0;
+[e = _count -> 0 `i ]
+[; ;main.c: 47: LCD_SetUp(PB_0,PB_1,PB_2,P_NC,P_NC,P_NC,P_NC,PB_4,PB_5,PB_6,PB_7);
+"47
+[e ( _LCD_SetUp (4 , , , , , , , , , , . `E22 8 . `E22 9 . `E22 10 . `E22 40 . `E22 40 . `E22 40 . `E22 40 . `E22 12 . `E22 13 . `E22 14 . `E22 15 ]
+[; ;main.c: 48: LCD_Init(2,16);
+"48
+[e ( _LCD_Init (2 , -> -> 2 `i `uc -> -> 16 `i `uc ]
+[; ;main.c: 50: LCD_DisplayString("Decimal");
+"50
+[e ( _LCD_DisplayString (1 :s 1C ]
+[; ;main.c: 52: while(1)
+"52
+[e :U 4 ]
+[; ;main.c: 53: {
+"53
+{
+[; ;main.c: 54: LCD_GoToLine(1);
+"54
+[e ( _LCD_GoToLine (1 -> -> 1 `i `uc ]
+[; ;main.c: 55: LCD_Printf("Count=%4d",count);
+"55
+[e ( _LCD_Printf , (. :s 2C _count ]
+[; ;main.c: 56: DELAY_ms(500);
+"56
+[e ( _DELAY_ms (1 -> -> 500 `i `ui ]
+[; ;main.c: 57: count++;
+"57
+[e ++ _count -> 1 `i ]
+"58
+}
+[e :U 3 ]
+"52
+[e $U 4  ]
+[e :U 5 ]
+[; ;main.c: 58: }
+[; ;main.c: 60: return (0);
+"60
+[e ) -> 0 `i ]
+[e $UE 2  ]
+[; ;main.c: 61: }
+"61
+[e :UE 2 ]
+}
+[a 1C 68 101 99 105 109 97 108 0 ]
+[a 2C 67 111 117 110 116 61 37 52 100 0 ]

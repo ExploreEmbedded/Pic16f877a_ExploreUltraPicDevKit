@@ -1,0 +1,306 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 6 ]
+"54 F:\Tutorials_And_Codes\PIC\ULTRA_PIC/00-libfiles/adc.c
+[v _ADC_Init ADC_Init `(v  1 e 1 0 ]
+"76
+[v _ADC_GetAdcValue ADC_GetAdcValue `(ui  1 e 2 0 ]
+"56 F:\Tutorials_And_Codes\PIC\ULTRA_PIC/00-libfiles/delay.c
+[v _DELAY_us DELAY_us `(v  1 e 1 0 ]
+"65 F:\Tutorials_And_Codes\PIC\ULTRA_PIC/00-libfiles/uart.c
+[v _UART_Init UART_Init `(v  1 e 1 0 ]
+"90
+[v _UART_SetBaudRate UART_SetBaudRate `(v  1 e 1 0 ]
+"122
+[v _UART_RxChar UART_RxChar `(uc  1 e 1 0 ]
+"144
+[v _UART_TxChar UART_TxChar `(v  1 e 1 0 ]
+"168
+[v _UART_TxString UART_TxString `(v  1 e 1 0 ]
+"259
+[v _UART_TxNumber UART_TxNumber `(v  1 e 1 0 ]
+"348
+[v _UART_TxFloatNumber UART_TxFloatNumber `(v  1 e 1 0 ]
+"411
+[v _UART_Printf UART_Printf `(v  1 e 1 0 ]
+"32 C:\Program Files\Microchip\xc8\v1.36\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"62 C:\Program Files\Microchip\xc8\v1.36\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files\Microchip\xc8\v1.36\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"56 C:\Program Files\Microchip\xc8\v1.36\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 C:\Program Files\Microchip\xc8\v1.36\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 C:\Program Files\Microchip\xc8\v1.36\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"44 C:\Program Files\Microchip\xc8\v1.36\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.36\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"35 C:\Program Files\Microchip\xc8\v1.36\sources\common\lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+"4 C:\Program Files\Microchip\xc8\v1.36\sources\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.36\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"41 F:\Tutorials_And_Codes\PIC\ULTRA_PIC\07b-Adc_RawValue_Voltage.X\main.c
+[v _main main `(i  1 e 2 0 ]
+"937 C:\Program Files\Microchip\xc8\v1.36\include\pic16f877a.h
+[v _RCSTA RCSTA `VEuc  1 e 1 @24 ]
+"1031
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1037
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
+"1118
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+"1124
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
+"1398
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1950
+[v _TXSTA TXSTA `VEuc  1 e 1 @152 ]
+"2030
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"2169
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
+"2175
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"2333
+[v _ADON ADON `VEb  1 e 0 @248 ]
+"2445
+[v _GO GO `VEb  1 e 0 @250 ]
+"2447
+[v _GO_DONE GO_DONE `VEb  1 e 0 @250 ]
+"2559
+[v _RCIF RCIF `VEb  1 e 0 @101 ]
+"2755
+[v _TXIF TXIF `VEb  1 e 0 @100 ]
+"41 F:\Tutorials_And_Codes\PIC\ULTRA_PIC\07b-Adc_RawValue_Voltage.X\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"44
+[v main@volt volt `f  1 a 3 71 ]
+"43
+[v main@adcValue adcValue `i  1 a 2 74 ]
+"57
+} 0
+"56 C:\Program Files\Microchip\xc8\v1.36\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+{
+"60
+[v ___ftdiv@f3 f3 `f  1 a 3 27 ]
+"59
+[v ___ftdiv@sign sign `uc  1 a 1 31 ]
+[v ___ftdiv@exp exp `uc  1 a 1 30 ]
+[v ___ftdiv@cntr cntr `uc  1 a 1 26 ]
+"56
+[v ___ftdiv@f2 f2 `f  1 p 3 16 ]
+[v ___ftdiv@f1 f1 `f  1 p 3 19 ]
+"86
+} 0
+"32 C:\Program Files\Microchip\xc8\v1.36\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+{
+"34
+[v ___awtoft@sign sign `uc  1 a 1 13 ]
+"32
+[v ___awtoft@c c `i  1 p 2 8 ]
+"42
+} 0
+"411 F:\Tutorials_And_Codes\PIC\ULTRA_PIC/00-libfiles/uart.c
+[v _UART_Printf UART_Printf `(v  1 e 1 0 ]
+{
+[v UART_Printf@argList argList `*.24DCCuc  1 a 1 wreg ]
+"418
+[v UART_Printf@v_num_u32 v_num_u32 `ul  1 a 4 61 ]
+"416
+[v UART_Printf@v_num_s32 v_num_s32 `l  1 a 4 55 ]
+"423
+[v UART_Printf@v_floatNum_f32 v_floatNum_f32 `d  1 a 3 50 ]
+"417
+[v UART_Printf@v_num_u16 v_num_u16 `ui  1 a 2 65 ]
+"415
+[v UART_Printf@v_num_s16 v_num_s16 `i  1 a 2 59 ]
+"414
+[v UART_Printf@argp argp `[1]*.4v  1 a 1 70 ]
+"421
+[v UART_Printf@v_numOfDigitsToTransmit_u8 v_numOfDigitsToTransmit_u8 `uc  1 a 1 69 ]
+"420
+[v UART_Printf@ch ch `uc  1 a 1 68 ]
+"413
+[v UART_Printf@ptr ptr `*.24DCCuc  1 a 1 67 ]
+"419
+[v UART_Printf@str str `*.1uc  1 a 1 53 ]
+"411
+[v UART_Printf@argList argList `*.24DCCuc  1 a 1 wreg ]
+"427
+[v UART_Printf@argList argList `*.24DCCuc  1 a 1 54 ]
+"550
+} 0
+"168
+[v _UART_TxString UART_TxString `(v  1 e 1 0 ]
+{
+[v UART_TxString@ptr_string ptr_string `*.1uc  1 a 1 wreg ]
+[v UART_TxString@ptr_string ptr_string `*.1uc  1 a 1 wreg ]
+[v UART_TxString@ptr_string ptr_string `*.1uc  1 a 1 2 ]
+"172
+} 0
+"348
+[v _UART_TxFloatNumber UART_TxFloatNumber `(v  1 e 1 0 ]
+{
+"350
+[v UART_TxFloatNumber@v_tempNumber_u32 v_tempNumber_u32 `ul  1 a 4 39 ]
+"348
+[v UART_TxFloatNumber@v_floatNumber_f32 v_floatNumber_f32 `f  1 p 3 35 ]
+"365
+} 0
+"35 C:\Program Files\Microchip\xc8\v1.36\sources\common\lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+{
+"37
+[v ___lltoft@exp exp `uc  1 a 1 13 ]
+"35
+[v ___lltoft@c c `ul  1 p 4 8 ]
+"46
+} 0
+"44 C:\Program Files\Microchip\xc8\v1.36\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 25 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 29 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 24 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 16 ]
+"73
+} 0
+"15 C:\Program Files\Microchip\xc8\v1.36\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+{
+[v ___ftneg@f1 f1 `f  1 p 3 0 ]
+"20
+} 0
+"62 C:\Program Files\Microchip\xc8\v1.36\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 11 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 15 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 14 ]
+[v ___ftmul@exp exp `uc  1 a 1 10 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 0 ]
+[v ___ftmul@f2 f2 `f  1 p 3 3 ]
+"157
+} 0
+"86 C:\Program Files\Microchip\xc8\v1.36\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+{
+"88
+[v ___ftadd@exp1 exp1 `uc  1 a 1 15 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 14 ]
+[v ___ftadd@sign sign `uc  1 a 1 13 ]
+"86
+[v ___ftadd@f1 f1 `f  1 p 3 3 ]
+[v ___ftadd@f2 f2 `f  1 p 3 6 ]
+"148
+} 0
+"62 C:\Program Files\Microchip\xc8\v1.36\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"259 F:\Tutorials_And_Codes\PIC\ULTRA_PIC/00-libfiles/uart.c
+[v _UART_TxNumber UART_TxNumber `(v  1 e 1 0 ]
+{
+[v UART_TxNumber@v_numericSystem_u8 v_numericSystem_u8 `uc  1 a 1 wreg ]
+"261
+[v UART_TxNumber@a a `[10]uc  1 a 10 21 ]
+[v UART_TxNumber@i i `uc  1 a 1 34 ]
+"259
+[v UART_TxNumber@v_numericSystem_u8 v_numericSystem_u8 `uc  1 a 1 wreg ]
+[v UART_TxNumber@v_number_u32 v_number_u32 `ul  1 p 4 4 ]
+[v UART_TxNumber@v_numOfDigitsToTransmit_u8 v_numOfDigitsToTransmit_u8 `uc  1 p 1 8 ]
+"261
+[v UART_TxNumber@v_numericSystem_u8 v_numericSystem_u8 `uc  1 a 1 33 ]
+"322
+} 0
+"4 C:\Program Files\Microchip\xc8\v1.36\sources\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 2 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 a 1 3 ]
+"51
+} 0
+"144 F:\Tutorials_And_Codes\PIC\ULTRA_PIC/00-libfiles/uart.c
+[v _UART_TxChar UART_TxChar `(v  1 e 1 0 ]
+{
+[v UART_TxChar@var_uartData_u8 var_uartData_u8 `uc  1 a 1 wreg ]
+[v UART_TxChar@var_uartData_u8 var_uartData_u8 `uc  1 a 1 wreg ]
+[v UART_TxChar@var_uartData_u8 var_uartData_u8 `uc  1 a 1 0 ]
+"149
+} 0
+"65
+[v _UART_Init UART_Init `(v  1 e 1 0 ]
+{
+[v UART_Init@var_baudRate_u32 var_baudRate_u32 `ul  1 p 4 16 ]
+"71
+} 0
+"90
+[v _UART_SetBaudRate UART_SetBaudRate `(v  1 e 1 0 ]
+{
+"92
+[v UART_SetBaudRate@RegValue RegValue `ul  1 a 4 12 ]
+"90
+[v UART_SetBaudRate@var_baudRate_u32 var_baudRate_u32 `ul  1 p 4 0 ]
+"107
+} 0
+"6 C:\Program Files\Microchip\xc8\v1.36\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"11
+[v ___lldiv@quotient quotient `ul  1 a 4 9 ]
+"12
+[v ___lldiv@counter counter `uc  1 a 1 13 ]
+"6
+[v ___lldiv@divisor divisor `ul  1 p 4 0 ]
+[v ___lldiv@dividend dividend `ul  1 p 4 4 ]
+"31
+} 0
+"54 F:\Tutorials_And_Codes\PIC\ULTRA_PIC/00-libfiles/adc.c
+[v _ADC_Init ADC_Init `(v  1 e 1 0 ]
+{
+"59
+} 0
+"76
+[v _ADC_GetAdcValue ADC_GetAdcValue `(ui  1 e 2 0 ]
+{
+[v ADC_GetAdcValue@var_adcChannel_u8 var_adcChannel_u8 `uc  1 a 1 wreg ]
+[v ADC_GetAdcValue@var_adcChannel_u8 var_adcChannel_u8 `uc  1 a 1 wreg ]
+"79
+[v ADC_GetAdcValue@var_adcChannel_u8 var_adcChannel_u8 `uc  1 a 1 5 ]
+"88
+} 0
+"56 F:\Tutorials_And_Codes\PIC\ULTRA_PIC/00-libfiles/delay.c
+[v _DELAY_us DELAY_us `(v  1 e 1 0 ]
+{
+[v DELAY_us@us_count us_count `ui  1 p 2 0 ]
+"62
+} 0
