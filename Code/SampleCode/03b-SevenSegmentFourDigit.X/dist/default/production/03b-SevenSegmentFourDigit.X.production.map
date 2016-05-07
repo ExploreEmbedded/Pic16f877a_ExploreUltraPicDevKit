@@ -2,10 +2,10 @@ Microchip MPLAB XC8 Compiler V1.36 ()
 
 Linker command line:
 
--W-3 --edf=C:\Program Files\Microchip\xc8\v1.36\dat\en_msgs.txt -cs \
+-W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v1.36\dat\en_msgs.txt -cs \
   -h+dist/default/production\03b-SevenSegmentFourDigit.X.production.sym \
   --cmf=dist/default/production\03b-SevenSegmentFourDigit.X.production.cmf \
-  -z -Q16F877A -oC:\Users\bagwan\AppData\Local\Temp\s4fg.2 \
+  -z -Q16F877A -oC:\Users\EXPLOR~1\AppData\Local\Temp\s3s4.2 \
   -Mdist/default/production/03b-SevenSegmentFourDigit.X.production.map -E1 \
   -ver=XC8 -ASTACK=0110h-016fh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -pfunctab=CODE -ACONFIG=02007h-02007h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k C:\Users\bagwan\AppData\Local\Temp\s4fg.obj \
+  -DENTRY=2 -k C:\Users\EXPLOR~1\AppData\Local\Temp\s3s4.obj \
   dist/default/production\03b-SevenSegmentFourDigit.X.production.obj 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F877A
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\bagwan\AppData\Local\Temp\s4fg.obj
+C:\Users\EXPLOR~1\AppData\Local\Temp\s3s4.obj
                 end_init                              0        0        3        0       0
 dist/default/production\03b-SevenSegmentFourDigit.X.production.obj
                 cinit                               7F0      7F0       10      FE0       0
@@ -344,7 +344,7 @@ Total ram usage:       28 bytes
 
  *************** function ___awmod *****************
  Defined at:
-		line 6 in file "C:\Program Files\Microchip\xc8\v1.36\sources\common\awmod.c"
+		line 6 in file "C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c"
  Parameters:    Size  Location     Type
   divisor         2    0[COMMON] int 
   dividend        2    2[COMMON] int 
@@ -375,7 +375,7 @@ Total ram usage:        7 bytes
 
  *************** function ___awdiv *****************
  Defined at:
-		line 6 in file "C:\Program Files\Microchip\xc8\v1.36\sources\common\awdiv.c"
+		line 6 in file "C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c"
  Parameters:    Size  Location     Type
   divisor         2    0[COMMON] int 
   dividend        2    2[COMMON] int 
@@ -439,24 +439,24 @@ Total ram usage:        6 bytes
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
-C:\Program Files\Microchip\xc8\v1.36\sources\common\awmod.c
-		___awmod       		CODE           	0637	0000	76
+C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+		___awdiv       		CODE           	0682	0000	90
 
-C:\Program Files\Microchip\xc8\v1.36\sources\common\awmod.c estimated size: 76
+C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c estimated size: 90
 
 shared
 		__initialization		CODE           	07F0	0000	13
 
 shared estimated size: 13
 
+C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+		___awmod       		CODE           	0637	0000	76
+
+C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c estimated size: 76
+
 main.c
 		_DELAY_ms      		CODE           	0610	0000	40
 		_main          		CODE           	06DB	0000	278
 
 main.c estimated size: 318
-
-C:\Program Files\Microchip\xc8\v1.36\sources\common\awdiv.c
-		___awdiv       		CODE           	0682	0000	90
-
-C:\Program Files\Microchip\xc8\v1.36\sources\common\awdiv.c estimated size: 90
 

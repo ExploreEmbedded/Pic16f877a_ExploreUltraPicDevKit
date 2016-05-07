@@ -70,3 +70,12 @@ ms_count--;
 }
 }
 
+# 102
+void DELAY_sec(uint16_t sec_count)
+{
+while (sec_count != 0) {
+DELAY_ms(1000);
+sec_count--;
+}
+}
+

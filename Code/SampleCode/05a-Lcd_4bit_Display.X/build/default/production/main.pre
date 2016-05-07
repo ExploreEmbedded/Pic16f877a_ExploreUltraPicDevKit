@@ -92,7 +92,7 @@ void LCD_SetCursor(uint8_t v_lineNumber_u8, uint8_t v_charNumber_u8);
 void LCD_DisplayString(const char *ptr_stringPointer_u8);
 void LCD_ScrollMessage(uint8_t v_lineNumber_u8, char *ptr_msgPointer_u8);
 void LCD_DisplayNumber(uint8_t v_numericSystem_u8, uint32_t v_number_u32, uint8_t v_numOfDigitsToDisplay_u8);
-void LCD_DisplayFloatNumber(float v_floatNum_f32);
+void LCD_DisplayFloatNumber(double v_floatNum_f32);
 void LCD_Printf(const char *argList, ...);
 void LCD_SetUp(gpioPins_et RS,
 gpioPins_et RW,
@@ -110,11 +110,11 @@ gpioPins_et D7 );
 int main()
 {
 
-LCD_SetUp(PB_0,PB_1,PB_2,P_NC,P_NC,P_NC,P_NC,PB_4,PB_5,PB_6,PB_7);
+LCD_SetUp(PD_0,PD_1,PD_2,P_NC,P_NC,P_NC,P_NC,PB_4,PB_5,PB_6,PB_7);
 LCD_Init(2,16);
 
 LCD_DisplayString("Explore Embedded");
-LCD_DisplayString("Lcd 8-bit Mode");
+LCD_DisplayString("Lcd 4-bit Mode");
 while(1);
 
 return (0);

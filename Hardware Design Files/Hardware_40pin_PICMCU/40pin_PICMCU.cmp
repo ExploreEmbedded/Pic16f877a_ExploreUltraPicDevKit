@@ -1,0 +1,143 @@
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 6/1/2015 7:21:43 PM
+
+BeginCmp
+TimeStamp = /54F6C64A;
+Reference = C1;
+ValeurCmp = 22pF;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F6C658;
+Reference = C2;
+ValeurCmp = 22pF;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F6C6C2;
+Reference = C3;
+ValeurCmp = 0.1uF;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F6C6CC;
+Reference = C4;
+ValeurCmp = 0.1uF;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F94F96;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /55155B3E;
+Reference = D2;
+ValeurCmp = LED;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /55155B44;
+Reference = D3;
+ValeurCmp = LED;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /556C6267;
+Reference = JP1;
+ValeurCmp = JUMPER;
+IdModule  = SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F6D29C;
+Reference = P1;
+ValeurCmp = CONN_10;
+IdModule  = SIL-10;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F6D600;
+Reference = P2;
+ValeurCmp = CONN_10;
+IdModule  = SIL-10;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F6DBE9;
+Reference = P3;
+ValeurCmp = CONN_10;
+IdModule  = SIL-10;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F6D95F;
+Reference = P4;
+ValeurCmp = CONN_10;
+IdModule  = SIL-10;
+EndCmp
+
+BeginCmp
+TimeStamp = /556C607B;
+Reference = P5;
+ValeurCmp = CONN_7;
+IdModule  = SIL-7;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F6C620;
+Reference = P6;
+ValeurCmp = ICSP;
+IdModule  = SIL-6;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F6C63D;
+Reference = R1;
+ValeurCmp = 10K;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F94F87;
+Reference = R2;
+ValeurCmp = R;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /55155B4A;
+Reference = R3;
+ValeurCmp = R;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F6C692;
+Reference = SW1;
+ValeurCmp = rst;
+IdModule  = SW_PUSH_SMALL_2pin_xl;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F6C610;
+Reference = U1;
+ValeurCmp = 16F877A;
+IdModule  = DIP-40__600_ELL;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F6C644;
+Reference = X1;
+ValeurCmp = 20Mhz;
+IdModule  = HC-49V;
+EndCmp
+
+EndListe

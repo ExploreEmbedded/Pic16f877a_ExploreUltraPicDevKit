@@ -6,8 +6,8 @@
 CND_BASEDIR=`pwd`
 # default configuration
 CND_ARTIFACT_DIR_default=dist/default/production
-CND_ARTIFACT_NAME_default=03a_SevenSegment_Single.X.production.hex
-CND_ARTIFACT_PATH_default=dist/default/production/03a_SevenSegment_Single.X.production.hex
+CND_ARTIFACT_NAME_default=03a-SevenSegment_Single.X.production.hex
+CND_ARTIFACT_PATH_default=dist/default/production/03a-SevenSegment_Single.X.production.hex
 CND_PACKAGE_DIR_default=${CND_DISTDIR}/default/package
-CND_PACKAGE_NAME_default=03asevensegmentsingle.x.tar
-CND_PACKAGE_PATH_default=${CND_DISTDIR}/default/package/03asevensegmentsingle.x.tar
+CND_PACKAGE_NAME_default=03a-sevensegmentsingle.x.tar
+CND_PACKAGE_PATH_default=${CND_DISTDIR}/default/package/03a-sevensegmentsingle.x.tar

@@ -42,11 +42,11 @@ Errors and omissions should be reported to codelibraries@exploreembedded.com
 int main() 
 {
     /*Connect RS->PB0, RW->PB1, EN->PB2 and data bus to PORTB.4 to PORTB.7*/
-    LCD_SetUp(PB_0,PB_1,PB_2,P_NC,P_NC,P_NC,P_NC,PB_4,PB_5,PB_6,PB_7);
+    LCD_SetUp(PD_0,PD_1,PD_2,P_NC,P_NC,P_NC,P_NC,PB_4,PB_5,PB_6,PB_7);
     LCD_Init(2,16);
     
     LCD_DisplayString("Explore Embedded");
-    LCD_DisplayString("Lcd 8-bit Mode");
+    LCD_DisplayString("Lcd 4-bit Mode");
     while(1);
     
     return (0);

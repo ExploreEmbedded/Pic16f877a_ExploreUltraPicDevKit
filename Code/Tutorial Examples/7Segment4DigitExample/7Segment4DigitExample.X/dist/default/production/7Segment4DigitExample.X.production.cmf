@@ -1,0 +1,386 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.obj
+end_init CODE 0 0 0 3 2
+$dist/default/production\7Segment4DigitExample.X.production.obj
+cinit CODE 0 7F0 7F0 10 2
+text1 CODE 0 637 637 4B 2
+text2 CODE 0 682 682 59 2
+text3 CODE 0 610 610 27 2
+maintext CODE 0 6DB 6DB 115 2
+cstackCOMMON COMMON 1 70 70 D 1
+cstackBANK0 BANK0 1 20 20 18 1
+inittext CODE 0 5FF 5FF 11 2
+idataBANK0 CODE 0 5EF 5EF 10 2
+dataBANK0 BANK0 1 38 38 10 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 48-6F 1
+RAM A0-EF 1
+RAM 110-16F 1
+RAM 190-1EF 1
+BANK0 48-6F 1
+BANK1 A0-EF 1
+BANK2 110-16F 1
+BANK3 190-1EF 1
+CONST 3-5EE 2
+CONST 800-1FFF 2
+ENTRY 3-5EE 2
+ENTRY 800-1FFF 2
+IDLOC 2000-2003 2
+STACK 110-16F 1
+CODE 3-5EE 2
+CODE 800-1FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-10F 1
+SFR3 180-18F 1
+COMMON 7D-7D 1
+CONFIG 2007-2007 2
+EEDATA 2100-21FF 2
+STRCODE 3-5EE 2
+STRCODE 800-1FFF 2
+STRING 3-5EE 2
+STRING 800-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\7Segment4DigitExample.X.production.obj
+7F0 cinit CODE >203:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+7F0 cinit CODE >206:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+7F0 cinit CODE >247:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+7F1 cinit CODE >248:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+7F2 cinit CODE >249:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+7F3 cinit CODE >250:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+7F4 cinit CODE >251:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+7F5 cinit CODE >252:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+7F6 cinit CODE >253:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+7F7 cinit CODE >254:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+7F8 cinit CODE >255:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+7F9 cinit CODE >256:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+7FC cinit CODE >262:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+7FC cinit CODE >264:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+7FD cinit CODE >265:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+610 text3 CODE >8:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+610 text3 CODE >11:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+61A text3 CODE >13:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+630 text3 CODE >11:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+682 text2 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+682 text2 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+683 text2 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+685 text2 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+68A text2 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+68C text2 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+68E text2 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+693 text2 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+697 text2 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+699 text2 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+69D text2 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+69F text2 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+6A1 text2 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+6A8 text2 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+6AC text2 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+6AD text2 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+6B4 text2 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+6BC text2 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+6C2 text2 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+6C3 text2 CODE >36:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+6CA text2 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+6CE text2 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+6D1 text2 CODE >40:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+6D6 text2 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+637 text1 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+637 text1 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+638 text1 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+63A text1 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+63F text1 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+641 text1 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+643 text1 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+648 text1 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+64C text1 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+64E text1 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+650 text1 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+657 text1 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+65B text1 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+65C text1 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+664 text1 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+66A text1 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+671 text1 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+675 text1 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+678 text1 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+67D text1 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+6DB maintext CODE >19:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+6DB maintext CODE >20:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+6F0 maintext CODE >24:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+6F3 maintext CODE >25:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+6F4 maintext CODE >29:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+703 maintext CODE >31:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+712 maintext CODE >33:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+718 maintext CODE >34:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+72B maintext CODE >35:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+73E maintext CODE >36:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+740 maintext CODE >37:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+746 maintext CODE >38:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+74F maintext CODE >40:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+764 maintext CODE >41:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+777 maintext CODE >42:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+779 maintext CODE >43:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+77F maintext CODE >44:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+788 maintext CODE >46:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+79D maintext CODE >47:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+79F maintext CODE >48:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+7A5 maintext CODE >49:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+7AE maintext CODE >51:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+7C3 maintext CODE >52:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+7C5 maintext CODE >53:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+7CB maintext CODE >54:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+7D4 maintext CODE >31:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+7E7 maintext CODE >29:D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7Segment4DigitExample\7Segment4DigitExample.X\main.c
+5FF inittext CODE >221:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+5FF inittext CODE >222:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+600 inittext CODE >223:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+601 inittext CODE >224:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+602 inittext CODE >225:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+603 inittext CODE >232:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+603 inittext CODE >233:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+606 inittext CODE >234:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+607 inittext CODE >235:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+608 inittext CODE >236:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+609 inittext CODE >237:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+60A inittext CODE >238:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+60B inittext CODE >239:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+60C inittext CODE >240:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+60D inittext CODE >241:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+60E inittext CODE >242:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+60F inittext CODE >243:C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 2 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+___awdiv@counter 75 0 COMMON 1 cstackCOMMON dist/default/production\7Segment4DigitExample.X.production.obj
+__LdataBANK0 0 0 ABS 0 dataBANK0 -
+__Hspace_0 800 0 ABS 0 - -
+__Hspace_1 7D 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__HidataBANK0 0 0 ABS 0 idataBANK0 -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+ltemp0 7E 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+ltemp1 82 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+ltemp2 86 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+ltemp3 80 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+main@i 30 0 BANK0 1 cstackBANK0 dist/default/production\7Segment4DigitExample.X.production.obj
+__Hstrings 0 0 ABS 0 strings -
+___sp 0 0 STACK 2 stack C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.obj
+_main DB6 0 CODE 0 maintext dist/default/production\7Segment4DigitExample.X.production.obj
+btemp 7E 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+ltemp 7E 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+start 0 0 CODE 0 init C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.obj
+ttemp 7E 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+wtemp 7E 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+__size_of___awdiv 0 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+__size_of___awmod 0 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+__size_of_main 0 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+__LidataBANK0 0 0 ABS 0 idataBANK0 -
+__Hpowerup 0 0 CODE 0 powerup -
+___awmod@sign 76 0 COMMON 1 cstackCOMMON dist/default/production\7Segment4DigitExample.X.production.obj
+ttemp0 7E 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+ttemp1 81 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+ttemp2 84 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+ttemp3 87 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+ttemp4 7F 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+intlevel0 0 0 CODE 0 functab C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.obj
+intlevel1 0 0 CODE 0 functab C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.obj
+intlevel2 0 0 CODE 0 functab C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.obj
+intlevel3 0 0 CODE 0 functab C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.obj
+intlevel4 0 0 CODE 0 functab C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.obj
+intlevel5 0 0 CODE 0 functab C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.obj
+wtemp0 7E 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+wtemp1 80 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+wtemp2 82 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+wtemp3 84 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+wtemp4 86 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+wtemp5 88 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+wtemp6 7F 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+__Hfunctab 0 0 CODE 0 functab -
+___awdiv@sign 76 0 COMMON 1 cstackCOMMON dist/default/production\7Segment4DigitExample.X.production.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+___awdiv@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production\7Segment4DigitExample.X.production.obj
+DELAY_ms@i 72 0 COMMON 1 cstackCOMMON dist/default/production\7Segment4DigitExample.X.production.obj
+DELAY_ms@j 74 0 COMMON 1 cstackCOMMON dist/default/production\7Segment4DigitExample.X.production.obj
+main@cnt 32 0 BANK0 1 cstackBANK0 dist/default/production\7Segment4DigitExample.X.production.obj
+main@num 36 0 BANK0 1 cstackBANK0 dist/default/production\7Segment4DigitExample.X.production.obj
+__Lmaintext 0 0 ABS 0 maintext -
+___awdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\7Segment4DigitExample.X.production.obj
+__end_of___awdiv DB6 0 CODE 0 text2 dist/default/production\7Segment4DigitExample.X.production.obj
+__end_of___awmod D04 0 CODE 0 text1 dist/default/production\7Segment4DigitExample.X.production.obj
+__size_of_DELAY_ms 0 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+start_initialization FE0 0 CODE 0 cinit dist/default/production\7Segment4DigitExample.X.production.obj
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\7Segment4DigitExample.X.production.obj
+_DELAY_ms C20 0 CODE 0 text3 dist/default/production\7Segment4DigitExample.X.production.obj
+___int_sp 0 0 STACK 2 stack C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hcinit 1000 0 CODE 0 cinit -
+__Hidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__end_of_DELAY_ms C6E 0 CODE 0 text3 dist/default/production\7Segment4DigitExample.X.production.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 0 0 CONFIG 0 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lcinit FE0 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Lstack 0 0 STACK 2 stack -
+__Linittext 0 0 ABS 0 inittext -
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 0 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 0 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Ltext 0 0 ABS 0 text -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__S0 800 0 ABS 0 - -
+__S1 7D 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__Lintentry 0 0 CODE 0 intentry -
+reset_vec 0 0 CODE 0 reset_vec C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.obj
+__pdataBANK0 38 0 BANK0 1 dataBANK0 dist/default/production\7Segment4DigitExample.X.production.obj
+___awmod@counter 75 0 COMMON 1 cstackCOMMON dist/default/production\7Segment4DigitExample.X.production.obj
+___awdiv D04 0 CODE 0 text2 dist/default/production\7Segment4DigitExample.X.production.obj
+___awmod C6E 0 CODE 0 text1 dist/default/production\7Segment4DigitExample.X.production.obj
+__pmaintext DB6 0 CODE 0 maintext dist/default/production\7Segment4DigitExample.X.production.obj
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 0 config -
+__Hinittext 0 0 ABS 0 inittext -
+main@F1073 38 0 BANK0 1 dataBANK0 dist/default/production\7Segment4DigitExample.X.production.obj
+main@temp 34 0 BANK0 1 cstackBANK0 dist/default/production\7Segment4DigitExample.X.production.obj
+stackhi 0 0 ABS 0 - C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.obj
+stacklo 0 0 ABS 0 - C:\Users\EXPLOR~1\AppData\Local\Temp\s5rs.obj
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+init_fetch0 BFE 0 CODE 0 inittext dist/default/production\7Segment4DigitExample.X.production.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__Lend_init 0 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+end_of_initialization FF8 0 CODE 0 cinit dist/default/production\7Segment4DigitExample.X.production.obj
+__Hintentry 0 0 CODE 0 intentry -
+__Lstrings 0 0 ABS 0 strings -
+___awdiv@quotient 77 0 COMMON 1 cstackCOMMON dist/default/production\7Segment4DigitExample.X.production.obj
+?___awdiv 70 0 COMMON 1 cstackCOMMON dist/default/production\7Segment4DigitExample.X.production.obj
+?___awmod 70 0 COMMON 1 cstackCOMMON dist/default/production\7Segment4DigitExample.X.production.obj
+__Hreset_vec 0 0 CODE 0 reset_vec -
+___awmod@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production\7Segment4DigitExample.X.production.obj
+__ptext1 C6E 0 CODE 0 text1 dist/default/production\7Segment4DigitExample.X.production.obj
+__ptext2 D04 0 CODE 0 text2 dist/default/production\7Segment4DigitExample.X.production.obj
+__ptext3 C20 0 CODE 0 text3 dist/default/production\7Segment4DigitExample.X.production.obj
+main@seg_code 20 0 BANK0 1 cstackBANK0 dist/default/production\7Segment4DigitExample.X.production.obj
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+DELAY_ms@ms_Count 70 0 COMMON 1 cstackCOMMON dist/default/production\7Segment4DigitExample.X.production.obj
+__end_of__initialization FF8 0 CODE 0 cinit dist/default/production\7Segment4DigitExample.X.production.obj
+___awmod@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\7Segment4DigitExample.X.production.obj
+__Lfunctab 0 0 CODE 0 functab -
+__pidataBANK0 BDE 0 CODE 0 idataBANK0 dist/default/production\7Segment4DigitExample.X.production.obj
+__Lclrtext 0 0 ABS 0 clrtext -
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\7Segment4DigitExample.X.production.obj
+__Hend_init 6 0 CODE 0 end_init -
+init_ram0 C06 0 CODE 0 inittext dist/default/production\7Segment4DigitExample.X.production.obj
+__end_of_main FE0 0 CODE 0 maintext dist/default/production\7Segment4DigitExample.X.production.obj
+_PORTB 6 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+_PORTD 8 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+_TRISB 86 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+_TRISD 88 0 ABS 0 - dist/default/production\7Segment4DigitExample.X.production.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+__HdataBANK0 0 0 ABS 0 dataBANK0 -
+__initialization FE0 0 CODE 0 cinit dist/default/production\7Segment4DigitExample.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 7F0 FE0 10 2
+text1 0 637 C6E 4B 2
+text2 0 682 D04 59 2
+text3 0 610 C20 27 2
+maintext 0 6DB DB6 115 2
+cstackCOMMON 1 70 70 D 1
+cstackBANK0 1 20 20 28 1
+inittext 0 5FF BFE 11 2
+reset_vec 0 0 0 3 2
+idataBANK0 0 5EF BDE 10 2

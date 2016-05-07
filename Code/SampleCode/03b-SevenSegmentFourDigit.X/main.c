@@ -35,10 +35,10 @@ Errors and omissions should be reported to codelibraries@exploreembedded.com
  **************************************************************************************************/
 #include <pic16f877a.h>
 
-#define SegOne   0xfe
-#define SegTwo   0xfd
-#define SegThree 0xfb
-#define SegFour  0xf7	
+#define SegOne   0x01
+#define SegTwo   0x02
+#define SegThree 0x04
+#define SegFour  0x08	
 
 void DELAY_ms(unsigned int ms_Count) 
 {
@@ -50,7 +50,7 @@ void DELAY_ms(unsigned int ms_Count)
 }
 
 int main() {
-    char seg_code[] = {0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f, 0x77, 0x7c, 0x39, 0x5e, 0x79, 0x71};
+    char seg_code[] = {0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90,0x88,0x83,0xc6,0xa1,0x86,0x8e};
     int cnt, num, temp,i;
 
     /* Configure the ports as output */

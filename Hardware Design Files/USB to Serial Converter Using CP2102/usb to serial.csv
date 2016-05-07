@@ -1,0 +1,8 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"J1";"USB_B";1;"USB_2";;;
+2;"U1";"cp2102_xl2";1;"CP2102";;;
+3;"C2";"SM1206";1;"0.1uF";;;
+4;"C3";"SM1206";1;"1uF";;;
+5;"D1";"SM1206";1;"LED";;;
+6;"R1";"SM1206";1;"330r";;;
+7;"P1";"SIL-7";1;"CONN_7";;;

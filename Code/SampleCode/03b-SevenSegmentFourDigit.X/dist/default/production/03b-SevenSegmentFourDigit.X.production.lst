@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.36 build -262312587 
-                                                                                               Sat Feb 20 12:42:13 2016
+                                                                                               Fri May 06 15:50:04 2016
 
 Microchip Technology Omniscient Code Generator v1.36 (Free mode) build 201601150325
      1                           	processor	16F877A
@@ -83,22 +83,22 @@ Microchip Technology Omniscient Code Generator v1.36 (Free mode) build 201601150
     77  05EF                     __pidataBANK0:	
     78                           
     79                           ;initializer for main@F1073
-    80  05EF  343F               	retlw	63
-    81  05F0  3406               	retlw	6
-    82  05F1  345B               	retlw	91
-    83  05F2  344F               	retlw	79
-    84  05F3  3466               	retlw	102
-    85  05F4  346D               	retlw	109
-    86  05F5  347D               	retlw	125
-    87  05F6  3407               	retlw	7
-    88  05F7  347F               	retlw	127
-    89  05F8  346F               	retlw	111
-    90  05F9  3477               	retlw	119
-    91  05FA  347C               	retlw	124
-    92  05FB  3439               	retlw	57
-    93  05FC  345E               	retlw	94
-    94  05FD  3479               	retlw	121
-    95  05FE  3471               	retlw	113
+    80  05EF  34C0               	retlw	192
+    81  05F0  34F9               	retlw	249
+    82  05F1  34A4               	retlw	164
+    83  05F2  34B0               	retlw	176
+    84  05F3  3499               	retlw	153
+    85  05F4  3492               	retlw	146
+    86  05F5  3482               	retlw	130
+    87  05F6  34F8               	retlw	248
+    88  05F7  3480               	retlw	128
+    89  05F8  3490               	retlw	144
+    90  05F9  3488               	retlw	136
+    91  05FA  3483               	retlw	131
+    92  05FB  34C6               	retlw	198
+    93  05FC  34A1               	retlw	161
+    94  05FD  3486               	retlw	134
+    95  05FE  348E               	retlw	142
     96  0006                     _PORTB	set	6
     97  0008                     _PORTD	set	8
     98  0086                     _TRISB	set	134
@@ -297,8 +297,8 @@ Microchip Technology Omniscient Code Generator v1.36 (Free mode) build 201601150
    291                           ;psect for function _main
    292  06DB                     _main:	
    293                           
-   294                           ;main.c: 53: char seg_code[] = {0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x
-      +                          6f, 0x77, 0x7c, 0x39, 0x5e, 0x79, 0x71};
+   294                           ;main.c: 53: char seg_code[] = {0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90,0x88,0
+      +                          x83,0xc6,0xa1,0x86,0x8e};
    295                           
    296                           ;incstack = 0
    297                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
@@ -420,8 +420,8 @@ Microchip Technology Omniscient Code Generator v1.36 (Free mode) build 201601150
    413  073C  0870               	movf	?___awmod,w
    414  073D  00B6               	movwf	main@num
    415                           
-   416                           ;main.c: 69: PORTD = 0xfe;
-   417  073E  30FE               	movlw	254
+   416                           ;main.c: 69: PORTD = 0x01;
+   417  073E  3001               	movlw	1
    418  073F  0088               	movwf	8	;volatile
    419                           
    420                           ;main.c: 70: PORTB = seg_code[temp];
@@ -475,8 +475,8 @@ Microchip Technology Omniscient Code Generator v1.36 (Free mode) build 201601150
    468  0775  0870               	movf	?___awmod,w
    469  0776  00B6               	movwf	main@num
    470                           
-   471                           ;main.c: 75: PORTD = 0xfd;
-   472  0777  30FD               	movlw	253
+   471                           ;main.c: 75: PORTD = 0x02;
+   472  0777  3002               	movlw	2
    473  0778  0088               	movwf	8	;volatile
    474                           
    475                           ;main.c: 76: PORTB = seg_code[temp];
@@ -513,8 +513,8 @@ Microchip Technology Omniscient Code Generator v1.36 (Free mode) build 201601150
    506  079B  0870               	movf	?___awdiv,w
    507  079C  00B4               	movwf	main@temp
    508                           
-   509                           ;main.c: 80: PORTD = 0xfb;
-   510  079D  30FB               	movlw	251
+   509                           ;main.c: 80: PORTD = 0x04;
+   510  079D  3004               	movlw	4
    511  079E  0088               	movwf	8	;volatile
    512                           
    513                           ;main.c: 81: PORTB = seg_code[temp];
@@ -551,8 +551,8 @@ Microchip Technology Omniscient Code Generator v1.36 (Free mode) build 201601150
    544  07C1  0870               	movf	?___awmod,w
    545  07C2  00B4               	movwf	main@temp
    546                           
-   547                           ;main.c: 85: PORTD = 0xf7;
-   548  07C3  30F7               	movlw	247
+   547                           ;main.c: 85: PORTD = 0x08;
+   548  07C3  3008               	movlw	8
    549  07C4  0088               	movwf	8	;volatile
    550                           
    551                           ;main.c: 86: PORTB = seg_code[temp];
@@ -605,7 +605,7 @@ Microchip Technology Omniscient Code Generator v1.36 (Free mode) build 201601150
    598  0637                     __ptext1:	
    599 ;; *************** function ___awmod *****************
    600 ;; Defined at:
-   601 ;;		line 6 in file "C:\Program Files\Microchip\xc8\v1.36\sources\common\awmod.c"
+   601 ;;		line 6 in file "C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c"
    602 ;; Parameters:    Size  Location     Type
    603 ;;  divisor         2    0[COMMON] int 
    604 ;;  dividend        2    2[COMMON] int 
@@ -731,7 +731,7 @@ Microchip Technology Omniscient Code Generator v1.36 (Free mode) build 201601150
    724  0682                     __ptext2:	
    725 ;; *************** function ___awdiv *****************
    726 ;; Defined at:
-   727 ;;		line 6 in file "C:\Program Files\Microchip\xc8\v1.36\sources\common\awdiv.c"
+   727 ;;		line 6 in file "C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c"
    728 ;; Parameters:    Size  Location     Type
    729 ;;  divisor         2    0[COMMON] int 
    730 ;;  dividend        2    2[COMMON] int 
@@ -1079,7 +1079,7 @@ EEDATA             100      0       0       0        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.36 build -262312587 
-Symbol Table                                                                                   Sat Feb 20 12:42:13 2016
+Symbol Table                                                                                   Fri May 06 15:50:04 2016
 
                       pc 0002                       l11 0612             ___awdiv@sign 0076  
                      fsr 0004                      l702 0641                      l720 066A  

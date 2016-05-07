@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=03a_SevenSegment_Single.X
+PROJECTNAME=03a-SevenSegment_Single.X
 
 # Active Configuration
 DEFAULTCONF=default

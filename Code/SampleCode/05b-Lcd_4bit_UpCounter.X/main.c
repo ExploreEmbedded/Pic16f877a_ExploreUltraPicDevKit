@@ -35,8 +35,6 @@ Errors and omissions should be reported to codelibraries@exploreembedded.com
 **************************************************************************************************/
 #include "lcd.h"
 #include "delay.h" 
-
-
 /*
  * 
  */
@@ -44,7 +42,7 @@ int main()
 {
     int count = 0;
     /*Connect RS->PB0, RW->PB1, EN->PB2 and data bus to PORTB.4 to PORTB.7*/
-    LCD_SetUp(PB_0,PB_1,PB_2,P_NC,P_NC,P_NC,P_NC,PB_4,PB_5,PB_6,PB_7);
+    LCD_SetUp(PD_0,PD_1,PD_2,P_NC,P_NC,P_NC,P_NC,PB_4,PB_5,PB_6,PB_7);
     LCD_Init(2,16);
     
     LCD_DisplayString("Decimal");

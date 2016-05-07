@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=04a-Lcd_8Bit_Display.X
+PROJECTNAME=04a-Lcd_8bit_Display.X
 
 # Active Configuration
 DEFAULTCONF=default

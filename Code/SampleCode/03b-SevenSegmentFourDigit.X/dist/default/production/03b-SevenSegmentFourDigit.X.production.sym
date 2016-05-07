@@ -170,7 +170,7 @@ inittext BFE C1F CODE BFE 0
 idataBANK0 BDE BFD CODE BDE 0
 %locals
 dist/default/production\03b-SevenSegmentFourDigit.X.production.obj
-C:\Users\bagwan\AppData\Local\Temp\s4fg.
+C:\Users\EXPLOR~1\AppData\Local\Temp\s3s4.
 203 7F0 0 CODE 0
 206 7F0 0 CODE 0
 247 7F0 0 CODE 0
@@ -231,7 +231,7 @@ main.c
 87 7CB 0 CODE 0
 64 7D4 0 CODE 0
 62 7E7 0 CODE 0
-C:\Program Files\Microchip\xc8\v1.36\sources\common\awmod.c
+C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
 6 637 0 CODE 0
 13 637 0 CODE 0
 14 638 0 CODE 0
@@ -252,7 +252,7 @@ C:\Program Files\Microchip\xc8\v1.36\sources\common\awmod.c
 32 675 0 CODE 0
 33 678 0 CODE 0
 34 67D 0 CODE 0
-C:\Program Files\Microchip\xc8\v1.36\sources\common\awdiv.c
+C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
 6 682 0 CODE 0
 14 682 0 CODE 0
 15 683 0 CODE 0

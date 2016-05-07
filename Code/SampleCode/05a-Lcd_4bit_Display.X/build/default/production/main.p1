@@ -88,7 +88,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;00-libfiles\lcd.h: 157: void LCD_DisplayString(const char *ptr_stringPointer_u8);
 [; ;00-libfiles\lcd.h: 158: void LCD_ScrollMessage(uint8_t v_lineNumber_u8, char *ptr_msgPointer_u8);
 [; ;00-libfiles\lcd.h: 159: void LCD_DisplayNumber(uint8_t v_numericSystem_u8, uint32_t v_number_u32, uint8_t v_numOfDigitsToDisplay_u8);
-[; ;00-libfiles\lcd.h: 160: void LCD_DisplayFloatNumber(float v_floatNum_f32);
+[; ;00-libfiles\lcd.h: 160: void LCD_DisplayFloatNumber(double v_floatNum_f32);
 [; ;00-libfiles\lcd.h: 161: void LCD_Printf(const char *argList, ...);
 [; ;00-libfiles\lcd.h: 162: void LCD_SetUp(gpioPins_et RS,
 [; ;00-libfiles\lcd.h: 163: gpioPins_et RW,
@@ -109,16 +109,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 43: {
 [e :U _main ]
 [f ]
-[; ;main.c: 45: LCD_SetUp(PB_0,PB_1,PB_2,P_NC,P_NC,P_NC,P_NC,PB_4,PB_5,PB_6,PB_7);
+[; ;main.c: 45: LCD_SetUp(PD_0,PD_1,PD_2,P_NC,P_NC,P_NC,P_NC,PB_4,PB_5,PB_6,PB_7);
 "45
-[e ( _LCD_SetUp (4 , , , , , , , , , , . `E22 8 . `E22 9 . `E22 10 . `E22 40 . `E22 40 . `E22 40 . `E22 40 . `E22 12 . `E22 13 . `E22 14 . `E22 15 ]
+[e ( _LCD_SetUp (4 , , , , , , , , , , . `E22 24 . `E22 25 . `E22 26 . `E22 40 . `E22 40 . `E22 40 . `E22 40 . `E22 12 . `E22 13 . `E22 14 . `E22 15 ]
 [; ;main.c: 46: LCD_Init(2,16);
 "46
 [e ( _LCD_Init (2 , -> -> 2 `i `uc -> -> 16 `i `uc ]
 [; ;main.c: 48: LCD_DisplayString("Explore Embedded");
 "48
 [e ( _LCD_DisplayString (1 :s 1C ]
-[; ;main.c: 49: LCD_DisplayString("Lcd 8-bit Mode");
+[; ;main.c: 49: LCD_DisplayString("Lcd 4-bit Mode");
 "49
 [e ( _LCD_DisplayString (1 :s 2C ]
 [; ;main.c: 50: while(1);
@@ -135,5 +135,5 @@ Version 3.2 HI-TECH Software Intermediate Code
 "53
 [e :UE 2 ]
 }
-[a 2C 76 99 100 32 56 45 98 105 116 32 77 111 100 101 0 ]
+[a 2C 76 99 100 32 52 45 98 105 116 32 77 111 100 101 0 ]
 [a 1C 69 120 112 108 111 114 101 32 69 109 98 101 100 100 101 100 0 ]

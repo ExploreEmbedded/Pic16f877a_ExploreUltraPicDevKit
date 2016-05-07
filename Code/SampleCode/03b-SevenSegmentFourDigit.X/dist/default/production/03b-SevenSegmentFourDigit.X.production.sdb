@@ -3,23 +3,23 @@
 [d edition pro ]
 [d chip 16F877A ]
 [d frameptr 6 ]
-"6 C:\Program Files\Microchip\xc8\v1.36\sources\common\awdiv.c
+"6 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
-"6 C:\Program Files\Microchip\xc8\v1.36\sources\common\awmod.c
+"6 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
-"62 C:\Program Files\Microchip\xc8\v1.36\sources\common\float.c
+"62 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
-"86 C:\Program Files\Microchip\xc8\v1.36\sources\common\ftadd.c
+"86 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
-"6 C:\Program Files\Microchip\xc8\v1.36\sources\pic\eeprom.c
+"6 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\pic\eeprom.c
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"43 F:\Tutorials_And_Codes\PIC\ULTRA_PIC\03b-SevenSegmentFourDigit.X\main.c
+"43 D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode\03b-SevenSegmentFourDigit.X\main.c
 [v _DELAY_ms DELAY_ms `(v  1 e 1 0 ]
 "52
 [v _main main `(i  1 e 2 0 ]
-"209 C:\Program Files\Microchip\xc8\v1.36\include\pic16f877a.h
+"209 C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic16f877a.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
 "331
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
@@ -27,7 +27,7 @@
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
 "1459
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
-"52 F:\Tutorials_And_Codes\PIC\ULTRA_PIC\03b-SevenSegmentFourDigit.X\main.c
+"52 D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode\03b-SevenSegmentFourDigit.X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
 "53
@@ -41,7 +41,7 @@
 [v main@F1073 F1073 `[16]uc  1 s 16 F1073 ]
 "91
 } 0
-"6 C:\Program Files\Microchip\xc8\v1.36\sources\common\awmod.c
+"6 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
 {
 "11
@@ -52,7 +52,7 @@
 [v ___awmod@dividend dividend `i  1 p 2 2 ]
 "35
 } 0
-"6 C:\Program Files\Microchip\xc8\v1.36\sources\common\awdiv.c
+"6 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 {
 "11
@@ -65,7 +65,7 @@
 [v ___awdiv@dividend dividend `i  1 p 2 2 ]
 "42
 } 0
-"43 F:\Tutorials_And_Codes\PIC\ULTRA_PIC\03b-SevenSegmentFourDigit.X\main.c
+"43 D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode\03b-SevenSegmentFourDigit.X\main.c
 [v _DELAY_ms DELAY_ms `(v  1 e 1 0 ]
 {
 "45

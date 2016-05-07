@@ -1,0 +1,42 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 6 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"3 D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7SegmentSingleDisplayExample\main.c
+[v _DELAY_ms DELAY_ms `(v  1 e 1 0 ]
+"13
+[v _main main `(i  1 e 2 0 ]
+"331 C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic16f877a.h
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"1459
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"13 D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\7SegmentSingleDisplayExample\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"14
+[v main@seg_code seg_code `[10]uc  1 a 10 0 ]
+"15
+[v main@i i `i  1 a 2 10 ]
+"13
+[v main@F1073 F1073 `[10]uc  1 s 10 F1073 ]
+"28
+} 0
+"3
+[v _DELAY_ms DELAY_ms `(v  1 e 1 0 ]
+{
+"5
+[v DELAY_ms@j j `ui  1 a 2 4 ]
+[v DELAY_ms@i i `ui  1 a 2 2 ]
+"3
+[v DELAY_ms@ms_Count ms_Count `ui  1 p 2 0 ]
+"10
+} 0

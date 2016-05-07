@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F877A ]
 [d frameptr 6 ]
-"61 F:\Tutorials_And_Codes\PIC\ULTRA_PIC/00-libfiles/gpio.c
+"61 D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode/00-libfiles/gpio.c
 [e E1088 . `uc
 PA_0 0
 PA_1 1
@@ -47,7 +47,7 @@ PE_6 38
 PE_7 39
 P_NC 255
 ]
-"89 F:\Tutorials_And_Codes\PIC\ULTRA_PIC/00-libfiles/lcd.c
+"89 D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode/00-libfiles/lcd.c
 [e E33 . `uc
 PA_0 0
 PA_1 1
@@ -91,7 +91,7 @@ PE_6 38
 PE_7 39
 P_NC 255
 ]
-"47 F:\Tutorials_And_Codes\PIC\ULTRA_PIC\05b-Lcd_4bit_UpCounter.X\main.c
+"45 D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode\05b-Lcd_4bit_UpCounter.X\main.c
 [e E22 . `uc
 PA_0 0
 PA_1 1
@@ -135,17 +135,17 @@ PE_6 38
 PE_7 39
 P_NC 255
 ]
-"56 F:\Tutorials_And_Codes\PIC\ULTRA_PIC/00-libfiles/delay.c
+"56 D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode/00-libfiles/delay.c
 [v _DELAY_us DELAY_us `(v  1 e 1 0 ]
 "75
 [v _DELAY_ms DELAY_ms `(v  1 e 1 0 ]
-"60 F:\Tutorials_And_Codes\PIC\ULTRA_PIC/00-libfiles/gpio.c
+"60 D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode/00-libfiles/gpio.c
 [v _GPIO_PinDirection GPIO_PinDirection `(v  1 e 1 0 ]
 "127
 [v _GPIO_PinWrite GPIO_PinWrite `(v  1 e 1 0 ]
 "192
 [v _GPIO_PinRead GPIO_PinRead `(uc  1 e 1 0 ]
-"135 F:\Tutorials_And_Codes\PIC\ULTRA_PIC/00-libfiles/lcd.c
+"135 D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode/00-libfiles/lcd.c
 [v _LCD_SetUp LCD_SetUp `(v  1 e 1 0 ]
 "198
 [v _LCD_Init LCD_Init `(v  1 e 1 0 ]
@@ -161,12 +161,6 @@ P_NC 255
 [v _LCD_DisplayChar LCD_DisplayChar `(v  1 e 1 0 ]
 "427
 [v _LCD_DisplayString LCD_DisplayString `(v  1 e 1 0 ]
-"529
-[v _LCD_DisplayNumber LCD_DisplayNumber `(v  1 e 1 0 ]
-"616
-[v _LCD_DisplayFloatNumber LCD_DisplayFloatNumber `(v  1 e 1 0 ]
-"676
-[v _LCD_Printf LCD_Printf `(v  1 e 1 0 ]
 "826
 [v _lcd_DataWrite lcd_DataWrite `(v  1 s 1 lcd_DataWrite ]
 "860
@@ -181,38 +175,26 @@ P_NC 255
 [v _lcd_SendCmdSignals lcd_SendCmdSignals `(v  1 s 1 lcd_SendCmdSignals ]
 "1002
 [v _lcd_SendDataSignals lcd_SendDataSignals `(v  1 s 1 lcd_SendDataSignals ]
-"62 C:\Program Files\Microchip\xc8\v1.36\sources\common\float.c
+"62 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
-"86 C:\Program Files\Microchip\xc8\v1.36\sources\common\ftadd.c
+"86 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
-"62 C:\Program Files\Microchip\xc8\v1.36\sources\common\ftmul.c
-[v ___ftmul __ftmul `(f  1 e 3 0 ]
-"15 C:\Program Files\Microchip\xc8\v1.36\sources\common\ftneg.c
-[v ___ftneg __ftneg `(f  1 e 3 0 ]
-"44 C:\Program Files\Microchip\xc8\v1.36\sources\common\fttol.c
-[v ___fttol __fttol `(l  1 e 4 0 ]
-"6 C:\Program Files\Microchip\xc8\v1.36\sources\common\lldiv.c
-[v ___lldiv __lldiv `(ul  1 e 4 0 ]
-"35 C:\Program Files\Microchip\xc8\v1.36\sources\common\lltoft.c
-[v ___lltoft __lltoft `(f  1 e 3 0 ]
-"4 C:\Program Files\Microchip\xc8\v1.36\sources\common\Umul8.c
-[v ___bmul __bmul `(uc  1 e 1 0 ]
-"6 C:\Program Files\Microchip\xc8\v1.36\sources\pic\eeprom.c
+"6 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\pic\eeprom.c
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"43 F:\Tutorials_And_Codes\PIC\ULTRA_PIC\05b-Lcd_4bit_UpCounter.X\main.c
+"41 D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode\05b-Lcd_4bit_UpCounter.X\main.c
 [v _main main `(i  1 e 2 0 ]
-"87 F:\Tutorials_And_Codes\PIC\ULTRA_PIC/00-libfiles/lcd.c
+"87 D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode/00-libfiles/lcd.c
 [v _v_LcdTrackLineNum_U8 v_LcdTrackLineNum_U8 `uc  1 e 1 0 ]
 "88
 [v _v_LcdTrackCursorPos_U8 v_LcdTrackCursorPos_U8 `uc  1 e 1 0 ]
-[s S130 . 14 `uc 1 v_MaxSupportedLines_U8 1 0 `uc 1 v_MaxSupportedChars_U8 1 1 `uc 1 v_LcdMode_U8 1 2 `E33 1 RS 1 3 `E33 1 RW 1 4 `E33 1 EN 1 5 `E33 1 D0 1 6 `E33 1 D1 1 7 `E33 1 D2 1 8 `E33 1 D3 1 9 `E33 1 D4 1 10 `E33 1 D5 1 11 `E33 1 D6 1 12 `E33 1 D7 1 13 ]
+[s S133 . 14 `uc 1 v_MaxSupportedLines_U8 1 0 `uc 1 v_MaxSupportedChars_U8 1 1 `uc 1 v_LcdMode_U8 1 2 `E33 1 RS 1 3 `E33 1 RW 1 4 `E33 1 EN 1 5 `E33 1 D0 1 6 `E33 1 D1 1 7 `E33 1 D2 1 8 `E33 1 D3 1 9 `E33 1 D4 1 10 `E33 1 D5 1 11 `E33 1 D6 1 12 `E33 1 D7 1 13 ]
 "89
-[v _LCDConfig LCDConfig `S130  1 e 14 0 ]
+[v _LCDConfig LCDConfig `S133  1 e 14 0 ]
 "90
 [v _ARR_LcdLineNumAddress_U8 ARR_LcdLineNumAddress_U8 `[4]uc  1 e 4 0 ]
-"160 C:\Program Files\Microchip\xc8\v1.36\include\pic16f877a.h
+"160 C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic16f877a.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
 "209
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
@@ -232,14 +214,14 @@ P_NC 255
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
 "1520
 [v _TRISE TRISE `VEuc  1 e 1 @137 ]
-"43 F:\Tutorials_And_Codes\PIC\ULTRA_PIC\05b-Lcd_4bit_UpCounter.X\main.c
+"41 D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode\05b-Lcd_4bit_UpCounter.X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"45
-[v main@count count `i  1 a 2 78 ]
-"61
+"43
+[v main@count count `i  1 a 2 20 ]
+"59
 } 0
-"135 F:\Tutorials_And_Codes\PIC\ULTRA_PIC/00-libfiles/lcd.c
+"135 D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode/00-libfiles/lcd.c
 [v _LCD_SetUp LCD_SetUp `(v  1 e 1 0 ]
 {
 [v LCD_SetUp@RS RS `E33  1 a 1 wreg ]
@@ -267,182 +249,6 @@ P_NC 255
 "148
 [v LCD_SetUp@RS RS `E33  1 a 1 6 ]
 "184
-} 0
-"676
-[v _LCD_Printf LCD_Printf `(v  1 e 1 0 ]
-{
-[v LCD_Printf@argList argList `*.24DCCuc  1 a 1 wreg ]
-"683
-[v LCD_Printf@v_num_u32 v_num_u32 `ul  1 a 4 58 ]
-"681
-[v LCD_Printf@v_num_s32 v_num_s32 `l  1 a 4 52 ]
-"688
-[v LCD_Printf@v_floatNum_f32 v_floatNum_f32 `d  1 a 3 47 ]
-"682
-[v LCD_Printf@v_num_u16 v_num_u16 `ui  1 a 2 62 ]
-"680
-[v LCD_Printf@v_num_s16 v_num_s16 `i  1 a 2 56 ]
-"679
-[v LCD_Printf@argp argp `[1]*.4v  1 a 1 67 ]
-"686
-[v LCD_Printf@v_numOfDigitsToDisp_u8 v_numOfDigitsToDisp_u8 `uc  1 a 1 66 ]
-"685
-[v LCD_Printf@ch ch `uc  1 a 1 65 ]
-"678
-[v LCD_Printf@ptr ptr `*.24DCCuc  1 a 1 64 ]
-"684
-[v LCD_Printf@str str `*.1uc  1 a 1 50 ]
-"676
-[v LCD_Printf@argList argList `*.24DCCuc  1 a 1 wreg ]
-"691
-[v LCD_Printf@argList argList `*.24DCCuc  1 a 1 51 ]
-"810
-} 0
-"427
-[v _LCD_DisplayString LCD_DisplayString `(v  1 e 1 0 ]
-{
-[v LCD_DisplayString@ptr_stringPointer_u8 ptr_stringPointer_u8 `*.24DCCuc  1 a 1 wreg ]
-[v LCD_DisplayString@ptr_stringPointer_u8 ptr_stringPointer_u8 `*.24DCCuc  1 a 1 wreg ]
-[v LCD_DisplayString@ptr_stringPointer_u8 ptr_stringPointer_u8 `*.24DCCuc  1 a 1 0 ]
-"431
-} 0
-"616
-[v _LCD_DisplayFloatNumber LCD_DisplayFloatNumber `(v  1 e 1 0 ]
-{
-"618
-[v LCD_DisplayFloatNumber@v_decNumber_u32 v_decNumber_u32 `ul  1 a 4 39 ]
-"616
-[v LCD_DisplayFloatNumber@v_floatNum_f32 v_floatNum_f32 `d  1 p 3 35 ]
-"633
-} 0
-"35 C:\Program Files\Microchip\xc8\v1.36\sources\common\lltoft.c
-[v ___lltoft __lltoft `(f  1 e 3 0 ]
-{
-"37
-[v ___lltoft@exp exp `uc  1 a 1 13 ]
-"35
-[v ___lltoft@c c `ul  1 p 4 8 ]
-"46
-} 0
-"44 C:\Program Files\Microchip\xc8\v1.36\sources\common\fttol.c
-[v ___fttol __fttol `(l  1 e 4 0 ]
-{
-"47
-[v ___fttol@lval lval `ul  1 a 4 19 ]
-"46
-[v ___fttol@exp1 exp1 `uc  1 a 1 23 ]
-[v ___fttol@sign1 sign1 `uc  1 a 1 18 ]
-"44
-[v ___fttol@f1 f1 `f  1 p 3 10 ]
-"73
-} 0
-"15 C:\Program Files\Microchip\xc8\v1.36\sources\common\ftneg.c
-[v ___ftneg __ftneg `(f  1 e 3 0 ]
-{
-[v ___ftneg@f1 f1 `f  1 p 3 0 ]
-"20
-} 0
-"62 C:\Program Files\Microchip\xc8\v1.36\sources\common\ftmul.c
-[v ___ftmul __ftmul `(f  1 e 3 0 ]
-{
-"65
-[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 5 ]
-"64
-[v ___ftmul@sign sign `uc  1 a 1 9 ]
-[v ___ftmul@cntr cntr `uc  1 a 1 8 ]
-[v ___ftmul@exp exp `uc  1 a 1 4 ]
-"62
-[v ___ftmul@f1 f1 `f  1 p 3 8 ]
-[v ___ftmul@f2 f2 `f  1 p 3 11 ]
-"157
-} 0
-"86 C:\Program Files\Microchip\xc8\v1.36\sources\common\ftadd.c
-[v ___ftadd __ftadd `(f  1 e 3 0 ]
-{
-"88
-[v ___ftadd@exp1 exp1 `uc  1 a 1 15 ]
-[v ___ftadd@exp2 exp2 `uc  1 a 1 14 ]
-[v ___ftadd@sign sign `uc  1 a 1 13 ]
-"86
-[v ___ftadd@f1 f1 `f  1 p 3 3 ]
-[v ___ftadd@f2 f2 `f  1 p 3 6 ]
-"148
-} 0
-"62 C:\Program Files\Microchip\xc8\v1.36\sources\common\float.c
-[v ___ftpack __ftpack `(f  1 e 3 0 ]
-{
-[v ___ftpack@arg arg `um  1 p 3 0 ]
-[v ___ftpack@exp exp `uc  1 p 1 3 ]
-[v ___ftpack@sign sign `uc  1 p 1 4 ]
-"86
-} 0
-"529 F:\Tutorials_And_Codes\PIC\ULTRA_PIC/00-libfiles/lcd.c
-[v _LCD_DisplayNumber LCD_DisplayNumber `(v  1 e 1 0 ]
-{
-[v LCD_DisplayNumber@v_numericSystem_u8 v_numericSystem_u8 `uc  1 a 1 wreg ]
-"531
-[v LCD_DisplayNumber@a a `[10]uc  1 a 10 21 ]
-[v LCD_DisplayNumber@i i `uc  1 a 1 34 ]
-"529
-[v LCD_DisplayNumber@v_numericSystem_u8 v_numericSystem_u8 `uc  1 a 1 wreg ]
-[v LCD_DisplayNumber@v_number_u32 v_number_u32 `ul  1 p 4 4 ]
-[v LCD_DisplayNumber@v_numOfDigitsToDisplay_u8 v_numOfDigitsToDisplay_u8 `uc  1 p 1 8 ]
-"531
-[v LCD_DisplayNumber@v_numericSystem_u8 v_numericSystem_u8 `uc  1 a 1 33 ]
-"591
-} 0
-"6 C:\Program Files\Microchip\xc8\v1.36\sources\common\lldiv.c
-[v ___lldiv __lldiv `(ul  1 e 4 0 ]
-{
-"11
-[v ___lldiv@quotient quotient `ul  1 a 4 9 ]
-"12
-[v ___lldiv@counter counter `uc  1 a 1 13 ]
-"6
-[v ___lldiv@divisor divisor `ul  1 p 4 0 ]
-[v ___lldiv@dividend dividend `ul  1 p 4 4 ]
-"31
-} 0
-"4 C:\Program Files\Microchip\xc8\v1.36\sources\common\Umul8.c
-[v ___bmul __bmul `(uc  1 e 1 0 ]
-{
-[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
-"6
-[v ___bmul@product product `uc  1 a 1 2 ]
-"4
-[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
-[v ___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
-"6
-[v ___bmul@multiplier multiplier `uc  1 a 1 3 ]
-"51
-} 0
-"392 F:\Tutorials_And_Codes\PIC\ULTRA_PIC/00-libfiles/lcd.c
-[v _LCD_DisplayChar LCD_DisplayChar `(v  1 e 1 0 ]
-{
-[v LCD_DisplayChar@v_lcdData_u8 v_lcdData_u8 `uc  1 a 1 wreg ]
-[v LCD_DisplayChar@v_lcdData_u8 v_lcdData_u8 `uc  1 a 1 wreg ]
-"394
-[v LCD_DisplayChar@v_lcdData_u8 v_lcdData_u8 `uc  1 a 1 12 ]
-"406
-} 0
-"826
-[v _lcd_DataWrite lcd_DataWrite `(v  1 s 1 lcd_DataWrite ]
-{
-[v lcd_DataWrite@dataByte dataByte `uc  1 a 1 wreg ]
-[v lcd_DataWrite@dataByte dataByte `uc  1 a 1 wreg ]
-"828
-[v lcd_DataWrite@dataByte dataByte `uc  1 a 1 9 ]
-"842
-} 0
-"1002
-[v _lcd_SendDataSignals lcd_SendDataSignals `(v  1 s 1 lcd_SendDataSignals ]
-{
-"1009
-} 0
-"292
-[v _LCD_GoToNextLine LCD_GoToNextLine `(v  1 e 1 0 ]
-{
-"301
 } 0
 "198
 [v _LCD_Init LCD_Init `(v  1 e 1 0 ]
@@ -472,6 +278,42 @@ P_NC 255
 "267
 [v LCD_GoToLine@v_lineNumber_u8 v_lineNumber_u8 `uc  1 a 1 11 ]
 "275
+} 0
+"427
+[v _LCD_DisplayString LCD_DisplayString `(v  1 e 1 0 ]
+{
+[v LCD_DisplayString@ptr_stringPointer_u8 ptr_stringPointer_u8 `*.24DCCuc  1 a 1 wreg ]
+[v LCD_DisplayString@ptr_stringPointer_u8 ptr_stringPointer_u8 `*.24DCCuc  1 a 1 wreg ]
+[v LCD_DisplayString@ptr_stringPointer_u8 ptr_stringPointer_u8 `*.24DCCuc  1 a 1 0 ]
+"431
+} 0
+"392
+[v _LCD_DisplayChar LCD_DisplayChar `(v  1 e 1 0 ]
+{
+[v LCD_DisplayChar@v_lcdData_u8 v_lcdData_u8 `uc  1 a 1 wreg ]
+[v LCD_DisplayChar@v_lcdData_u8 v_lcdData_u8 `uc  1 a 1 wreg ]
+"394
+[v LCD_DisplayChar@v_lcdData_u8 v_lcdData_u8 `uc  1 a 1 12 ]
+"406
+} 0
+"826
+[v _lcd_DataWrite lcd_DataWrite `(v  1 s 1 lcd_DataWrite ]
+{
+[v lcd_DataWrite@dataByte dataByte `uc  1 a 1 wreg ]
+[v lcd_DataWrite@dataByte dataByte `uc  1 a 1 wreg ]
+"828
+[v lcd_DataWrite@dataByte dataByte `uc  1 a 1 9 ]
+"842
+} 0
+"1002
+[v _lcd_SendDataSignals lcd_SendDataSignals `(v  1 s 1 lcd_SendDataSignals ]
+{
+"1009
+} 0
+"292
+[v _LCD_GoToNextLine LCD_GoToNextLine `(v  1 e 1 0 ]
+{
+"301
 } 0
 "358
 [v _LCD_CmdWrite LCD_CmdWrite `(v  1 e 1 0 ]
@@ -512,7 +354,7 @@ P_NC 255
 [v lcd_BusyCheck@busyflag busyflag `uc  1 a 1 6 ]
 "897
 } 0
-"127 F:\Tutorials_And_Codes\PIC\ULTRA_PIC/00-libfiles/gpio.c
+"127 D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode/00-libfiles/gpio.c
 [v _GPIO_PinWrite GPIO_PinWrite `(v  1 e 1 0 ]
 {
 [v GPIO_PinWrite@enm_pinNumber enm_pinNumber `E1088  1 a 1 wreg ]
@@ -552,7 +394,7 @@ P_NC 255
 [v GPIO_PinDirection@enm_pinNumber enm_pinNumber `E1088  1 a 1 4 ]
 "102
 } 0
-"75 F:\Tutorials_And_Codes\PIC\ULTRA_PIC/00-libfiles/delay.c
+"75 D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode/00-libfiles/delay.c
 [v _DELAY_ms DELAY_ms `(v  1 e 1 0 ]
 {
 [v DELAY_ms@ms_count ms_count `ui  1 p 2 2 ]

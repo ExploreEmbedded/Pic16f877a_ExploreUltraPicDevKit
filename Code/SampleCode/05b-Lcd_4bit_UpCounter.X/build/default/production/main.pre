@@ -111,12 +111,12 @@ void DELAY_us(uint16_t us_count);
 void DELAY_ms(uint16_t ms_count);
 void DELAY_sec(uint16_t var_delaySecCount_u16);
 
-# 43 "main.c"
+# 41 "main.c"
 int main()
 {
 int count = 0;
 
-LCD_SetUp(PB_0,PB_1,PB_2,P_NC,P_NC,P_NC,P_NC,PB_4,PB_5,PB_6,PB_7);
+LCD_SetUp(PD_0,PD_1,PD_2,P_NC,P_NC,P_NC,P_NC,PB_4,PB_5,PB_6,PB_7);
 LCD_Init(2,16);
 
 LCD_DisplayString("Decimal");

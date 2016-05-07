@@ -109,3 +109,36 @@ Version 3.2 HI-TECH Software Intermediate Code
 "82
 [e :UE 5 ]
 }
+"102
+[v _DELAY_sec `(v ~T0 @X0 1 ef1`ui ]
+"103
+{
+[; ;delay.c: 102: void DELAY_sec(uint16_t sec_count)
+[; ;delay.c: 103: {
+[e :U _DELAY_sec ]
+"102
+[v _sec_count `ui ~T0 @X0 1 r1 ]
+"103
+[f ]
+[; ;delay.c: 104: while (sec_count != 0) {
+"104
+[e $U 10  ]
+[e :U 11 ]
+{
+[; ;delay.c: 105: DELAY_ms(1000);
+"105
+[e ( _DELAY_ms (1 -> -> 1000 `i `ui ]
+[; ;delay.c: 106: sec_count--;
+"106
+[e -- _sec_count -> -> 1 `i `ui ]
+"107
+}
+[e :U 10 ]
+"104
+[e $ != _sec_count -> -> 0 `i `ui 11  ]
+[e :U 12 ]
+[; ;delay.c: 107: }
+[; ;delay.c: 108: }
+"108
+[e :UE 9 ]
+}

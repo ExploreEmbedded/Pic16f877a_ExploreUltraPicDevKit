@@ -1,0 +1,66 @@
+Cmp-Mod V01 Created by Cvpcb (2015-01-16 BZR 5376)-product   date = 5/25/2015 3:20:26 PM
+
+BeginCmp
+TimeStamp = /519178E1;
+Reference = C2;
+ValeurCmp = 0.1uF;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /519178D9;
+Reference = C3;
+ValeurCmp = 1uF;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /5562EF82;
+Reference = CON1;
+ValeurCmp = USB-MINI-B;
+IdModule  = Connect:USB_Micro-B;
+EndCmp
+
+BeginCmp
+TimeStamp = /51917BC5;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /5562ADA9;
+Reference = P1;
+ValeurCmp = CONN_7;
+IdModule  = SIL-7;
+EndCmp
+
+BeginCmp
+TimeStamp = /5562C438;
+Reference = P2;
+ValeurCmp = CONN_1;
+IdModule  = Connect:1pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /5562C445;
+Reference = P3;
+ValeurCmp = CONN_1;
+IdModule  = Connect:1pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /51917BB4;
+Reference = R1;
+ValeurCmp = 330r;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /5191711E;
+Reference = U1;
+ValeurCmp = CP2102;
+IdModule  = cp2102_xl2;
+EndCmp
+
+EndListe

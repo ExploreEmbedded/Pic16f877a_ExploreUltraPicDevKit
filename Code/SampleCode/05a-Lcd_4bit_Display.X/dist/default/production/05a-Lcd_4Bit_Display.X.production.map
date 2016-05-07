@@ -2,11 +2,11 @@ Microchip MPLAB XC8 Compiler V1.36 ()
 
 Linker command line:
 
--W-3 --edf=C:\Program Files\Microchip\xc8\v1.36\dat\en_msgs.txt -cs \
-  -h+dist/default/production\05a-Lcd_4Bit_Display.X.production.sym \
-  --cmf=dist/default/production\05a-Lcd_4Bit_Display.X.production.cmf -z \
-  -Q16F877A -oC:\Users\bagwan\AppData\Local\Temp\s2dk.2 \
-  -Mdist/default/production/05a-Lcd_4Bit_Display.X.production.map -E1 \
+-W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v1.36\dat\en_msgs.txt -cs \
+  -h+dist/default/production\05a-Lcd_4bit_Display.X.production.sym \
+  --cmf=dist/default/production\05a-Lcd_4bit_Display.X.production.cmf -z \
+  -Q16F877A -oC:\Users\EXPLOR~1\AppData\Local\Temp\s22o.2 \
+  -Mdist/default/production/05a-Lcd_4bit_Display.X.production.map -E1 \
   -ver=XC8 -ASTACK=0110h-016fh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
   -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh -ABANK0=020h-06Fh \
@@ -18,8 +18,8 @@ Linker command line:
   -pfunctab=CODE -ACONFIG=02007h-02007h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k C:\Users\bagwan\AppData\Local\Temp\s2dk.obj \
-  dist/default/production\05a-Lcd_4Bit_Display.X.production.obj 
+  -DENTRY=2 -k C:\Users\EXPLOR~1\AppData\Local\Temp\s22o.obj \
+  dist/default/production\05a-Lcd_4bit_Display.X.production.obj 
 
 Object code version is 3.11
 
@@ -28,10 +28,10 @@ Machine type is 16F877A
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\bagwan\AppData\Local\Temp\s2dk.obj
+C:\Users\EXPLOR~1\AppData\Local\Temp\s22o.obj
                 end_init                              0        0        3        0       0
                 config                             2007     2007        1     400E       0
-dist/default/production\05a-Lcd_4Bit_Display.X.production.obj
+dist/default/production\05a-Lcd_4bit_Display.X.production.obj
                 cinit                               7DD      7DD       23      FBA       0
                 text20                              1D3      1D3        B      3A6       0
                 text19                              1E9      1E9       14      3D2       0
@@ -474,7 +474,7 @@ FUNCTION INFORMATION:
  Auto vars:     Size  Location     Type
 		None
  Return value:  Size  Location     Type
-                  2  305[None  ] int 
+                  2  225[None  ] int 
  Registers used:
 		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
  Tracked objects:
@@ -499,7 +499,7 @@ Total ram usage:       10 bytes
 
  *************** function _LCD_SetUp *****************
  Defined at:
-		line 129 in file "../00-libfiles/lcd.c"
+		line 135 in file "../00-libfiles/lcd.c"
  Parameters:    Size  Location     Type
   RS              1    wreg     enum E33
   RW              1    0[BANK0 ] enum E33
@@ -539,7 +539,7 @@ Total ram usage:       12 bytes
 
  *************** function _LCD_Init *****************
  Defined at:
-		line 192 in file "../00-libfiles/lcd.c"
+		line 198 in file "../00-libfiles/lcd.c"
  Parameters:    Size  Location     Type
   v_lcdNoOfLin    1    wreg     unsigned char 
   v_MaxCharsPe    1   12[COMMON] unsigned char 
@@ -573,7 +573,7 @@ Total ram usage:        3 bytes
 
  *************** function _lcd_Reset *****************
  Defined at:
-		line 906 in file "../00-libfiles/lcd.c"
+		line 913 in file "../00-libfiles/lcd.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -606,7 +606,7 @@ Total ram usage:        0 bytes
 
  *************** function _LCD_Clear *****************
  Defined at:
-		line 231 in file "../00-libfiles/lcd.c"
+		line 237 in file "../00-libfiles/lcd.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -637,7 +637,7 @@ Total ram usage:        0 bytes
 
  *************** function _LCD_GoToLine *****************
  Defined at:
-		line 259 in file "../00-libfiles/lcd.c"
+		line 265 in file "../00-libfiles/lcd.c"
  Parameters:    Size  Location     Type
   v_lineNumber    1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -662,13 +662,12 @@ Total ram usage:        2 bytes
 		_LCD_CmdWrite
  This function is called by:
 		_LCD_Clear
-		_LCD_ScrollMessage
  This function uses a non-reentrant model
 
 
  *************** function _LCD_DisplayString *****************
  Defined at:
-		line 421 in file "../00-libfiles/lcd.c"
+		line 427 in file "../00-libfiles/lcd.c"
  Parameters:    Size  Location     Type
   ptr_stringPo    1    wreg     PTR const unsigned char 
 		 -> STR_2(15), STR_1(17), 
@@ -695,13 +694,12 @@ Total ram usage:        2 bytes
 		_LCD_DisplayChar
  This function is called by:
 		_main
-		_LCD_Printf
  This function uses a non-reentrant model
 
 
  *************** function _LCD_DisplayChar *****************
  Defined at:
-		line 386 in file "../00-libfiles/lcd.c"
+		line 392 in file "../00-libfiles/lcd.c"
  Parameters:    Size  Location     Type
   v_lcdData_u8    1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -727,15 +725,12 @@ Total ram usage:        2 bytes
 		_lcd_DataWrite
  This function is called by:
 		_LCD_DisplayString
-		_LCD_ScrollMessage
-		_LCD_DisplayNumber
-		_LCD_Printf
  This function uses a non-reentrant model
 
 
  *************** function _lcd_DataWrite *****************
  Defined at:
-		line 819 in file "../00-libfiles/lcd.c"
+		line 826 in file "../00-libfiles/lcd.c"
  Parameters:    Size  Location     Type
   dataByte        1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -768,7 +763,7 @@ Total ram usage:        3 bytes
 
  *************** function _lcd_SendDataSignals *****************
  Defined at:
-		line 995 in file "../00-libfiles/lcd.c"
+		line 1002 in file "../00-libfiles/lcd.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -799,7 +794,7 @@ Total ram usage:        0 bytes
 
  *************** function _LCD_GoToNextLine *****************
  Defined at:
-		line 286 in file "../00-libfiles/lcd.c"
+		line 292 in file "../00-libfiles/lcd.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -829,7 +824,7 @@ Total ram usage:        1 bytes
 
  *************** function _LCD_CmdWrite *****************
  Defined at:
-		line 352 in file "../00-libfiles/lcd.c"
+		line 358 in file "../00-libfiles/lcd.c"
  Parameters:    Size  Location     Type
   v_lcdCmd_u8     1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -860,13 +855,12 @@ Total ram usage:        3 bytes
 		_LCD_Clear
 		_LCD_GoToLine
 		_LCD_GoToNextLine
-		_LCD_ScrollMessage
  This function uses a non-reentrant model
 
 
  *************** function _lcd_SendLowerNibble *****************
  Defined at:
-		line 955 in file "../00-libfiles/lcd.c"
+		line 962 in file "../00-libfiles/lcd.c"
  Parameters:    Size  Location     Type
   dataByte        1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -897,7 +891,7 @@ Total ram usage:        2 bytes
 
  *************** function _lcd_SendHigherNibble *****************
  Defined at:
-		line 936 in file "../00-libfiles/lcd.c"
+		line 943 in file "../00-libfiles/lcd.c"
  Parameters:    Size  Location     Type
   dataByte        1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -929,7 +923,7 @@ Total ram usage:        2 bytes
 
  *************** function _lcd_SendCmdSignals *****************
  Defined at:
-		line 974 in file "../00-libfiles/lcd.c"
+		line 981 in file "../00-libfiles/lcd.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -961,7 +955,7 @@ Total ram usage:        0 bytes
 
  *************** function _lcd_BusyCheck *****************
  Defined at:
-		line 853 in file "../00-libfiles/lcd.c"
+		line 860 in file "../00-libfiles/lcd.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1121,7 +1115,7 @@ Total ram usage:        2 bytes
 		_LCD_Init
 		_lcd_BusyCheck
 		_lcd_Reset
-		_LCD_ScrollMessage
+		_DELAY_sec
  This function uses a non-reentrant model
 
 
