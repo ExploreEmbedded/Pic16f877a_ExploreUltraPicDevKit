@@ -1,7 +1,7 @@
 
 # 1 "../00-libfiles/uart.c"
 
-# 7 "C:\Program Files\Microchip\xc8\v1.36\include\stdarg.h"
+# 7 "C:\Program Files (x86)\Microchip\xc8\v1.36\include\stdarg.h"
 typedef void * va_list[1];
 
 #pragma intrinsic(__va_start)
@@ -10,7 +10,7 @@ extern void * __va_start(void);
 #pragma intrinsic(__va_arg)
 extern void * __va_arg(void *, ...);
 
-# 49 "C:\Program Files\Microchip\xc8\v1.36\include\pic16f877a.h"
+# 49 "C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic16f877a.h"
 extern volatile unsigned char INDF @ 0x000;
 
 asm("INDF equ 00h");
@@ -1617,22 +1617,6 @@ i--;
 
 }
 
-# 350
-void UART_TxFloatNumber(float v_floatNumber_f32)
-{
-uint32_t v_decNumber_u32;
-
-# 359
-v_decNumber_u32 = (uint32_t) v_floatNumber_f32;
-UART_TxNumber(10u,v_decNumber_u32,0xffu);
-
-UART_TxChar('.');
-
-v_floatNumber_f32 = v_floatNumber_f32 - v_decNumber_u32;
-v_decNumber_u32 = v_floatNumber_f32 * 1000000;
-UART_TxNumber(10u,v_decNumber_u32,0xffu);
-}
-
 # 413
 void UART_Printf(const char *argList, ...)
 {
@@ -1646,10 +1630,7 @@ char *str;
 char ch;
 uint8_t v_numOfDigitsToTransmit_u8;
 
-double v_floatNum_f32;
-
-
-
+# 429
 *argp = __va_start();
 
 
@@ -1748,9 +1729,7 @@ break;
 case 'F':
 case 'f':
 
-v_floatNum_f32 = (*(double *)__va_arg((*(double **)argp), (double)0));
-UART_TxFloatNumber(v_floatNum_f32);
-
+# 530
 break;
 
 

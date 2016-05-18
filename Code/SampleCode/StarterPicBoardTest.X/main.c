@@ -208,7 +208,7 @@ void eeprom_Test(void)
 {
     unsigned char eeprom_address = 0x00, write_char = 'X', read_char;
 
-     UART_Printf("\n\r\n\rInbuilt Eeprom Test. Writing and reading A-Z to and from Eeprom.");
+   UART_Printf("\n\r\n\rInbuilt Eeprom Test. Writing and reading A-Z to and from Eeprom.");
 
     for(write_char='A';write_char<='Z';write_char++)
     {

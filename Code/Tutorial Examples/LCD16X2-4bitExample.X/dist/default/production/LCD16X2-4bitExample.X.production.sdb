@@ -1,0 +1,61 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 6 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"16 D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\LCD16X2-4bitExample.X\main.c
+[v _delay delay `(v  1 e 1 0 ]
+"26
+[v _Lcd_CmdWrite Lcd_CmdWrite `(v  1 e 1 0 ]
+"51
+[v _Lcd_DataWrite Lcd_DataWrite `(v  1 e 1 0 ]
+"74
+[v _main main `(i  1 e 2 0 ]
+"209 C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic16f877a.h
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"1337
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"74 D:\Github\Pic16f877a_ExploreUltraPicDevKit\Code\Tutorial Examples\LCD16X2-4bitExample.X\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"76
+[v main@a a `[14]uc  1 a 14 0 ]
+[v main@i i `uc  1 a 1 14 ]
+[v main@F1077 F1077 `[14]uc  1 s 14 F1077 ]
+"107
+} 0
+"51
+[v _Lcd_DataWrite Lcd_DataWrite `(v  1 e 1 0 ]
+{
+[v Lcd_DataWrite@dat dat `uc  1 a 1 wreg ]
+[v Lcd_DataWrite@dat dat `uc  1 a 1 wreg ]
+"53
+[v Lcd_DataWrite@dat dat `uc  1 a 1 6 ]
+"70
+} 0
+"26
+[v _Lcd_CmdWrite Lcd_CmdWrite `(v  1 e 1 0 ]
+{
+[v Lcd_CmdWrite@cmd cmd `uc  1 a 1 wreg ]
+[v Lcd_CmdWrite@cmd cmd `uc  1 a 1 wreg ]
+"28
+[v Lcd_CmdWrite@cmd cmd `uc  1 a 1 6 ]
+"45
+} 0
+"16
+[v _delay delay `(v  1 e 1 0 ]
+{
+"18
+[v delay@i i `i  1 a 2 3 ]
+"16
+[v delay@cnt cnt `i  1 p 2 0 ]
+"20
+} 0

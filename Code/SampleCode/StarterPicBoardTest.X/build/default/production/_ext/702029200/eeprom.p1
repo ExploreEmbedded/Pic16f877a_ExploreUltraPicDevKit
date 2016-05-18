@@ -1,5 +1,7 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"2561 C:\Program Files\Microchip\xc8\v1.36\include\pic16f877a.h
+"114 C:\Program Files (x86)\Microchip\xc8\v1.36\include\eeprom_routines.h
+[v _eeprom_write `(v ~T0 @X0 0 ef2`uc`uc ]
+"2561 C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic16f877a.h
 [v _RD `Vb ~T0 @X0 0 e@3168 ]
 "2761
 [v _WR `Vb ~T0 @X0 0 e@3169 ]
@@ -7,14 +9,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _EEADR `Vuc ~T0 @X0 0 e@269 ]
 "2233
 [v _EEDATA `Vuc ~T0 @X0 0 e@268 ]
-"2763
-[v _WREN `Vb ~T0 @X0 0 e@3170 ]
-"2301
-[v _EECON2 `Vuc ~T0 @X0 0 e@397 ]
-"67 ../00-libfiles/delay.h
-[v _DELAY_us `(v ~T0 @X0 0 ef1`ui ]
 [; ;pic16f877a.h: 49: extern volatile unsigned char INDF @ 0x000;
-"51 C:\Program Files\Microchip\xc8\v1.36\include\pic16f877a.h
+"51 C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic16f877a.h
 [; ;pic16f877a.h: 51: asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
 [; ;pic16f877a.h: 55: extern volatile unsigned char TMR0 @ 0x001;
@@ -1067,163 +1063,147 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;delay.h: 67: void DELAY_us(uint16_t us_count);
 [; ;delay.h: 68: void DELAY_ms(uint16_t ms_count);
 [; ;delay.h: 69: void DELAY_sec(uint16_t var_delaySecCount_u16);
-"57 ../00-libfiles/eeprom.c
+[; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
+[; ;htc.h: 28: extern double __fpnormalize(double);
+[; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
+[; ;pic.h: 28: extern void __nop(void);
+[; ;pic.h: 77: extern unsigned int flash_read(unsigned short addr);
+[; ;eeprom_routines.h: 114: extern void eeprom_write(unsigned char addr, unsigned char value);
+[; ;eeprom_routines.h: 115: extern unsigned char eeprom_read(unsigned char addr);
+[; ;eeprom_routines.h: 116: extern void eecpymem(volatile unsigned char *to, __eeprom unsigned char *from, unsigned char size);
+[; ;eeprom_routines.h: 117: extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsigned char size);
+[; ;pic.h: 152: extern __nonreentrant void _delay(unsigned long);
+[; ;pic.h: 186: extern unsigned char __resetbits;
+[; ;pic.h: 187: extern __bit __powerdown;
+[; ;pic.h: 188: extern __bit __timeout;
+[; ;eeprom.c: 47: extern void eeprom_write(unsigned char addr, unsigned char value);
+[; ;eeprom.c: 48: extern unsigned char eeprom_read(unsigned char addr);
+"60 ../00-libfiles/eeprom.c
 [v _EEPROM_WriteByte `(v ~T0 @X0 1 ef2`ui`uc ]
-"58
+"61
 {
-[; ;eeprom.c: 57: void EEPROM_WriteByte(uint16_t v_eepromAddress_u16, uint8_t v_eepromData_u8)
-[; ;eeprom.c: 58: {
+[; ;eeprom.c: 60: void EEPROM_WriteByte(uint16_t v_eepromAddress_u16, uint8_t v_eepromData_u8)
+[; ;eeprom.c: 61: {
 [e :U _EEPROM_WriteByte ]
-"57
+"60
 [v _v_eepromAddress_u16 `ui ~T0 @X0 1 r1 ]
 [v _v_eepromData_u8 `uc ~T0 @X0 1 r2 ]
-"58
+"61
 [f ]
-[; ;eeprom.c: 59: while(RD || WR);
-"59
-[e $U 97  ]
-[e :U 98 ]
-[e :U 97 ]
-[e $ || _RD _WR 98  ]
-[e :U 99 ]
-[; ;eeprom.c: 60: EEADR=v_eepromAddress_u16;
-"60
-[e = _EEADR -> _v_eepromAddress_u16 `uc ]
-[; ;eeprom.c: 62: EEDATA=v_eepromData_u8;
+[; ;eeprom.c: 62: eeprom_write(v_eepromAddress_u16,v_eepromData_u8);
 "62
-[e = _EEDATA _v_eepromData_u8 ]
-[; ;eeprom.c: 63: WREN=1;
-"63
-[e = _WREN -> -> 1 `i `b ]
-[; ;eeprom.c: 64: EECON2=0x55;
-"64
-[e = _EECON2 -> -> 85 `i `uc ]
-[; ;eeprom.c: 65: EECON2=0xaa;
-"65
-[e = _EECON2 -> -> 170 `i `uc ]
-[; ;eeprom.c: 66: WR=1;
-"66
-[e = _WR -> -> 1 `i `b ]
-[; ;eeprom.c: 67: DELAY_us(10);
-"67
-[e ( _DELAY_us (1 -> -> 10 `i `ui ]
-[; ;eeprom.c: 68: WREN=0;
-"68
-[e = _WREN -> -> 0 `i `b ]
-[; ;eeprom.c: 69: }
-"69
+[e ( _eeprom_write (2 , -> _v_eepromAddress_u16 `uc _v_eepromData_u8 ]
+[; ;eeprom.c: 73: }
+"73
 [e :UE 96 ]
 }
-"84
+"88
 [v _EEPROM_ReadByte `(uc ~T0 @X0 1 ef1`ui ]
-"85
-{
-[; ;eeprom.c: 84: uint8_t EEPROM_ReadByte(uint16_t v_eepromAddress_u16)
-[; ;eeprom.c: 85: {
-[e :U _EEPROM_ReadByte ]
-"84
-[v _v_eepromAddress_u16 `ui ~T0 @X0 1 r1 ]
-"85
-[f ]
-[; ;eeprom.c: 86: while(RD || WR);
-"86
-[e $U 101  ]
-[e :U 102 ]
-[e :U 101 ]
-[e $ || _RD _WR 102  ]
-[e :U 103 ]
-[; ;eeprom.c: 87: EEADR=v_eepromAddress_u16;
-"87
-[e = _EEADR -> _v_eepromAddress_u16 `uc ]
-[; ;eeprom.c: 89: RD = 1;
 "89
-[e = _RD -> -> 1 `i `b ]
-[; ;eeprom.c: 90: DELAY_us(50);
-"90
-[e ( _DELAY_us (1 -> -> 50 `i `ui ]
-[; ;eeprom.c: 91: return(EEDATA);
-"91
-[e ) _EEDATA ]
-[e $UE 100  ]
-[; ;eeprom.c: 92: }
-"92
-[e :UE 100 ]
-}
-"173
-[v _EEPROM_WriteString `(v ~T0 @X0 1 ef2`ui`*uc ]
-"174
 {
-[; ;eeprom.c: 173: void EEPROM_WriteString(uint16_t v_eepromAddress_u16, char *ptr_stringPointer_u8)
-[; ;eeprom.c: 174: {
-[e :U _EEPROM_WriteString ]
-"173
+[; ;eeprom.c: 88: uint8_t EEPROM_ReadByte(uint16_t v_eepromAddress_u16)
+[; ;eeprom.c: 89: {
+[e :U _EEPROM_ReadByte ]
+"88
 [v _v_eepromAddress_u16 `ui ~T0 @X0 1 r1 ]
-[v _ptr_stringPointer_u8 `*uc ~T0 @X0 1 r2 ]
-"174
+"89
 [f ]
-[; ;eeprom.c: 176: do
+[; ;eeprom.c: 90: while(RD || WR);
+"90
+[e $U 98  ]
+[e :U 99 ]
+[e :U 98 ]
+[e $ || _RD _WR 99  ]
+[e :U 100 ]
+[; ;eeprom.c: 91: EEADR=v_eepromAddress_u16;
+"91
+[e = _EEADR -> _v_eepromAddress_u16 `uc ]
+[; ;eeprom.c: 93: RD = 1;
+"93
+[e = _RD -> -> 1 `i `b ]
+[; ;eeprom.c: 94: return(EEDATA);
+"94
+[e ) _EEDATA ]
+[e $UE 97  ]
+[; ;eeprom.c: 95: }
+"95
+[e :UE 97 ]
+}
 "176
-[e :U 107 ]
-[; ;eeprom.c: 177: {
+[v _EEPROM_WriteString `(v ~T0 @X0 1 ef2`ui`*uc ]
 "177
 {
-[; ;eeprom.c: 178: EEPROM_WriteByte(v_eepromAddress_u16,*ptr_stringPointer_u8);
-"178
-[e ( _EEPROM_WriteByte (2 , _v_eepromAddress_u16 *U _ptr_stringPointer_u8 ]
-[; ;eeprom.c: 179: ptr_stringPointer_u8++;
+[; ;eeprom.c: 176: void EEPROM_WriteString(uint16_t v_eepromAddress_u16, char *ptr_stringPointer_u8)
+[; ;eeprom.c: 177: {
+[e :U _EEPROM_WriteString ]
+"176
+[v _v_eepromAddress_u16 `ui ~T0 @X0 1 r1 ]
+[v _ptr_stringPointer_u8 `*uc ~T0 @X0 1 r2 ]
+"177
+[f ]
+[; ;eeprom.c: 179: do
 "179
-[e ++ _ptr_stringPointer_u8 * -> -> 1 `i `x -> -> # *U _ptr_stringPointer_u8 `i `x ]
-[; ;eeprom.c: 180: v_eepromAddress_u16++;
+[e :U 104 ]
+[; ;eeprom.c: 180: {
 "180
-[e ++ _v_eepromAddress_u16 -> -> 1 `i `ui ]
-"181
-}
-[; ;eeprom.c: 181: }while(*(ptr_stringPointer_u8-1) !=0);
-[e $ != -> *U - _ptr_stringPointer_u8 * -> -> 1 `i `x -> -> # *U _ptr_stringPointer_u8 `i `x `i -> 0 `i 107  ]
-[e :U 106 ]
-[; ;eeprom.c: 182: }
-"182
-[e :UE 104 ]
-}
-"200
-[v _EEPROM_ReadString `(v ~T0 @X0 1 ef2`ui`*uc ]
-"201
 {
-[; ;eeprom.c: 200: void EEPROM_ReadString(uint16_t v_eepromAddress_u16, char *ptr_destStringAddress_u8)
-[; ;eeprom.c: 201: {
+[; ;eeprom.c: 181: EEPROM_WriteByte(v_eepromAddress_u16,*ptr_stringPointer_u8);
+"181
+[e ( _EEPROM_WriteByte (2 , _v_eepromAddress_u16 *U _ptr_stringPointer_u8 ]
+[; ;eeprom.c: 182: ptr_stringPointer_u8++;
+"182
+[e ++ _ptr_stringPointer_u8 * -> -> 1 `i `x -> -> # *U _ptr_stringPointer_u8 `i `x ]
+[; ;eeprom.c: 183: v_eepromAddress_u16++;
+"183
+[e ++ _v_eepromAddress_u16 -> -> 1 `i `ui ]
+"184
+}
+[; ;eeprom.c: 184: }while(*(ptr_stringPointer_u8-1) !=0);
+[e $ != -> *U - _ptr_stringPointer_u8 * -> -> 1 `i `x -> -> # *U _ptr_stringPointer_u8 `i `x `i -> 0 `i 104  ]
+[e :U 103 ]
+[; ;eeprom.c: 185: }
+"185
+[e :UE 101 ]
+}
+"203
+[v _EEPROM_ReadString `(v ~T0 @X0 1 ef2`ui`*uc ]
+"204
+{
+[; ;eeprom.c: 203: void EEPROM_ReadString(uint16_t v_eepromAddress_u16, char *ptr_destStringAddress_u8)
+[; ;eeprom.c: 204: {
 [e :U _EEPROM_ReadString ]
-"200
+"203
 [v _v_eepromAddress_u16 `ui ~T0 @X0 1 r1 ]
 [v _ptr_destStringAddress_u8 `*uc ~T0 @X0 1 r2 ]
-"201
-[f ]
-"202
-[v _eeprom_data `uc ~T0 @X0 1 a ]
-[; ;eeprom.c: 202: char eeprom_data;
-[; ;eeprom.c: 204: do
 "204
-[e :U 111 ]
-[; ;eeprom.c: 205: {
+[f ]
 "205
-{
-[; ;eeprom.c: 206: eeprom_data = EEPROM_ReadByte(v_eepromAddress_u16);
-"206
-[e = _eeprom_data ( _EEPROM_ReadByte (1 _v_eepromAddress_u16 ]
-[; ;eeprom.c: 207: *ptr_destStringAddress_u8 = eeprom_data;
+[v _eeprom_data `uc ~T0 @X0 1 a ]
+[; ;eeprom.c: 205: char eeprom_data;
+[; ;eeprom.c: 207: do
 "207
-[e = *U _ptr_destStringAddress_u8 _eeprom_data ]
-[; ;eeprom.c: 208: ptr_destStringAddress_u8++;
+[e :U 108 ]
+[; ;eeprom.c: 208: {
 "208
-[e ++ _ptr_destStringAddress_u8 * -> -> 1 `i `x -> -> # *U _ptr_destStringAddress_u8 `i `x ]
-[; ;eeprom.c: 209: v_eepromAddress_u16++;
+{
+[; ;eeprom.c: 209: eeprom_data = EEPROM_ReadByte(v_eepromAddress_u16);
 "209
-[e ++ _v_eepromAddress_u16 -> -> 1 `i `ui ]
+[e = _eeprom_data ( _EEPROM_ReadByte (1 _v_eepromAddress_u16 ]
+[; ;eeprom.c: 210: *ptr_destStringAddress_u8 = eeprom_data;
 "210
-}
-[; ;eeprom.c: 210: }while(eeprom_data!=0);
-[e $ != -> _eeprom_data `i -> 0 `i 111  ]
-[e :U 110 ]
-[; ;eeprom.c: 211: }
+[e = *U _ptr_destStringAddress_u8 _eeprom_data ]
+[; ;eeprom.c: 211: ptr_destStringAddress_u8++;
 "211
-[e :UE 108 ]
+[e ++ _ptr_destStringAddress_u8 * -> -> 1 `i `x -> -> # *U _ptr_destStringAddress_u8 `i `x ]
+[; ;eeprom.c: 212: v_eepromAddress_u16++;
+"212
+[e ++ _v_eepromAddress_u16 -> -> 1 `i `ui ]
+"213
+}
+[; ;eeprom.c: 213: }while(eeprom_data!=0);
+[e $ != -> _eeprom_data `i -> 0 `i 108  ]
+[e :U 107 ]
+[; ;eeprom.c: 214: }
+"214
+[e :UE 105 ]
 }

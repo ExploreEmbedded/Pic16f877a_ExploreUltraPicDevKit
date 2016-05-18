@@ -2,7 +2,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "61 ../00-libfiles/gpio.c
 [c E1088 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 255 .. ]
 [n E1088 . PA_0 PA_1 PA_2 PA_3 PA_4 PA_5 PA_6 PA_7 PB_0 PB_1 PB_2 PB_3 PB_4 PB_5 PB_6 PB_7 PC_0 PC_1 PC_2 PC_3 PC_4 PC_5 PC_6 PC_7 PD_0 PD_1 PD_2 PD_3 PD_4 PD_5 PD_6 PD_7 PE_0 PE_1 PE_2 PE_3 PE_4 PE_5 PE_6 PE_7 P_NC  ]
-"1288 C:\Program Files\Microchip\xc8\v1.36\include\pic16f877a.h
+"1288 C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic16f877a.h
 [v _TRISA `Vuc ~T0 @X0 0 e@133 ]
 "1337
 [v _TRISB `Vuc ~T0 @X0 0 e@134 ]
@@ -23,7 +23,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "392
 [v _PORTE `Vuc ~T0 @X0 0 e@9 ]
 [; ;pic16f877a.h: 49: extern volatile unsigned char INDF @ 0x000;
-"51 C:\Program Files\Microchip\xc8\v1.36\include\pic16f877a.h
+"51 C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic16f877a.h
 [; ;pic16f877a.h: 51: asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
 [; ;pic16f877a.h: 55: extern volatile unsigned char TMR0 @ 0x001;

@@ -46,6 +46,8 @@
       <compileType>
         <linkerTool>
           <linkerLibItems>
+            <linkerLibFileItem>../00-libfiles/lcd.c</linkerLibFileItem>
+            <linkerLibFileItem>../00-libfiles/lcd.h</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
         <archiverTool>

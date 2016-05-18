@@ -27,13 +27,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _lcd_SendCmdSignals `(v ~T0 @X0 0 sf ]
 "99
 [v _lcd_DataWrite `(v ~T0 @X0 0 sf1`uc ]
-"10 C:\Program Files\Microchip\xc8\v1.36\include\stdarg.h
-[v ___va_start `(*v ~T0 @X0 0 ef ]
-[p i ___va_start ]
-"13
-[v ___va_arg `(*v ~T0 @X0 0 ev`*v ]
-[p i ___va_arg ]
-"103 ../00-libfiles/lcd.c
+"103
 [v _lcd_SendDataSignals `(v ~T0 @X0 0 sf ]
 "67 ../00-libfiles/gpio.h
 [v _GPIO_PinWrite `(v ~T0 @X0 0 ef2`E33`uc ]
@@ -599,682 +593,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 "431
 [e :UE 21 ]
 }
-"454
-[v _LCD_ScrollMessage `(v ~T0 @X0 1 ef2`uc`*uc ]
-"455
-{
-[; ;lcd.c: 454: void LCD_ScrollMessage(uint8_t v_lineNumber_u8, char *ptr_msgPointer_u8)
-[; ;lcd.c: 455: {
-[e :U _LCD_ScrollMessage ]
-"454
-[v _v_lineNumber_u8 `uc ~T0 @X0 1 r1 ]
-[v _ptr_msgPointer_u8 `*uc ~T0 @X0 1 r2 ]
-"455
-[f ]
-"456
-[v _i `uc ~T0 @X0 1 a ]
-[v _j `uc ~T0 @X0 1 a ]
-[; ;lcd.c: 456: unsigned char i,j;
-[; ;lcd.c: 459: if(v_lineNumber_u8 >= LCDConfig.v_MaxSupportedLines_U8)
-"459
-[e $ ! >= -> _v_lineNumber_u8 `i -> . _LCDConfig 0 `i 26  ]
-[; ;lcd.c: 460: v_lineNumber_u8 = 0x00;
-"460
-[e = _v_lineNumber_u8 -> -> 0 `i `uc ]
-[e :U 26 ]
-[; ;lcd.c: 462: LCD_CmdWrite(0x0Cu);
-"462
-[e ( _LCD_CmdWrite (1 -> -> 12 `ui `uc ]
-[; ;lcd.c: 464: for(i=0;ptr_msgPointer_u8[i];i++)
-"464
-{
-[e = _i -> -> 0 `i `uc ]
-[e $U 30  ]
-"465
-[e :U 27 ]
-[; ;lcd.c: 465: {
-{
-[; ;lcd.c: 470: LCD_GoToLine(v_lineNumber_u8);
-"470
-[e ( _LCD_GoToLine (1 _v_lineNumber_u8 ]
-[; ;lcd.c: 472: for(j=0;(j<LCDConfig.v_MaxSupportedChars_U8) && (ptr_msgPointer_u8[i+j]);j++)
-"472
-{
-[e = _j -> -> 0 `i `uc ]
-[e $U 34  ]
-"473
-[e :U 31 ]
-[; ;lcd.c: 473: {
-{
-[; ;lcd.c: 475: LCD_DisplayChar(ptr_msgPointer_u8[i+j]);
-"475
-[e ( _LCD_DisplayChar (1 *U + _ptr_msgPointer_u8 * -> + -> _i `i -> _j `i `x -> -> # *U _ptr_msgPointer_u8 `i `x ]
-"476
-}
-"472
-[e ++ _j -> -> 1 `i `uc ]
-[e :U 34 ]
-[e $ && < -> _j `i -> . _LCDConfig 1 `i != -> *U + _ptr_msgPointer_u8 * -> + -> _i `i -> _j `i `x -> -> # *U _ptr_msgPointer_u8 `i `x `i -> -> -> 0 `i `uc `i 31  ]
-[e :U 32 ]
-"476
-}
-[; ;lcd.c: 476: }
-[; ;lcd.c: 479: while( j<LCDConfig.v_MaxSupportedChars_U8)
-"479
-[e $U 35  ]
-[e :U 36 ]
-[; ;lcd.c: 480: {
-"480
-{
-[; ;lcd.c: 483: LCD_DisplayChar(' ');
-"483
-[e ( _LCD_DisplayChar (1 -> -> 32 `ui `uc ]
-[; ;lcd.c: 484: j++;
-"484
-[e ++ _j -> -> 1 `i `uc ]
-"485
-}
-[e :U 35 ]
-"479
-[e $ < -> _j `i -> . _LCDConfig 1 `i 36  ]
-[e :U 37 ]
-[; ;lcd.c: 485: }
-[; ;lcd.c: 487: DELAY_ms(200);
-"487
-[e ( _DELAY_ms (1 -> -> 200 `i `ui ]
-"488
-}
-"464
-[e ++ _i -> -> 1 `i `uc ]
-[e :U 30 ]
-[e $ != -> *U + _ptr_msgPointer_u8 * -> _i `ux -> -> # *U _ptr_msgPointer_u8 `ui `ux `i -> -> -> 0 `i `uc `i 27  ]
-[e :U 28 ]
-"488
-}
-[; ;lcd.c: 488: }
-[; ;lcd.c: 489: LCD_CmdWrite(0x0Eu);
-"489
-[e ( _LCD_CmdWrite (1 -> -> 14 `ui `uc ]
-[; ;lcd.c: 490: }
-"490
-[e :UE 25 ]
-}
-"529
-[v _LCD_DisplayNumber `(v ~T0 @X0 1 ef3`uc`ul`uc ]
-"530
-{
-[; ;lcd.c: 529: void LCD_DisplayNumber(uint8_t v_numericSystem_u8, uint32_t v_number_u32, uint8_t v_numOfDigitsToDisplay_u8)
-[; ;lcd.c: 530: {
-[e :U _LCD_DisplayNumber ]
-"529
-[v _v_numericSystem_u8 `uc ~T0 @X0 1 r1 ]
-[v _v_number_u32 `ul ~T0 @X0 1 r2 ]
-[v _v_numOfDigitsToDisplay_u8 `uc ~T0 @X0 1 r3 ]
-"530
-[f ]
-"531
-[v _i `uc ~T0 @X0 1 a ]
-[; ;lcd.c: 531: uint8_t i=0,a[10];
-[e = _i -> -> 0 `i `uc ]
-[v _a `uc ~T0 @X0 -> 10 `i a ]
-[; ;lcd.c: 533: if(2u == v_numericSystem_u8)
-"533
-[e $ ! == -> 2 `ui -> _v_numericSystem_u8 `ui 39  ]
-[; ;lcd.c: 534: {
-"534
-{
-[; ;lcd.c: 535: while(v_numOfDigitsToDisplay_u8!=0)
-"535
-[e $U 40  ]
-[e :U 41 ]
-[; ;lcd.c: 536: {
-"536
-{
-[; ;lcd.c: 539: i = (((v_number_u32)&((1<<((v_numOfDigitsToDisplay_u8-1)))))!=0u);
-"539
-[e = _i -> -> != & _v_number_u32 -> -> << -> 1 `i - -> _v_numOfDigitsToDisplay_u8 `i -> 1 `i `l `ul -> -> 0 `ui `ul `i `uc ]
-[; ;lcd.c: 540: LCD_DisplayChar(((i)+0x30));
-"540
-[e ( _LCD_DisplayChar (1 -> + -> _i `i -> 48 `i `uc ]
-[; ;lcd.c: 541: v_numOfDigitsToDisplay_u8--;
-"541
-[e -- _v_numOfDigitsToDisplay_u8 -> -> 1 `i `uc ]
-"542
-}
-[e :U 40 ]
-"535
-[e $ != -> _v_numOfDigitsToDisplay_u8 `i -> 0 `i 41  ]
-[e :U 42 ]
-"543
-}
-[; ;lcd.c: 542: }
-[; ;lcd.c: 543: }
-[e $U 43  ]
-"544
-[e :U 39 ]
-[; ;lcd.c: 544: else if(v_number_u32==0)
-[e $ ! == _v_number_u32 -> -> -> 0 `i `l `ul 44  ]
-[; ;lcd.c: 545: {
-"545
-{
-[; ;lcd.c: 549: LCD_DisplayChar('0');
-"549
-[e ( _LCD_DisplayChar (1 -> -> 48 `ui `uc ]
-"550
-}
-[; ;lcd.c: 550: }
-[e $U 45  ]
-"551
-[e :U 44 ]
-[; ;lcd.c: 551: else
-[; ;lcd.c: 552: {
-"552
-{
-[; ;lcd.c: 553: for(i=0;i<v_numOfDigitsToDisplay_u8;i++)
-"553
-{
-[e = _i -> -> 0 `i `uc ]
-[e $U 49  ]
-"554
-[e :U 46 ]
-[; ;lcd.c: 554: {
-{
-[; ;lcd.c: 557: if(v_number_u32!=0)
-"557
-[e $ ! != _v_number_u32 -> -> -> 0 `i `l `ul 50  ]
-[; ;lcd.c: 558: {
-"558
-{
-[; ;lcd.c: 565: a[i]=(uint32_t)(v_number_u32 - (v_numericSystem_u8 * (uint32_t)(v_number_u32/v_numericSystem_u8)));
-"565
-[e = *U + &U _a * -> _i `ux -> -> # *U &U _a `ui `ux -> - _v_number_u32 * -> _v_numericSystem_u8 `ul / _v_number_u32 -> _v_numericSystem_u8 `ul `uc ]
-[; ;lcd.c: 566: v_number_u32=v_number_u32/v_numericSystem_u8;
-"566
-[e = _v_number_u32 / _v_number_u32 -> _v_numericSystem_u8 `ul ]
-"567
-}
-[; ;lcd.c: 567: }
-[e $U 51  ]
-"568
-[e :U 50 ]
-[; ;lcd.c: 568: else if( (v_numOfDigitsToDisplay_u8 == 0xffu) ||
-[; ;lcd.c: 569: (v_numOfDigitsToDisplay_u8 > 10u))
-"569
-[e $ ! || == -> _v_numOfDigitsToDisplay_u8 `ui -> 255 `ui > -> _v_numOfDigitsToDisplay_u8 `ui -> 10 `ui 52  ]
-[; ;lcd.c: 570: {
-"570
-{
-[; ;lcd.c: 573: break;
-"573
-[e $U 47  ]
-"574
-}
-[; ;lcd.c: 574: }
-[e $U 53  ]
-"575
-[e :U 52 ]
-[; ;lcd.c: 575: else
-[; ;lcd.c: 576: {
-"576
-{
-[; ;lcd.c: 580: a[i]=0;
-"580
-[e = *U + &U _a * -> _i `ux -> -> # *U &U _a `ui `ux -> -> 0 `i `uc ]
-"581
-}
-[e :U 53 ]
-[e :U 51 ]
-"582
-}
-"553
-[e ++ _i -> -> 1 `i `uc ]
-[e :U 49 ]
-[e $ < -> _i `i -> _v_numOfDigitsToDisplay_u8 `i 46  ]
-[e :U 47 ]
-"582
-}
-[; ;lcd.c: 581: }
-[; ;lcd.c: 582: }
-[; ;lcd.c: 584: while(i!=0)
-"584
-[e $U 54  ]
-[e :U 55 ]
-[; ;lcd.c: 585: {
-"585
-{
-[; ;lcd.c: 587: LCD_DisplayChar((((a[i-1])>0x09) ? ((a[i-1]) + 0x37): ((a[i-1]) + 0x30)));
-"587
-[e ( _LCD_DisplayChar (1 -> ? > -> *U + &U _a * -> -> - -> _i `i -> 1 `i `ui `ux -> -> # *U &U _a `ui `ux `i -> 9 `i : + -> *U + &U _a * -> -> - -> _i `i -> 1 `i `ui `ux -> -> # *U &U _a `ui `ux `i -> 55 `i + -> *U + &U _a * -> -> - -> _i `i -> 1 `i `ui `ux -> -> # *U &U _a `ui `ux `i -> 48 `i `uc ]
-[; ;lcd.c: 588: i--;
-"588
-[e -- _i -> -> 1 `i `uc ]
-"589
-}
-[e :U 54 ]
-"584
-[e $ != -> _i `i -> 0 `i 55  ]
-[e :U 56 ]
-"590
-}
-[e :U 45 ]
-[e :U 43 ]
-[; ;lcd.c: 589: }
-[; ;lcd.c: 590: }
-[; ;lcd.c: 591: }
-"591
-[e :UE 38 ]
-}
-"616
-[v _LCD_DisplayFloatNumber `(v ~T0 @X0 1 ef1`d ]
-"617
-{
-[; ;lcd.c: 616: void LCD_DisplayFloatNumber(double v_floatNum_f32)
-[; ;lcd.c: 617: {
-[e :U _LCD_DisplayFloatNumber ]
-"616
-[v _v_floatNum_f32 `d ~T0 @X0 1 r1 ]
-"617
-[f ]
-"618
-[v _v_decNumber_u32 `ul ~T0 @X0 1 a ]
-[; ;lcd.c: 618: uint32_t v_decNumber_u32;
-[; ;lcd.c: 625: v_decNumber_u32 = (uint32_t) v_floatNum_f32;
-"625
-[e = _v_decNumber_u32 -> _v_floatNum_f32 `ul ]
-[; ;lcd.c: 626: LCD_DisplayNumber(10u,v_decNumber_u32,0xffu);
-"626
-[e ( _LCD_DisplayNumber (3 , , -> -> 10 `ui `uc _v_decNumber_u32 -> -> 255 `ui `uc ]
-[; ;lcd.c: 628: LCD_DisplayChar('.');
-"628
-[e ( _LCD_DisplayChar (1 -> -> 46 `ui `uc ]
-[; ;lcd.c: 630: v_floatNum_f32 = v_floatNum_f32 - v_decNumber_u32;
-"630
-[e = _v_floatNum_f32 - _v_floatNum_f32 -> _v_decNumber_u32 `d ]
-[; ;lcd.c: 631: v_decNumber_u32 = v_floatNum_f32 * 1000000;
-"631
-[e = _v_decNumber_u32 -> * _v_floatNum_f32 -> -> 1000000 `l `d `ul ]
-[; ;lcd.c: 632: LCD_DisplayNumber(10u,v_decNumber_u32,0xffu);
-"632
-[e ( _LCD_DisplayNumber (3 , , -> -> 10 `ui `uc _v_decNumber_u32 -> -> 255 `ui `uc ]
-[; ;lcd.c: 633: }
-"633
-[e :UE 57 ]
-}
-"676
-[v _LCD_Printf `(v ~T0 @X0 1 ev`*Cuc ]
-"677
-{
-[; ;lcd.c: 676: void LCD_Printf(const char *argList, ...)
-[; ;lcd.c: 677: {
-[e :U _LCD_Printf ]
-"676
-[v _argList `*Cuc ~T0 @X0 1 r0 ]
-"677
-[f ]
-"678
-[v _ptr `*Cuc ~T0 @X0 1 a ]
-"679
-[v _argp `*v ~T0 @X0 -> -> 1 `i `ux a ]
-"680
-[v _v_num_s16 `i ~T0 @X0 1 a ]
-"681
-[v _v_num_s32 `l ~T0 @X0 1 a ]
-"682
-[v _v_num_u16 `ui ~T0 @X0 1 a ]
-"683
-[v _v_num_u32 `ul ~T0 @X0 1 a ]
-"684
-[v _str `*uc ~T0 @X0 1 a ]
-"685
-[v _ch `uc ~T0 @X0 1 a ]
-"686
-[v _v_numOfDigitsToDisp_u8 `uc ~T0 @X0 1 a ]
-"688
-[v _v_floatNum_f32 `d ~T0 @X0 1 a ]
-[; ;lcd.c: 678: const char *ptr;
-[; ;lcd.c: 679: va_list argp;
-[; ;lcd.c: 680: sint16_t v_num_s16;
-[; ;lcd.c: 681: sint32_t v_num_s32;
-[; ;lcd.c: 682: uint16_t v_num_u16;
-[; ;lcd.c: 683: uint32_t v_num_u32;
-[; ;lcd.c: 684: char *str;
-[; ;lcd.c: 685: char ch;
-[; ;lcd.c: 686: uint8_t v_numOfDigitsToDisp_u8;
-[; ;lcd.c: 688: double v_floatNum_f32;
-[; ;lcd.c: 691: *argp = __va_start();
-"691
-[e = *U &U _argp ( ___va_start ..  ]
-[; ;lcd.c: 694: for(ptr = argList; *ptr != '\0'; ptr++)
-"694
-{
-[e = _ptr _argList ]
-[e $U 62  ]
-"695
-[e :U 59 ]
-[; ;lcd.c: 695: {
-{
-[; ;lcd.c: 697: ch= *ptr;
-"697
-[e = _ch *U _ptr ]
-[; ;lcd.c: 698: if(ch == '%')
-"698
-[e $ ! == -> _ch `ui -> 37 `ui 63  ]
-[; ;lcd.c: 699: {
-"699
-{
-[; ;lcd.c: 700: ptr++;
-"700
-[e ++ _ptr * -> -> 1 `i `x -> -> # *U _ptr `i `x ]
-[; ;lcd.c: 701: ch = *ptr;
-"701
-[e = _ch *U _ptr ]
-[; ;lcd.c: 702: if((ch>=0x30) && (ch<=0x39))
-"702
-[e $ ! && >= -> _ch `i -> 48 `i <= -> _ch `i -> 57 `i 64  ]
-[; ;lcd.c: 703: {
-"703
-{
-[; ;lcd.c: 704: v_numOfDigitsToDisp_u8 = 0;
-"704
-[e = _v_numOfDigitsToDisp_u8 -> -> 0 `i `uc ]
-[; ;lcd.c: 705: while((ch>=0x30) && (ch<=0x39))
-"705
-[e $U 65  ]
-[e :U 66 ]
-[; ;lcd.c: 706: {
-"706
-{
-[; ;lcd.c: 707: v_numOfDigitsToDisp_u8 = (v_numOfDigitsToDisp_u8 * 10) + (ch-0x30);
-"707
-[e = _v_numOfDigitsToDisp_u8 -> + * -> _v_numOfDigitsToDisp_u8 `i -> 10 `i - -> _ch `i -> 48 `i `uc ]
-[; ;lcd.c: 708: ptr++;
-"708
-[e ++ _ptr * -> -> 1 `i `x -> -> # *U _ptr `i `x ]
-[; ;lcd.c: 709: ch = *ptr;
-"709
-[e = _ch *U _ptr ]
-"710
-}
-[e :U 65 ]
-"705
-[e $ && >= -> _ch `i -> 48 `i <= -> _ch `i -> 57 `i 66  ]
-[e :U 67 ]
-"711
-}
-[; ;lcd.c: 710: }
-[; ;lcd.c: 711: }
-[e $U 68  ]
-"712
-[e :U 64 ]
-[; ;lcd.c: 712: else
-[; ;lcd.c: 713: {
-"713
-{
-[; ;lcd.c: 714: v_numOfDigitsToDisp_u8 = 0xffu;
-"714
-[e = _v_numOfDigitsToDisp_u8 -> -> 255 `ui `uc ]
-"715
-}
-[e :U 68 ]
-[; ;lcd.c: 715: }
-[; ;lcd.c: 718: switch(ch)
-"718
-[e $U 70  ]
-[; ;lcd.c: 719: {
-"719
-{
-[; ;lcd.c: 720: case 'C':
-"720
-[e :U 71 ]
-"721
-[e :U 72 ]
-[; ;lcd.c: 721: case 'c':
-[; ;lcd.c: 722: ch = (*(int *)__va_arg((*(int **)argp), (int)0));
-"722
-[e = _ch -> *U -> ( ___va_arg , (. -> *U -> &U _argp `**i `*v -> 0 `i `*i `uc ]
-[; ;lcd.c: 723: LCD_DisplayChar(ch);
-"723
-[e ( _LCD_DisplayChar (1 _ch ]
-[; ;lcd.c: 724: break;
-"724
-[e $U 69  ]
-[; ;lcd.c: 726: case 'd':
-"726
-[e :U 73 ]
-[; ;lcd.c: 727: v_num_s16 = (*(int *)__va_arg((*(int **)argp), (int)0));
-"727
-[e = _v_num_s16 *U -> ( ___va_arg , (. -> *U -> &U _argp `**i `*v -> 0 `i `*i ]
-[; ;lcd.c: 728: if(v_num_s16<0)
-"728
-[e $ ! < _v_num_s16 -> 0 `i 74  ]
-[; ;lcd.c: 729: {
-"729
-{
-[; ;lcd.c: 730: v_num_s16 = -v_num_s16;
-"730
-[e = _v_num_s16 -U _v_num_s16 ]
-[; ;lcd.c: 731: LCD_DisplayChar('-');
-"731
-[e ( _LCD_DisplayChar (1 -> -> 45 `ui `uc ]
-"732
-}
-[e :U 74 ]
-[; ;lcd.c: 732: }
-[; ;lcd.c: 733: LCD_DisplayNumber(10u,v_num_s16,v_numOfDigitsToDisp_u8);
-"733
-[e ( _LCD_DisplayNumber (3 , , -> -> 10 `ui `uc -> -> _v_num_s16 `l `ul _v_numOfDigitsToDisp_u8 ]
-[; ;lcd.c: 734: break;
-"734
-[e $U 69  ]
-[; ;lcd.c: 736: case 'D':
-"736
-[e :U 75 ]
-[; ;lcd.c: 737: v_num_s32 = (*(sint32_t *)__va_arg((*(sint32_t **)argp), (sint32_t)0));
-"737
-[e = _v_num_s32 *U -> ( ___va_arg , (. -> *U -> &U _argp `**l `*v -> -> 0 `i `l `*l ]
-[; ;lcd.c: 738: if(v_num_s32<0)
-"738
-[e $ ! < _v_num_s32 -> -> 0 `i `l 76  ]
-[; ;lcd.c: 739: {
-"739
-{
-[; ;lcd.c: 740: v_num_s32 = -v_num_s32;
-"740
-[e = _v_num_s32 -U _v_num_s32 ]
-[; ;lcd.c: 741: LCD_DisplayChar('-');
-"741
-[e ( _LCD_DisplayChar (1 -> -> 45 `ui `uc ]
-"742
-}
-[e :U 76 ]
-[; ;lcd.c: 742: }
-[; ;lcd.c: 743: LCD_DisplayNumber(10u,v_num_s32,v_numOfDigitsToDisp_u8);
-"743
-[e ( _LCD_DisplayNumber (3 , , -> -> 10 `ui `uc -> _v_num_s32 `ul _v_numOfDigitsToDisp_u8 ]
-[; ;lcd.c: 744: break;
-"744
-[e $U 69  ]
-[; ;lcd.c: 746: case 'u':
-"746
-[e :U 77 ]
-[; ;lcd.c: 747: v_num_u16 = (*(int *)__va_arg((*(int **)argp), (int)0));
-"747
-[e = _v_num_u16 -> *U -> ( ___va_arg , (. -> *U -> &U _argp `**i `*v -> 0 `i `*i `ui ]
-[; ;lcd.c: 748: LCD_DisplayNumber(10u,v_num_u16,v_numOfDigitsToDisp_u8);
-"748
-[e ( _LCD_DisplayNumber (3 , , -> -> 10 `ui `uc -> _v_num_u16 `ul _v_numOfDigitsToDisp_u8 ]
-[; ;lcd.c: 749: break;
-"749
-[e $U 69  ]
-[; ;lcd.c: 751: case 'U':
-"751
-[e :U 78 ]
-[; ;lcd.c: 752: v_num_u32 = (*(uint32_t *)__va_arg((*(uint32_t **)argp), (uint32_t)0));
-"752
-[e = _v_num_u32 *U -> ( ___va_arg , (. -> *U -> &U _argp `**ul `*v -> -> 0 `i `ul `*ul ]
-[; ;lcd.c: 753: LCD_DisplayNumber(10u,v_num_u32,v_numOfDigitsToDisp_u8);
-"753
-[e ( _LCD_DisplayNumber (3 , , -> -> 10 `ui `uc _v_num_u32 _v_numOfDigitsToDisp_u8 ]
-[; ;lcd.c: 754: break;
-"754
-[e $U 69  ]
-[; ;lcd.c: 756: case 'x':
-"756
-[e :U 79 ]
-[; ;lcd.c: 757: v_num_u16 = (*(int *)__va_arg((*(int **)argp), (int)0));
-"757
-[e = _v_num_u16 -> *U -> ( ___va_arg , (. -> *U -> &U _argp `**i `*v -> 0 `i `*i `ui ]
-[; ;lcd.c: 758: LCD_DisplayNumber(16u,v_num_u16,v_numOfDigitsToDisp_u8);
-"758
-[e ( _LCD_DisplayNumber (3 , , -> -> 16 `ui `uc -> _v_num_u16 `ul _v_numOfDigitsToDisp_u8 ]
-[; ;lcd.c: 759: break;
-"759
-[e $U 69  ]
-[; ;lcd.c: 761: case 'X':
-"761
-[e :U 80 ]
-[; ;lcd.c: 762: v_num_u32 = (*(uint32_t *)__va_arg((*(uint32_t **)argp), (uint32_t)0));
-"762
-[e = _v_num_u32 *U -> ( ___va_arg , (. -> *U -> &U _argp `**ul `*v -> -> 0 `i `ul `*ul ]
-[; ;lcd.c: 763: LCD_DisplayNumber(16u,v_num_u32,v_numOfDigitsToDisp_u8);
-"763
-[e ( _LCD_DisplayNumber (3 , , -> -> 16 `ui `uc _v_num_u32 _v_numOfDigitsToDisp_u8 ]
-[; ;lcd.c: 764: break;
-"764
-[e $U 69  ]
-[; ;lcd.c: 767: case 'b':
-"767
-[e :U 81 ]
-[; ;lcd.c: 768: v_num_u16 = (*(int *)__va_arg((*(int **)argp), (int)0));
-"768
-[e = _v_num_u16 -> *U -> ( ___va_arg , (. -> *U -> &U _argp `**i `*v -> 0 `i `*i `ui ]
-[; ;lcd.c: 769: if(v_numOfDigitsToDisp_u8 == 0xffu)
-"769
-[e $ ! == -> _v_numOfDigitsToDisp_u8 `ui -> 255 `ui 82  ]
-[; ;lcd.c: 770: v_numOfDigitsToDisp_u8 = 16;
-"770
-[e = _v_numOfDigitsToDisp_u8 -> -> 16 `i `uc ]
-[e :U 82 ]
-[; ;lcd.c: 771: LCD_DisplayNumber(2u,v_num_u16,v_numOfDigitsToDisp_u8);
-"771
-[e ( _LCD_DisplayNumber (3 , , -> -> 2 `ui `uc -> _v_num_u16 `ul _v_numOfDigitsToDisp_u8 ]
-[; ;lcd.c: 772: break;
-"772
-[e $U 69  ]
-[; ;lcd.c: 774: case 'B':
-"774
-[e :U 83 ]
-[; ;lcd.c: 775: v_num_u32 = (*(uint32_t *)__va_arg((*(uint32_t **)argp), (uint32_t)0));
-"775
-[e = _v_num_u32 *U -> ( ___va_arg , (. -> *U -> &U _argp `**ul `*v -> -> 0 `i `ul `*ul ]
-[; ;lcd.c: 776: if(v_numOfDigitsToDisp_u8 == 0xffu)
-"776
-[e $ ! == -> _v_numOfDigitsToDisp_u8 `ui -> 255 `ui 84  ]
-[; ;lcd.c: 777: v_numOfDigitsToDisp_u8 = 16;
-"777
-[e = _v_numOfDigitsToDisp_u8 -> -> 16 `i `uc ]
-[e :U 84 ]
-[; ;lcd.c: 778: LCD_DisplayNumber(2u,v_num_u32,v_numOfDigitsToDisp_u8);
-"778
-[e ( _LCD_DisplayNumber (3 , , -> -> 2 `ui `uc _v_num_u32 _v_numOfDigitsToDisp_u8 ]
-[; ;lcd.c: 779: break;
-"779
-[e $U 69  ]
-[; ;lcd.c: 782: case 'F':
-"782
-[e :U 85 ]
-"783
-[e :U 86 ]
-[; ;lcd.c: 783: case 'f':
-[; ;lcd.c: 785: v_floatNum_f32 = (*(double *)__va_arg((*(double **)argp), (double)0));
-"785
-[e = _v_floatNum_f32 *U -> ( ___va_arg , (. -> *U -> &U _argp `**d `*v -> -> 0 `i `d `*d ]
-[; ;lcd.c: 786: LCD_DisplayFloatNumber(v_floatNum_f32);
-"786
-[e ( _LCD_DisplayFloatNumber (1 _v_floatNum_f32 ]
-[; ;lcd.c: 788: break;
-"788
-[e $U 69  ]
-[; ;lcd.c: 791: case 'S':
-"791
-[e :U 87 ]
-"792
-[e :U 88 ]
-[; ;lcd.c: 792: case 's':
-[; ;lcd.c: 793: str = (*(char * *)__va_arg((*(char * **)argp), (char *)0));
-"793
-[e = _str *U -> ( ___va_arg , (. -> *U -> &U _argp `***uc `*v -> -> 0 `i `*uc `**uc ]
-[; ;lcd.c: 794: LCD_DisplayString(str);
-"794
-[e ( _LCD_DisplayString (1 -> _str `*Cuc ]
-[; ;lcd.c: 795: break;
-"795
-[e $U 69  ]
-[; ;lcd.c: 797: case '%':
-"797
-[e :U 89 ]
-[; ;lcd.c: 798: LCD_DisplayChar('%');
-"798
-[e ( _LCD_DisplayChar (1 -> -> 37 `ui `uc ]
-[; ;lcd.c: 799: break;
-"799
-[e $U 69  ]
-"800
-}
-[; ;lcd.c: 800: }
-[e $U 69  ]
-"718
-[e :U 70 ]
-[e [\ _ch , $ -> -> 67 `ui `uc 71
- , $ -> -> 99 `ui `uc 72
- , $ -> -> 100 `ui `uc 73
- , $ -> -> 68 `ui `uc 75
- , $ -> -> 117 `ui `uc 77
- , $ -> -> 85 `ui `uc 78
- , $ -> -> 120 `ui `uc 79
- , $ -> -> 88 `ui `uc 80
- , $ -> -> 98 `ui `uc 81
- , $ -> -> 66 `ui `uc 83
- , $ -> -> 70 `ui `uc 85
- , $ -> -> 102 `ui `uc 86
- , $ -> -> 83 `ui `uc 87
- , $ -> -> 115 `ui `uc 88
- , $ -> -> 37 `ui `uc 89
- 69 ]
-"800
-[e :U 69 ]
-"801
-}
-[; ;lcd.c: 801: }
-[e $U 90  ]
-"802
-[e :U 63 ]
-[; ;lcd.c: 802: else
-[; ;lcd.c: 803: {
-"803
-{
-[; ;lcd.c: 805: LCD_DisplayChar(ch);
-"805
-[e ( _LCD_DisplayChar (1 _ch ]
-"806
-}
-[e :U 90 ]
-"807
-}
-"694
-[e ++ _ptr * -> -> 1 `i `x -> -> # *U _ptr `i `x ]
-[e :U 62 ]
-[e $ != -> *U _ptr `ui -> 0 `ui 59  ]
-[e :U 60 ]
-"807
-}
-[; ;lcd.c: 806: }
-[; ;lcd.c: 807: }
-[; ;lcd.c: 809: ;
-[; ;lcd.c: 810: }
-"810
-[e :UE 58 ]
-}
 "826
 [v _lcd_DataWrite `(v ~T0 @X0 1 sf1`uc ]
 "827
@@ -1291,7 +609,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _lcd_BusyCheck ..  ]
 [; ;lcd.c: 829: if(LCDConfig.v_LcdMode_U8 == 8u)
 "829
-[e $ ! == -> . _LCDConfig 2 `ui -> 8 `ui 92  ]
+[e $ ! == -> . _LCDConfig 2 `ui -> 8 `ui 26  ]
 [; ;lcd.c: 830: {
 "830
 {
@@ -1301,9 +619,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "832
 }
 [; ;lcd.c: 832: }
-[e $U 93  ]
+[e $U 27  ]
 "833
-[e :U 92 ]
+[e :U 26 ]
 [; ;lcd.c: 833: else
 [; ;lcd.c: 834: {
 "834
@@ -1319,7 +637,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _dataByte -> << -> _dataByte `i -> 4 `i `uc ]
 "838
 }
-[e :U 93 ]
+[e :U 27 ]
 [; ;lcd.c: 838: }
 [; ;lcd.c: 840: lcd_SendHigherNibble(dataByte);
 "840
@@ -1329,7 +647,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _lcd_SendDataSignals ..  ]
 [; ;lcd.c: 842: }
 "842
-[e :UE 91 ]
+[e :UE 25 ]
 }
 "860
 [v _lcd_BusyCheck `(v ~T0 @X0 1 sf ]
@@ -1344,7 +662,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;lcd.c: 862: uint8_t busyflag;
 [; ;lcd.c: 864: if(LCDConfig.RW != P_NC)
 "864
-[e $ ! != -> . _LCDConfig 4 `i -> . `E33 40 `i 95  ]
+[e $ ! != -> . _LCDConfig 4 `i -> . `E33 40 `i 29  ]
 [; ;lcd.c: 865: {
 "865
 {
@@ -1359,7 +677,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _GPIO_PinWrite (2 , . _LCDConfig 4 -> -> 1 `i `uc ]
 [; ;lcd.c: 869: do
 "869
-[e :U 98 ]
+[e :U 32 ]
 [; ;lcd.c: 870: {
 "870
 {
@@ -1380,7 +698,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _busyflag ( _GPIO_PinRead (1 . _LCDConfig 13 ]
 [; ;lcd.c: 879: if(LCDConfig.v_LcdMode_U8 == 4)
 "879
-[e $ ! == -> . _LCDConfig 2 `i -> 4 `i 99  ]
+[e $ ! == -> . _LCDConfig 2 `i -> 4 `i 33  ]
 [; ;lcd.c: 880: {
 "880
 {
@@ -1398,22 +716,22 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _DELAY_us (1 -> -> 10 `i `ui ]
 "886
 }
-[e :U 99 ]
+[e :U 33 ]
 "887
 }
 [; ;lcd.c: 886: }
 [; ;lcd.c: 887: }while(busyflag!=0);
-[e $ != -> _busyflag `i -> 0 `i 98  ]
-[e :U 97 ]
+[e $ != -> _busyflag `i -> 0 `i 32  ]
+[e :U 31 ]
 [; ;lcd.c: 889: GPIO_PinDirection(LCDConfig.D7,0x00u);
 "889
 [e ( _GPIO_PinDirection (2 , . _LCDConfig 13 -> -> 0 `ui `uc ]
 "890
 }
 [; ;lcd.c: 890: }
-[e $U 100  ]
+[e $U 34  ]
 "891
-[e :U 95 ]
+[e :U 29 ]
 [; ;lcd.c: 891: else
 [; ;lcd.c: 892: {
 "892
@@ -1423,11 +741,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _DELAY_ms (1 -> -> 1 `i `ui ]
 "896
 }
-[e :U 100 ]
+[e :U 34 ]
 [; ;lcd.c: 896: }
 [; ;lcd.c: 897: }
 "897
-[e :UE 94 ]
+[e :UE 28 ]
 }
 "913
 [v _lcd_Reset `(v ~T0 @X0 1 sf ]
@@ -1475,7 +793,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _DELAY_us (1 -> -> 200 `i `ui ]
 [; ;lcd.c: 928: }
 "928
-[e :UE 101 ]
+[e :UE 35 ]
 }
 "943
 [v _lcd_SendHigherNibble `(v ~T0 @X0 1 sf1`uc ]
@@ -1502,7 +820,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _GPIO_PinWrite (2 , . _LCDConfig 13 -> -> != -> & -> _dataByte `i << -> 1 `i -> 7 `i `ui -> 0 `ui `i `uc ]
 [; ;lcd.c: 949: }
 "949
-[e :UE 102 ]
+[e :UE 36 ]
 }
 "962
 [v _lcd_SendLowerNibble `(v ~T0 @X0 1 sf1`uc ]
@@ -1529,7 +847,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _GPIO_PinWrite (2 , . _LCDConfig 9 -> -> != -> & -> _dataByte `i << -> 1 `i -> 3 `i `ui -> 0 `ui `i `uc ]
 [; ;lcd.c: 968: }
 "968
-[e :UE 103 ]
+[e :UE 37 ]
 }
 "981
 [v _lcd_SendCmdSignals `(v ~T0 @X0 1 sf ]
@@ -1556,7 +874,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _GPIO_PinWrite (2 , . _LCDConfig 5 -> -> 0 `i `uc ]
 [; ;lcd.c: 989: }
 "989
-[e :UE 104 ]
+[e :UE 38 ]
 }
 "1002
 [v _lcd_SendDataSignals `(v ~T0 @X0 1 sf ]
@@ -1583,7 +901,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _GPIO_PinWrite (2 , . _LCDConfig 5 -> -> 0 `i `uc ]
 [; ;lcd.c: 1009: }
 "1009
-[e :UE 105 ]
+[e :UE 39 ]
 }
 "1012
 [p o ]

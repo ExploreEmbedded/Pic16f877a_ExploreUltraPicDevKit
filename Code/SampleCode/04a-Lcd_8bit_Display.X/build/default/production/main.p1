@@ -88,7 +88,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;00-libfiles\lcd.h: 157: void LCD_DisplayString(const char *ptr_stringPointer_u8);
 [; ;00-libfiles\lcd.h: 158: void LCD_ScrollMessage(uint8_t v_lineNumber_u8, char *ptr_msgPointer_u8);
 [; ;00-libfiles\lcd.h: 159: void LCD_DisplayNumber(uint8_t v_numericSystem_u8, uint32_t v_number_u32, uint8_t v_numOfDigitsToDisplay_u8);
-[; ;00-libfiles\lcd.h: 160: void LCD_DisplayFloatNumber(float v_floatNum_f32);
+[; ;00-libfiles\lcd.h: 160: void LCD_DisplayFloatNumber(double v_floatNum_f32);
 [; ;00-libfiles\lcd.h: 161: void LCD_Printf(const char *argList, ...);
 [; ;00-libfiles\lcd.h: 162: void LCD_SetUp(gpioPins_et RS,
 [; ;00-libfiles\lcd.h: 163: gpioPins_et RW,

@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v1.36\dat\en_msgs.txt -cs \
   -h+dist/default/production\05b-Lcd_4bit_UpCounter.X.production.sym \
   --cmf=dist/default/production\05b-Lcd_4bit_UpCounter.X.production.cmf -z \
-  -w9 --norlf -Q16F877A -oC:\Users\EXPLOR~1\AppData\Local\Temp\s15c.2 \
+  -w9 --norlf -Q16F877A -oC:\Users\EXPLOR~1\AppData\Local\Temp\s7s4.2 \
   -Mdist/default/production/05b-Lcd_4bit_UpCounter.X.production.map -E1 \
   -ver=XC8 -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
   -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh \
@@ -17,7 +17,7 @@ Linker command line:
   -pfunctab=CODE -ACONFIG=02007h-02007h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k C:\Users\EXPLOR~1\AppData\Local\Temp\s15c.obj \
+  -DENTRY=2 -k C:\Users\EXPLOR~1\AppData\Local\Temp\s7s4.obj \
   dist/default/production\05b-Lcd_4bit_UpCounter.X.production.obj 
 
 Object code version is 3.11
@@ -27,7 +27,7 @@ Machine type is 16F877A
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\EXPLOR~1\AppData\Local\Temp\s15c.obj
+C:\Users\EXPLOR~1\AppData\Local\Temp\s7s4.obj
                 end_init                              0        0        4        0       0
 dist/default/production\05b-Lcd_4bit_UpCounter.X.production.obj
                 cinit                               7DD      7DD       23      FBA       0

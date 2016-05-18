@@ -1,5 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"1398 C:\Program Files\Microchip\xc8\v1.36\include\pic16f877a.h
+"1398 C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic16f877a.h
 [v _TRISC `Vuc ~T0 @X0 0 e@135 ]
 "1950
 [v _TXSTA `Vuc ~T0 @X0 0 e@152 ]
@@ -7,7 +7,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _RCSTA `Vuc ~T0 @X0 0 e@24 ]
 "100 ../00-libfiles/uart.h
 [v _UART_SetBaudRate `(v ~T0 @X0 0 ef1`ul ]
-"2030 C:\Program Files\Microchip\xc8\v1.36\include\pic16f877a.h
+"2030 C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic16f877a.h
 [v _SPBRG `Vuc ~T0 @X0 0 e@153 ]
 "2559
 [v _RCIF `Vb ~T0 @X0 0 e@101 ]
@@ -17,7 +17,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TXIF `Vb ~T0 @X0 0 e@100 ]
 "1031
 [v _TXREG `Vuc ~T0 @X0 0 e@25 ]
-"10 C:\Program Files\Microchip\xc8\v1.36\include\stdarg.h
+"10 C:\Program Files (x86)\Microchip\xc8\v1.36\include\stdarg.h
 [v ___va_start `(*v ~T0 @X0 0 ef ]
 [p i ___va_start ]
 "13
@@ -27,7 +27,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdarg.h: 10: extern void * __va_start(void);
 [; ;stdarg.h: 13: extern void * __va_arg(void *, ...);
 [; ;pic16f877a.h: 49: extern volatile unsigned char INDF @ 0x000;
-"51 C:\Program Files\Microchip\xc8\v1.36\include\pic16f877a.h
+"51 C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic16f877a.h
 [; ;pic16f877a.h: 51: asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
 [; ;pic16f877a.h: 55: extern volatile unsigned char TMR0 @ 0x001;
@@ -1504,42 +1504,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 "324
 [e :UE 120 ]
 }
-"350
-[v _UART_TxFloatNumber `(v ~T0 @X0 1 ef1`f ]
-"351
-{
-[; ;uart.c: 350: void UART_TxFloatNumber(float v_floatNumber_f32)
-[; ;uart.c: 351: {
-[e :U _UART_TxFloatNumber ]
-"350
-[v _v_floatNumber_f32 `f ~T0 @X0 1 r1 ]
-"351
-[f ]
-"352
-[v _v_decNumber_u32 `ul ~T0 @X0 1 a ]
-[; ;uart.c: 352: uint32_t v_decNumber_u32;
-[; ;uart.c: 359: v_decNumber_u32 = (uint32_t) v_floatNumber_f32;
-"359
-[e = _v_decNumber_u32 -> _v_floatNumber_f32 `ul ]
-[; ;uart.c: 360: UART_TxNumber(10u,v_decNumber_u32,0xffu);
-"360
-[e ( _UART_TxNumber (3 , , -> -> 10 `ui `uc _v_decNumber_u32 -> -> 255 `ui `uc ]
-[; ;uart.c: 362: UART_TxChar('.');
-"362
-[e ( _UART_TxChar (1 -> -> 46 `ui `uc ]
-[; ;uart.c: 364: v_floatNumber_f32 = v_floatNumber_f32 - v_decNumber_u32;
-"364
-[e = _v_floatNumber_f32 - _v_floatNumber_f32 -> _v_decNumber_u32 `f ]
-[; ;uart.c: 365: v_decNumber_u32 = v_floatNumber_f32 * 1000000;
-"365
-[e = _v_decNumber_u32 -> * _v_floatNumber_f32 -> -> 1000000 `l `f `ul ]
-[; ;uart.c: 366: UART_TxNumber(10u,v_decNumber_u32,0xffu);
-"366
-[e ( _UART_TxNumber (3 , , -> -> 10 `ui `uc _v_decNumber_u32 -> -> 255 `ui `uc ]
-[; ;uart.c: 367: }
-"367
-[e :UE 139 ]
-}
 "413
 [v _UART_Printf `(v ~T0 @X0 1 ev`*Cuc ]
 "414
@@ -1569,8 +1533,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ch `uc ~T0 @X0 1 a ]
 "423
 [v _v_numOfDigitsToTransmit_u8 `uc ~T0 @X0 1 a ]
-"425
-[v _v_floatNum_f32 `d ~T0 @X0 1 a ]
 [; ;uart.c: 415: const char *ptr;
 [; ;uart.c: 416: va_list argp;
 [; ;uart.c: 417: sint16_t v_num_s16;
@@ -1580,7 +1542,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;uart.c: 421: char *str;
 [; ;uart.c: 422: char ch;
 [; ;uart.c: 423: uint8_t v_numOfDigitsToTransmit_u8;
-[; ;uart.c: 425: double v_floatNum_f32;
 [; ;uart.c: 429: *argp = __va_start();
 "429
 [e = *U &U _argp ( ___va_start ..  ]
@@ -1588,9 +1549,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "432
 {
 [e = _ptr _argList ]
-[e $U 144  ]
+[e $U 143  ]
 "433
-[e :U 141 ]
+[e :U 140 ]
 [; ;uart.c: 433: {
 {
 [; ;uart.c: 435: ch= *ptr;
@@ -1598,7 +1559,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _ch *U _ptr ]
 [; ;uart.c: 436: if(ch == '%')
 "436
-[e $ ! == -> _ch `ui -> 37 `ui 145  ]
+[e $ ! == -> _ch `ui -> 37 `ui 144  ]
 [; ;uart.c: 437: {
 "437
 {
@@ -1610,7 +1571,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _ch *U _ptr ]
 [; ;uart.c: 440: if((ch>=0x30) && (ch<=0x39))
 "440
-[e $ ! && >= -> _ch `i -> 48 `i <= -> _ch `i -> 57 `i 146  ]
+[e $ ! && >= -> _ch `i -> 48 `i <= -> _ch `i -> 57 `i 145  ]
 [; ;uart.c: 441: {
 "441
 {
@@ -1619,8 +1580,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _v_numOfDigitsToTransmit_u8 -> -> 0 `i `uc ]
 [; ;uart.c: 443: while((ch>=0x30) && (ch<=0x39))
 "443
-[e $U 147  ]
-[e :U 148 ]
+[e $U 146  ]
+[e :U 147 ]
 [; ;uart.c: 444: {
 "444
 {
@@ -1635,17 +1596,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _ch *U _ptr ]
 "448
 }
-[e :U 147 ]
+[e :U 146 ]
 "443
-[e $ && >= -> _ch `i -> 48 `i <= -> _ch `i -> 57 `i 148  ]
-[e :U 149 ]
+[e $ && >= -> _ch `i -> 48 `i <= -> _ch `i -> 57 `i 147  ]
+[e :U 148 ]
 "449
 }
 [; ;uart.c: 448: }
 [; ;uart.c: 449: }
-[e $U 150  ]
+[e $U 149  ]
 "450
-[e :U 146 ]
+[e :U 145 ]
 [; ;uart.c: 450: else
 [; ;uart.c: 451: {
 "451
@@ -1655,19 +1616,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _v_numOfDigitsToTransmit_u8 -> -> 255 `ui `uc ]
 "453
 }
-[e :U 150 ]
+[e :U 149 ]
 [; ;uart.c: 453: }
 [; ;uart.c: 456: switch(ch)
 "456
-[e $U 152  ]
+[e $U 151  ]
 [; ;uart.c: 457: {
 "457
 {
 [; ;uart.c: 458: case 'C':
 "458
-[e :U 153 ]
+[e :U 152 ]
 "459
-[e :U 154 ]
+[e :U 153 ]
 [; ;uart.c: 459: case 'c':
 [; ;uart.c: 460: ch = (*(uint8_t *)__va_arg((*(uint8_t **)argp), (uint8_t)0));
 "460
@@ -1677,16 +1638,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _UART_TxChar (1 _ch ]
 [; ;uart.c: 462: break;
 "462
-[e $U 151  ]
+[e $U 150  ]
 [; ;uart.c: 464: case 'd':
 "464
-[e :U 155 ]
+[e :U 154 ]
 [; ;uart.c: 465: v_num_s16 = (*(sint16_t *)__va_arg((*(sint16_t **)argp), (sint16_t)0));
 "465
 [e = _v_num_s16 *U -> ( ___va_arg , (. -> *U -> &U _argp `**i `*v -> 0 `i `*i ]
 [; ;uart.c: 466: if(v_num_s16<0)
 "466
-[e $ ! < _v_num_s16 -> 0 `i 156  ]
+[e $ ! < _v_num_s16 -> 0 `i 155  ]
 [; ;uart.c: 467: {
 "467
 {
@@ -1698,23 +1659,23 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _UART_TxChar (1 -> -> 45 `ui `uc ]
 "470
 }
-[e :U 156 ]
+[e :U 155 ]
 [; ;uart.c: 470: }
 [; ;uart.c: 471: UART_TxNumber(10u,v_num_s16,v_numOfDigitsToTransmit_u8);
 "471
 [e ( _UART_TxNumber (3 , , -> -> 10 `ui `uc -> -> _v_num_s16 `l `ul _v_numOfDigitsToTransmit_u8 ]
 [; ;uart.c: 472: break;
 "472
-[e $U 151  ]
+[e $U 150  ]
 [; ;uart.c: 474: case 'D':
 "474
-[e :U 157 ]
+[e :U 156 ]
 [; ;uart.c: 475: v_num_s32 = (*(sint32_t *)__va_arg((*(sint32_t **)argp), (sint32_t)0));
 "475
 [e = _v_num_s32 *U -> ( ___va_arg , (. -> *U -> &U _argp `**l `*v -> -> 0 `i `l `*l ]
 [; ;uart.c: 476: if(v_num_s32<0)
 "476
-[e $ ! < _v_num_s32 -> -> 0 `i `l 158  ]
+[e $ ! < _v_num_s32 -> -> 0 `i `l 157  ]
 [; ;uart.c: 477: {
 "477
 {
@@ -1726,17 +1687,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _UART_TxChar (1 -> -> 45 `ui `uc ]
 "480
 }
-[e :U 158 ]
+[e :U 157 ]
 [; ;uart.c: 480: }
 [; ;uart.c: 481: UART_TxNumber(10u,v_num_s32,v_numOfDigitsToTransmit_u8);
 "481
 [e ( _UART_TxNumber (3 , , -> -> 10 `ui `uc -> _v_num_s32 `ul _v_numOfDigitsToTransmit_u8 ]
 [; ;uart.c: 482: break;
 "482
-[e $U 151  ]
+[e $U 150  ]
 [; ;uart.c: 484: case 'u':
 "484
-[e :U 159 ]
+[e :U 158 ]
 [; ;uart.c: 485: v_num_u16 = (*(uint16_t *)__va_arg((*(uint16_t **)argp), (uint16_t)0));
 "485
 [e = _v_num_u16 *U -> ( ___va_arg , (. -> *U -> &U _argp `**ui `*v -> -> 0 `i `ui `*ui ]
@@ -1745,10 +1706,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _UART_TxNumber (3 , , -> -> 10 `ui `uc -> _v_num_u16 `ul _v_numOfDigitsToTransmit_u8 ]
 [; ;uart.c: 487: break;
 "487
-[e $U 151  ]
+[e $U 150  ]
 [; ;uart.c: 489: case 'U':
 "489
-[e :U 160 ]
+[e :U 159 ]
 [; ;uart.c: 490: v_num_u32 = (*(uint32_t *)__va_arg((*(uint32_t **)argp), (uint32_t)0));
 "490
 [e = _v_num_u32 *U -> ( ___va_arg , (. -> *U -> &U _argp `**ul `*v -> -> 0 `i `ul `*ul ]
@@ -1757,10 +1718,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _UART_TxNumber (3 , , -> -> 10 `ui `uc _v_num_u32 _v_numOfDigitsToTransmit_u8 ]
 [; ;uart.c: 492: break;
 "492
-[e $U 151  ]
+[e $U 150  ]
 [; ;uart.c: 494: case 'x':
 "494
-[e :U 161 ]
+[e :U 160 ]
 [; ;uart.c: 495: v_num_u16 = (*(uint16_t *)__va_arg((*(uint16_t **)argp), (uint16_t)0));
 "495
 [e = _v_num_u16 *U -> ( ___va_arg , (. -> *U -> &U _argp `**ui `*v -> -> 0 `i `ui `*ui ]
@@ -1769,10 +1730,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _UART_TxNumber (3 , , -> -> 16 `ui `uc -> _v_num_u16 `ul _v_numOfDigitsToTransmit_u8 ]
 [; ;uart.c: 497: break;
 "497
-[e $U 151  ]
+[e $U 150  ]
 [; ;uart.c: 499: case 'X':
 "499
-[e :U 162 ]
+[e :U 161 ]
 [; ;uart.c: 500: v_num_u32 = (*(uint32_t *)__va_arg((*(uint32_t **)argp), (uint32_t)0));
 "500
 [e = _v_num_u32 *U -> ( ___va_arg , (. -> *U -> &U _argp `**ul `*v -> -> 0 `i `ul `*ul ]
@@ -1781,65 +1742,59 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _UART_TxNumber (3 , , -> -> 16 `ui `uc _v_num_u32 _v_numOfDigitsToTransmit_u8 ]
 [; ;uart.c: 502: break;
 "502
-[e $U 151  ]
+[e $U 150  ]
 [; ;uart.c: 505: case 'b':
 "505
-[e :U 163 ]
+[e :U 162 ]
 [; ;uart.c: 506: v_num_u16 = (*(uint16_t *)__va_arg((*(uint16_t **)argp), (uint16_t)0));
 "506
 [e = _v_num_u16 *U -> ( ___va_arg , (. -> *U -> &U _argp `**ui `*v -> -> 0 `i `ui `*ui ]
 [; ;uart.c: 508: if(v_numOfDigitsToTransmit_u8 == 0xffu)
 "508
-[e $ ! == -> _v_numOfDigitsToTransmit_u8 `ui -> 255 `ui 164  ]
+[e $ ! == -> _v_numOfDigitsToTransmit_u8 `ui -> 255 `ui 163  ]
 [; ;uart.c: 509: v_numOfDigitsToTransmit_u8 = 16;
 "509
 [e = _v_numOfDigitsToTransmit_u8 -> -> 16 `i `uc ]
-[e :U 164 ]
+[e :U 163 ]
 [; ;uart.c: 511: UART_TxNumber(2u,v_num_u16,v_numOfDigitsToTransmit_u8);
 "511
 [e ( _UART_TxNumber (3 , , -> -> 2 `ui `uc -> _v_num_u16 `ul _v_numOfDigitsToTransmit_u8 ]
 [; ;uart.c: 512: break;
 "512
-[e $U 151  ]
+[e $U 150  ]
 [; ;uart.c: 514: case 'B':
 "514
-[e :U 165 ]
+[e :U 164 ]
 [; ;uart.c: 515: v_num_u32 = (*(uint32_t *)__va_arg((*(uint32_t **)argp), (uint32_t)0));
 "515
 [e = _v_num_u32 *U -> ( ___va_arg , (. -> *U -> &U _argp `**ul `*v -> -> 0 `i `ul `*ul ]
 [; ;uart.c: 517: if(v_numOfDigitsToTransmit_u8 == 0xffu)
 "517
-[e $ ! == -> _v_numOfDigitsToTransmit_u8 `ui -> 255 `ui 166  ]
+[e $ ! == -> _v_numOfDigitsToTransmit_u8 `ui -> 255 `ui 165  ]
 [; ;uart.c: 518: v_numOfDigitsToTransmit_u8 = 32;
 "518
 [e = _v_numOfDigitsToTransmit_u8 -> -> 32 `i `uc ]
-[e :U 166 ]
+[e :U 165 ]
 [; ;uart.c: 520: UART_TxNumber(2u,v_num_u32,v_numOfDigitsToTransmit_u8);
 "520
 [e ( _UART_TxNumber (3 , , -> -> 2 `ui `uc _v_num_u32 _v_numOfDigitsToTransmit_u8 ]
 [; ;uart.c: 521: break;
 "521
-[e $U 151  ]
+[e $U 150  ]
 [; ;uart.c: 524: case 'F':
 "524
-[e :U 167 ]
+[e :U 166 ]
 "525
-[e :U 168 ]
+[e :U 167 ]
 [; ;uart.c: 525: case 'f':
-[; ;uart.c: 527: v_floatNum_f32 = (*(double *)__va_arg((*(double **)argp), (double)0));
-"527
-[e = _v_floatNum_f32 *U -> ( ___va_arg , (. -> *U -> &U _argp `**d `*v -> -> 0 `i `d `*d ]
-[; ;uart.c: 528: UART_TxFloatNumber(v_floatNum_f32);
-"528
-[e ( _UART_TxFloatNumber (1 -> _v_floatNum_f32 `f ]
 [; ;uart.c: 530: break;
 "530
-[e $U 151  ]
+[e $U 150  ]
 [; ;uart.c: 533: case 'S':
 "533
-[e :U 169 ]
+[e :U 168 ]
 "534
-[e :U 170 ]
+[e :U 169 ]
 [; ;uart.c: 534: case 's':
 [; ;uart.c: 535: str = (*(char * *)__va_arg((*(char * **)argp), (char *)0));
 "535
@@ -1849,46 +1804,46 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _UART_TxString (1 -> _str `*Cuc ]
 [; ;uart.c: 537: break;
 "537
-[e $U 151  ]
+[e $U 150  ]
 [; ;uart.c: 539: case '%':
 "539
-[e :U 171 ]
+[e :U 170 ]
 [; ;uart.c: 540: UART_TxChar('%');
 "540
 [e ( _UART_TxChar (1 -> -> 37 `ui `uc ]
 [; ;uart.c: 541: break;
 "541
-[e $U 151  ]
+[e $U 150  ]
 "542
 }
 [; ;uart.c: 542: }
-[e $U 151  ]
+[e $U 150  ]
 "456
-[e :U 152 ]
-[e [\ _ch , $ -> -> 67 `ui `uc 153
- , $ -> -> 99 `ui `uc 154
- , $ -> -> 100 `ui `uc 155
- , $ -> -> 68 `ui `uc 157
- , $ -> -> 117 `ui `uc 159
- , $ -> -> 85 `ui `uc 160
- , $ -> -> 120 `ui `uc 161
- , $ -> -> 88 `ui `uc 162
- , $ -> -> 98 `ui `uc 163
- , $ -> -> 66 `ui `uc 165
- , $ -> -> 70 `ui `uc 167
- , $ -> -> 102 `ui `uc 168
- , $ -> -> 83 `ui `uc 169
- , $ -> -> 115 `ui `uc 170
- , $ -> -> 37 `ui `uc 171
- 151 ]
-"542
 [e :U 151 ]
+[e [\ _ch , $ -> -> 67 `ui `uc 152
+ , $ -> -> 99 `ui `uc 153
+ , $ -> -> 100 `ui `uc 154
+ , $ -> -> 68 `ui `uc 156
+ , $ -> -> 117 `ui `uc 158
+ , $ -> -> 85 `ui `uc 159
+ , $ -> -> 120 `ui `uc 160
+ , $ -> -> 88 `ui `uc 161
+ , $ -> -> 98 `ui `uc 162
+ , $ -> -> 66 `ui `uc 164
+ , $ -> -> 70 `ui `uc 166
+ , $ -> -> 102 `ui `uc 167
+ , $ -> -> 83 `ui `uc 168
+ , $ -> -> 115 `ui `uc 169
+ , $ -> -> 37 `ui `uc 170
+ 150 ]
+"542
+[e :U 150 ]
 "543
 }
 [; ;uart.c: 543: }
-[e $U 172  ]
+[e $U 171  ]
 "544
-[e :U 145 ]
+[e :U 144 ]
 [; ;uart.c: 544: else
 [; ;uart.c: 545: {
 "545
@@ -1898,14 +1853,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _UART_TxChar (1 _ch ]
 "548
 }
-[e :U 172 ]
+[e :U 171 ]
 "549
 }
 "432
 [e ++ _ptr * -> -> 1 `i `x -> -> # *U _ptr `i `x ]
-[e :U 144 ]
-[e $ != -> *U _ptr `ui -> 0 `ui 141  ]
-[e :U 142 ]
+[e :U 143 ]
+[e $ != -> *U _ptr `ui -> 0 `ui 140  ]
+[e :U 141 ]
 "549
 }
 [; ;uart.c: 548: }
@@ -1913,7 +1868,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;uart.c: 551: ;
 [; ;uart.c: 552: }
 "552
-[e :UE 140 ]
+[e :UE 139 ]
 }
 "556
 [p o ]

@@ -92,7 +92,7 @@ void LCD_SetCursor(uint8_t v_lineNumber_u8, uint8_t v_charNumber_u8);
 void LCD_DisplayString(const char *ptr_stringPointer_u8);
 void LCD_ScrollMessage(uint8_t v_lineNumber_u8, char *ptr_msgPointer_u8);
 void LCD_DisplayNumber(uint8_t v_numericSystem_u8, uint32_t v_number_u32, uint8_t v_numOfDigitsToDisplay_u8);
-void LCD_DisplayFloatNumber(float v_floatNum_f32);
+void LCD_DisplayFloatNumber(double v_floatNum_f32);
 void LCD_Printf(const char *argList, ...);
 void LCD_SetUp(gpioPins_et RS,
 gpioPins_et RW,

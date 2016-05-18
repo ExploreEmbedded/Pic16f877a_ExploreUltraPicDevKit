@@ -1,7 +1,7 @@
 
 # 1 "main.c"
 
-# 49 "C:\Program Files\Microchip\xc8\v1.36\include\pic16f877a.h"
+# 49 "C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic16f877a.h"
 extern volatile unsigned char INDF @ 0x000;
 
 asm("INDF equ 00h");
@@ -1546,6 +1546,28 @@ int main()
 
 char option;
 
+GPIO_PinDirection(PD_2,0x01u);
+GPIO_PinDirection(PD_3,0x01u);
+
+if((GPIO_PinRead(PD_2)==1) && (GPIO_PinRead(PD_3)==1))
+{
+
+GPIO_PinDirection(PD_0,0x00u);
+GPIO_PinDirection(PD_1,0x00u);
+
+while(1)
+{
+GPIO_PinWrite(PD_0,1);
+GPIO_PinWrite(PD_1,1);
+DELAY_ms(200);
+
+GPIO_PinWrite(PD_0,0);
+GPIO_PinWrite(PD_1,0);
+DELAY_ms(200);
+}
+}
+
+
 UART_Init(9600);
 UART_Printf("\n\r\n\rStarter PIC test Menu\n\r 1.Led test\n\r 2.Lcd test\n\r 3.Switch test\n\r 4.Adc Test\n\r 5.Eeprom Test \n\rSelect One of the above options");
 
@@ -1634,7 +1656,7 @@ LCD_DisplayString("Explore\n Starter Pic...");
 while(1);
 }
 
-# 156
+# 178
 void switch_Test(void)
 {
 GPIO_PinDirection(PD_0,0x00u);
