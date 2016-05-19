@@ -1044,15 +1044,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 97 ]
 [; ;main.c: 44: {
 {
-[; ;main.c: 45: for(j=0;j<1000;j++);
+[; ;main.c: 45: for(j=0;j<100;j++);
 "45
 {
 [e = _j -> -> 0 `i `ui ]
-[e $ < _j -> -> 1000 `i `ui 101  ]
+[e $ < _j -> -> 100 `i `ui 101  ]
 [e $U 102  ]
 [e :U 101 ]
 [e ++ _j -> -> 1 `i `ui ]
-[e $ < _j -> -> 1000 `i `ui 101  ]
+[e $ < _j -> -> 100 `i `ui 101  ]
 [e :U 102 ]
 }
 "46
@@ -1151,9 +1151,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 76: PORTC = pattern;
 "76
 [e = _PORTC -> _pattern `uc ]
-[; ;main.c: 77: PORTD = pattern;
+[; ;main.c: 77: PORTB = pattern;
 "77
-[e = _PORTD -> _pattern `uc ]
+[e = _PORTB -> _pattern `uc ]
 [; ;main.c: 78: pattern = pattern<<1;
 "78
 [e = _pattern << _pattern -> 1 `i ]

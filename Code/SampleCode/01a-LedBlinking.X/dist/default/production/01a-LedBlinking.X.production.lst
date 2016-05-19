@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.36 build -262312587 
-                                                                                               Tue Mar 15 11:22:37 2016
+                                                                                               Tue May 17 11:36:10 2016
 
 Microchip Technology Omniscient Code Generator v1.36 (Free mode) build 201601150325
      1                           	processor	16F877A
@@ -273,9 +273,9 @@ Microchip Technology Omniscient Code Generator v1.36 (Free mode) build 201601150
    267  07E3  0878               	movf	main@pattern,w
    268  07E4  0087               	movwf	7	;volatile
    269                           
-   270                           ;main.c: 77: PORTD = pattern;
+   270                           ;main.c: 77: PORTB = pattern;
    271  07E5  0878               	movf	main@pattern,w
-   272  07E6  0088               	movwf	8	;volatile
+   272  07E6  0086               	movwf	6	;volatile
    273                           
    274                           ;main.c: 78: pattern = pattern<<1;
    275  07E7  1003               	clrc
@@ -359,12 +359,12 @@ Microchip Technology Omniscient Code Generator v1.36 (Free mode) build 201601150
    353  0786  0008               	return
    354                           
    355                           ;main.c: 44: {
-   356                           ;main.c: 45: for(j=0;j<1000;j++);
+   356                           ;main.c: 45: for(j=0;j<100;j++);
    357  0787  01F4               	clrf	DELAY_ms@j
    358  0788  01F5               	clrf	DELAY_ms@j+1
-   359  0789  3003               	movlw	3
+   359  0789  3000               	movlw	0
    360  078A  0275               	subwf	DELAY_ms@j+1,w
-   361  078B  30E8               	movlw	232
+   361  078B  3064               	movlw	100
    362  078C  1903               	skipnz
    363  078D  0274               	subwf	DELAY_ms@j,w
    364  078E  1803               	btfsc	3,0
@@ -376,9 +376,9 @@ Microchip Technology Omniscient Code Generator v1.36 (Free mode) build 201601150
    370  0793  0AF5               	incf	DELAY_ms@j+1,f
    371  0794  3000               	movlw	0
    372  0795  07F5               	addwf	DELAY_ms@j+1,f
-   373  0796  3003               	movlw	3
+   373  0796  3000               	movlw	0
    374  0797  0275               	subwf	DELAY_ms@j+1,w
-   375  0798  30E8               	movlw	232
+   375  0798  3064               	movlw	100
    376  0799  1903               	skipnz
    377  079A  0274               	subwf	DELAY_ms@j,w
    378  079B  1C03               	skipc
@@ -503,7 +503,7 @@ DATA                 0      0       0      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.36 build -262312587 
-Symbol Table                                                                                   Tue Mar 15 11:22:37 2016
+Symbol Table                                                                                   Tue May 17 11:36:10 2016
 
                      l19 077F                       u85 0785                       u95 07DB  
                     l550 0790                      l552 079D                      l556 07AA  

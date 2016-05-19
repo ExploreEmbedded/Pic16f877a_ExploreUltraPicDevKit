@@ -1,5 +1,5 @@
 /***************************************************************************************************
-                                   ExploreEmbedded	
+                                   ExploreEmbedded    
 ****************************************************************************************************
  * File:   uart.c (AVR controllers)
  * Version: 15.0
@@ -54,21 +54,21 @@ Errors and omissions should be reported to codelibraries@exploreembedded.com
                          void UART_Init(uint32_t v_baudRate_u32)
 ****************************************************************************************************
  * I/P Arguments: uint32_t : Baudrate to be configured.
- * Return value	: none
+ * Return value    : none
 
  * description  :This function is used to initialize the UART at specified baud rate.
                  If the requested baud rate is not within the supported range then
                  the default baud rate of 9600 is set.
 
 
-		    Refer uart.h file for Supported(range) baud rates.		
+            Refer uart.h file for Supported(range) baud rates.        
 ***************************************************************************************************/
 void UART_Init(uint32_t v_baudRate_u32)
-{	
+{    
     TRISC=0x80;      // Configure Rx pin as input and Tx as output  
-  	TXSTA=0x20;      // Asynchronous mode, 8-bit data & enable transmitter
-	RCSTA=0x90;      // 8-bit continous receive enable
-	UART_SetBaudRate(v_baudRate_u32);
+    TXSTA=0x20;      // Asynchronous mode, 8-bit data & enable transmitter
+    RCSTA=0x90;      // 8-bit continous receive enable
+    UART_SetBaudRate(v_baudRate_u32);
 }
 
 
@@ -80,31 +80,31 @@ void UART_Init(uint32_t v_baudRate_u32)
                          void UART_SetBaudRate(uint32_t v_baudRate_u32)
  ***************************************************************************************************
  * I/P Arguments: uint32_t : v_baudRate_u32 to be configured.
- * Return value	: none
+ * Return value    : none
 
  * description  :This function is used to Set/Change the baudrate on the fly.
                  If the requested baud rate is not within the supported range then
                  the default baudrate of 9600 is set.
 
-		    Refer uart.h file for Supported range of baud rates.
+            Refer uart.h file for Supported range of baud rates.
 ***************************************************************************************************/
 void UART_SetBaudRate(uint32_t v_baudRate_u32)
 {
-	uint8_t RegValue;
+    uint8_t RegValue;
 
-	if((v_baudRate_u32 >= C_MinBaudRate_U32) && (v_baudRate_u32<=C_MaxBaudRate_U32))
-	{
-		/* Check if the requested baudate is within range,
-	     If yes then calculate the value to be loaded into baud rate generator. */
-		RegValue = (uint8_t)M_GetBaudRateGeneratorValue(v_baudRate_u32);
-	}
-	else
-	{
-		/*	 Invalid baudrate requested, hence set it to default baudrate of 9600 */
-		RegValue = (uint8_t)M_GetBaudRateGeneratorValue(9600);
-	}
+    if((v_baudRate_u32 >= C_MinBaudRate_U32) && (v_baudRate_u32<=C_MaxBaudRate_U32))
+    {
+        /* Check if the requested baudate is within range,
+         If yes then calculate the value to be loaded into baud rate generator. */
+        RegValue = (uint8_t)M_GetBaudRateGeneratorValue(v_baudRate_u32);
+    }
+    else
+    {
+        /*     Invalid baudrate requested, hence set it to default baudrate of 9600 */
+        RegValue = (uint8_t)M_GetBaudRateGeneratorValue(9600);
+    }
 
-	SPBRG = RegValue; 
+    SPBRG = RegValue; 
 }
 
 
@@ -115,7 +115,7 @@ void UART_SetBaudRate(uint32_t v_baudRate_u32)
                               char UART_RxChar()
  ***************************************************************************************************
  * I/P Arguments: none.
- * Return value	: char: Ascii value of the character received
+ * Return value    : char: Ascii value of the character received
 
  * description :This function is used to receive a char from UART module.
                 It waits till a char is received and returns it after reception.
@@ -124,7 +124,7 @@ char UART_RxChar()
 {
     while(RCIF==0);    // Wait till the data is received 
     RCIF=0;            // Clear receiver flag
-    return(RCREG);        // Return the received data to calling function
+    return(RCREG);     // Return the received data to calling function
 }
 
 
@@ -138,15 +138,15 @@ char UART_RxChar()
                          void UART_TxChar(char v_uartData_u8)
 ****************************************************************************************************
  * I/P Arguments: char--> Ascii value of the character to be transmitted.
- * Return value	: none.
+ * Return value    : none.
 
  * description  :This function is used to transmit a char through UART module.
 ***************************************************************************************************/
 void UART_TxChar(char v_uartData_u8)
 {
-    while(TXIF==0);  // Wait till the transmitter register becomes empty
-	TXIF=0;        // Clear transmitter flag
-    TXREG=v_uartData_u8;        // load the char to be transmitted into transmit reg
+    while(TXIF==0);       // Wait till the transmitter register becomes empty
+    TXIF=0;               // Clear transmitter flag
+    TXREG=v_uartData_u8;  // load the char to be transmitted into transmit reg
 }
 
 

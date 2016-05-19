@@ -1,5 +1,5 @@
 /***************************************************************************************************
-                                   ExploreEmbedded	
+                                   ExploreEmbedded    
  ****************************************************************************************************
  * File:   eeprom.c
  * Version: 15.0
@@ -52,7 +52,7 @@ extern unsigned char eeprom_read(unsigned char addr);
  ***************************************************************************************************
  * I/P Arguments: uint16_t: eeprom_address at which eeprom_data is to be written
                   uint8_t: byte of data to be to be written in eeprom.
- * Return value	: none
+ * Return value    : none
 
  * description: This function is used to write the data at specified EEPROM_address..
 
@@ -60,15 +60,19 @@ extern unsigned char eeprom_read(unsigned char addr);
 void EEPROM_WriteByte(uint16_t v_eepromAddress_u16, uint8_t v_eepromData_u8)
 {
     eeprom_write(v_eepromAddress_u16,v_eepromData_u8);
-   /*  while(WR);           // check the WR bit to see if a WR is in progress
-	EEADR=v_eepromAddress_u16; // Write the address to EEADR.
-                               // Make sure that the address is not larger than the memory size 
-	EEDATA=v_eepromData_u8;    // load the 8-bit data value to be written in the EEDATA register.
-	WREN=1;                    // Set the WREN bit to enable eeprom operation.
-    EECON2=0x55;               //Execute the special instruction sequence
-	EECON2=0xaa;               //Refer the datasheet for more info
-	WR=1;                      // Set the WR bit to trigger the eeprom write operation.
-    WREN=0; 
+   /*    unsigned char gie_Status;
+    
+    while(WR);            // check the WR bit to see if a WR is in progress
+    EEADR=eepromAddress;  // Write the address to EEADR.
+    EEDATA=eepromData;    // load the 8-bit data value to be written in the EEDATA register.
+    WREN=1;               // Set the WREN bit to enable eeprom operation.
+    gie_Status = GIE;     // Store the Interrupts enable/disable state
+    GIE = 0;              // Disable the interrupts
+    EECON2=0x55;          // Execute the special instruction sequence
+    EECON2=0xaa;          // Refer the datasheet for more info
+    WR=1;                 // Set the WR bit to trigger the eeprom write operation.
+    GIE = gie_Status;     // Restore the interrupts
+    WREN=0;               // Disable the EepromWrite
    */
 }
 
@@ -81,16 +85,16 @@ void EEPROM_WriteByte(uint16_t v_eepromAddress_u16, uint8_t v_eepromData_u8)
                uint8_t EEPROM_ReadByte(uint16_t v_eepromAddress_u16)
  ***************************************************************************************************
  * I/P Arguments: uint16_t: eeprom_address from where eeprom_data is to be read.
- * Return value	: uint8_t: data read from Eeprom.
+ * Return value    : uint8_t: data read from Eeprom.
 
  * description: This function is used to read the data from specified EEPROM_address.        
  ***************************************************************************************************/
 uint8_t EEPROM_ReadByte(uint16_t v_eepromAddress_u16)
 {
     while(RD || WR);           // check the WR&RD bit to see if a RD/WR is in progress
-	EEADR=v_eepromAddress_u16; // Write the address to EEADR.
+    EEADR=v_eepromAddress_u16; // Write the address to EEADR.
                                // Make sure that the address is not larger than the memory size 
-	RD = 1;                    // Set the WR bit to trigger the eeprom read operation.
+    RD = 1;                    // Set the WR bit to trigger the eeprom read operation.
     return(EEDATA);            // Return the data read form eeprom.
 }
 
@@ -105,7 +109,7 @@ void EEPROM_WriteNBytes(uint16_t v_eepromAddress_u16, uint8_t *ptr_ramAddress_u8
                   uint8_t*: Buffer(Pointer) containing the N-Bytes of data to be written in Eeprom.
                   uint16_t :  Number of bytes to be written
 
- * Return value	: none
+ * Return value    : none
 
  * description:
             This function is used to write N-bytes of data at specified EEPROM_address.
@@ -113,13 +117,13 @@ void EEPROM_WriteNBytes(uint16_t v_eepromAddress_u16, uint8_t *ptr_ramAddress_u8
 #if ( ENABLE_EEPROM_WriteNBytes == 1)
 void EEPROM_WriteNBytes(uint16_t v_eepromAddress_u16, uint8_t *ptr_ramAddress_u8, uint16_t v_numOfBytes_u16)
 {
-	while(v_numOfBytes_u16 !=  0)
-	{
-		EEPROM_WriteByte(v_eepromAddress_u16,*ptr_ramAddress_u8); //Write a byte from RAM to EEPROM
-		v_eepromAddress_u16++;					   //Increment the Eeprom Address
-		ptr_ramAddress_u8++;						   //Increment the RAM Address
-		v_numOfBytes_u16--;					   //Decrement NoOfBytes after writing each Byte
-	}
+    while(v_numOfBytes_u16 !=  0)
+    {
+        EEPROM_WriteByte(v_eepromAddress_u16,*ptr_ramAddress_u8); //Write a byte from RAM to EEPROM
+        v_eepromAddress_u16++;                       //Increment the Eeprom Address
+        ptr_ramAddress_u8++;                           //Increment the RAM Address
+        v_numOfBytes_u16--;                       //Decrement NoOfBytes after writing each Byte
+    }
 }
 #endif
 
@@ -132,25 +136,25 @@ void EEPROM_ReadNBytes(uint16_t EepromAddr, uint8_t *RamAddr, uint16_t NoOfBytes
                   uint8_t*: Pointer to copy the N-bytes read from Eeprom.
                   uint16_t :  Number of bytes to be Read
 
- * Return value	: none
+ * Return value    : none
 
  * description:
             This function is used to Read N-bytes of data from specified EEPROM_address.
             The data read from the eeprom will be copied into the specified RamAddress.
 
-	##Note:	Care should be taken to allocate enough buffer to read the data.
+    ##Note:    Care should be taken to allocate enough buffer to read the data.
  ***************************************************************************************************/
 #if ( ENABLE_EEPROM_ReadNBytes == 1)
 void EEPROM_ReadNBytes(uint16_t v_eepromAddress_16, uint8_t *ptr_ramAddress_u8, uint16_t v_numOfBytes_u16)
 {
-	while(v_numOfBytes_u16 !=  0)
-	{
-		*ptr_ramAddress_u8 = EEPROM_ReadByte(v_eepromAddress_16);//Read a byte from EEPROM to RAM
-		v_eepromAddress_16++;						//Increment the EEPROM Address
-		ptr_ramAddress_u8++;							//Increment the RAM Address
-		v_numOfBytes_u16--;						//Decrement NoOfBytes after Reading each Byte
+    while(v_numOfBytes_u16 !=  0)
+    {
+        *ptr_ramAddress_u8 = EEPROM_ReadByte(v_eepromAddress_16);//Read a byte from EEPROM to RAM
+        v_eepromAddress_16++;                        //Increment the EEPROM Address
+        ptr_ramAddress_u8++;                            //Increment the RAM Address
+        v_numOfBytes_u16--;                        //Decrement NoOfBytes after Reading each Byte
 
-	}
+    }
 }
 #endif
 
@@ -166,7 +170,7 @@ void EEPROM_ReadNBytes(uint16_t v_eepromAddress_16, uint8_t *ptr_ramAddress_u8, 
  * I/P Arguments: uint16_t,: eeprom_address where the String is to be written.
                   char*: Pointer to String which has to be written.
 
- * Return value	: none
+ * Return value    : none
 
  * description:This function is used to Write a String at specified EEPROM_address.
 
@@ -176,12 +180,12 @@ void EEPROM_ReadNBytes(uint16_t v_eepromAddress_16, uint8_t *ptr_ramAddress_u8, 
 void EEPROM_WriteString(uint16_t v_eepromAddress_u16, char *ptr_stringPointer_u8)
 {
 
-	do
-	{
-		EEPROM_WriteByte(v_eepromAddress_u16,*ptr_stringPointer_u8); //Write a byte from RAM to EEPROM
-		ptr_stringPointer_u8++;								//Increment the RAM Address
-		v_eepromAddress_u16++;								//Increment the Eeprom Address
-	}while(*(ptr_stringPointer_u8-1) !=0);
+    do
+    {
+        EEPROM_WriteByte(v_eepromAddress_u16,*ptr_stringPointer_u8); //Write a byte from RAM to EEPROM
+        ptr_stringPointer_u8++;                                //Increment the RAM Address
+        v_eepromAddress_u16++;                                //Increment the Eeprom Address
+    }while(*(ptr_stringPointer_u8-1) !=0);
 }
 #endif
 
@@ -194,7 +198,7 @@ void EEPROM_ReadString(uint16_t v_eepromAddress_u16, char *ptr_destStringAddress
  * I/P Arguments: uint16_t,: eeprom_address from where the String is to be read.
                   char*: Pointer into which the String is to be read.
 
- * Return value	: none
+ * Return value    : none
 
  * description:This function is used to Read a String from specified EEPROM_address.
            The string read from eeprom will be copied to specified buffer along with NULL character
@@ -202,15 +206,15 @@ void EEPROM_ReadString(uint16_t v_eepromAddress_u16, char *ptr_destStringAddress
 #if ( ENABLE_EEPROM_ReadString == 1)
 void EEPROM_ReadString(uint16_t v_eepromAddress_u16, char *ptr_destStringAddress_u8)
 {
-	char eeprom_data;
+    char eeprom_data;
 
-	do
-	{
-		eeprom_data = EEPROM_ReadByte(v_eepromAddress_u16); //Read a byte from EEPROM to RAM
-		*ptr_destStringAddress_u8 = eeprom_data;			 //Copy the data into String Buffer
-		ptr_destStringAddress_u8++;						 //Increment the RAM Address
-		v_eepromAddress_u16++;							 //Increment the Eeprom Address
-	}while(eeprom_data!=0);
+    do
+    {
+        eeprom_data = EEPROM_ReadByte(v_eepromAddress_u16); //Read a byte from EEPROM to RAM
+        *ptr_destStringAddress_u8 = eeprom_data;             //Copy the data into String Buffer
+        ptr_destStringAddress_u8++;                         //Increment the RAM Address
+        v_eepromAddress_u16++;                             //Increment the Eeprom Address
+    }while(eeprom_data!=0);
 }
 #endif
 
@@ -223,7 +227,7 @@ void EEPROM_ReadString(uint16_t v_eepromAddress_u16, char *ptr_destStringAddress
  ***************************************************************************************************
  * I/P Arguments: none
 
- * Return value	: none
+ * Return value    : none
 
  * description: This function is used to erase the entire Eeprom memory.
                Complete Eeprom(C_MaxEepromSize_U16) is filled with 0xFF to accomplish the Eeprom Erase.
@@ -231,11 +235,11 @@ void EEPROM_ReadString(uint16_t v_eepromAddress_u16, char *ptr_destStringAddress
 #if ( ENABLE_EEPROM_Erase == 1)
 void EEPROM_Erase()
 {
-	uint16_t v_eepromAddress_u16;
+    uint16_t v_eepromAddress_u16;
 
-	for(v_eepromAddress_u16=0;v_eepromAddress_u16<C_MaxEepromSize_U16;v_eepromAddress_u16++)
-	{
-		EEPROM_WriteByte(v_eepromAddress_u16,0xffu); // Write Each memory location with OxFF
-	}
+    for(v_eepromAddress_u16=0;v_eepromAddress_u16<C_MaxEepromSize_U16;v_eepromAddress_u16++)
+    {
+        EEPROM_WriteByte(v_eepromAddress_u16,0xffu); // Write Each memory location with OxFF
+    }
 }
 #endif

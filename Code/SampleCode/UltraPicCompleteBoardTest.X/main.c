@@ -87,7 +87,7 @@ char mm_option;
 void main() 
 {
    UART_Init(9600);
-   UART_TxString("\n\rTest menu Utra x51 v1.1\r\n 1:GPIO Blink\r\n 2:LCD 8-bit \n\r 3:LCD 4-bit\n\r 4:7-Segment\n\r 5:RTC\n\r 6:EEPROM\n\r 7:ADC\n\r 8:Keypad \n\r Enter option:");
+   UART_TxString("\n\rPIC Ultra baord menu v2.0\r\n 1:GPIO Blink\r\n 2:LCD 8-bit \n\r 3:LCD 4-bit\n\r 4:7-Segment\n\r 5:RTC\n\r 6:EEPROM\n\r 7:ADC\n\r 8:Keypad \n\r Enter option:");
    UART_TxString("\n\rReset the board after test is done");
    mm_option = UART_RxChar();
    while(1)
@@ -174,7 +174,7 @@ void gpio_test()
 
 void LCD_8bit_test()
 {     
-      UART_TxString("\n\r LCD DataBus: PD Control: RS-PB.0 RW-PB.1 EN-PB.2 ");
+      UART_TxString("\n\r LCD DataBus: PORTD   RS-PB.0 RW-PB.1 EN-PB.2 ");
 	  UART_Printf("\n\r Make connections and hit 'k' to test ");
 	  while(UART_RxChar()!='k');
 	  LCD_SetUp(PB_0,PB_1,PB_2,PD_0,PD_1,PD_2,PD_3,PD_4,PD_5,PD_6,PD_7);
@@ -189,7 +189,7 @@ void LCD_8bit_test()
 
 void LCD_4bit_test()
 {
-     UART_TxString("\n\r LCD DataBus: PD Msb bits(PD4-PD7) Control: RS-PB.0 RW-PB.1 EN-PB.2 ");
+     UART_TxString("\n\r LCD DataBus:(PD4-PD7)  RS-PB.0  RW-PB.1  EN-PB.2 ");
       UART_Printf("\n\r Make connections and hit 'k' to test ");
       while(UART_RxChar()!='k');
       LCD_SetUp(PB_0,PB_1,PB_2,P_NC,P_NC,P_NC,P_NC,PD_4,PD_5,PD_6,PD_7);
@@ -208,7 +208,7 @@ void LCD_4bit_test()
 void seg_test()
 {  
  unsigned char seg_code[]={0xC0,0xF9,0xA4,0xB0}; 
- UART_TxString("\n\r Segment DataBus: PD Seg select: S1->PB.0 S2->PB.1 S3->PB.2 S4->PB.4  ");
+ UART_TxString("\n\r Segment DataBus: PORTD    Seg select: S1->PB.0 S2->PB.1 S3->PB.2 S4->PB.3");
  UART_Printf("\n\rMake connections and hit 'k' to test! ");
  while(UART_RxChar()!='k');
  SegValueDirnReg = C_PortOutput_U8;

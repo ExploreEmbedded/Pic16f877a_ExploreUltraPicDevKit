@@ -1025,39 +1025,39 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdutils.h: 72: typedef unsigned int uint16_t;
 [; ;stdutils.h: 74: typedef signed long int sint32_t;
 [; ;stdutils.h: 75: typedef unsigned long int uint32_t;
-[; ;stdutils.h: 177: typedef enum
-[; ;stdutils.h: 178: {
-[; ;stdutils.h: 179: E_FALSE,
-[; ;stdutils.h: 180: E_TRUE
-[; ;stdutils.h: 181: }Boolean_et;
-[; ;stdutils.h: 184: typedef enum
-[; ;stdutils.h: 185: {
-[; ;stdutils.h: 186: E_FAILED,
-[; ;stdutils.h: 187: E_SUCCESS,
-[; ;stdutils.h: 188: E_BUSY,
-[; ;stdutils.h: 189: E_TIMEOUT
-[; ;stdutils.h: 190: }Status_et;
-[; ;stdutils.h: 193: typedef enum
-[; ;stdutils.h: 194: {
-[; ;stdutils.h: 195: E_BINARY=2,
-[; ;stdutils.h: 196: E_DECIMAL = 10,
-[; ;stdutils.h: 197: E_HEX = 16
-[; ;stdutils.h: 198: }NumericSystem_et;
-"299 ../00-libfiles/stdutils.h
+[; ;stdutils.h: 180: typedef enum
+[; ;stdutils.h: 181: {
+[; ;stdutils.h: 182: E_FALSE,
+[; ;stdutils.h: 183: E_TRUE
+[; ;stdutils.h: 184: }Boolean_et;
+[; ;stdutils.h: 187: typedef enum
+[; ;stdutils.h: 188: {
+[; ;stdutils.h: 189: E_FAILED,
+[; ;stdutils.h: 190: E_SUCCESS,
+[; ;stdutils.h: 191: E_BUSY,
+[; ;stdutils.h: 192: E_TIMEOUT
+[; ;stdutils.h: 193: }Status_et;
+[; ;stdutils.h: 196: typedef enum
+[; ;stdutils.h: 197: {
+[; ;stdutils.h: 198: E_BINARY=2,
+[; ;stdutils.h: 199: E_DECIMAL = 10,
+[; ;stdutils.h: 200: E_HEX = 16
+[; ;stdutils.h: 201: }NumericSystem_et;
+"302 ../00-libfiles/stdutils.h
 [p x FOSC=HS ]
-"300
-[p x WDTE=OFF ]
-"301
-[p x PWRTE=OFF ]
-"302
-[p x BOREN=OFF ]
 "303
-[p x LVP=ON ]
+[p x WDTE=OFF ]
 "304
-[p x CPD=OFF ]
+[p x PWRTE=OFF ]
 "305
-[p x WRT=OFF ]
+[p x BOREN=OFF ]
 "306
+[p x LVP=ON ]
+"307
+[p x CPD=OFF ]
+"308
+[p x WRT=OFF ]
+"309
 [p x CP=OFF ]
 [; ;adc.h: 53: void ADC_Init();
 [; ;adc.h: 54: uint16_t ADC_GetAdcValue(uint8_t var_adcChannel_u8);

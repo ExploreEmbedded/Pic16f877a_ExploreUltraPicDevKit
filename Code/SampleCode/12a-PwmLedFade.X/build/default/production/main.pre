@@ -1,0 +1,67 @@
+
+# 1 "main.c"
+
+# 68 "../00-libfiles\stdutils.h"
+typedef signed char sint8_t;
+typedef unsigned char uint8_t;
+
+typedef signed int sint16_t;
+typedef unsigned int uint16_t;
+
+typedef signed long int sint32_t;
+typedef unsigned long int uint32_t;
+
+# 180
+typedef enum
+{
+E_FALSE,
+E_TRUE
+}Boolean_et;
+
+
+typedef enum
+{
+E_FAILED,
+E_SUCCESS,
+E_BUSY,
+E_TIMEOUT
+}Status_et;
+
+
+typedef enum
+{
+E_BINARY=2,
+E_DECIMAL = 10,
+E_HEX = 16
+}NumericSystem_et;
+
+
+# 302
+#pragma config FOSC = HS
+#pragma config WDTE = OFF
+#pragma config PWRTE = OFF
+#pragma config BOREN = OFF
+#pragma config LVP = ON
+#pragma config CPD = OFF
+#pragma config WRT = OFF
+#pragma config CP = OFF
+
+# 47 "../00-libfiles\pwm.h"
+void PWM_Init(uint8_t channel);
+void PWM_SetDutyCycle(uint8_t channel,uint8_t dutyCycle);
+void PWM_Start(uint8_t channel);
+void PWM_Stop(uint8_t channel);
+
+# 41 "main.c"
+int main()
+{
+PWM_Init(0);
+PWM_Init(1);
+PWM_Start(0);
+PWM_Start(1);
+
+PWM_SetDutyCycle(0,25);
+PWM_SetDutyCycle(1,75);
+
+while(1);
+}

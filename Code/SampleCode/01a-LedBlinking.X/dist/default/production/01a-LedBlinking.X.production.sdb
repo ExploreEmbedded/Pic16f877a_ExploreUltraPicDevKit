@@ -11,7 +11,7 @@
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"40 F:\Tutorials_And_Codes\PIC\ULTRA_PIC\01a-LedBlinking.X\main.c
+"40 F:\GitHub\PIC\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode\01a-LedBlinking.X\main.c
 [v _DELAY_ms DELAY_ms `(v  1 e 1 0 ]
 "48
 [v _main main `(i  1 e 2 0 ]
@@ -31,7 +31,7 @@
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
 "1459
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
-"48 F:\Tutorials_And_Codes\PIC\ULTRA_PIC\01a-LedBlinking.X\main.c
+"48 F:\GitHub\PIC\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode\01a-LedBlinking.X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
 "50

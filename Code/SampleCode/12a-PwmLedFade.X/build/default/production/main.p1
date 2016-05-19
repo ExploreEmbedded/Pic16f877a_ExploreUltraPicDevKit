@@ -1,0 +1,88 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[p mainexit ]
+"47 ../00-libfiles\pwm.h
+[v _PWM_Init `(v ~T0 @X0 0 ef1`uc ]
+"49
+[v _PWM_Start `(v ~T0 @X0 0 ef1`uc ]
+"48
+[v _PWM_SetDutyCycle `(v ~T0 @X0 0 ef2`uc`uc ]
+[; ;00-libfiles\stdutils.h: 68: typedef signed char sint8_t;
+[; ;00-libfiles\stdutils.h: 69: typedef unsigned char uint8_t;
+[; ;00-libfiles\stdutils.h: 71: typedef signed int sint16_t;
+[; ;00-libfiles\stdutils.h: 72: typedef unsigned int uint16_t;
+[; ;00-libfiles\stdutils.h: 74: typedef signed long int sint32_t;
+[; ;00-libfiles\stdutils.h: 75: typedef unsigned long int uint32_t;
+[; ;00-libfiles\stdutils.h: 180: typedef enum
+[; ;00-libfiles\stdutils.h: 181: {
+[; ;00-libfiles\stdutils.h: 182: E_FALSE,
+[; ;00-libfiles\stdutils.h: 183: E_TRUE
+[; ;00-libfiles\stdutils.h: 184: }Boolean_et;
+[; ;00-libfiles\stdutils.h: 187: typedef enum
+[; ;00-libfiles\stdutils.h: 188: {
+[; ;00-libfiles\stdutils.h: 189: E_FAILED,
+[; ;00-libfiles\stdutils.h: 190: E_SUCCESS,
+[; ;00-libfiles\stdutils.h: 191: E_BUSY,
+[; ;00-libfiles\stdutils.h: 192: E_TIMEOUT
+[; ;00-libfiles\stdutils.h: 193: }Status_et;
+[; ;00-libfiles\stdutils.h: 196: typedef enum
+[; ;00-libfiles\stdutils.h: 197: {
+[; ;00-libfiles\stdutils.h: 198: E_BINARY=2,
+[; ;00-libfiles\stdutils.h: 199: E_DECIMAL = 10,
+[; ;00-libfiles\stdutils.h: 200: E_HEX = 16
+[; ;00-libfiles\stdutils.h: 201: }NumericSystem_et;
+"302 ../00-libfiles\stdutils.h
+[p x FOSC=HS ]
+"303
+[p x WDTE=OFF ]
+"304
+[p x PWRTE=OFF ]
+"305
+[p x BOREN=OFF ]
+"306
+[p x LVP=ON ]
+"307
+[p x CPD=OFF ]
+"308
+[p x WRT=OFF ]
+"309
+[p x CP=OFF ]
+[; ;00-libfiles\pwm.h: 47: void PWM_Init(uint8_t channel);
+[; ;00-libfiles\pwm.h: 48: void PWM_SetDutyCycle(uint8_t channel,uint8_t dutyCycle);
+[; ;00-libfiles\pwm.h: 49: void PWM_Start(uint8_t channel);
+[; ;00-libfiles\pwm.h: 50: void PWM_Stop(uint8_t channel);
+"41 main.c
+[v _main `(i ~T0 @X0 1 ef ]
+"42
+{
+[; ;main.c: 41: int main()
+[; ;main.c: 42: {
+[e :U _main ]
+[f ]
+[; ;main.c: 43: PWM_Init(0);
+"43
+[e ( _PWM_Init (1 -> -> 0 `i `uc ]
+[; ;main.c: 44: PWM_Init(1);
+"44
+[e ( _PWM_Init (1 -> -> 1 `i `uc ]
+[; ;main.c: 45: PWM_Start(0);
+"45
+[e ( _PWM_Start (1 -> -> 0 `i `uc ]
+[; ;main.c: 46: PWM_Start(1);
+"46
+[e ( _PWM_Start (1 -> -> 1 `i `uc ]
+[; ;main.c: 48: PWM_SetDutyCycle(0,25);
+"48
+[e ( _PWM_SetDutyCycle (2 , -> -> 0 `i `uc -> -> 25 `i `uc ]
+[; ;main.c: 49: PWM_SetDutyCycle(1,75);
+"49
+[e ( _PWM_SetDutyCycle (2 , -> -> 1 `i `uc -> -> 75 `i `uc ]
+[; ;main.c: 51: while(1);
+"51
+[e :U 3 ]
+[e :U 2 ]
+[e $U 3  ]
+[e :U 4 ]
+[; ;main.c: 52: }
+"52
+[e :UE 1 ]
+}

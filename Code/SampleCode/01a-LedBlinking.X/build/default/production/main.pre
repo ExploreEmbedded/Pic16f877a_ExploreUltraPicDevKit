@@ -1406,7 +1406,7 @@ void DELAY_ms(unsigned int ms_Count)
 unsigned int i,j;
 for(i=0;i<ms_Count;i++)
 {
-for(j=0;j<1000;j++);
+for(j=0;j<100;j++);
 }
 }
 int main()
@@ -1438,7 +1438,7 @@ for(i=0;i<8;i++)
 PORTA = pattern;
 PORTB = pattern;
 PORTC = pattern;
-PORTD = pattern;
+PORTB = pattern;
 pattern = pattern<<1;
 DELAY_ms(100);
 }

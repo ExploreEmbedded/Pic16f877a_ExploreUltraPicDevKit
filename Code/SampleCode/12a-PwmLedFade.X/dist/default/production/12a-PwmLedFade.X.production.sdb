@@ -1,0 +1,63 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 6 ]
+"50 F:\GitHub\PIC\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode/00-libfiles/pwm.c
+[v _PWM_Init PWM_Init `(v  1 e 1 0 ]
+"89
+[v _PWM_SetDutyCycle PWM_SetDutyCycle `(v  1 e 1 0 ]
+"119
+[v _PWM_Start PWM_Start `(v  1 e 1 0 ]
+"62 C:\Program Files\Microchip\xc8\v1.36\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files\Microchip\xc8\v1.36\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.36\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"41 F:\GitHub\PIC\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode\12a-PwmLedFade.X\main.c
+[v _main main `(i  1 e 2 0 ]
+"868 C:\Program Files\Microchip\xc8\v1.36\include\pic16f877a.h
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @21 ]
+"880
+[v _CCP1CON CCP1CON `VEuc  1 e 1 @23 ]
+"1049
+[v _CCPR2L CCPR2L `VEuc  1 e 1 @27 ]
+"1061
+[v _CCP2CON CCP2CON `VEuc  1 e 1 @29 ]
+"1398
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1770
+[v _PR2 PR2 `VEuc  1 e 1 @146 ]
+"2665
+[v _TMR2ON TMR2ON `VEb  1 e 0 @146 ]
+"41 F:\GitHub\PIC\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode\12a-PwmLedFade.X\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"52
+} 0
+"119 F:\GitHub\PIC\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode/00-libfiles/pwm.c
+[v _PWM_Start PWM_Start `(v  1 e 1 0 ]
+{
+"122
+} 0
+"89
+[v _PWM_SetDutyCycle PWM_SetDutyCycle `(v  1 e 1 0 ]
+{
+[v PWM_SetDutyCycle@channel channel `uc  1 a 1 wreg ]
+[v PWM_SetDutyCycle@channel channel `uc  1 a 1 wreg ]
+[v PWM_SetDutyCycle@dutyCycle dutyCycle `uc  1 p 1 0 ]
+"91
+[v PWM_SetDutyCycle@channel channel `uc  1 a 1 2 ]
+"104
+} 0
+"50
+[v _PWM_Init PWM_Init `(v  1 e 1 0 ]
+{
+[v PWM_Init@channel channel `uc  1 a 1 wreg ]
+[v PWM_Init@channel channel `uc  1 a 1 wreg ]
+[v PWM_Init@channel channel `uc  1 a 1 1 ]
+"68
+} 0
