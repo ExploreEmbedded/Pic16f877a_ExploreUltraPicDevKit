@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\01a-LedBlinking.X.production.hex">
+  <executable name="dist/default/debug\01a-LedBlinking.X.debug.hex">
     <memory name="program">
       <units>words</units>
       <length>8192</length>
-      <used>84</used>
-      <free>8108</free>
+      <used>87</used>
+      <free>8105</free>
     </memory>
     <memory name="data">
       <units>bytes</units>

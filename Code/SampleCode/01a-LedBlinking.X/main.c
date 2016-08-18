@@ -52,15 +52,15 @@ int main()
         PORTB = 0xff;
         PORTC = 0xff;
         PORTD = 0xff;
-        DELAY_ms(100);
+        DELAY_ms(1);
         
         PORTA = 0x00; /* Turn OFF all the leds connected to Ports */
         PORTB = 0x00;
         PORTC = 0x00;
         PORTD = 0x00;
-        DELAY_ms(100);
+        DELAY_ms(1);
         
-        pattern=0x01;
+   /*     pattern=0x01;
         for(i=0;i<8;i++)
         {
             PORTA = pattern;
@@ -69,7 +69,7 @@ int main()
             PORTB = pattern;  
             pattern = pattern<<1;
             DELAY_ms(100);
-        }
+        }*/
     }
 
     return (0);

@@ -1,18 +1,18 @@
 __S0 800 0 ABS 0
-__S1 76 0 ABS 0
+__S1 77 0 ABS 0
 __S2 0 0 ABS 0
 __S3 0 0 ABS 0
-__Hintentry 0 0 CODE 0
-__Lintentry 0 0 CODE 0
-DELAY_ms@i 72 0 COMMON 1
-DELAY_ms@j 74 0 COMMON 1
+__Hintentry 1 0 CODE 0
+__Lintentry 1 0 CODE 0
+DELAY_ms@i 73 0 COMMON 1
+DELAY_ms@j 75 0 COMMON 1
 _main 7D3 0 CODE 0
 ___sp 0 0 STACK 2
 btemp 7E 0 ABS 0
 ltemp 7E 0 ABS 0
 ttemp 7E 0 ABS 0
 wtemp 7E 0 ABS 0
-start 0 0 CODE 0
+start 1 0 CODE 0
 _TRISA 85 0 ABS 0
 _TRISB 86 0 ABS 0
 _TRISC 87 0 ABS 0
@@ -66,8 +66,8 @@ __Hcode 0 0 ABS 0
 __Lcode 0 0 ABS 0
 stackhi 0 0 ABS 0
 stacklo 0 0 ABS 0
-__Hinit 0 0 CODE 0
-__Linit 0 0 CODE 0
+__Hinit 1 0 CODE 0
+__Linit 1 0 CODE 0
 __end_of_main 7FC 0 CODE 0
 __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
@@ -85,7 +85,7 @@ __Lbank3 0 0 ABS 0
 ___latbits 2 0 ABS 0
 __Hpowerup 0 0 CODE 0
 __Lpowerup 0 0 CODE 0
-DELAY_ms@ms_Count 70 0 COMMON 1
+DELAY_ms@ms_Count 71 0 COMMON 1
 __ptext1 7AC 0 CODE 0
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
@@ -96,7 +96,7 @@ __Hstack 0 0 STACK 2
 __Lstack 0 0 STACK 2
 __Hspace_0 800 0 ABS 0
 __Lspace_0 0 0 ABS 0
-__Hspace_1 76 0 ABS 0
+__Hspace_1 77 0 ABS 0
 __Lspace_1 0 0 ABS 0
 __Hspace_2 0 0 ABS 0
 __Lspace_2 0 0 ABS 0
@@ -105,9 +105,9 @@ __Lcinit 7FC 0 CODE 0
 __Hspace_3 0 0 ABS 0
 __Lspace_3 0 0 ABS 0
 __size_of_main 0 0 ABS 0
-__Hend_init 3 0 CODE 0
-__Lend_init 0 0 CODE 0
-__Hreset_vec 0 0 CODE 0
+__Hend_init 4 0 CODE 0
+__Lend_init 1 0 CODE 0
+__Hreset_vec 1 0 CODE 0
 __Lreset_vec 0 0 CODE 0
 intlevel0 0 0 CODE 0
 intlevel1 0 0 CODE 0
@@ -117,21 +117,21 @@ intlevel4 0 0 CODE 0
 intlevel5 0 0 CODE 0
 __HcstackCOMMON 0 0 ABS 0
 __LcstackCOMMON 0 0 ABS 0
-__pcstackCOMMON 70 0 COMMON 1
+__pcstackCOMMON 71 0 COMMON 1
 start_initialization 7FC 0 CODE 0
 __Hmaintext 0 0 ABS 0
 __Lmaintext 0 0 ABS 0
 __pmaintext 7D3 0 CODE 0
 __initialization 7FC 0 CODE 0
 %segments
-reset_vec 0 5 CODE 0 0
+reset_vec 0 7 CODE 0 0
 cinit FF8 FFF CODE FF8 0
-cstackCOMMON 70 75 COMMON 70 1
+cstackCOMMON 71 76 COMMON 71 1
 maintext FA6 FF7 CODE FA6 0
 text1 F58 FA5 CODE F58 0
 %locals
-dist/default/production\01a-LedBlinking.X.production.obj
-C:\Users\bagwan\AppData\Local\Temp\s4tc.
+dist/default/debug\01a-LedBlinking.X.debug.obj
+C:\Users\bagwan\AppData\Local\Temp\s5gk.
 185 7FC 0 CODE 0
 188 7FC 0 CODE 0
 194 7FC 0 CODE 0
