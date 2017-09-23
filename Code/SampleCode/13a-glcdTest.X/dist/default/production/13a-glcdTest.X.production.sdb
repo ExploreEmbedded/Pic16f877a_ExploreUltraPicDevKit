@@ -1,0 +1,361 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 6 ]
+"912 F:\GitHub\PIC\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode/00-libfiles/glcd.c
+[e E1088 . `uc
+E_BINARY 2
+E_DECIMAL 10
+E_HEX 16
+]
+"56 F:\GitHub\PIC\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode/00-libfiles/delay.c
+[v _DELAY_us DELAY_us `(v  1 e 1 0 ]
+"75
+[v _DELAY_ms DELAY_ms `(v  1 e 1 0 ]
+"102
+[v _DELAY_sec DELAY_sec `(v  1 e 1 0 ]
+"168 F:\GitHub\PIC\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode/00-libfiles/glcd.c
+[v _GLCD_Init GLCD_Init `(v  1 e 1 0 ]
+"213
+[v _GLCD_DisplayChar GLCD_DisplayChar `(v  1 e 1 0 ]
+"274
+[v _GLCD_DisplayString GLCD_DisplayString `(v  1 e 1 0 ]
+"392
+[v _GLCD_DisplayNumber GLCD_DisplayNumber `(v  1 e 1 0 ]
+"538
+[v _GLCD_Printf GLCD_Printf `(v  1 e 1 0 ]
+"688
+[v _GLCD_Clear GLCD_Clear `(v  1 e 1 0 ]
+"726
+[v _GLCD_GoToPage GLCD_GoToPage `(v  1 e 1 0 ]
+"764
+[v _GLCD_GoToLine GLCD_GoToLine `(v  1 e 1 0 ]
+"789
+[v _GLCD_GoToNextLine GLCD_GoToNextLine `(v  1 e 1 0 ]
+"820
+[v _GLCD_SetCursor GLCD_SetCursor `(v  1 e 1 0 ]
+"863
+[v _GLCD_DisplayLogo GLCD_DisplayLogo `(v  1 e 1 0 ]
+"901
+[v _GLCD_VerticalGraph GLCD_VerticalGraph `(v  1 e 1 0 ]
+"961
+[v _GLCD_HorizontalGraph GLCD_HorizontalGraph `(v  1 e 1 0 ]
+"1045
+[v _glcd_CmdWrite glcd_CmdWrite `(v  1 e 1 0 ]
+"1059
+[v _glcd_DataWrite glcd_DataWrite `(v  1 e 1 0 ]
+"1073
+[v _glcd_SelectPage0 glcd_SelectPage0 `(v  1 e 1 0 ]
+"1081
+[v _glcd_SelectPage1 glcd_SelectPage1 `(v  1 e 1 0 ]
+"1091
+[v _glcd_BusyCheck glcd_BusyCheck `(v  1 e 1 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.36\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.36\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"62 C:\Program Files\Microchip\xc8\v1.36\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files\Microchip\xc8\v1.36\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.36\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v1.36\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v1.36\sources\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.36\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"7 F:\GitHub\PIC\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode\13a-glcdTest.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"52 F:\GitHub\PIC\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode/00-libfiles/glcd.c
+[v _A_GlcdFontTable_U8 A_GlcdFontTable_U8 `DCC[95][5]uc  1 e 475 0 ]
+[s S66 . 4 `uc 1 PageNum 1 0 `uc 1 LineNum 1 1 `uc 1 CursorPos 1 2 `uc 1 Invertdisplay 1 3 ]
+"157
+[v _GLCD GLCD `S66  1 e 4 0 ]
+"1012 F:\GitHub\PIC\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode/00-libfiles/logo.c
+[v _LogoBitMap LogoBitMap `DCC[1024]uc  1 e 1024 0 ]
+"209 C:\Program Files\Microchip\xc8\v1.36\include\pic16f877a.h
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"331
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"1337
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1459
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"7 F:\GitHub\PIC\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode\13a-glcdTest.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"9
+[v main@num num `i  1 a 2 72 ]
+"36
+} 0
+"901 F:\GitHub\PIC\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode/00-libfiles/glcd.c
+[v _GLCD_VerticalGraph GLCD_VerticalGraph `(v  1 e 1 0 ]
+{
+[v GLCD_VerticalGraph@var_barGraphNumber_u8 var_barGraphNumber_u8 `uc  1 a 1 wreg ]
+"903
+[v GLCD_VerticalGraph@i i `uc  1 a 1 52 ]
+"904
+[v GLCD_VerticalGraph@var_valueToDisplay_u8 var_valueToDisplay_u8 `uc  1 a 1 51 ]
+"903
+[v GLCD_VerticalGraph@j j `uc  1 a 1 50 ]
+"904
+[v GLCD_VerticalGraph@lineNumber lineNumber `uc  1 a 1 49 ]
+"903
+[v GLCD_VerticalGraph@var_barGraphPosition_u8 var_barGraphPosition_u8 `uc  1 a 1 48 ]
+[v GLCD_VerticalGraph@var_lineNumberToStartDisplay_u8 var_lineNumberToStartDisplay_u8 `uc  1 a 1 46 ]
+"901
+[v GLCD_VerticalGraph@var_barGraphNumber_u8 var_barGraphNumber_u8 `uc  1 a 1 wreg ]
+[v GLCD_VerticalGraph@var_percentageValue_u8 var_percentageValue_u8 `uc  1 p 1 40 ]
+"907
+[v GLCD_VerticalGraph@var_barGraphNumber_u8 var_barGraphNumber_u8 `uc  1 a 1 47 ]
+"944
+} 0
+"538
+[v _GLCD_Printf GLCD_Printf `(v  1 e 1 0 ]
+{
+"545
+[v GLCD_Printf@v_num_u32 v_num_u32 `ul  1 a 4 60 ]
+"543
+[v GLCD_Printf@v_num_s32 v_num_s32 `l  1 a 4 54 ]
+"540
+[v GLCD_Printf@ptr ptr `*.25DCCuc  1 a 2 66 ]
+"544
+[v GLCD_Printf@v_num_u16 v_num_u16 `ui  1 a 2 64 ]
+"542
+[v GLCD_Printf@v_num_s16 v_num_s16 `i  1 a 2 58 ]
+"541
+[v GLCD_Printf@argp argp `[1]*.4v  1 a 1 70 ]
+"548
+[v GLCD_Printf@v_numOfDigitsToDisp_u8 v_numOfDigitsToDisp_u8 `uc  1 a 1 69 ]
+"547
+[v GLCD_Printf@ch ch `uc  1 a 1 68 ]
+"546
+[v GLCD_Printf@str str `*.1uc  1 a 1 53 ]
+"538
+[v GLCD_Printf@argList argList `*.25DCCuc  1 p 2 40 ]
+"672
+} 0
+"274
+[v _GLCD_DisplayString GLCD_DisplayString `(v  1 e 1 0 ]
+{
+[v GLCD_DisplayString@ptr ptr `*.1uc  1 a 1 wreg ]
+[v GLCD_DisplayString@ptr ptr `*.1uc  1 a 1 wreg ]
+[v GLCD_DisplayString@ptr ptr `*.1uc  1 a 1 11 ]
+"278
+} 0
+"168
+[v _GLCD_Init GLCD_Init `(v  1 e 1 0 ]
+{
+"195
+} 0
+"688
+[v _GLCD_Clear GLCD_Clear `(v  1 e 1 0 ]
+{
+"690
+[v GLCD_Clear@line line `uc  1 a 1 10 ]
+[v GLCD_Clear@cursor cursor `uc  1 a 1 9 ]
+"710
+} 0
+"764
+[v _GLCD_GoToLine GLCD_GoToLine `(v  1 e 1 0 ]
+{
+[v GLCD_GoToLine@lineNumber lineNumber `uc  1 a 1 wreg ]
+[v GLCD_GoToLine@lineNumber lineNumber `uc  1 a 1 wreg ]
+"766
+[v GLCD_GoToLine@lineNumber lineNumber `uc  1 a 1 7 ]
+"772
+} 0
+"961
+[v _GLCD_HorizontalGraph GLCD_HorizontalGraph `(v  1 e 1 0 ]
+{
+[v GLCD_HorizontalGraph@var_barGraphNumber_u8 var_barGraphNumber_u8 `uc  1 a 1 wreg ]
+"963
+[v GLCD_HorizontalGraph@i i `uc  1 a 1 48 ]
+[v GLCD_HorizontalGraph@var_lineNumber_u8 var_lineNumber_u8 `uc  1 a 1 47 ]
+"961
+[v GLCD_HorizontalGraph@var_barGraphNumber_u8 var_barGraphNumber_u8 `uc  1 a 1 wreg ]
+[v GLCD_HorizontalGraph@var_percentageValue_u8 var_percentageValue_u8 `uc  1 p 1 40 ]
+"964
+[v GLCD_HorizontalGraph@var_barGraphNumber_u8 var_barGraphNumber_u8 `uc  1 a 1 46 ]
+"992
+} 0
+"820
+[v _GLCD_SetCursor GLCD_SetCursor `(v  1 e 1 0 ]
+{
+[v GLCD_SetCursor@lineNumber lineNumber `uc  1 a 1 wreg ]
+"823
+[v GLCD_SetCursor@pageNumber pageNumber `uc  1 a 1 1 ]
+"820
+[v GLCD_SetCursor@lineNumber lineNumber `uc  1 a 1 wreg ]
+[v GLCD_SetCursor@CursorPosition CursorPosition `uc  1 p 1 9 ]
+"825
+[v GLCD_SetCursor@lineNumber lineNumber `uc  1 a 1 0 ]
+"845
+} 0
+"6 C:\Program Files\Microchip\xc8\v1.36\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"6
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"35
+} 0
+"6 C:\Program Files\Microchip\xc8\v1.36\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
+"6
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"42
+} 0
+"392 F:\GitHub\PIC\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode/00-libfiles/glcd.c
+[v _GLCD_DisplayNumber GLCD_DisplayNumber `(v  1 e 1 0 ]
+{
+[v GLCD_DisplayNumber@v_numericSystem_u8 v_numericSystem_u8 `uc  1 a 1 wreg ]
+"394
+[v GLCD_DisplayNumber@a a `[10]uc  1 a 10 26 ]
+[v GLCD_DisplayNumber@i i `uc  1 a 1 39 ]
+"392
+[v GLCD_DisplayNumber@v_numericSystem_u8 v_numericSystem_u8 `uc  1 a 1 wreg ]
+[v GLCD_DisplayNumber@v_number_u32 v_number_u32 `ul  1 p 4 9 ]
+[v GLCD_DisplayNumber@v_numOfDigitsToDisplay_u8 v_numOfDigitsToDisplay_u8 `uc  1 p 1 13 ]
+"394
+[v GLCD_DisplayNumber@v_numericSystem_u8 v_numericSystem_u8 `uc  1 a 1 38 ]
+"453
+} 0
+"6 C:\Program Files\Microchip\xc8\v1.36\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"11
+[v ___lldiv@quotient quotient `ul  1 a 4 9 ]
+"12
+[v ___lldiv@counter counter `uc  1 a 1 13 ]
+"6
+[v ___lldiv@divisor divisor `ul  1 p 4 0 ]
+[v ___lldiv@dividend dividend `ul  1 p 4 4 ]
+"31
+} 0
+"4 C:\Program Files\Microchip\xc8\v1.36\sources\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 2 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 a 1 3 ]
+"51
+} 0
+"213 F:\GitHub\PIC\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode/00-libfiles/glcd.c
+[v _GLCD_DisplayChar GLCD_DisplayChar `(v  1 e 1 0 ]
+{
+[v GLCD_DisplayChar@ch ch `uc  1 a 1 wreg ]
+"215
+[v GLCD_DisplayChar@i i `uc  1 a 1 8 ]
+[v GLCD_DisplayChar@dat dat `uc  1 a 1 7 ]
+"213
+[v GLCD_DisplayChar@ch ch `uc  1 a 1 wreg ]
+"215
+[v GLCD_DisplayChar@ch ch `uc  1 a 1 9 ]
+"253
+} 0
+"15 C:\Program Files\Microchip\xc8\v1.36\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"789 F:\GitHub\PIC\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode/00-libfiles/glcd.c
+[v _GLCD_GoToNextLine GLCD_GoToNextLine `(v  1 e 1 0 ]
+{
+"797
+} 0
+"726
+[v _GLCD_GoToPage GLCD_GoToPage `(v  1 e 1 0 ]
+{
+[v GLCD_GoToPage@pageNumber pageNumber `uc  1 a 1 wreg ]
+[v GLCD_GoToPage@pageNumber pageNumber `uc  1 a 1 wreg ]
+"729
+[v GLCD_GoToPage@pageNumber pageNumber `uc  1 a 1 5 ]
+"747
+} 0
+"863
+[v _GLCD_DisplayLogo GLCD_DisplayLogo `(v  1 e 1 0 ]
+{
+"865
+[v GLCD_DisplayLogo@line line `uc  1 a 1 8 ]
+[v GLCD_DisplayLogo@cursor cursor `uc  1 a 1 7 ]
+"863
+[v GLCD_DisplayLogo@ptr_Logo ptr_Logo `*.25DCCuc  1 p 2 4 ]
+"883
+} 0
+"1081
+[v _glcd_SelectPage1 glcd_SelectPage1 `(v  1 e 1 0 ]
+{
+"1085
+} 0
+"1073
+[v _glcd_SelectPage0 glcd_SelectPage0 `(v  1 e 1 0 ]
+{
+"1077
+} 0
+"1059
+[v _glcd_DataWrite glcd_DataWrite `(v  1 e 1 0 ]
+{
+[v glcd_DataWrite@dat dat `uc  1 a 1 wreg ]
+[v glcd_DataWrite@dat dat `uc  1 a 1 wreg ]
+"1061
+[v glcd_DataWrite@dat dat `uc  1 a 1 3 ]
+"1068
+} 0
+"1045
+[v _glcd_CmdWrite glcd_CmdWrite `(v  1 e 1 0 ]
+{
+[v glcd_CmdWrite@cmd cmd `uc  1 a 1 wreg ]
+[v glcd_CmdWrite@cmd cmd `uc  1 a 1 wreg ]
+"1047
+[v glcd_CmdWrite@cmd cmd `uc  1 a 1 3 ]
+"1054
+} 0
+"1091
+[v _glcd_BusyCheck glcd_BusyCheck `(v  1 e 1 0 ]
+{
+"1113
+} 0
+"102 F:\GitHub\PIC\Pic16f877a_ExploreUltraPicDevKit\Code\SampleCode/00-libfiles/delay.c
+[v _DELAY_sec DELAY_sec `(v  1 e 1 0 ]
+{
+[v DELAY_sec@sec_count sec_count `ui  1 p 2 4 ]
+"108
+} 0
+"75
+[v _DELAY_ms DELAY_ms `(v  1 e 1 0 ]
+{
+[v DELAY_ms@ms_count ms_count `ui  1 p 2 2 ]
+"82
+} 0
+"56
+[v _DELAY_us DELAY_us `(v  1 e 1 0 ]
+{
+[v DELAY_us@us_count us_count `ui  1 p 2 0 ]
+"62
+} 0

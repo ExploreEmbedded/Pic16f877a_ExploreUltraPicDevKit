@@ -1,0 +1,144 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[; ;stdutils.h: 68: typedef signed char sint8_t;
+[; ;stdutils.h: 69: typedef unsigned char uint8_t;
+[; ;stdutils.h: 71: typedef signed int sint16_t;
+[; ;stdutils.h: 72: typedef unsigned int uint16_t;
+[; ;stdutils.h: 74: typedef signed long int sint32_t;
+[; ;stdutils.h: 75: typedef unsigned long int uint32_t;
+[; ;stdutils.h: 180: typedef enum
+[; ;stdutils.h: 181: {
+[; ;stdutils.h: 182: E_FALSE,
+[; ;stdutils.h: 183: E_TRUE
+[; ;stdutils.h: 184: }Boolean_et;
+[; ;stdutils.h: 187: typedef enum
+[; ;stdutils.h: 188: {
+[; ;stdutils.h: 189: E_FAILED,
+[; ;stdutils.h: 190: E_SUCCESS,
+[; ;stdutils.h: 191: E_BUSY,
+[; ;stdutils.h: 192: E_TIMEOUT
+[; ;stdutils.h: 193: }Status_et;
+[; ;stdutils.h: 196: typedef enum
+[; ;stdutils.h: 197: {
+[; ;stdutils.h: 198: E_BINARY=2,
+[; ;stdutils.h: 199: E_DECIMAL = 10,
+[; ;stdutils.h: 200: E_HEX = 16
+[; ;stdutils.h: 201: }NumericSystem_et;
+"302 ../00-libfiles/stdutils.h
+[p x FOSC=HS ]
+"303
+[p x WDTE=OFF ]
+"304
+[p x PWRTE=OFF ]
+"305
+[p x BOREN=OFF ]
+"306
+[p x LVP=OFF ]
+"307
+[p x CPD=OFF ]
+"308
+[p x WRT=OFF ]
+"309
+[p x CP=OFF ]
+[; ;delay.h: 67: void DELAY_us(uint16_t us_count);
+[; ;delay.h: 68: void DELAY_ms(uint16_t ms_count);
+[; ;delay.h: 69: void DELAY_sec(uint16_t var_delaySecCount_u16);
+"56 ../00-libfiles/delay.c
+[v _DELAY_us `(v ~T0 @X0 1 ef1`ui ]
+"57
+{
+[; ;delay.c: 56: void DELAY_us(uint16_t us_count)
+[; ;delay.c: 57: {
+[e :U _DELAY_us ]
+"56
+[v _us_count `ui ~T0 @X0 1 r1 ]
+"57
+[f ]
+[; ;delay.c: 58: while (us_count != 0)
+"58
+[e $U 2  ]
+[e :U 3 ]
+[; ;delay.c: 59: {
+"59
+{
+[; ;delay.c: 60: us_count--;
+"60
+[e -- _us_count -> -> 1 `i `ui ]
+"61
+}
+[e :U 2 ]
+"58
+[e $ != _us_count -> -> 0 `i `ui 3  ]
+[e :U 4 ]
+[; ;delay.c: 61: }
+[; ;delay.c: 62: }
+"62
+[e :UE 1 ]
+}
+"75
+[v _DELAY_ms `(v ~T0 @X0 1 ef1`ui ]
+"76
+{
+[; ;delay.c: 75: void DELAY_ms(uint16_t ms_count)
+[; ;delay.c: 76: {
+[e :U _DELAY_ms ]
+"75
+[v _ms_count `ui ~T0 @X0 1 r1 ]
+"76
+[f ]
+[; ;delay.c: 77: while (ms_count != 0)
+"77
+[e $U 6  ]
+[e :U 7 ]
+[; ;delay.c: 78: {
+"78
+{
+[; ;delay.c: 79: DELAY_us(300u);
+"79
+[e ( _DELAY_us (1 -> 300 `ui ]
+[; ;delay.c: 80: ms_count--;
+"80
+[e -- _ms_count -> -> 1 `i `ui ]
+"81
+}
+[e :U 6 ]
+"77
+[e $ != _ms_count -> -> 0 `i `ui 7  ]
+[e :U 8 ]
+[; ;delay.c: 81: }
+[; ;delay.c: 82: }
+"82
+[e :UE 5 ]
+}
+"102
+[v _DELAY_sec `(v ~T0 @X0 1 ef1`ui ]
+"103
+{
+[; ;delay.c: 102: void DELAY_sec(uint16_t sec_count)
+[; ;delay.c: 103: {
+[e :U _DELAY_sec ]
+"102
+[v _sec_count `ui ~T0 @X0 1 r1 ]
+"103
+[f ]
+[; ;delay.c: 104: while (sec_count != 0) {
+"104
+[e $U 10  ]
+[e :U 11 ]
+{
+[; ;delay.c: 105: DELAY_ms(1000);
+"105
+[e ( _DELAY_ms (1 -> -> 1000 `i `ui ]
+[; ;delay.c: 106: sec_count--;
+"106
+[e -- _sec_count -> -> 1 `i `ui ]
+"107
+}
+[e :U 10 ]
+"104
+[e $ != _sec_count -> -> 0 `i `ui 11  ]
+[e :U 12 ]
+[; ;delay.c: 107: }
+[; ;delay.c: 108: }
+"108
+[e :UE 9 ]
+}

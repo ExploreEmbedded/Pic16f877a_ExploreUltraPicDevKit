@@ -1,0 +1,122 @@
+
+# 1 "main.c"
+
+# 7 "C:\Program Files\Microchip\xc8\v1.36\include\stdarg.h"
+typedef void * va_list[1];
+
+#pragma intrinsic(__va_start)
+extern void * __va_start(void);
+
+#pragma intrinsic(__va_arg)
+extern void * __va_arg(void *, ...);
+
+# 68 "../00-libfiles\stdutils.h"
+typedef signed char sint8_t;
+typedef unsigned char uint8_t;
+
+typedef signed int sint16_t;
+typedef unsigned int uint16_t;
+
+typedef signed long int sint32_t;
+typedef unsigned long int uint32_t;
+
+# 180
+typedef enum
+{
+E_FALSE,
+E_TRUE
+}Boolean_et;
+
+
+typedef enum
+{
+E_FAILED,
+E_SUCCESS,
+E_BUSY,
+E_TIMEOUT
+}Status_et;
+
+
+typedef enum
+{
+E_BINARY=2,
+E_DECIMAL = 10,
+E_HEX = 16
+}NumericSystem_et;
+
+
+# 302
+#pragma config FOSC = HS
+#pragma config WDTE = OFF
+#pragma config PWRTE = OFF
+#pragma config BOREN = OFF
+#pragma config LVP = OFF
+#pragma config CPD = OFF
+#pragma config WRT = OFF
+#pragma config CP = OFF
+
+# 67 "../00-libfiles\delay.h"
+void DELAY_us(uint16_t us_count);
+void DELAY_ms(uint16_t ms_count);
+void DELAY_sec(uint16_t var_delaySecCount_u16);
+
+# 105 "../00-libfiles\glcd.h"
+typedef struct{
+uint8_t PageNum;
+uint8_t LineNum;
+uint8_t CursorPos;
+uint8_t Invertdisplay;
+}GLCD_Config;
+
+extern const unsigned char LogoBitMap[];
+
+# 120
+void GLCD_Init(void);
+void GLCD_DisplayChar(uint8_t ch);
+void GLCD_DisplayString(uint8_t *);
+void GLCD_ScrollMessage(uint8_t lineNum, char *strptr);
+void GLCD_DisplayNumber(uint8_t v_numericSystem_u8, uint32_t v_number_u32, uint8_t v_numOfDigitsToDisplay_u8);
+void GLCD_DisplayFloatNumber(double v_floatNum_f32);
+void GLCD_Printf(const char *argList, ...);
+void GLCD_Clear(void);
+void GLCD_GoToPage(uint8_t );
+void GLCD_GoToLine(uint8_t );
+void GLCD_GoToNextLine(void);
+void GLCD_SetCursor(uint8_t lineNumber,uint8_t CursorPosition);
+void GLCD_DisplayLogo(const char ptr_Logo[]);
+void GLCD_EnableInversion(void);
+void GLCD_DisableInversion(void);
+void GLCD_VerticalGraph(uint8_t var_barGraphNumber_u8, uint8_t var_percentageValue_u8);
+void GLCD_HorizontalGraph(uint8_t var_barGraphNumber_u8, uint8_t var_percentageValue_u8);
+
+# 7 "main.c"
+void main()
+{
+int num = 1234;
+GLCD_Init();
+
+while (1)
+{
+GLCD_Clear();
+GLCD_DisplayLogo(LogoBitMap);
+DELAY_sec(3);
+
+GLCD_Clear();
+GLCD_Printf("Dec:%d \nHex:%x \nBin:%b \nFloat:%f", num, num, num, 4567.89);
+DELAY_sec(3);
+
+GLCD_Clear();
+GLCD_HorizontalGraph(0, 45);
+GLCD_HorizontalGraph(1, 50);
+GLCD_HorizontalGraph(2, 82);
+GLCD_HorizontalGraph(3, 74);
+DELAY_sec(3);
+
+GLCD_Clear();
+GLCD_VerticalGraph(0, 45);
+GLCD_VerticalGraph(1, 50);
+GLCD_VerticalGraph(2, 82);
+GLCD_VerticalGraph(3, 74);
+DELAY_sec(3);
+}
+}

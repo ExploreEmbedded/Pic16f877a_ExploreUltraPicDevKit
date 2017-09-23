@@ -1,0 +1,176 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[p mainexit ]
+"120 ../00-libfiles\glcd.h
+[v _GLCD_Init `(v ~T0 @X0 0 ef ]
+"127
+[v _GLCD_Clear `(v ~T0 @X0 0 ef ]
+"132
+[v _GLCD_DisplayLogo `(v ~T0 @X0 0 ef1`*Cuc ]
+"112
+[v _LogoBitMap `Cuc ~T0 @X0 -> 0 `x e ]
+"69 ../00-libfiles\delay.h
+[v _DELAY_sec `(v ~T0 @X0 0 ef1`ui ]
+"126 ../00-libfiles\glcd.h
+[v _GLCD_Printf `(v ~T0 @X0 0 ev`*Cuc ]
+"136
+[v _GLCD_HorizontalGraph `(v ~T0 @X0 0 ef2`uc`uc ]
+"135
+[v _GLCD_VerticalGraph `(v ~T0 @X0 0 ef2`uc`uc ]
+[; ;stdarg.h: 7: typedef void * va_list[1];
+[; ;stdarg.h: 10: extern void * __va_start(void);
+[; ;stdarg.h: 13: extern void * __va_arg(void *, ...);
+[; ;00-libfiles\stdutils.h: 68: typedef signed char sint8_t;
+[; ;00-libfiles\stdutils.h: 69: typedef unsigned char uint8_t;
+[; ;00-libfiles\stdutils.h: 71: typedef signed int sint16_t;
+[; ;00-libfiles\stdutils.h: 72: typedef unsigned int uint16_t;
+[; ;00-libfiles\stdutils.h: 74: typedef signed long int sint32_t;
+[; ;00-libfiles\stdutils.h: 75: typedef unsigned long int uint32_t;
+[; ;00-libfiles\stdutils.h: 180: typedef enum
+[; ;00-libfiles\stdutils.h: 181: {
+[; ;00-libfiles\stdutils.h: 182: E_FALSE,
+[; ;00-libfiles\stdutils.h: 183: E_TRUE
+[; ;00-libfiles\stdutils.h: 184: }Boolean_et;
+[; ;00-libfiles\stdutils.h: 187: typedef enum
+[; ;00-libfiles\stdutils.h: 188: {
+[; ;00-libfiles\stdutils.h: 189: E_FAILED,
+[; ;00-libfiles\stdutils.h: 190: E_SUCCESS,
+[; ;00-libfiles\stdutils.h: 191: E_BUSY,
+[; ;00-libfiles\stdutils.h: 192: E_TIMEOUT
+[; ;00-libfiles\stdutils.h: 193: }Status_et;
+[; ;00-libfiles\stdutils.h: 196: typedef enum
+[; ;00-libfiles\stdutils.h: 197: {
+[; ;00-libfiles\stdutils.h: 198: E_BINARY=2,
+[; ;00-libfiles\stdutils.h: 199: E_DECIMAL = 10,
+[; ;00-libfiles\stdutils.h: 200: E_HEX = 16
+[; ;00-libfiles\stdutils.h: 201: }NumericSystem_et;
+"302 ../00-libfiles\stdutils.h
+[p x FOSC=HS ]
+"303
+[p x WDTE=OFF ]
+"304
+[p x PWRTE=OFF ]
+"305
+[p x BOREN=OFF ]
+"306
+[p x LVP=OFF ]
+"307
+[p x CPD=OFF ]
+"308
+[p x WRT=OFF ]
+"309
+[p x CP=OFF ]
+[; ;00-libfiles\delay.h: 67: void DELAY_us(uint16_t us_count);
+[; ;00-libfiles\delay.h: 68: void DELAY_ms(uint16_t ms_count);
+[; ;00-libfiles\delay.h: 69: void DELAY_sec(uint16_t var_delaySecCount_u16);
+[; ;00-libfiles\glcd.h: 105: typedef struct{
+[; ;00-libfiles\glcd.h: 106: uint8_t PageNum;
+[; ;00-libfiles\glcd.h: 107: uint8_t LineNum;
+[; ;00-libfiles\glcd.h: 108: uint8_t CursorPos;
+[; ;00-libfiles\glcd.h: 109: uint8_t Invertdisplay;
+[; ;00-libfiles\glcd.h: 110: }GLCD_Config;
+[; ;00-libfiles\glcd.h: 112: extern const unsigned char LogoBitMap[];
+[; ;00-libfiles\glcd.h: 120: void GLCD_Init(void);
+[; ;00-libfiles\glcd.h: 121: void GLCD_DisplayChar(uint8_t ch);
+[; ;00-libfiles\glcd.h: 122: void GLCD_DisplayString(uint8_t *);
+[; ;00-libfiles\glcd.h: 123: void GLCD_ScrollMessage(uint8_t lineNum, char *strptr);
+[; ;00-libfiles\glcd.h: 124: void GLCD_DisplayNumber(uint8_t v_numericSystem_u8, uint32_t v_number_u32, uint8_t v_numOfDigitsToDisplay_u8);
+[; ;00-libfiles\glcd.h: 125: void GLCD_DisplayFloatNumber(double v_floatNum_f32);
+[; ;00-libfiles\glcd.h: 126: void GLCD_Printf(const char *argList, ...);
+[; ;00-libfiles\glcd.h: 127: void GLCD_Clear(void);
+[; ;00-libfiles\glcd.h: 128: void GLCD_GoToPage(uint8_t );
+[; ;00-libfiles\glcd.h: 129: void GLCD_GoToLine(uint8_t );
+[; ;00-libfiles\glcd.h: 130: void GLCD_GoToNextLine(void);
+[; ;00-libfiles\glcd.h: 131: void GLCD_SetCursor(uint8_t lineNumber,uint8_t CursorPosition);
+[; ;00-libfiles\glcd.h: 132: void GLCD_DisplayLogo(const char ptr_Logo[]);
+[; ;00-libfiles\glcd.h: 133: void GLCD_EnableInversion(void);
+[; ;00-libfiles\glcd.h: 134: void GLCD_DisableInversion(void);
+[; ;00-libfiles\glcd.h: 135: void GLCD_VerticalGraph(uint8_t var_barGraphNumber_u8, uint8_t var_percentageValue_u8);
+[; ;00-libfiles\glcd.h: 136: void GLCD_HorizontalGraph(uint8_t var_barGraphNumber_u8, uint8_t var_percentageValue_u8);
+"7 main.c
+[v _main `(v ~T0 @X0 1 ef ]
+"8
+{
+[; ;main.c: 7: void main()
+[; ;main.c: 8: {
+[e :U _main ]
+[f ]
+"9
+[v _num `i ~T0 @X0 1 a ]
+[; ;main.c: 9: int num = 1234;
+[e = _num -> 1234 `i ]
+[; ;main.c: 10: GLCD_Init();
+"10
+[e ( _GLCD_Init ..  ]
+[; ;main.c: 12: while (1)
+"12
+[e :U 4 ]
+[; ;main.c: 13: {
+"13
+{
+[; ;main.c: 14: GLCD_Clear();
+"14
+[e ( _GLCD_Clear ..  ]
+[; ;main.c: 15: GLCD_DisplayLogo(LogoBitMap);
+"15
+[e ( _GLCD_DisplayLogo (1 &U _LogoBitMap ]
+[; ;main.c: 16: DELAY_sec(3);
+"16
+[e ( _DELAY_sec (1 -> -> 3 `i `ui ]
+[; ;main.c: 18: GLCD_Clear();
+"18
+[e ( _GLCD_Clear ..  ]
+[; ;main.c: 19: GLCD_Printf("Dec:%d \nHex:%x \nBin:%b \nFloat:%f", num, num, num, 4567.89);
+"19
+[e ( _GLCD_Printf , , , , (. :s 1C _num _num _num .4567.89 ]
+[; ;main.c: 20: DELAY_sec(3);
+"20
+[e ( _DELAY_sec (1 -> -> 3 `i `ui ]
+[; ;main.c: 22: GLCD_Clear();
+"22
+[e ( _GLCD_Clear ..  ]
+[; ;main.c: 23: GLCD_HorizontalGraph(0, 45);
+"23
+[e ( _GLCD_HorizontalGraph (2 , -> -> 0 `i `uc -> -> 45 `i `uc ]
+[; ;main.c: 24: GLCD_HorizontalGraph(1, 50);
+"24
+[e ( _GLCD_HorizontalGraph (2 , -> -> 1 `i `uc -> -> 50 `i `uc ]
+[; ;main.c: 25: GLCD_HorizontalGraph(2, 82);
+"25
+[e ( _GLCD_HorizontalGraph (2 , -> -> 2 `i `uc -> -> 82 `i `uc ]
+[; ;main.c: 26: GLCD_HorizontalGraph(3, 74);
+"26
+[e ( _GLCD_HorizontalGraph (2 , -> -> 3 `i `uc -> -> 74 `i `uc ]
+[; ;main.c: 27: DELAY_sec(3);
+"27
+[e ( _DELAY_sec (1 -> -> 3 `i `ui ]
+[; ;main.c: 29: GLCD_Clear();
+"29
+[e ( _GLCD_Clear ..  ]
+[; ;main.c: 30: GLCD_VerticalGraph(0, 45);
+"30
+[e ( _GLCD_VerticalGraph (2 , -> -> 0 `i `uc -> -> 45 `i `uc ]
+[; ;main.c: 31: GLCD_VerticalGraph(1, 50);
+"31
+[e ( _GLCD_VerticalGraph (2 , -> -> 1 `i `uc -> -> 50 `i `uc ]
+[; ;main.c: 32: GLCD_VerticalGraph(2, 82);
+"32
+[e ( _GLCD_VerticalGraph (2 , -> -> 2 `i `uc -> -> 82 `i `uc ]
+[; ;main.c: 33: GLCD_VerticalGraph(3, 74);
+"33
+[e ( _GLCD_VerticalGraph (2 , -> -> 3 `i `uc -> -> 74 `i `uc ]
+[; ;main.c: 34: DELAY_sec(3);
+"34
+[e ( _DELAY_sec (1 -> -> 3 `i `ui ]
+"35
+}
+[e :U 3 ]
+"12
+[e $U 4  ]
+[e :U 5 ]
+[; ;main.c: 35: }
+[; ;main.c: 36: }
+"36
+[e :UE 2 ]
+}
+[a 1C 68 101 99 58 37 100 32 10 72 101 120 58 37 120 32 10 66 105 110 58 37 98 32 10 70 108 111 97 116 58 37 102 0 ]
+

@@ -1,0 +1,1524 @@
+Microchip MPLAB XC8 Compiler V1.36 ()
+
+Linker command line:
+
+-W-3 --edf=C:\Program Files\Microchip\xc8\v1.36\dat\en_msgs.txt -cs \
+  -h+dist/default/production\13a-glcdTest.X.production.sym \
+  --cmf=dist/default/production\13a-glcdTest.X.production.cmf -z -Q16F877A \
+  -oC:\Users\bagwan\AppData\Local\Temp\s2s.2 \
+  -Mdist/default/production/13a-glcdTest.X.production.map -E1 -ver=XC8 \
+  -ASTACK=0110h-016fh -pstack=STACK -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
+  -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 \
+  -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
+  -ABANK2=0110h-016Fh -ABANK3=0190h-01EFh \
+  -ARAM=020h-06Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh \
+  -AABS1=020h-07Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh -ASFR0=00h-01Fh \
+  -ASFR1=080h-09Fh -ASFR2=0100h-010Fh -ASFR3=0180h-018Fh \
+  -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
+  -pfunctab=CODE -ACONFIG=02007h-02007h -pconfig=CONFIG -DCONFIG=2 \
+  -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
+  -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
+  -DENTRY=2 -k C:\Users\bagwan\AppData\Local\Temp\s2s.obj \
+  dist/default/production\13a-glcdTest.X.production.obj 
+
+Object code version is 3.11
+
+Machine type is 16F877A
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+C:\Users\bagwan\AppData\Local\Temp\s2s.obj
+                end_init                              0        0        3        0       0
+                config                             2007     2007        1     400E       0
+dist/default/production\13a-glcdTest.X.production.obj
+                cinit                               7F8      7F8        8      FF0       0
+                text26                              EBF      EBF        B     1D7E       0
+                text25                              F01      F01       14     1E02       0
+                text24                              F15      F15       14     1E2A       0
+                text23                              EA7      EA7        8     1D4E       0
+                text22                              F48      F48       21     1E90       0
+                text21                              F29      F29       1F     1E52       0
+                text20                              EAF      EAF        8     1D5E       0
+                text19                              EB7      EB7        8     1D6E       0
+                text18                               6C       6C       55       D8       0
+                text17                              F8A      F8A       2B     1F14       0
+                text16                              EDB      EDB       13     1DB6       0
+                text15                              F69      F69       21     1ED2       0
+                text14                              2B2      2B2       8C      564       0
+                text13                              EEE      EEE       13     1DDC       0
+                text12                              171      171       5E      2E2       0
+                text11                              4DB      4DB      101      9B6       0
+                text10                              118      118       59      230       0
+                text9                               FB5      FB5       4B     1F6A       0
+                text8                               1CF      1CF       62      39E       0
+                text7                               231      231       81      462       0
+                text6                               ECA      ECA       11     1D94       0
+                text5                                1F       1F       4D       3E       0
+                text4                                C1       C1       57      182       0
+                text3                                 A        A       15       14       0
+                text2                               5DC      5DC      21C      BB8       0
+                text1                               408      408       D3      810       0
+                maintext                            33E      33E       CA      67C       0
+                cstackBANK0                          20       20       4A       20       1
+                cstackCOMMON                         70       70        E       70       1
+                bssBANK0                             6A       6A        4       20       1
+                stringtext                          800      800      60E       10       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   STACK          
+
+        CLASS   CODE           
+                end_init                              0        0        3         0
+                cinit                               7F8      7F8        8         0
+                text26                              EBF      EBF        B         0
+                text25                              F01      F01       14         0
+                text24                              F15      F15       14         0
+                text23                              EA7      EA7        8         0
+                text22                              F48      F48       21         0
+                text21                              F29      F29       1F         0
+                text20                              EAF      EAF        8         0
+                text19                              EB7      EB7        8         0
+                text18                               6C       6C       55         0
+                text17                              F8A      F8A       2B         0
+                text16                              EDB      EDB       13         0
+                text15                              F69      F69       21         0
+                text14                              2B2      2B2       8C         0
+                text13                              EEE      EEE       13         0
+                text12                              171      171       5E         0
+                text11                              4DB      4DB      101         0
+                text10                              118      118       59         0
+                text9                               FB5      FB5       4B         0
+                text8                               1CF      1CF       62         0
+                text7                               231      231       81         0
+                text6                               ECA      ECA       11         0
+                text5                                1F       1F       4D         0
+                text4                                C1       C1       57         0
+                text3                                 A        A       15         0
+                text2                               5DC      5DC      21C         0
+                text1                               408      408       D3         0
+                maintext                            33E      33E       CA         0
+
+        CLASS   STRCODE        
+                stringtext                          800      800      60E         0
+
+        CLASS   STRING         
+
+        CLASS   CONST          
+
+        CLASS   ENTRY          
+
+        CLASS   COMMON         
+                cstackCOMMON                         70       70        E         1
+
+        CLASS   BANK0          
+                cstackBANK0                          20       20       4A         1
+                bssBANK0                             6A       6A        4         1
+
+        CLASS   BANK1          
+
+        CLASS   BANK2          
+
+        CLASS   BANK3          
+
+        CLASS   RAM            
+
+        CLASS   ABS1           
+                abs_s1                               7E       7E        2         1
+
+        CLASS   SFR0           
+
+        CLASS   SFR1           
+
+        CLASS   SFR2           
+
+        CLASS   SFR3           
+
+        CLASS   CONFIG         
+                config                             2007     2007        1         0
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
+
+                reset_vec                      000000  000003  000003         0       0  CODE        2
+                text3                          00000A  000015  00001F        14       0  CODE        2
+                cstackBANK0                    000020  00004E  00006E        20       1  BANK0       1
+                text5                          00001F  00004D  00006C        3E       0  CODE        2
+                cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
+                text18                         00006C  000055  0000C1        D8       0  CODE        2
+                text4                          0000C1  000057  000118       182       0  CODE        2
+                text10                         000118  000059  000171       230       0  CODE        2
+                text12                         000171  00005E  0001CF       2E2       0  CODE        2
+                text8                          0001CF  000062  000231       39E       0  CODE        2
+                text7                          000231  000081  0002B2       462       0  CODE        2
+                text14                         0002B2  00008C  00033E       564       0  CODE        2
+                maintext                       00033E  0000CA  000408       67C       0  CODE        2
+                text1                          000408  0000D3  0004DB       810       0  CODE        2
+                text11                         0004DB  000101  0005DC       9B6       0  CODE        2
+                text2                          0005DC  00021C  0007F8       BB8       0  CODE        2
+                cinit                          0007F8  000008  000800       FF0       0  CODE        2
+                stringtext                     000800  00060E  000E0E        10       0  STRCODE     2
+                text23                         000EA7  000008  000EAF      1D4E       0  CODE        2
+                text20                         000EAF  000008  000EB7      1D5E       0  CODE        2
+                text19                         000EB7  000008  000EBF      1D6E       0  CODE        2
+                text26                         000EBF  00000B  000ECA      1D7E       0  CODE        2
+                text6                          000ECA  000011  000EDB      1D94       0  CODE        2
+                text16                         000EDB  000013  000EEE      1DB6       0  CODE        2
+                text13                         000EEE  000013  000F01      1DDC       0  CODE        2
+                text25                         000F01  000014  000F15      1E02       0  CODE        2
+                text24                         000F15  000014  000F29      1E2A       0  CODE        2
+                text21                         000F29  00001F  000F48      1E52       0  CODE        2
+                text22                         000F48  000021  000F69      1E90       0  CODE        2
+                text15                         000F69  000021  000F8A      1ED2       0  CODE        2
+                text17                         000F8A  00002B  000FB5      1F14       0  CODE        2
+                text9                          000FB5  00004B  001000      1F6A       0  CODE        2
+                config                         002007  000001  002008      400E       0  CONFIG      2
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            006E-006F              2           1
+        BANK1            00A0-00EF             50           1
+        BANK2            0110-016F             60           1
+        BANK3            0190-01EF             60           1
+        CODE             0003-0009              7           2
+                         0E0E-0EA6             99
+                         1000-1FFF            800
+        CONST            0003-0009              7           2
+                         0E0E-0EA6             99
+                         1000-1FFF            100
+        EEDATA           2100-21FF            100           2
+        ENTRY            0003-0009              7           2
+                         0E0E-0EA6             99
+                         1000-1FFF            100
+        IDLOC            2000-2003              4           2
+        RAM              006E-006F              2           1
+                         00A0-00EF             50
+                         0110-016F             60
+                         0190-01EF             60
+        SFR0             0000-001F             20           1
+        SFR1             0080-009F             20           1
+        SFR2             0100-010F             10           1
+        SFR3             0180-018F             10           1
+        STACK            0110-016F             60           1
+        STRCODE          0003-0009              7           2
+                         0E0E-0EA6             99
+                         1000-1FFF           1000
+        STRING           0003-0009              7           2
+                         0E0E-0EA6             99
+                         1000-1FFF            100
+
+                                  Symbol Table
+
+?_GLCD_Printf                                      cstackBANK0  0048
+?___awdiv                                          cstackCOMMON 0070
+?___awmod                                          cstackCOMMON 0070
+?___lldiv                                          cstackCOMMON 0070
+?___wmul                                           cstackCOMMON 0070
+DELAY_ms@ms_count                                  cstackCOMMON 0072
+DELAY_sec@sec_count                                cstackCOMMON 0074
+DELAY_us@us_count                                  cstackCOMMON 0070
+GLCD_Clear@cursor                                  cstackCOMMON 0079
+GLCD_Clear@line                                    cstackCOMMON 007A
+GLCD_DisplayChar@ch                                cstackCOMMON 0079
+GLCD_DisplayChar@dat                               cstackCOMMON 0077
+GLCD_DisplayChar@i                                 cstackCOMMON 0078
+GLCD_DisplayLogo@cursor                            cstackCOMMON 0077
+GLCD_DisplayLogo@line                              cstackCOMMON 0078
+GLCD_DisplayLogo@ptr_Logo                          cstackCOMMON 0074
+GLCD_DisplayNumber@a                               cstackBANK0  003A
+GLCD_DisplayNumber@i                               cstackBANK0  0047
+GLCD_DisplayNumber@v_numOfDigitsToDisplay_u8       cstackBANK0  002D
+GLCD_DisplayNumber@v_number_u32                    cstackBANK0  0029
+GLCD_DisplayNumber@v_numericSystem_u8              cstackBANK0  0046
+GLCD_DisplayString@ptr                             cstackCOMMON 007B
+GLCD_GoToLine@lineNumber                           cstackCOMMON 0077
+GLCD_GoToPage@pageNumber                           cstackCOMMON 0075
+GLCD_HorizontalGraph@i                             cstackBANK0  0050
+GLCD_HorizontalGraph@var_barGraphNumber_u8         cstackBANK0  004E
+GLCD_HorizontalGraph@var_lineNumber_u8             cstackBANK0  004F
+GLCD_HorizontalGraph@var_percentageValue_u8        cstackBANK0  0048
+GLCD_Printf@argList                                cstackBANK0  0048
+GLCD_Printf@argp                                   cstackBANK0  0066
+GLCD_Printf@ch                                     cstackBANK0  0064
+GLCD_Printf@ptr                                    cstackBANK0  0062
+GLCD_Printf@str                                    cstackBANK0  0055
+GLCD_Printf@v_numOfDigitsToDisp_u8                 cstackBANK0  0065
+GLCD_Printf@v_num_s16                              cstackBANK0  005A
+GLCD_Printf@v_num_s32                              cstackBANK0  0056
+GLCD_Printf@v_num_u16                              cstackBANK0  0060
+GLCD_Printf@v_num_u32                              cstackBANK0  005C
+GLCD_SetCursor@CursorPosition                      cstackCOMMON 0079
+GLCD_SetCursor@lineNumber                          cstackBANK0  0020
+GLCD_SetCursor@pageNumber                          cstackBANK0  0021
+GLCD_VerticalGraph@i                               cstackBANK0  0054
+GLCD_VerticalGraph@j                               cstackBANK0  0052
+GLCD_VerticalGraph@lineNumber                      cstackBANK0  0051
+GLCD_VerticalGraph@var_barGraphNumber_u8           cstackBANK0  004F
+GLCD_VerticalGraph@var_barGraphPosition_u8         cstackBANK0  0050
+GLCD_VerticalGraph@var_lineNumberToStartDisplay_u8 cstackBANK0  004E
+GLCD_VerticalGraph@var_percentageValue_u8          cstackBANK0  0048
+GLCD_VerticalGraph@var_valueToDisplay_u8           cstackBANK0  0053
+_A_GlcdFontTable_U8                                stringtext   0812
+_DELAY_ms                                          text25       0F01
+_DELAY_sec                                         text24       0F15
+_DELAY_us                                          text26       0EBF
+_GLCD                                              bssBANK0     006A
+_GLCD_Clear                                        text5        001F
+_GLCD_DisplayChar                                  text14       02B2
+_GLCD_DisplayLogo                                  text18       006C
+_GLCD_DisplayNumber                                text11       04DB
+_GLCD_DisplayNumber$148                            cstackBANK0  0044
+_GLCD_DisplayString                                text3        000A
+_GLCD_GoToLine                                     text6        0ECA
+_GLCD_GoToNextLine                                 text16       0EDB
+_GLCD_GoToPage                                     text17       0F8A
+_GLCD_HorizontalGraph                              text7        0231
+_GLCD_Init                                         text4        00C1
+_GLCD_Printf                                       text2        05DC
+_GLCD_SetCursor                                    text8        01CF
+_GLCD_VerticalGraph                                text1        0408
+_LogoBitMap                                        stringtext   09ED
+_PORTB                                             (abs)        0006
+_PORTD                                             (abs)        0008
+_TRISB                                             (abs)        0086
+_TRISD                                             (abs)        0088
+__CFG_BOREN$OFF                                    (abs)        0000
+__CFG_CP$OFF                                       (abs)        0000
+__CFG_CPD$OFF                                      (abs)        0000
+__CFG_FOSC$HS                                      (abs)        0000
+__CFG_LVP$OFF                                      (abs)        0000
+__CFG_PWRTE$OFF                                    (abs)        0000
+__CFG_WDTE$OFF                                     (abs)        0000
+__CFG_WRT$OFF                                      (abs)        0000
+__Habs1                                            abs1         0000
+__Hbank0                                           bank0        0000
+__Hbank1                                           bank1        0000
+__Hbank2                                           bank2        0000
+__Hbank3                                           bank3        0000
+__HbssBANK0                                        bssBANK0     0000
+__Hcinit                                           cinit        0800
+__Hclrtext                                         clrtext      0000
+__Hcode                                            code         0000
+__Hcommon                                          common       0000
+__Hconfig                                          config       2008
+__HcstackBANK0                                     cstackBANK0  0000
+__HcstackCOMMON                                    cstackCOMMON 0000
+__Heeprom_data                                     eeprom_data  0000
+__Hend_init                                        end_init     0003
+__Hfunctab                                         functab      0000
+__Hidloc                                           idloc        0000
+__Hinit                                            init         0000
+__Hintentry                                        intentry     0000
+__Hmaintext                                        maintext     0000
+__Hpowerup                                         powerup      0000
+__Hram                                             ram          0000
+__Hreset_vec                                       reset_vec    0000
+__Hsfr0                                            sfr0         0000
+__Hsfr1                                            sfr1         0000
+__Hsfr2                                            sfr2         0000
+__Hsfr3                                            sfr3         0000
+__Hspace_0                                         (abs)        2008
+__Hspace_1                                         (abs)        007E
+__Hspace_2                                         (abs)        0000
+__Hspace_3                                         (abs)        0000
+__Hstack                                           stack        0000
+__Hstrings                                         strings      0000
+__Hstringtext                                      stringtext   0000
+__Htext                                            text         0000
+__Labs1                                            abs1         0000
+__Lbank0                                           bank0        0000
+__Lbank1                                           bank1        0000
+__Lbank2                                           bank2        0000
+__Lbank3                                           bank3        0000
+__LbssBANK0                                        bssBANK0     0000
+__Lcinit                                           cinit        07F8
+__Lclrtext                                         clrtext      0000
+__Lcode                                            code         0000
+__Lcommon                                          common       0000
+__Lconfig                                          config       2007
+__LcstackBANK0                                     cstackBANK0  0000
+__LcstackCOMMON                                    cstackCOMMON 0000
+__Leeprom_data                                     eeprom_data  0000
+__Lend_init                                        end_init     0000
+__Lfunctab                                         functab      0000
+__Lidloc                                           idloc        0000
+__Linit                                            init         0000
+__Lintentry                                        intentry     0000
+__Lmaintext                                        maintext     0000
+__Lpowerup                                         powerup      0000
+__Lram                                             ram          0000
+__Lreset_vec                                       reset_vec    0000
+__Lsfr0                                            sfr0         0000
+__Lsfr1                                            sfr1         0000
+__Lsfr2                                            sfr2         0000
+__Lsfr3                                            sfr3         0000
+__Lspace_0                                         (abs)        0000
+__Lspace_1                                         (abs)        0000
+__Lspace_2                                         (abs)        0000
+__Lspace_3                                         (abs)        0000
+__Lstack                                           stack        0000
+__Lstrings                                         strings      0000
+__Lstringtext                                      stringtext   0000
+__Ltext                                            text         0000
+__S0                                               (abs)        2008
+__S1                                               (abs)        007E
+__S2                                               (abs)        0000
+__S3                                               (abs)        0000
+___awdiv                                           text10       0118
+___awdiv@counter                                   cstackCOMMON 0075
+___awdiv@dividend                                  cstackCOMMON 0072
+___awdiv@divisor                                   cstackCOMMON 0070
+___awdiv@quotient                                  cstackCOMMON 0077
+___awdiv@sign                                      cstackCOMMON 0076
+___awmod                                           text9        0FB5
+___awmod@counter                                   cstackCOMMON 0075
+___awmod@dividend                                  cstackCOMMON 0072
+___awmod@divisor                                   cstackCOMMON 0070
+___awmod@sign                                      cstackCOMMON 0076
+___bmul                                            text13       0EEE
+___bmul@multiplicand                               cstackBANK0  0020
+___bmul@multiplier                                 cstackBANK0  0023
+___bmul@product                                    cstackBANK0  0022
+___int_sp                                          stack        0000
+___latbits                                         (abs)        0002
+___lldiv                                           text12       0171
+___lldiv@counter                                   cstackCOMMON 007D
+___lldiv@dividend                                  cstackCOMMON 0074
+___lldiv@divisor                                   cstackCOMMON 0070
+___lldiv@quotient                                  cstackCOMMON 0079
+___sp                                              stack        0000
+___wmul                                            text15       0F69
+___wmul@multiplicand                               cstackCOMMON 0072
+___wmul@multiplier                                 cstackCOMMON 0070
+___wmul@product                                    cstackCOMMON 0074
+__end_of_A_GlcdFontTable_U8                        stringtext   09ED
+__end_of_DELAY_ms                                  text25       0F15
+__end_of_DELAY_sec                                 text24       0F29
+__end_of_DELAY_us                                  text26       0ECA
+__end_of_GLCD_Clear                                text5        006C
+__end_of_GLCD_DisplayChar                          text14       033E
+__end_of_GLCD_DisplayLogo                          text18       00C1
+__end_of_GLCD_DisplayNumber                        text11       05DC
+__end_of_GLCD_DisplayString                        text3        001F
+__end_of_GLCD_GoToLine                             text6        0EDB
+__end_of_GLCD_GoToNextLine                         text16       0EEE
+__end_of_GLCD_GoToPage                             text17       0FB5
+__end_of_GLCD_HorizontalGraph                      text7        02B2
+__end_of_GLCD_Init                                 text4        0118
+__end_of_GLCD_Printf                               text2        07F8
+__end_of_GLCD_SetCursor                            text8        0231
+__end_of_GLCD_VerticalGraph                        text1        04DB
+__end_of_LogoBitMap                                stringtext   0DED
+__end_of___awdiv                                   text10       0171
+__end_of___awmod                                   text9        1000
+__end_of___bmul                                    text13       0F01
+__end_of___lldiv                                   text12       01CF
+__end_of___wmul                                    text15       0F8A
+__end_of__initialization                           cinit        07FC
+__end_of__stringtab                                stringtext   0812
+__end_of_glcd_BusyCheck                            text23       0EAF
+__end_of_glcd_CmdWrite                             text22       0F69
+__end_of_glcd_DataWrite                            text21       0F48
+__end_of_glcd_SelectPage0                          text20       0EB7
+__end_of_glcd_SelectPage1                          text19       0EBF
+__end_of_main                                      maintext     0408
+__initialization                                   cinit        07F8
+__pbssBANK0                                        bssBANK0     006A
+__pcstackBANK0                                     cstackBANK0  0020
+__pcstackCOMMON                                    cstackCOMMON 0070
+__pmaintext                                        maintext     033E
+__pstringtext                                      stringtext   0800
+__ptext1                                           text1        0408
+__ptext10                                          text10       0118
+__ptext11                                          text11       04DB
+__ptext12                                          text12       0171
+__ptext13                                          text13       0EEE
+__ptext14                                          text14       02B2
+__ptext15                                          text15       0F69
+__ptext16                                          text16       0EDB
+__ptext17                                          text17       0F8A
+__ptext18                                          text18       006C
+__ptext19                                          text19       0EB7
+__ptext2                                           text2        05DC
+__ptext20                                          text20       0EAF
+__ptext21                                          text21       0F29
+__ptext22                                          text22       0F48
+__ptext23                                          text23       0EA7
+__ptext24                                          text24       0F15
+__ptext25                                          text25       0F01
+__ptext26                                          text26       0EBF
+__ptext3                                           text3        000A
+__ptext4                                           text4        00C1
+__ptext5                                           text5        001F
+__ptext6                                           text6        0ECA
+__ptext7                                           text7        0231
+__ptext8                                           text8        01CF
+__ptext9                                           text9        0FB5
+__size_of_DELAY_ms                                 (abs)        0000
+__size_of_DELAY_sec                                (abs)        0000
+__size_of_DELAY_us                                 (abs)        0000
+__size_of_GLCD_Clear                               (abs)        0000
+__size_of_GLCD_DisplayChar                         (abs)        0000
+__size_of_GLCD_DisplayLogo                         (abs)        0000
+__size_of_GLCD_DisplayNumber                       (abs)        0000
+__size_of_GLCD_DisplayString                       (abs)        0000
+__size_of_GLCD_GoToLine                            (abs)        0000
+__size_of_GLCD_GoToNextLine                        (abs)        0000
+__size_of_GLCD_GoToPage                            (abs)        0000
+__size_of_GLCD_HorizontalGraph                     (abs)        0000
+__size_of_GLCD_Init                                (abs)        0000
+__size_of_GLCD_Printf                              (abs)        0000
+__size_of_GLCD_SetCursor                           (abs)        0000
+__size_of_GLCD_VerticalGraph                       (abs)        0000
+__size_of___awdiv                                  (abs)        0000
+__size_of___awmod                                  (abs)        0000
+__size_of___bmul                                   (abs)        0000
+__size_of___lldiv                                  (abs)        0000
+__size_of___wmul                                   (abs)        0000
+__size_of_glcd_BusyCheck                           (abs)        0000
+__size_of_glcd_CmdWrite                            (abs)        0000
+__size_of_glcd_DataWrite                           (abs)        0000
+__size_of_glcd_SelectPage0                         (abs)        0000
+__size_of_glcd_SelectPage1                         (abs)        0000
+__size_of_main                                     (abs)        0000
+__stringbase                                       stringtext   0812
+__stringtab                                        stringtext   0800
+_glcd_BusyCheck                                    text23       0EA7
+_glcd_CmdWrite                                     text22       0F48
+_glcd_DataWrite                                    text21       0F29
+_glcd_SelectPage0                                  text20       0EAF
+_glcd_SelectPage1                                  text19       0EB7
+_main                                              maintext     033E
+btemp                                              (abs)        007E
+end_of_initialization                              cinit        07FC
+glcd_CmdWrite@cmd                                  cstackCOMMON 0073
+glcd_DataWrite@dat                                 cstackCOMMON 0073
+intlevel0                                          functab      0000
+intlevel1                                          functab      0000
+intlevel2                                          functab      0000
+intlevel3                                          functab      0000
+intlevel4                                          functab      0000
+intlevel5                                          functab      0000
+ltemp                                              (abs)        007E
+ltemp0                                             (abs)        007E
+ltemp1                                             (abs)        0082
+ltemp2                                             (abs)        0086
+ltemp3                                             (abs)        0080
+main@num                                           cstackBANK0  0068
+reset_vec                                          reset_vec    0000
+stackhi                                            (abs)        0000
+stacklo                                            (abs)        0000
+start                                              init         0000
+start_initialization                               cinit        07F8
+ttemp                                              (abs)        007E
+ttemp0                                             (abs)        007E
+ttemp1                                             (abs)        0081
+ttemp2                                             (abs)        0084
+ttemp3                                             (abs)        0087
+ttemp4                                             (abs)        007F
+wtemp                                              (abs)        007E
+wtemp0                                             (abs)        007E
+wtemp1                                             (abs)        0080
+wtemp2                                             (abs)        0082
+wtemp3                                             (abs)        0084
+wtemp4                                             (abs)        0086
+wtemp5                                             (abs)        0088
+wtemp6                                             (abs)        007F
+
+
+FUNCTION INFORMATION:
+
+ *************** function _main *****************
+ Defined at:
+		line 7 in file "main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  num             2   72[BANK0 ] int 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       2       0       0       0
+      Temps:          0       1       0       0       0
+      Totals:         0       3       0       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels required when called:    8
+ This function calls:
+		_DELAY_sec
+		_GLCD_Clear
+		_GLCD_DisplayLogo
+		_GLCD_HorizontalGraph
+		_GLCD_Init
+		_GLCD_Printf
+		_GLCD_VerticalGraph
+ This function is called by:
+		Startup code after reset
+ This function uses a non-reentrant model
+
+
+ *************** function _GLCD_VerticalGraph *****************
+ Defined at:
+		line 901 in file "../00-libfiles/glcd.c"
+ Parameters:    Size  Location     Type
+  var_barGraph    1    wreg     unsigned char 
+  var_percenta    1   40[BANK0 ] unsigned char 
+ Auto vars:     Size  Location     Type
+  var_barGraph    1   47[BANK0 ] unsigned char 
+  i               1   52[BANK0 ] unsigned char 
+  var_valueToD    1   51[BANK0 ] unsigned char 
+  j               1   50[BANK0 ] unsigned char 
+  lineNumber      1   49[BANK0 ] unsigned char 
+  var_barGraph    1   48[BANK0 ] unsigned char 
+  var_lineNumb    1   46[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       1       0       0       0
+      Locals:         0       7       0       0       0
+      Temps:          0       5       0       0       0
+      Totals:         0      13       0       0       0
+Total ram usage:       13 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    7
+ This function calls:
+		_GLCD_DisplayNumber
+		_GLCD_SetCursor
+		___awdiv
+		_glcd_DataWrite
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _GLCD_Printf *****************
+ Defined at:
+		line 538 in file "../00-libfiles/glcd.c"
+ Parameters:    Size  Location     Type
+  argList         2   40[BANK0 ] PTR const unsigned char 
+		 -> STR_1(33), 
+ Auto vars:     Size  Location     Type
+  v_num_u32       4   60[BANK0 ] unsigned long 
+  v_num_s32       4   54[BANK0 ] long 
+  ptr             2   66[BANK0 ] PTR const unsigned char 
+		 -> STR_1(33), 
+  v_num_u16       2   64[BANK0 ] unsigned int 
+  v_num_s16       2   58[BANK0 ] int 
+  argp            1   70[BANK0 ] PTR void [1]
+		 -> ?_GLCD_Printf(1), 
+  v_numOfDigit    1   69[BANK0 ] unsigned char 
+  ch              1   68[BANK0 ] unsigned char 
+  str             1   53[BANK0 ] PTR unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0      11       0       0       0
+      Locals:         0      18       0       0       0
+      Temps:          0       2       0       0       0
+      Totals:         0      31       0       0       0
+Total ram usage:       31 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    7
+ This function calls:
+		_GLCD_DisplayChar
+		_GLCD_DisplayNumber
+		_GLCD_DisplayString
+		___bmul
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _GLCD_DisplayString *****************
+ Defined at:
+		line 274 in file "../00-libfiles/glcd.c"
+ Parameters:    Size  Location     Type
+  ptr             1    wreg     PTR unsigned char 
+ Auto vars:     Size  Location     Type
+  ptr             1   11[COMMON] PTR unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         1       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         2       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_GLCD_DisplayChar
+ This function is called by:
+		_GLCD_Printf
+ This function uses a non-reentrant model
+
+
+ *************** function _GLCD_Init *****************
+ Defined at:
+		line 168 in file "../00-libfiles/glcd.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         1       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_DELAY_ms
+		_GLCD_Clear
+		_GLCD_GoToPage
+		_glcd_CmdWrite
+		_glcd_SelectPage0
+		_glcd_SelectPage1
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _GLCD_Clear *****************
+ Defined at:
+		line 688 in file "../00-libfiles/glcd.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  line            1   10[COMMON] unsigned char 
+  cursor          1    9[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         2       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         3       0       0       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		_GLCD_GoToLine
+		_glcd_CmdWrite
+		_glcd_DataWrite
+		_glcd_SelectPage0
+		_glcd_SelectPage1
+ This function is called by:
+		_main
+		_GLCD_Init
+ This function uses a non-reentrant model
+
+
+ *************** function _GLCD_GoToLine *****************
+ Defined at:
+		line 764 in file "../00-libfiles/glcd.c"
+ Parameters:    Size  Location     Type
+  lineNumber      1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  lineNumber      1    7[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         1       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         2       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_GLCD_GoToPage
+ This function is called by:
+		_GLCD_Clear
+ This function uses a non-reentrant model
+
+
+ *************** function _GLCD_HorizontalGraph *****************
+ Defined at:
+		line 961 in file "../00-libfiles/glcd.c"
+ Parameters:    Size  Location     Type
+  var_barGraph    1    wreg     unsigned char 
+  var_percenta    1   40[BANK0 ] unsigned char 
+ Auto vars:     Size  Location     Type
+  var_barGraph    1   46[BANK0 ] unsigned char 
+  i               1   48[BANK0 ] unsigned char 
+  var_lineNumb    1   47[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       1       0       0       0
+      Locals:         0       3       0       0       0
+      Temps:          0       5       0       0       0
+      Totals:         0       9       0       0       0
+Total ram usage:        9 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    7
+ This function calls:
+		_GLCD_DisplayNumber
+		_GLCD_GoToPage
+		_GLCD_SetCursor
+		_glcd_DataWrite
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _GLCD_SetCursor *****************
+ Defined at:
+		line 820 in file "../00-libfiles/glcd.c"
+ Parameters:    Size  Location     Type
+  lineNumber      1    wreg     unsigned char 
+  CursorPositi    1    9[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  lineNumber      1    0[BANK0 ] unsigned char 
+  pageNumber      1    1[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         1       0       0       0       0
+      Locals:         0       2       0       0       0
+      Temps:          3       0       0       0       0
+      Totals:         4       2       0       0       0
+Total ram usage:        6 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		___awdiv
+		___awmod
+		_glcd_CmdWrite
+		_glcd_SelectPage0
+		_glcd_SelectPage1
+ This function is called by:
+		_GLCD_VerticalGraph
+		_GLCD_HorizontalGraph
+ This function uses a non-reentrant model
+
+
+ *************** function ___awmod *****************
+ Defined at:
+		line 6 in file "C:\Program Files\Microchip\xc8\v1.36\sources\common\awmod.c"
+ Parameters:    Size  Location     Type
+  divisor         2    0[COMMON] int 
+  dividend        2    2[COMMON] int 
+ Auto vars:     Size  Location     Type
+  sign            1    6[COMMON] unsigned char 
+  counter         1    5[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  2    0[COMMON] int 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         4       0       0       0       0
+      Locals:         2       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         7       0       0       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_GLCD_SetCursor
+ This function uses a non-reentrant model
+
+
+ *************** function ___awdiv *****************
+ Defined at:
+		line 6 in file "C:\Program Files\Microchip\xc8\v1.36\sources\common\awdiv.c"
+ Parameters:    Size  Location     Type
+  divisor         2    0[COMMON] int 
+  dividend        2    2[COMMON] int 
+ Auto vars:     Size  Location     Type
+  quotient        2    7[COMMON] int 
+  sign            1    6[COMMON] unsigned char 
+  counter         1    5[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  2    0[COMMON] int 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         4       0       0       0       0
+      Locals:         4       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         9       0       0       0       0
+Total ram usage:        9 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_GLCD_SetCursor
+		_GLCD_VerticalGraph
+ This function uses a non-reentrant model
+
+
+ *************** function _GLCD_DisplayNumber *****************
+ Defined at:
+		line 392 in file "../00-libfiles/glcd.c"
+ Parameters:    Size  Location     Type
+  v_numericSys    1    wreg     unsigned char 
+  v_number_u32    4    9[BANK0 ] unsigned long 
+  v_numOfDigit    1   13[BANK0 ] unsigned char 
+ Auto vars:     Size  Location     Type
+  v_numericSys    1   38[BANK0 ] unsigned char 
+  a              10   26[BANK0 ] unsigned char [10]
+  i               1   39[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       5       0       0       0
+      Locals:         0      14       0       0       0
+      Temps:          0      12       0       0       0
+      Totals:         0      31       0       0       0
+Total ram usage:       31 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_GLCD_DisplayChar
+		___bmul
+		___lldiv
+ This function is called by:
+		_GLCD_Printf
+		_GLCD_VerticalGraph
+		_GLCD_HorizontalGraph
+ This function uses a non-reentrant model
+
+
+ *************** function ___lldiv *****************
+ Defined at:
+		line 6 in file "C:\Program Files\Microchip\xc8\v1.36\sources\common\lldiv.c"
+ Parameters:    Size  Location     Type
+  divisor         4    0[COMMON] unsigned long 
+  dividend        4    4[COMMON] unsigned long 
+ Auto vars:     Size  Location     Type
+  quotient        4    9[COMMON] unsigned long 
+  counter         1   13[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  4    0[COMMON] unsigned long 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         8       0       0       0       0
+      Locals:         5       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:        14       0       0       0       0
+Total ram usage:       14 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_GLCD_DisplayNumber
+ This function uses a non-reentrant model
+
+
+ *************** function ___bmul *****************
+ Defined at:
+		line 4 in file "C:\Program Files\Microchip\xc8\v1.36\sources\common\Umul8.c"
+ Parameters:    Size  Location     Type
+  multiplier      1    wreg     unsigned char 
+  multiplicand    1    0[BANK0 ] unsigned char 
+ Auto vars:     Size  Location     Type
+  multiplier      1    3[BANK0 ] unsigned char 
+  product         1    2[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       1       0       0       0
+      Locals:         0       2       0       0       0
+      Temps:          0       1       0       0       0
+      Totals:         0       4       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_GLCD_DisplayNumber
+		_GLCD_Printf
+ This function uses a non-reentrant model
+
+
+ *************** function _GLCD_DisplayChar *****************
+ Defined at:
+		line 213 in file "../00-libfiles/glcd.c"
+ Parameters:    Size  Location     Type
+  ch              1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  ch              1    9[COMMON] unsigned char 
+  i               1    8[COMMON] unsigned char 
+  dat             1    7[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         3       0       0       0       0
+      Temps:          0       9       0       0       0
+      Totals:         3       9       0       0       0
+Total ram usage:       12 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		_GLCD_GoToNextLine
+		_GLCD_GoToPage
+		___wmul
+		_glcd_DataWrite
+ This function is called by:
+		_GLCD_DisplayString
+		_GLCD_DisplayNumber
+		_GLCD_Printf
+ This function uses a non-reentrant model
+
+
+ *************** function ___wmul *****************
+ Defined at:
+		line 15 in file "C:\Program Files\Microchip\xc8\v1.36\sources\common\Umul16.c"
+ Parameters:    Size  Location     Type
+  multiplier      2    0[COMMON] unsigned int 
+  multiplicand    2    2[COMMON] unsigned int 
+ Auto vars:     Size  Location     Type
+  product         2    4[COMMON] unsigned int 
+ Return value:  Size  Location     Type
+                  2    0[COMMON] unsigned int 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         4       0       0       0       0
+      Locals:         2       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         6       0       0       0       0
+Total ram usage:        6 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_GLCD_DisplayChar
+ This function uses a non-reentrant model
+
+
+ *************** function _GLCD_GoToNextLine *****************
+ Defined at:
+		line 789 in file "../00-libfiles/glcd.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         1       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_GLCD_GoToPage
+ This function is called by:
+		_GLCD_DisplayChar
+ This function uses a non-reentrant model
+
+
+ *************** function _GLCD_GoToPage *****************
+ Defined at:
+		line 726 in file "../00-libfiles/glcd.c"
+ Parameters:    Size  Location     Type
+  pageNumber      1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  pageNumber      1    5[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         1       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         2       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_glcd_CmdWrite
+		_glcd_SelectPage0
+		_glcd_SelectPage1
+ This function is called by:
+		_GLCD_Init
+		_GLCD_DisplayChar
+		_GLCD_GoToLine
+		_GLCD_GoToNextLine
+		_GLCD_HorizontalGraph
+ This function uses a non-reentrant model
+
+
+ *************** function _GLCD_DisplayLogo *****************
+ Defined at:
+		line 863 in file "../00-libfiles/glcd.c"
+ Parameters:    Size  Location     Type
+  ptr_Logo        2    4[COMMON] PTR const unsigned char 
+		 -> LogoBitMap(1024), 
+ Auto vars:     Size  Location     Type
+  line            1    8[COMMON] unsigned char 
+  cursor          1    7[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         2       0       0       0       0
+      Locals:         2       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         5       0       0       0       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_glcd_CmdWrite
+		_glcd_DataWrite
+		_glcd_SelectPage0
+		_glcd_SelectPage1
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _glcd_SelectPage1 *****************
+ Defined at:
+		line 1081 in file "../00-libfiles/glcd.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         1       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_GLCD_Init
+		_GLCD_Clear
+		_GLCD_GoToPage
+		_GLCD_SetCursor
+		_GLCD_DisplayLogo
+ This function uses a non-reentrant model
+
+
+ *************** function _glcd_SelectPage0 *****************
+ Defined at:
+		line 1073 in file "../00-libfiles/glcd.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         1       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_GLCD_Init
+		_GLCD_Clear
+		_GLCD_GoToPage
+		_GLCD_SetCursor
+		_GLCD_DisplayLogo
+ This function uses a non-reentrant model
+
+
+ *************** function _glcd_DataWrite *****************
+ Defined at:
+		line 1059 in file "../00-libfiles/glcd.c"
+ Parameters:    Size  Location     Type
+  dat             1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  dat             1    3[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         1       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         2       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_DELAY_us
+		_glcd_BusyCheck
+ This function is called by:
+		_GLCD_DisplayChar
+		_GLCD_Clear
+		_GLCD_DisplayLogo
+		_GLCD_VerticalGraph
+		_GLCD_HorizontalGraph
+ This function uses a non-reentrant model
+
+
+ *************** function _glcd_CmdWrite *****************
+ Defined at:
+		line 1045 in file "../00-libfiles/glcd.c"
+ Parameters:    Size  Location     Type
+  cmd             1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  cmd             1    3[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         1       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         2       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_DELAY_us
+		_glcd_BusyCheck
+ This function is called by:
+		_GLCD_Init
+		_GLCD_Clear
+		_GLCD_GoToPage
+		_GLCD_SetCursor
+		_GLCD_DisplayLogo
+ This function uses a non-reentrant model
+
+
+ *************** function _glcd_BusyCheck *****************
+ Defined at:
+		line 1091 in file "../00-libfiles/glcd.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_DELAY_us
+ This function is called by:
+		_glcd_CmdWrite
+		_glcd_DataWrite
+ This function uses a non-reentrant model
+
+
+ *************** function _DELAY_sec *****************
+ Defined at:
+		line 102 in file "../00-libfiles/delay.c"
+ Parameters:    Size  Location     Type
+  sec_count       2    4[COMMON] unsigned int 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         2       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         2       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_DELAY_ms
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _DELAY_ms *****************
+ Defined at:
+		line 75 in file "../00-libfiles/delay.c"
+ Parameters:    Size  Location     Type
+  ms_count        2    2[COMMON] unsigned int 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         2       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         2       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_DELAY_us
+ This function is called by:
+		_DELAY_sec
+		_GLCD_Init
+ This function uses a non-reentrant model
+
+
+ *************** function _DELAY_us *****************
+ Defined at:
+		line 56 in file "../00-libfiles/delay.c"
+ Parameters:    Size  Location     Type
+  us_count        2    0[COMMON] unsigned int 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         2       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         2       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_DELAY_ms
+		_glcd_CmdWrite
+		_glcd_DataWrite
+		_glcd_BusyCheck
+ This function uses a non-reentrant model
+
+
+
+MODULE INFORMATION
+
+Module		Function		Class		Link	Load	Size
+C:\Program Files\Microchip\xc8\v1.36\sources\common\Umul16.c
+		___wmul        		CODE           	0F69	0000	34
+
+C:\Program Files\Microchip\xc8\v1.36\sources\common\Umul16.c estimated size: 34
+
+../00-libfiles/delay.c
+		_DELAY_ms      		CODE           	0F01	0000	21
+		_DELAY_sec     		CODE           	0F15	0000	21
+		_DELAY_us      		CODE           	0EBF	0000	12
+
+../00-libfiles/delay.c estimated size: 54
+
+C:\Program Files\Microchip\xc8\v1.36\sources\common\awmod.c
+		___awmod       		CODE           	0FB5	0000	76
+
+C:\Program Files\Microchip\xc8\v1.36\sources\common\awmod.c estimated size: 76
+
+shared
+		__stringtab    		STRCODE        	0800	0000	19
+		__initialization		CODE           	07F8	0000	5
+		_LogoBitMap    		STRCODE        	09ED	0000	1025
+		_A_GlcdFontTable_U8		STRCODE        	0812	0000	476
+
+shared estimated size: 1525
+
+../00-libfiles/glcd.c
+		_glcd_DataWrite		CODE           	0F29	0000	32
+		_GLCD_VerticalGraph		CODE           	0408	0000	212
+		_glcd_BusyCheck		CODE           	0EA7	0000	9
+		_GLCD_DisplayChar		CODE           	02B2	0000	141
+		_GLCD_DisplayLogo		CODE           	006C	0000	86
+		_GLCD_Init     		CODE           	00C1	0000	88
+		_GLCD_GoToPage 		CODE           	0F8A	0000	44
+		_GLCD_GoToLine 		CODE           	0ECA	0000	18
+		_GLCD_Printf   		CODE           	05DC	0000	541
+		_glcd_SelectPage0		CODE           	0EAF	0000	9
+		_glcd_SelectPage1		CODE           	0EB7	0000	9
+		_GLCD_GoToNextLine		CODE           	0EDB	0000	20
+		_GLCD_HorizontalGraph		CODE           	0231	0000	130
+		_GLCD_DisplayString		CODE           	000A	0000	22
+		_GLCD_DisplayNumber		CODE           	04DB	0000	258
+		_glcd_CmdWrite 		CODE           	0F48	0000	34
+		_GLCD_SetCursor		CODE           	01CF	0000	99
+		_GLCD_Clear    		CODE           	001F	0000	78
+
+../00-libfiles/glcd.c estimated size: 1830
+
+C:\Program Files\Microchip\xc8\v1.36\sources\common\lldiv.c
+		___lldiv       		CODE           	0171	0000	95
+
+C:\Program Files\Microchip\xc8\v1.36\sources\common\lldiv.c estimated size: 95
+
+C:\Program Files\Microchip\xc8\v1.36\sources\common\Umul8.c
+		___bmul        		CODE           	0EEE	0000	20
+
+C:\Program Files\Microchip\xc8\v1.36\sources\common\Umul8.c estimated size: 20
+
+main.c
+		_main          		CODE           	033E	0000	203
+
+main.c estimated size: 203
+
+C:\Program Files\Microchip\xc8\v1.36\sources\common\awdiv.c
+		___awdiv       		CODE           	0118	0000	90
+
+C:\Program Files\Microchip\xc8\v1.36\sources\common\awdiv.c estimated size: 90
+
